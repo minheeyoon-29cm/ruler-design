@@ -1,0 +1,41 @@
+---
+title: "프로덕트 카드 v2"
+description: "프로덕트 카드는 상품 정보와 이미지를 효과적으로 보여주는 컴포넌트입니다."
+status: "stable"
+version: "2.0.0"
+lastUpdated: "2025-05-04"
+category: "패턴"
+tags: ["UI", "카드", "상품"]
+---
+
+# 프로덕트 카드 v2
+
+프로덕트 카드는 상품 정보와 이미지를 효과적으로 보여주는 컴포넌트입니다. v2 버전에서는 이미지 비율, 할인률 표시, 재고 상태 등 다양한 옵션을 지원합니다.
+
+## 사용 가이드
+
+프로덕트 카드는 상품 목록, 추천 상품, 관련 상품 등 다양한 영역에서 사용할 수 있습니다. 상품의 주요 정보를 빠르게 파악할 수 있도록 설계되었습니다.
+
+### 주요 기능
+
+- 다양한 이미지 비율 지원 (1:1, 4:3, 3:4)
+- 할인률 및 프로모션 뱃지 표시
+- 재고 상태 표시 (품절, 매진 임박 등)
+- 위시리스트 버튼 옵션
+- 빠른 구매 버튼 옵션
+
+## 코드 예시
+
+```jsx
+<ProductCard
+  imageUrl="/images/product-sample.jpg"
+  imageRatio="4:3"
+  brandName="브랜드명"
+  productName="상품명"
+  price={39000}
+  discountPrice={29000}
+  discountRate={25}
+  soldOut={false}
+  wishButton={true}
+  quickBuy={true}
+/>
