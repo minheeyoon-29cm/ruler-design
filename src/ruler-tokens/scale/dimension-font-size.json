@@ -1,0 +1,82 @@
+{
+  "font-size-25": {
+    "value": "10",
+    "type": "fontSizes"
+  },
+  "font-size-50": {
+    "value": "11",
+    "type": "fontSizes"
+  },
+  "font-size-75": {
+    "value": "12",
+    "type": "fontSizes"
+  },
+  "font-size-100": {
+    "value": "13",
+    "type": "fontSizes"
+  },
+  "font-size-125": {
+    "value": "14",
+    "type": "fontSizes"
+  },
+  "font-size-150": {
+    "value": "15",
+    "type": "fontSizes"
+  },
+  "font-size-200": {
+    "value": "16",
+    "type": "fontSizes"
+  },
+  "font-size-250": {
+    "value": "18",
+    "type": "fontSizes"
+  },
+  "font-size-300": {
+    "value": "20",
+    "type": "fontSizes"
+  },
+  "font-size-350": {
+    "value": "22",
+    "type": "fontSizes"
+  },
+  "font-size-400": {
+    "value": "24",
+    "type": "fontSizes"
+  },
+  "font-size-500": {
+    "value": "28",
+    "type": "fontSizes"
+  },
+  "font-size-550": {
+    "value": "30",
+    "type": "fontSizes"
+  },
+  "font-size-600": {
+    "value": "32",
+    "type": "fontSizes"
+  },
+  "font-size-1000": {
+    "value": "48",
+    "type": "fontSizes"
+  },
+  "font-size-1300": {
+    "value": "60",
+    "type": "fontSizes"
+  },
+  "font-size-1400": {
+    "value": "64",
+    "type": "fontSizes"
+  },
+  "font-size-1500": {
+    "value": "68",
+    "type": "fontSizes"
+  },
+  "font-size-1600": {
+    "value": "72",
+    "type": "fontSizes"
+  },
+  "font-size-2100": {
+    "value": "92",
+    "type": "fontSizes"
+  }
+}

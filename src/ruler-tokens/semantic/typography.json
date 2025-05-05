@@ -1,0 +1,511 @@
+{
+  "title-xxl": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{regular-400}",
+      "lineHeight": "{line-height-3}",
+      "fontSize": "{font-size-550}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "30/타이틀 스타일은 사용자가 알아야할 정보와 개념을 강조하고 페이지나 섹션을 명확하게 설명해야 합니다",
+    "type": "typography"
+  },
+  "title-xxl-medium": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{medium-500}",
+      "lineHeight": "{line-height-3}",
+      "fontSize": "{font-size-550}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "30/타이틀 스타일은 사용자가 알아야할 정보와 개념을 강조하고 페이지나 섹션을 명확하게 설명해야 합니다",
+    "type": "typography"
+  },
+  "title-xxl-bold": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{bold-700}",
+      "lineHeight": "{line-height-3}",
+      "fontSize": "{font-size-550}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "30/타이틀 스타일은 사용자가 알아야할 정보와 개념을 강조하고 페이지나 섹션을 명확하게 설명해야 합니다",
+    "type": "typography"
+  },
+  "title-xl-medium": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{medium-500}",
+      "lineHeight": "{line-height-3}",
+      "fontSize": "{font-size-500}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "28/타이틀 스타일은 사용자가 알아야할 정보와 개념을 강조하고 페이지나 섹션을 명확하게 설명해야 합니다",
+    "type": "typography"
+  },
+  "title-xl-bold": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{bold-700}",
+      "lineHeight": "{line-height-3}",
+      "fontSize": "{font-size-500}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "28/타이틀 스타일은 사용자가 알아야할 정보와 개념을 강조하고 페이지나 섹션을 명확하게 설명해야 합니다",
+    "type": "typography"
+  },
+  "title-l-medium": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{medium-500}",
+      "lineHeight": "{line-height-3}",
+      "fontSize": "{font-size-400}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "24/타이틀 스타일은 사용자가 알아야할 정보와 개념을 강조하고 페이지나 섹션을 명확하게 설명해야 합니다",
+    "type": "typography"
+  },
+  "title-l-bold": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{bold-700}",
+      "lineHeight": "{line-height-3}",
+      "fontSize": "{font-size-400}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "24/타이틀 스타일은 사용자가 알아야할 정보와 개념을 강조하고 페이지나 섹션을 명확하게 설명해야 합니다",
+    "type": "typography"
+  },
+  "title-m-medium": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{medium-500}",
+      "lineHeight": "{line-height-3}",
+      "fontSize": "{font-size-350}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "22/타이틀 스타일은 사용자가 알아야할 정보와 개념을 강조하고 페이지나 섹션을 명확하게 설명해야 합니다",
+    "type": "typography"
+  },
+  "title-m-bold": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{bold-700}",
+      "lineHeight": "{line-height-3}",
+      "fontSize": "{font-size-350}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "22/타이틀 스타일은 사용자가 알아야할 정보와 개념을 강조하고 페이지나 섹션을 명확하게 설명해야 합니다",
+    "type": "typography"
+  },
+  "title-s-medium": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{medium-500}",
+      "lineHeight": "{line-height-3}",
+      "fontSize": "{font-size-300}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "20/타이틀 스타일은 사용자가 알아야할 정보와 개념을 강조하고 페이지나 섹션을 명확하게 설명해야 합니다",
+    "type": "typography"
+  },
+  "title-s-bold": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{bold-700}",
+      "lineHeight": "{line-height-3}",
+      "fontSize": "{font-size-300}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "20/타이틀 스타일은 사용자가 알아야할 정보와 개념을 강조하고 페이지나 섹션을 명확하게 설명해야 합니다",
+    "type": "typography"
+  },
+  "title-xs-medium": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{medium-500}",
+      "lineHeight": "{line-height-3}",
+      "fontSize": "{font-size-250}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "18/타이틀 스타일은 사용자가 알아야할 정보와 개념을 강조하고 페이지나 섹션을 명확하게 설명해야 합니다",
+    "type": "typography"
+  },
+  "title-xs-bold": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{bold-700}",
+      "lineHeight": "{line-height-3}",
+      "fontSize": "{font-size-250}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "18/타이틀 스타일은 사용자가 알아야할 정보와 개념을 강조하고 페이지나 섹션을 명확하게 설명해야 합니다",
+    "type": "typography"
+  },
+  "text-xxl-medium": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{medium-500}",
+      "lineHeight": "{line-height-4}",
+      "fontSize": "{font-size-200}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "16/텍스트 스타일은 페이지,UI안에서 사용자의 이해를 돕기 위해 내용을 보조할 때 사용합니다",
+    "type": "typography"
+  },
+  "text-xxl-bold": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{bold-700}",
+      "lineHeight": "{line-height-4}",
+      "fontSize": "{font-size-200}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "16/텍스트 스타일은 페이지,UI안에서 사용자의 이해를 돕기 위해 내용을 보조할 때 사용합니다. 2줄 이상의 텍스트에는 Bold Weight사용을 자제하세요",
+    "type": "typography"
+  },
+  "text-xxl": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{regular-400}",
+      "lineHeight": "{line-height-4}",
+      "fontSize": "{font-size-200}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "16/텍스트 스타일은 페이지,UI안에서 사용자의 이해를 돕기 위해 내용을 보조할 때 사용합니다",
+    "type": "typography"
+  },
+  "text-xl": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{regular-400}",
+      "lineHeight": "{line-height-5}",
+      "fontSize": "{font-size-150}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "15/텍스트 스타일은 페이지,UI안에서 사용자의 이해를 돕기 위해 내용을 보조할 때 사용합니다",
+    "type": "typography"
+  },
+  "text-xl-medium": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{medium-500}",
+      "lineHeight": "{line-height-5}",
+      "fontSize": "{font-size-150}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "15/텍스트 스타일은 페이지,UI안에서 사용자의 이해를 돕기 위해 내용을 보조할 때 사용합니다",
+    "type": "typography"
+  },
+  "text-xl-bold": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{bold-700}",
+      "lineHeight": "{line-height-5}",
+      "fontSize": "{font-size-150}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "15/텍스트 스타일은 페이지,UI안에서 사용자의 이해를 돕기 위해 내용을 보조할 때 사용합니다. 2줄 이상의 텍스트에는 Bold Weight사용을 자제하세요",
+    "type": "typography"
+  },
+  "text-l": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{regular-400}",
+      "lineHeight": "{line-height-4}",
+      "fontSize": "{font-size-125}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "14/텍스트 스타일은 페이지,UI안에서 사용자의 이해를 돕기 위해 내용을 보조할 때 사용합니다",
+    "type": "typography"
+  },
+  "text-l-medium": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{medium-500}",
+      "lineHeight": "{line-height-4}",
+      "fontSize": "{font-size-125}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "14/텍스트 스타일은 페이지,UI안에서 사용자의 이해를 돕기 위해 내용을 보조할 때 사용합니다",
+    "type": "typography"
+  },
+  "text-l-bold": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{bold-700}",
+      "lineHeight": "{line-height-4}",
+      "fontSize": "{font-size-125}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "14/텍스트 스타일은 페이지,UI안에서 사용자의 이해를 돕기 위해 내용을 보조할 때 사용합니다. 2줄 이상의 텍스트에는 Bold Weight사용을 자제하세요",
+    "type": "typography"
+  },
+  "text-m": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{regular-400}",
+      "lineHeight": "{line-height-4}",
+      "fontSize": "{font-size-100}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "13/주요 정보에는 14이하로 작은 폰트의 사용을 권장하지 않습니다!/텍스트 스타일은 페이지,UI안에서 사용자의 이해를 돕기 위해 내용을 보조할 때 사용합니다",
+    "type": "typography"
+  },
+  "text-m-medium": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{medium-500}",
+      "lineHeight": "{line-height-4}",
+      "fontSize": "{font-size-100}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "13/주요 정보에는 14이하로 작은 폰트의 사용을 권장하지 않습니다!/텍스트 스타일은 페이지,UI안에서 사용자의 이해를 돕기 위해 내용을 보조할 때 사용합니다",
+    "type": "typography"
+  },
+  "text-m-bold": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{bold-700}",
+      "lineHeight": "{line-height-4}",
+      "fontSize": "{font-size-100}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "13/주요 정보에는 14이하로 작은 폰트의 사용을 권장하지 않습니다!/텍스트 스타일은 페이지,UI안에서 사용자의 이해를 돕기 위해 내용을 보조할 때 사용합니다. 2줄 이상의 텍스트에는 Bold Weight사용을 자제하세요",
+    "type": "typography"
+  },
+  "text-s": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{regular-400}",
+      "lineHeight": "{line-height-3}",
+      "fontSize": "{font-size-75}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "12/주요 정보에는 14이하로 작은 폰트의 사용을 권장하지 않습니다!/텍스트 스타일은 페이지,UI안에서 사용자의 이해를 돕기 위해 내용을 보조할 때 사용합니다",
+    "type": "typography"
+  },
+  "text-s-medium": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{medium-500}",
+      "lineHeight": "{line-height-3}",
+      "fontSize": "{font-size-75}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "12/주요 정보에는 14이하로 작은 폰트의 사용을 권장하지 않습니다!/텍스트 스타일은 페이지,UI안에서 사용자의 이해를 돕기 위해 내용을 보조할 때 사용합니다",
+    "type": "typography"
+  },
+  "text-s-bold": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{bold-700}",
+      "lineHeight": "{line-height-3}",
+      "fontSize": "{font-size-75}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "12/주요 정보에는 14이하로 작은 폰트의 사용을 권장하지 않습니다!/텍스트 스타일은 페이지,UI안에서 사용자의 이해를 돕기 위해 내용을 보조할 때 사용합니다. 2줄 이상의 텍스트에는 Bold Weight사용을 자제하세요",
+    "type": "typography"
+  },
+  "text-xs-medium": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{medium-500}",
+      "lineHeight": "{line-height-3}",
+      "fontSize": "{font-size-50}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "11/주요 정보에는 14이하로 작은 폰트의 사용을 권장하지 않습니다!/텍스트 스타일은 페이지,UI안에서 사용자의 이해를 돕기 위해 내용을 보조할 때 사용합니다.",
+    "type": "typography"
+  },
+  "text-xs": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{regular-400}",
+      "lineHeight": "{line-height-3}",
+      "fontSize": "{font-size-50}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "11/주요 정보에는 14이하로 작은 폰트의 사용을 권장하지 않습니다!/텍스트 스타일은 페이지,UI안에서 사용자의 이해를 돕기 위해 내용을 보조할 때 사용합니다.",
+    "type": "typography"
+  },
+  "text-xs-bold": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{bold-700}",
+      "lineHeight": "{line-height-3}",
+      "fontSize": "{font-size-50}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "11/주요 정보에는 14이하로 작은 폰트의 사용을 권장하지 않습니다!/텍스트 스타일은 페이지,UI안에서 사용자의 이해를 돕기 위해 내용을 보조할 때 사용합니다. 2줄 이상의 텍스트에는 Bold Weight사용을 자제하세요",
+    "type": "typography"
+  },
+  "text-xxs": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{regular-400}",
+      "lineHeight": "{line-height-2}",
+      "fontSize": "{font-size-25}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "10/주요 정보에는 14이하로 작은 폰트의 사용을 권장하지 않습니다!/텍스트 스타일은 페이지,UI안에서 사용자의 이해를 돕기 위해 내용을 보조할 때 사용합니다.",
+    "type": "typography"
+  },
+  "text-xxs-medium": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{medium-500}",
+      "lineHeight": "{line-height-2}",
+      "fontSize": "{font-size-25}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "10/주요 정보에는 14이하로 작은 폰트의 사용을 권장하지 않습니다!/텍스트 스타일은 페이지,UI안에서 사용자의 이해를 돕기 위해 내용을 보조할 때 사용합니다.",
+    "type": "typography"
+  },
+  "text-xxs-bold": {
+    "value": {
+      "fontFamily": "{29cm-default-font}",
+      "fontWeight": "{bold-700}",
+      "lineHeight": "{line-height-2}",
+      "fontSize": "{font-size-25}",
+      "letterSpacing": "{narrow-base.web}",
+      "paragraphSpacing": "",
+      "paragraphIndent": "",
+      "textCase": "",
+      "textDecoration": ""
+    },
+    "description": "10/주요 정보에는 14이하로 작은 폰트의 사용을 권장하지 않습니다!/텍스트 스타일은 페이지,UI안에서 사용자의 이해를 돕기 위해 내용을 보조할 때 사용합니다.",
+    "type": "typography"
+  }
+}

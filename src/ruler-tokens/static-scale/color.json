@@ -1,0 +1,36 @@
+{
+  "static": {
+    "static-black": {
+      "value": "#000000",
+      "type": "color"
+    },
+    "static-white": {
+      "value": "#ffffff",
+      "type": "color"
+    },
+    "static-white-alpha-200": {
+      "value": "#FFFFFF20",
+      "type": "color"
+    },
+    "static-white-alpha-500": {
+      "value": "#FFFFFF80",
+      "type": "color"
+    },
+    "static-white-alpha-900": {
+      "value": "#FFFFFFe6",
+      "type": "color"
+    },
+    "static-black-alpha-200": {
+      "value": "#00000020",
+      "type": "color"
+    },
+    "static-black-alpha-500": {
+      "value": "#00000080",
+      "type": "color"
+    },
+    "static-black-alpha-900": {
+      "value": "#000000e6",
+      "type": "color"
+    }
+  }
+}

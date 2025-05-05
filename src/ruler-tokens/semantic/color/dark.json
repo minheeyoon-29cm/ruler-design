@@ -1,0 +1,297 @@
+{
+  "semantic": {
+    "text": {
+      "on-color": {
+        "value": "{scale.gray-00}",
+        "description": "UI 요소의 배경 컬러 위에 올라가는 기본 텍스트 컬러입니다\ntheme변경 시 색이 반전되어 자연스럽게 theme대응이 가능해집니다. ",
+        "type": "color"
+      },
+      "primary": {
+        "value": "{scale.gray-950}",
+        "description": "그레이 스케일중 가장 강한 명도를 가지고, 보편적이고 중요한 위계에 사용되는 텍스트 컬러입니다",
+        "type": "color"
+      },
+      "primary-hover": {
+        "value": "{scale.gray-900}",
+        "description": "primary컬러의 마우스 hover 상태를 표현하는 색상입니다",
+        "type": "color"
+      },
+      "primary-pressed": {
+        "value": "{scale.gray-900}",
+        "description": "primary컬러의 pressed 상태를 표현하는 색상입니다",
+        "type": "color"
+      },
+      "secondary": {
+        "value": "{scale.gray-600}",
+        "description": "주요 컬러의 보조적인 성격으로 사용됩니다. 시각 위계적으로 두번째로 눈에 띄는 컬러입니다",
+        "type": "color"
+      },
+      "secondary-hover": {
+        "value": "{scale.gray-500}",
+        "description": "secondary 컬러의 마우스 hover 상태를 표현하는 색상입니다",
+        "type": "color"
+      },
+      "secondary-pressed": {
+        "value": "{scale.gray-500}",
+        "description": "secondary 컬러의 pressed 상태를 표현하는 색상입니다",
+        "type": "color"
+      },
+      "tertiary": {
+        "value": "{scale.gray-alpha-700}",
+        "description": "그레이 스케일 중 약한 명도를 가지고 낮은 위계의 정보에 사용되는 컬러입니다. ",
+        "type": "color"
+      },
+      "tertiary-hover": {
+        "value": "{scale.gray-alpha-800}",
+        "description": "tertiary컬러의 마우스 hover 상태를 표현하는 색상입니다",
+        "type": "color"
+      },
+      "tertiary-pressed": {
+        "value": "{scale.gray-alpha-800}",
+        "description": "tertiary컬러의 pressed 상태를 표현하는 색상입니다",
+        "type": "color"
+      },
+      "disabled": {
+        "value": "{scale.gray-alpha-500}",
+        "description": "활성화 되지 않아 작동되지 않는 disabled 상태를 나타냅니다",
+        "type": "color"
+      }
+    },
+    "common": {
+      "interactive-low": {
+        "value": "{scale.blue-alpha-200}",
+        "description": "interactive 색상보다 낮은 위계로 interactive색상과 함께 쓰이거나 보조할 때 사용합니다. ",
+        "type": "color"
+      },
+      "interactive": {
+        "value": "{scale.blue-500}",
+        "description": "강조가 필요한 UI에서 포인트로 사용되는 컬러입니다, 강한 상호강조 표현의 의미를 가지고 있습니다.",
+        "type": "color"
+      },
+      "interactive-hover": {
+        "value": "{scale.blue-400}",
+        "description": "interacitve 컬러의 마우스 hover 상태를 표현하는 색상입니다",
+        "type": "color"
+      },
+      "interactive-pressed": {
+        "value": "{scale.blue-400}",
+        "description": "interacitve 컬러의 pressed 상태를 표현하는 색상입니다",
+        "type": "color"
+      },
+      "positive-low": {
+        "value": "{scale.green-alpha-200}",
+        "description": "positive 색상보다 낮은 위계로 positive 함께 쓰이거나 보조할 때 사용합니다. ",
+        "type": "color"
+      },
+      "positive": {
+        "value": "{scale.green-500}",
+        "description": "완료, 성공과 같은 긍정적인 피드백이 필요한 UI에서 포인트로 사용되는 컬러입니다.",
+        "type": "color"
+      },
+      "positive-hover": {
+        "value": "{scale.green-400}",
+        "description": "positive 컬러의 마우스 hover 상태를 표현하는 색상입니다",
+        "type": "color"
+      },
+      "positive-pressed": {
+        "value": "{scale.green-400}",
+        "description": "positive 컬러의 pressed 상태를 표현하는 색상입니다",
+        "type": "color"
+      },
+      "accent-low": {
+        "value": "{scale.orange-red-alpha-200}",
+        "description": "accent 색상의 낮은 위계로 accent 색상과 함께 쓰이거나 보조할 때 사용합니다. ",
+        "type": "color"
+      },
+      "accent": {
+        "value": "{scale.orange-red-600}",
+        "description": "가장 강한 강조가 필요한 UI에 사용됩니다. 화면에서 아껴서 사용해야합니다",
+        "type": "color"
+      },
+      "negative": {
+        "value": "{scale.deep-red-500}",
+        "description": "에러 등 주의가 필요한 텍스트에 사용됩니다",
+        "type": "color"
+      },
+      "negative-hover": {
+        "value": "{scale.deep-red-400}",
+        "description": "negative 컬러의 마우스 hover 상태를 표현하는 색상입니다",
+        "type": "color"
+      },
+      "negative-pressed": {
+        "value": "{scale.deep-red-400}",
+        "description": "negative 컬러의 pressed 상태를 표현하는 색상입니다",
+        "type": "color"
+      },
+      "on-white": {
+        "value": "{static.static-white}",
+        "description": "이미지 또는 UI 배경 컬러 위에 올라가는 기본 텍스트 컬러입니다\ntheme변경 시 고유 색상이 유지되어 dark, light theme에 상관없이 고정색상을 가집니다.",
+        "type": "color"
+      },
+      "on-white-hover": {
+        "value": "{static.static-white-alpha-900}",
+        "description": "이미지 또는 UI 배경 컬러 위에 올라가는 기본 텍스트 컬러입니다\ntheme변경 시 고유 색상이 유지되어 dark, light theme에 상관없이 고정색상을 가집니다.",
+        "type": "color"
+      },
+      "on-white-pressed": {
+        "value": "{static.static-white-alpha-900}",
+        "description": "이미지 또는 UI 배경 컬러 위에 올라가는 기본 텍스트 컬러입니다\ntheme변경 시 고유 색상이 유지되어 dark, light theme에 상관없이 고정색상을 가집니다.",
+        "type": "color"
+      },
+      "on-black": {
+        "value": "{static.static-black}",
+        "description": "이미지 또는 UI 배경 컬러 위에 올라가는 컬러 중 검정색을 유지하는 색상입니다.\ntheme변경 시 고유 색상이 유지되어 dark, light theme에 상관없이 고정색상을 가집니다.",
+        "type": "color"
+      },
+      "on-black-hover": {
+        "value": "{static.static-black-alpha-900}",
+        "description": "on-black 색상의 마우스 hover 색상입니다 ",
+        "type": "color"
+      },
+      "on-black-pressed": {
+        "value": "{static.static-black-alpha-900}",
+        "description": "on-black 색상의 pressed 색상입니다 ",
+        "type": "color"
+      }
+    },
+    "background": {
+      "default": {
+        "value": "{scale.gray-00}",
+        "description": "기본적으로 사용되는 배경색상입니다",
+        "type": "color"
+      },
+      "default-black": {
+        "value": "{static.static-black}",
+        "description": "기본적으로 사용되는 검정 배경 색상입니다. Theme에 영향을 받지않고 검정색을 유지합니다 ",
+        "type": "color"
+      }
+    },
+    "fill": {
+      "primary": {
+        "value": "{scale.gray-950}",
+        "description": "UI 표면에 사용되는 색상 중 가장 강한 명도를 가지고 높은 위계로 표현되는 색상입니다",
+        "type": "color"
+      },
+      "primary-hover": {
+        "value": "{scale.gray-900}",
+        "description": "primary컬러의 마우스 hover 상태를 표현하는 색상입니다",
+        "type": "color"
+      },
+      "primary-pressed": {
+        "value": "{scale.gray-900}",
+        "description": "primary컬러의 pressed 상태를 표현하는 색상입니다",
+        "type": "color"
+      },
+      "secondary": {
+        "value": "{scale.gray-700}",
+        "description": "UI 표면에 사용되는 색상 중 2번째로 강한 명도를 가지며 높은 위계로 표현되는 색상입니다",
+        "type": "color"
+      },
+      "tertiary": {
+        "value": "{scale.gray-alpha-200}",
+        "description": "UI요소의 가장 낮은 위계 표현으로 주요 컬러 Primary를 보조하는 성격으로 사용됩니다.",
+        "type": "color"
+      },
+      "silent": {
+        "value": "{scale.gray-00}",
+        "description": "UI의 표면이 배경색과 같은 색상을 가집니다. 강조하지 않아야하는 UI에 사용합니다 ",
+        "type": "color"
+      },
+      "silent-hover": {
+        "value": "{scale.gray-alpha-200}",
+        "description": "fill-silent의 마우스 hover 상태 색상입니다 ",
+        "type": "color"
+      },
+      "silent-pressed": {
+        "value": "{scale.gray-alpha-200}",
+        "description": "fill-silent의 preseed 상태 색상입니다 ",
+        "type": "color"
+      },
+      "disabled": {
+        "value": "{scale.gray-alpha-200}",
+        "description": "활성화 되지 않아 작동되지 않는 disabled 상태를 나타냅니다",
+        "type": "color"
+      },
+      "surface-contents": {
+        "value": "{scale.gray-100}",
+        "description": "UI의 표면에 사용되는 색상입니다, 표면 위계로 background-defulat위에서 사용됩니다. ",
+        "type": "color"
+      },
+      "surface-floating": {
+        "value": "{scale.gray-950}",
+        "description": "floating되는 UI 표면에 사용되는 색상입니다, 높은 표면 위계로 background와 surface-contents위에 사용됩니다. ",
+        "type": "color"
+      },
+      "surface-dialog": {
+        "value": "{scale.gray-00}",
+        "description": "dialog에 사용되는 표면 배경 색상입니다 ",
+        "type": "color"
+      },
+      "surface-sheet": {
+        "value": "{scale.gray-00}",
+        "description": "화면위를 덮는 Bbottom sheet, 또는 sheet에 사용되는 표면 배경 색상입니다, dialog와 구분하여 사용해주세요  ",
+        "type": "color"
+      },
+      "surface-black": {
+        "value": "{static.static-black}",
+        "description": "surface-black 페이지 위 올라가는 UI요소의 표면 색상으로 \ntheme에 상관없이 #000000값을 유지하는 static token을 참조하고 있습니다. ",
+        "type": "color"
+      }
+    },
+    "border": {
+      "divider-strong": {
+        "value": "{scale.gray-950}",
+        "description": "divider 색상에서 가장 강한 시각적 위계를 가지고 있습니다, 섹션과 섹션 사이 강력한 구분이 필요한 경우 사용합니다",
+        "type": "color"
+      },
+      "divider": {
+        "value": "{scale.gray-alpha-200}",
+        "description": "divider에 사용되는 기본 색상입니다",
+        "type": "color"
+      },
+      "line": {
+        "value": "{scale.gray-alpha-300}",
+        "description": "UI 외곽선을 표현하는 색상입니다",
+        "type": "color"
+      },
+      "line-hover": {
+        "value": "{scale.gray-alpha-400}",
+        "description": "border.line 색상의 마우스 hover 상태를 표현하는 색상입니다",
+        "type": "color"
+      },
+      "line-pressed": {
+        "value": "{scale.gray-alpha-400}",
+        "description": "border.line 색상의 pressed 상태를 표현하는 색상입니다",
+        "type": "color"
+      },
+      "line-selected": {
+        "value": "{scale.gray-950}",
+        "description": "border.line 색상의 selected 상태를 표현하는 색상입니다",
+        "type": "color"
+      },
+      "line-disabled": {
+        "value": "{scale.gray-alpha-200}",
+        "description": "line.negative의 disabled 표현 색상입니다 ",
+        "type": "color"
+      }
+    },
+    "overlay": {
+      "dimmed": {
+        "value": "{static.static-black-alpha-500}",
+        "description": "#000000 50% , 화면 위에 덧씌워지는 불투명 스크린 색상입니다",
+        "type": "color"
+      }
+    }
+  },
+  "shadow-100": {
+    "value": {
+      "x": "0",
+      "y": "10",
+      "blur": "40",
+      "spread": "0",
+      "color": "rgba(255, 255, 255, 0.15);",
+      "type": "dropShadow"
+    },
+    "type": "boxShadow"
+  }
+}

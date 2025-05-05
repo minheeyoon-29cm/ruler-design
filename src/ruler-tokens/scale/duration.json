@@ -1,0 +1,26 @@
+{
+  "duration-150": {
+    "value": "150ms",
+    "type": "other"
+  },
+  "duration-250": {
+    "value": "250ms",
+    "type": "other"
+  },
+  "duration-350": {
+    "value": "350ms",
+    "type": "other"
+  },
+  "duration-400": {
+    "value": "400ms",
+    "type": "other"
+  },
+  "duration-500": {
+    "value": "500ms",
+    "type": "other"
+  },
+  "duration-800": {
+    "value": "800ms",
+    "type": "other"
+  }
+}

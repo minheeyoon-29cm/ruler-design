@@ -1,0 +1,20 @@
+{
+  "tokenSetOrder": [
+    "semantic/color",
+    "semantic/color/dark",
+    "semantic/typography",
+    "semantic/breakpoints",
+    "scale/color/light",
+    "scale/color/dark",
+    "scale/corner-radius",
+    "scale/dimension-font-size",
+    "scale/dimension-size",
+    "scale/font-weight",
+    "scale/letter-spacing",
+    "scale/line-height",
+    "scale/duration",
+    "scale/materials(임시)",
+    "static-scale/color",
+    "static-scale/font-family"
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "dimension-00": {
+    "value": "0",
+    "type": "dimension"
+  },
+  "dimension-25": {
+    "value": "2",
+    "type": "dimension"
+  },
+  "dimension-50": {
+    "value": "4",
+    "type": "dimension"
+  },
+  "dimension-75": {
+    "value": "6",
+    "type": "dimension"
+  },
+  "dimension-100": {
+    "value": "8",
+    "type": "dimension"
+  },
+  "dimension-125": {
+    "value": "10",
+    "type": "dimension"
+  },
+  "dimension-150": {
+    "value": "12",
+    "type": "dimension"
+  },
+  "dimension-200": {
+    "value": "16",
+    "type": "dimension"
+  },
+  "dimension-225": {
+    "value": "18",
+    "type": "dimension"
+  },
+  "dimension-250": {
+    "value": "20",
+    "type": "dimension"
+  },
+  "dimension-300": {
+    "value": "24",
+    "type": "dimension"
+  },
+  "dimension-350": {
+    "value": "28",
+    "type": "dimension"
+  },
+  "dimension-375": {
+    "value": "30",
+    "type": "dimension"
+  },
+  "dimension-400": {
+    "value": "32",
+    "type": "dimension"
+  },
+  "dimension-500": {
+    "value": "40",
+    "type": "dimension"
+  },
+  "dimension-600": {
+    "value": "48",
+    "type": "dimension"
+  },
+  "dimension-700": {
+    "value": "56",
+    "type": "dimension"
+  },
+  "dimension-750": {
+    "value": "60",
+    "type": "dimension"
+  },
+  "dimension-800": {
+    "value": "64",
+    "type": "dimension"
+  },
+  "dimension-900": {
+    "value": "72",
+    "type": "dimension"
+  },
+  "dimension-950": {
+    "value": "76",
+    "type": "dimension"
+  },
+  "dimension-1000": {
+    "value": "80",
+    "type": "dimension"
+  },
+  "dimension-1100": {
+    "value": "88",
+    "type": "dimension"
+  },
+  "dimension-1150": {
+    "value": "92",
+    "type": "dimension"
+  },
+  "dimension-1200": {
+    "value": "100",
+    "type": "dimension"
+  },
+  "dimension-1300": {
+    "value": "108",
+    "type": "dimension"
+  },
+  "dimension-1400": {
+    "value": "116",
+    "type": "dimension"
+  },
+  "dimension-1500": {
+    "value": "124",
+    "type": "dimension"
+  },
+  "dimension-1600": {
+    "value": "132",
+    "type": "dimension"
+  },
+  "dimension-1700": {
+    "value": "140",
+    "type": "dimension"
+  },
+  "dimension-1800": {
+    "value": "148",
+    "type": "dimension"
+  },
+  "dimension-1900": {
+    "value": "156",
+    "type": "dimension"
+  },
+  "dimension-2000": {
+    "value": "164",
+    "type": "dimension"
+  },
+  "dimension-2100": {
+    "value": "172",
+    "type": "dimension"
+  },
+  "dimension-2200": {
+    "value": "180",
+    "type": "dimension"
+  },
+  "dimension-2300": {
+    "value": "188",
+    "type": "dimension"
+  },
+  "dimension-2400": {
+    "value": "196",
+    "type": "dimension"
+  },
+  "dimension-2500": {
+    "value": "204",
+    "type": "dimension"
+  },
+  "dimension-2600": {
+    "value": "212",
+    "type": "dimension"
+  },
+  "dimension-2700": {
+    "value": "220",
+    "type": "dimension"
+  },
+  "dimension-2800": {
+    "value": "228",
+    "type": "dimension"
+  },
+  "dimension-2900": {
+    "value": "236",
+    "type": "dimension"
+  },
+  "dimension-3000": {
+    "value": "244",
+    "type": "dimension"
+  }
+}

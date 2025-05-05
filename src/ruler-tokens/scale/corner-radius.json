@@ -1,0 +1,30 @@
+{
+  "corner-radius-25": {
+    "value": "2",
+    "type": "borderRadius"
+  },
+  "corner-radius-50": {
+    "value": "4",
+    "type": "borderRadius"
+  },
+  "corner-radius-75": {
+    "value": "6",
+    "type": "borderRadius"
+  },
+  "corner-radius-100": {
+    "value": "8",
+    "type": "borderRadius"
+  },
+  "corner-radius-200": {
+    "value": "16",
+    "type": "borderRadius"
+  },
+  "corner-radius-250": {
+    "value": "20",
+    "type": "borderRadius"
+  },
+  "corner-radius-full": {
+    "value": "9999",
+    "type": "borderRadius"
+  }
+}

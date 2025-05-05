@@ -1,0 +1,16 @@
+{
+  "narrow-base": {
+    "ios": {
+      "value": "0",
+      "type": "letterSpacing"
+    },
+    "android": {
+      "value": "-0.5",
+      "type": "letterSpacing"
+    },
+    "web": {
+      "value": "0",
+      "type": "letterSpacing"
+    }
+  }
+}

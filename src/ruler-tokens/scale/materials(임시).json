@@ -1,0 +1,18 @@
+{
+  "blur-test": {
+    "value": {
+      "fill": "rgba(210, 210, 210, 0.49)",
+      "opacity": "1",
+      "backgroundBlur": "40px",
+      "x": "color-dodge, normal"
+    },
+    "type": "composition"
+  },
+  "blur-test-2": {
+    "value": {
+      "fill": "rgba({scale.gray-300} , 0.49)",
+      "backgroundBlur": "40"
+    },
+    "type": "composition"
+  }
+}
