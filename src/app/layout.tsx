@@ -1,72 +1,35 @@
 // src/app/layout.tsx
-'use client';
-
-import React from 'react';
+import '../styles/globals.css';
+import { ThemeProvider } from 'next-themes';
 import Link from 'next/link';
+import PageThemeToggle from './components/pageThemeToggle';
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export const metadata = {
+  title: 'Ruler 디자인 시스템',
+  description: '29CM의 디자인 원칙을 반영한 컴포넌트/토큰 문서',
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ko">
-      <head>
-        <title>Ruler 디자인 시스템</title>
-        <meta name="description" content="29CM Ruler 디자인 시스템 문서" />
-      </head>
-      <body>
-        <header className="border-b">
-          <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-            <Link href="/" className="text-xl font-bold">
-              Ruler 디자인 시스템
-            </Link>
-            <nav>
-              <ul className="flex space-x-6">
-                <li>
-                  <Link href="/components" className="hover:text-blue-600 transition-colors">
-                    컴포넌트
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/tokens" className="hover:text-blue-600 transition-colors">
-                    디자인 토큰
-                  </Link>
-                </li>
-                <li>
-                  <a href="https://www.figma.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">
-                    Figma
-                  </a>
-                </li>
-              </ul>
+    <html lang="ko" suppressHydrationWarning>
+      <body className="bg-white text-gray-900 dark:bg-semantic-fill-surface-black dark:text-semantic-text-on-color">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
+          <header className="border-b py-4 px-6 flex justify-between items-center">
+            <Link href="/" className="text-xl font-bold">Ruler</Link>
+            <nav className="space-x-4 text-sm">
+              <Link href="/components">컴포넌트</Link>
+              <Link href="/tokens">디자인 토큰</Link>
+              <a href="https://www.figma.com/" target="_blank">Figma</a>
             </nav>
-          </div>
-        </header>
-        
-        <main>
-          {children}
-        </main>
-        
-        <footer className="bg-gray-100 mt-12">
-          <div className="container mx-auto px-4 py-8">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <div className="mb-4 md:mb-0">
-                <p className="text-gray-600">© 2025 29CM. All rights reserved.</p>
-              </div>
-              <div className="flex space-x-4">
-                <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
-                  GitHub
-                </a>
-                <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
-                  Storybook
-                </a>
-                <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
-                  Figma
-                </a>
-              </div>
-            </div>
-          </div>
-        </footer>
+            <PageThemeToggle />
+          </header>
+          
+          <main className="px-6 py-10">{children}</main>
+          
+          <footer className="border-t text-center text-xs text-gray-500 py-4">
+            © 2025 29CM. All rights reserved.
+          </footer>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -1,32 +1,36 @@
 // src/app/page.tsx
-import Link from 'next/link';
 import React from 'react';
 
 export default function HomePage() {
   return (
-    <div className="container mx-auto py-12 px-4">
-      <h1 className="text-4xl font-bold mb-6">Ruler 디자인 시스템</h1>
-      <p className="text-xl mb-8">
-        29CM의 디자인 시스템으로, 브랜드의 일관성을 유지하면서도 효율적인 디자인·개발 협업을 가능하게 하는 시스템입니다.
+    <section className="max-w-4xl mx-auto py-20 px-6">
+      <h1 className="text-4xl sm:text-6xl font-extrabold mb-6 leading-tight text-left">
+        A system designed<br />for clarity, not memory.
+      </h1>
+      <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-4 text-left">
+        The design system isn’t just how we build —<br />
+        it’s how we stay aligned.
       </p>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-        <Link href="/components" 
-          className="block p-6 border rounded-lg hover:shadow-md transition-shadow">
-          <h2 className="text-2xl font-bold mb-2">컴포넌트</h2>
-          <p className="text-gray-600">
-            버튼, 태그, 다이얼로그 등 Ruler의 기본 UI 컴포넌트입니다.
-          </p>
-        </Link>
-        
-        <Link href="/tokens" 
-          className="block p-6 border rounded-lg hover:shadow-md transition-shadow">
-          <h2 className="text-2xl font-bold mb-2">디자인 토큰</h2>
-          <p className="text-gray-600">
-            컬러, 타이포그래피, 스페이싱 등 Ruler의 디자인 토큰입니다.
-          </p>
-        </Link>
+      <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-4 text-left">
+        <strong className="font-medium text-black dark:text-white">Ruler</strong> enables designers and developers to work in their own tools,<br />
+        while thinking in the same structure and speaking the same language.
+      </p>
+      <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-4 text-left">
+        Freedom in expression begins with shared rules.<br />
+        Efficiency comes from clear principles.
+      </p>
+      <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-10 text-left">
+        This document is <strong className="font-medium text-black dark:text-white">Ruler’s Single Source of Truth</strong> —<br />
+        a shared foundation for consistent, scalable, and brand-aligned UI.
+      </p>
+      <div className="flex gap-4">
+        <a href="/components" className="px-5 py-3 bg-black text-white rounded hover:bg-gray-800">
+          컴포넌트 보러가기
+        </a>
+        <a href="/tokens" className="px-5 py-3 border border-black rounded hover:bg-gray-100 dark:border-white dark:text-white">
+          디자인 토큰
+        </a>
       </div>
-    </div>
+    </section>
   );
 }

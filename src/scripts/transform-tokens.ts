@@ -312,7 +312,7 @@ function generateTailwindTheme() {
   return { tailwindTheme, lightColors, darkColors };
 }
 
-// CSS 변수 생성 (수정된 부분)
+// CSS 변수 생성 (수정된 부분 - 라이트 모드 스케일 추가 및 다크 모드 클래스 지원)
 function generateCSSVariables(tailwindTheme, lightColors, darkColors) {
   // 정적 색상 불러오기
   const staticColors = JSON.parse(
@@ -421,10 +421,63 @@ function generateCSSVariables(tailwindTheme, lightColors, darkColors) {
     }
   }
   
-  css += '}\n';
+  // 라이트 모드 스케일 색상 추가
+  if (lightColors && lightColors.scale) {
+    for (const key in lightColors.scale) {
+      if (Object.prototype.hasOwnProperty.call(lightColors.scale, key) && !key.includes('alpha')) {
+        const colorValue = processValue(lightColors.scale[key].value);
+        if (colorValue !== '') {
+          css += `  --color-scale-${key}: ${colorValue};\n`;
+        }
+      }
+    }
+  }
+
+  // 라이트 모드 알파 색상 처리
+  if (lightColors && lightColors.scale) {
+    for (const key in lightColors.scale) {
+      if (Object.prototype.hasOwnProperty.call(lightColors.scale, key) && key.includes('alpha')) {
+        const colorObj = lightColors.scale[key];
+        
+        if (colorObj.$extensions && 
+            colorObj.$extensions['studio.tokens'] && 
+            colorObj.$extensions['studio.tokens'].modify && 
+            colorObj.$extensions['studio.tokens'].modify.type === 'alpha') {
+          
+          const alpha = parseFloat(colorObj.$extensions['studio.tokens'].modify.value);
+          
+          // 참조 값 처리
+          let baseColor = colorObj.value;
+          if (typeof baseColor === 'string' && baseColor.startsWith('{') && baseColor.endsWith('}')) {
+            // 참조 값을 해결
+            const resolvedColor = resolveReference(baseColor, lightColors, darkColors, staticColors);
+            if (resolvedColor && typeof resolvedColor === 'string' && resolvedColor.startsWith('#')) {
+              css += `  --color-scale-${key}: ${hexToRgba(resolvedColor, alpha)};\n`;
+              continue;
+            }
+          }
+          
+          // 직접 값인 경우
+          if (typeof baseColor === 'string' && baseColor.startsWith('#')) {
+            css += `  --color-scale-${key}: ${hexToRgba(baseColor, alpha)};\n`;
+            continue;
+          }
+        }
+        
+        // 알파값이 없는 경우 또는 처리할 수 없는 경우
+        const colorValue = processValue(colorObj.value);
+        if (colorValue !== '') {
+          css += `  --color-scale-${key}: ${colorValue};\n`;
+        }
+      }
+    }
+  }
   
-  // 다크 모드 변수
-  css += '\n@media (prefers-color-scheme: dark) {\n';
+  css += '}\n\n';
+  
+  // 미디어 쿼리 다크 모드
+  css += '/* 시스템 설정에 따른 다크 모드 */\n';
+  css += '@media (prefers-color-scheme: dark) {\n';
   css += '  :root {\n';
 
   // 다크 모드 일반 스케일 색상
@@ -480,6 +533,64 @@ function generateCSSVariables(tailwindTheme, lightColors, darkColors) {
   }
   
   css += '  }\n';
+  css += '}\n\n';
+  
+  // 클래스 기반 다크 모드 (.dark)
+  css += '/* 클래스 기반 다크 모드 */\n';
+  css += '.dark {\n';
+
+  // 다크 모드 일반 스케일 색상
+  if (darkColors && darkColors.scale) {
+    for (const key in darkColors.scale) {
+      if (Object.prototype.hasOwnProperty.call(darkColors.scale, key) && !key.includes('alpha')) {
+        const colorValue = processValue(darkColors.scale[key].value);
+        if (colorValue !== '') {
+          css += `  --color-scale-${key}: ${colorValue};\n`;
+        }
+      }
+    }
+  }
+
+  // 다크 모드 알파 색상 별도 처리
+  if (darkColors && darkColors.scale) {
+    for (const key in darkColors.scale) {
+      if (Object.prototype.hasOwnProperty.call(darkColors.scale, key) && key.includes('alpha')) {
+        const colorObj = darkColors.scale[key];
+        
+        if (colorObj.$extensions && 
+            colorObj.$extensions['studio.tokens'] && 
+            colorObj.$extensions['studio.tokens'].modify && 
+            colorObj.$extensions['studio.tokens'].modify.type === 'alpha') {
+          
+          const alpha = parseFloat(colorObj.$extensions['studio.tokens'].modify.value);
+          
+          // 참조 값 처리
+          let baseColor = colorObj.value;
+          if (typeof baseColor === 'string' && baseColor.startsWith('{') && baseColor.endsWith('}')) {
+            // 참조 값을 해결
+            const resolvedColor = resolveReference(baseColor, lightColors, darkColors, staticColors);
+            if (resolvedColor && typeof resolvedColor === 'string' && resolvedColor.startsWith('#')) {
+              css += `  --color-scale-${key}: ${hexToRgba(resolvedColor, alpha)};\n`;
+              continue;
+            }
+          }
+          
+          // 직접 값인 경우
+          if (typeof baseColor === 'string' && baseColor.startsWith('#')) {
+            css += `  --color-scale-${key}: ${hexToRgba(baseColor, alpha)};\n`;
+            continue;
+          }
+        }
+        
+        // 알파값이 없는 경우 또는 처리할 수 없는 경우
+        const colorValue = processValue(colorObj.value);
+        if (colorValue !== '') {
+          css += `  --color-scale-${key}: ${colorValue};\n`;
+        }
+      }
+    }
+  }
+  
   css += '}\n';
   
   fs.writeFileSync(path.join(outputDir, 'tokens.css'), css);
