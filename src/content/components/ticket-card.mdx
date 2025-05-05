@@ -1,44 +1,35 @@
-**티켓 카드 MDX 파일 (src/content/components/ticket-card.mdx)**:
-
-```mdx
 ---
-title: "티켓 카드"
+title: "TicketCard"
 description: "티켓 카드는 이벤트나 프로모션 정보를 티켓 형태로 보여주는 컴포넌트입니다."
 status: "beta"
 version: "1.0.0"
-lastUpdated: "2025-05-04"
-category: "패턴"
-tags: ["UI", "카드", "티켓", "이벤트"]
+category: "pattern"
+tags: ["ticket", "promotion", "event", "card"]
+platforms: ["web", "ios", "android"]
+updated: "2025-05-04"
 ---
 
-# 티켓 카드
+## 🎟️ TicketCard 컴포넌트 소개
 
-티켓 카드는 이벤트나 프로모션 정보를 티켓 형태로 보여주는 컴포넌트입니다. 전시, 공연, 할인 이벤트 등 다양한 정보를 티켓 형태로 표현하여 사용자의 주목도를 높입니다.
+티켓 카드는 이벤트, 기획전, 혜택 등을 티켓 형태로 시각적으로 표현합니다.  
+다양한 뷰에서 사용자 주목도를 높일 수 있도록 설계되었습니다.
 
-## 사용 가이드
+---
 
-티켓 카드는 이벤트 목록, 프로모션 배너, 혜택 안내 등 다양한 영역에서 사용할 수 있습니다. 사용자가 참여할 수 있는 이벤트나 혜택을 직관적으로 보여줍니다.
+### 🧾 Props
 
-### 주요 기능
 
-- 다양한 티켓 형태 지원 (기본형, 절취선형, 물결형)
-- 이벤트 기간 표시
-- 남은 시간 카운트다운 옵션
-- 참여 가능 여부 표시
-- 색상 테마 적용 가능
+---
 
-## 코드 예시
+### 📌 상태 및 버전
 
-```jsx
-<TicketCard
-  type="perforated"
-  title="신규 회원 웰컴 쿠폰"
-  subtitle="가입 즉시 사용 가능한 할인 쿠폰"
-  startDate="2025-05-01"
-  endDate="2025-05-31"
-  discount={10000}
-  minAmount={30000}
-  theme="orange"
-  isActive={true}
-  showCountdown={true}
-/>
+- **Status**: `beta`
+- **Version**: `1.0.0`
+- **Last updated**: `2025-05-04`
+
+---
+
+### 📘 Changelog
+
+- 2025-05-04: TicketCard 문서 초안 작성 완료
+
