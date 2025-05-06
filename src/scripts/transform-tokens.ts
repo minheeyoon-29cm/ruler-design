@@ -734,7 +734,21 @@ if (tailwindTheme.spacing) {
         if (radius !== '') {
           let varName = `radius-${key}`;
           varName = removeDuplicatePrefix(varName);
-          css += `  --${varName}: ${radius};\n`;
+          
+          // 단위 처리
+          let radiusWithUnit = radius;
+          // 0은 특별 케이스로 그대로 유지
+          if (radiusWithUnit !== '0' && radiusWithUnit !== 0) {
+            // 이미 단위가 있는지 확인
+            if (typeof radiusWithUnit === 'number' || (typeof radiusWithUnit === 'string' && 
+                !radiusWithUnit.endsWith('px') && !radiusWithUnit.endsWith('rem') && 
+                !radiusWithUnit.endsWith('em') && !radiusWithUnit.endsWith('%'))) {
+              // 단위가 없으면 px 추가
+              radiusWithUnit = parseFloat(String(radiusWithUnit)) + 'px';
+            }
+          }
+          
+          css += `  --${varName}: ${radiusWithUnit};\n`;
         }
       }
     }

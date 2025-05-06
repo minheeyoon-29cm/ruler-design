@@ -190,3 +190,4 @@ npm run generate-mdx
 - `ex:src/content/components/button.mdx` 파일이 자동 생성됩니다.
 
 - 프론트매터와 예제 코드, Props 설명 섹션이 포함된 기본 템플릿이 생성됩니다.
+
