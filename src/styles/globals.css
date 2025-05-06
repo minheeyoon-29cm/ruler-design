@@ -11,6 +11,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+}
+
 /* 기본 폰트 및 배경 */
 body {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;  color: var(--color-semantic-text-primary);
@@ -22,62 +26,118 @@ body {
 
 /* 문서 컨테이너 */
 .container {
-  @apply max-w-4xl mx-auto px-4;
+  max-width: 64rem; /* 1024px = 4xl */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-dimension-150);
+  padding-right: var(--spacing-dimension-150);
 }
 
-/* 기본 타이포그래피 */
+
+/* Ruler Heading Styles (h1~h6) */
+
 h1 {
   font-size: var(--font-size-1000);
   font-weight: var(--bold-700);
   line-height: var(--line-height-3);
+  margin-top: var(--spacing-dimension-400);
+  margin-bottom: var(--spacing-dimension-200);
 }
 
 h2 {
+  font-size: var(--font-size-800);
+  font-weight: var(--bold-700);
+  line-height: var(--line-height-3);
+  margin-top: var(--spacing-dimension-350);
+  margin-bottom: var(--spacing-dimension-200);
+}
 
-}
-h3 
-h4 
-
-h1 {
-  @apply text-3xl mt-12 mb-6;
-}
-h2 {
-  @apply text-2xl mt-10 mb-4;
-}
 h3 {
-  @apply text-xl mt-8 mb-3;
+  font-size: var(--font-size-600);
+  font-weight: var(--bold-700);
+  line-height: var(--line-height-3);
+  margin-top: var(--spacing-dimension-300);
+  margin-bottom: var(--spacing-dimension-150);
 }
+
+h4 {
+  font-size: var(--font-size-500);
+  font-weight: var(--bold-700);
+  line-height: var(--line-height-2);
+  margin-top: var(--spacing-dimension-250);
+  margin-bottom: var(--spacing-dimension-150);
+}
+
+h5 {
+  font-size: var(--font-size-400);
+  font-weight: var(--bold-700);
+  line-height: var(--line-height-2);
+  margin-top: var(--spacing-dimension-200);
+  margin-bottom: var(--spacing-dimension-100);
+}
+
+h6 {
+  font-size: var(--font-size-300);
+  font-weight: var(--bold-700);
+  line-height: var(--line-height-1);
+  margin-top: var(--spacing-dimension-150);
+  margin-bottom: var(--spacing-dimension-100);
+}
+
+
+/* 단락 */
 p {
-  @apply mb-4 text-base text-gray-800;
+  margin-bottom: var(--spacing-dimension-200);
+  font-size: var(--font-size-200);
+  color: var(--color-semantic-text-primary);
 }
 
 /* 링크 스타일 */
 a {
-  @apply text-blue-600 hover:underline;
+  color: var(--color-semantic-text-link);
+  text-decoration: none;
 }
-
+a:hover {
+  text-decoration: underline;
+}
 /* 리스트 스타일 */
 ul {
-  @apply list-disc ml-6 mb-4 text-base;
+  list-style-type: disc;
+  margin-left: var(--spacing-dimension-200);
+  margin-bottom: var(--spacing-dimension-200);
+  font-size: var(--font-size-200);
 }
 ol {
-  @apply list-decimal ml-6 mb-4 text-base;
+  list-style-type: decimal;
+  margin-left: var(--spacing-dimension-200);
+  margin-bottom: var(--spacing-dimension-200);
+  font-size: var(--font-size-200);
 }
 
 /* 코드 블럭 & 인라인 코드 */
 pre {
-  @apply bg-gray-100 p-4 rounded text-sm overflow-x-auto mb-6;
+  background-color: var(--color-semantic-background-codeblock);
+  padding: var(--spacing-dimension-200);
+  border-radius: var(--radius-corner-radius-100);
+  font-size: var(--font-size-100);
+  overflow-x: auto;
+  margin-bottom: var(--spacing-dimension-300);
 }
 code {
-  @apply bg-gray-100 px-1 py-0.5 rounded text-sm font-mono;
+  background-color: var(--color-semantic-background-codeblock);
+  padding: var(--spacing-dimension-50) var(--spacing-dimension-100);
+  border-radius: var(--radius-corner-radius-50);
+  font-size: var(--font-size-100);
+  font-family: var(--font-family-mono);
 }
 
 /* footer or site meta text */
 footer {
-  @apply text-sm text-gray-500 mt-12 text-center;
+  font-size: var(--font-size-100);
+  color: var(--color-semantic-text-secondary);
+  margin-top: var(--spacing-dimension-400);
+  text-align: center;
 }
-
-
 
 /* === TEXT === */
 .text-primary {

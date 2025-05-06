@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko" suppressHydrationWarning>
-      <body className="bg-white text-gray-900 dark:bg-semantic-fill-surface-black dark:text-semantic-text-on-color">
+      <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
           <header className="border-b py-4 px-6 flex justify-between items-center">
             <Link href="/" className="text-xl font-bold">Ruler</Link>

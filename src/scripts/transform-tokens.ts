@@ -152,6 +152,11 @@ function removeDuplicatePrefix(varName) {
   
   if (parts.length < 3) return varName; // 최소 3개 이상의 부분이 있어야 함
   
+  // 특수 케이스 처리: color-static-static-X -> color-static-X
+  if (parts[0] === 'color' && parts[1] === 'static' && parts[2] === 'static') {
+    return 'color-static-' + parts.slice(3).join('-');
+  }
+  
   // 특수 케이스 처리: radius-corner-radius-X -> corner-radius-X
   if (parts[0] === 'radius' && parts[1] === 'corner' && parts[2] === 'radius') {
     return parts.slice(1).join('-'); // corner-radius-X 형태로 변환
@@ -462,6 +467,62 @@ function generateCSSVariables(tailwindTheme, lightColors, darkColors) {
     
     return value;
   }
+
+  // 시맨틱 색상용 새 함수
+  function processSemanticValue(value) {
+    if (value === undefined || value === null) return '';
+
+    
+    
+    // 객체인 경우
+    if (typeof value === 'object') {
+      if ('value' in value) {
+        return processSemanticValue(value.value);
+      }
+      return '';
+    }
+    
+    // 참조 문법 처리 - CSS 변수 참조로 변환
+    if (typeof value === 'string' && value.startsWith('{') && value.endsWith('}')) {
+      const referenceMatch = value.match(/^\{(.*)\}$/);
+      if (referenceMatch) {
+        const reference = referenceMatch[1];
+        const parts = reference.split('.');
+        
+        // 참조 경로 생성 후 중복 접두사 제거
+        if (parts[0] === 'scale') {
+          return `var(--color-scale-${parts[1]})`;
+        }
+        
+        if (parts[0] === 'static') {
+          // 중복 접두사가 제거된 변수명 사용
+          return `var(--color-static-${parts[1]})`;
+        }
+      }
+    }
+    
+    // 직접 색상값인 경우 해당 값과 일치하는 스케일/정적 변수 찾기
+    if (typeof value === 'string' && value.startsWith('#')) {
+      // 스케일 색상 검색
+      for (const key in lightColors.scale) {
+        if (lightColors.scale[key].value === value) {
+          return `var(--color-scale-${key})`;
+        }
+      }
+      
+      // 정적 색상 검색
+      if (staticColors.static) {
+        for (const key in staticColors.static) {
+          if (staticColors.static[key].value === value) {
+            return `var(--color-static-${key})`;
+          }
+        }
+      }
+    }
+    
+    return value;
+  }
+
   
   // 색상 변수 추가 - 중첩 객체 플랫하게 처리
   function addColorVariables(prefix, obj) {
@@ -488,11 +549,50 @@ function generateCSSVariables(tailwindTheme, lightColors, darkColors) {
       }
     }
   }
+
+  // 시맨틱 색상 변수 추가 함수 - addColorVariables 다음에 추가
+  function addSemanticColorVariables(prefix, obj) {
+    if (!obj || typeof obj !== 'object') return;
+    
+    for (const key in obj) {
+      if (Object.prototype.hasOwnProperty.call(obj, key)) {
+        const value = obj[key];
+        let varName = `${prefix}-${key}`;
+        
+        // 중복 접두사 제거
+        varName = removeDuplicatePrefix(varName);
+        
+        if (typeof value === 'object' && value !== null && !('value' in value)) {
+          // 중첩 객체인 경우 재귀적으로 처리
+          addSemanticColorVariables(varName, value);
+        } else {
+          const processedValue = processSemanticValue(value);
+          // 값이 빈 문자열이 아닌 경우에만 추가
+          if (processedValue !== '') {
+            
+            // 변수명에서 중복 접두사 제거
+            const varNameCleaned = removeDuplicatePrefix(varName);
+
+            // 참조 경로에서도 static-static 중복 제거
+            let fixedValue = processedValue;
+            if (typeof fixedValue === 'string' && fixedValue.includes('--color-static-static-')) {
+              fixedValue = fixedValue.replace('--color-static-static-', '--color-static-');
+            }
+            
+            css += `  --${varName}: ${fixedValue};\n`; 
+          }
+        }
+      }
+    }
+  }
   
   // 색상 변수 생성
   if (tailwindTheme.colors) {
     for (const category in tailwindTheme.colors) {
       if (Object.prototype.hasOwnProperty.call(tailwindTheme.colors, category)) {
+        // semantic 카테고리는 건너뛰고 별도 처리
+        if (category === 'semantic') continue;
+        
         const values = tailwindTheme.colors[category];
         if (typeof values === 'object' && values !== null) {
           // 중첩 객체 처리
@@ -508,20 +608,28 @@ function generateCSSVariables(tailwindTheme, lightColors, darkColors) {
         }
       }
     }
+    if (tailwindTheme.colors.semantic) {
+      // 시맨틱 색상은 CSS 변수 참조로 변환
+      addSemanticColorVariables('color-semantic', tailwindTheme.colors.semantic);
+    }
   }
   
-  // 글꼴 크기 변수 - px 값을 rem으로 변환
-  if (tailwindTheme.fontSize) {
-    for (const key in tailwindTheme.fontSize) {
-      if (Object.prototype.hasOwnProperty.call(tailwindTheme.fontSize, key)) {
-        const fontSize = processValue(tailwindTheme.fontSize[key]);
-        if (fontSize !== '') {
-          let varName = `font-size-${key}`;
-          varName = removeDuplicatePrefix(varName);
-          
-          // 숫자만 있는 경우 px 단위 추가 후 rem으로 변환
+// 글꼴 크기 변수 부분
+if (tailwindTheme.fontSize) {
+  for (const key in tailwindTheme.fontSize) {
+    if (Object.prototype.hasOwnProperty.call(tailwindTheme.fontSize, key)) {
+      const fontSize = processValue(tailwindTheme.fontSize[key]);
+      if (fontSize !== '') {
+        let varName = `font-size-${key}`;
+        varName = removeDuplicatePrefix(varName);
+        
+        // 이미 rem 단위가 있으면 그대로 사용
+        if (typeof fontSize === 'string' && fontSize.endsWith('rem')) {
+          css += `  --${varName}: ${fontSize};\n`;
+        } else {
+          // 그렇지 않으면 px 단위 추가 후 rem으로 변환
           let fontSizeWithUnit = fontSize;
-          if (typeof fontSize === 'number' || (typeof fontSize === 'string' && !fontSize.endsWith('rem') && !fontSize.endsWith('px') && !fontSize.endsWith('em'))) {
+          if (typeof fontSize === 'number' || (typeof fontSize === 'string' && !fontSize.endsWith('px') && !fontSize.endsWith('em'))) {
             fontSizeWithUnit = parseFloat(String(fontSize)) + 'px';
           }
           
@@ -532,6 +640,8 @@ function generateCSSVariables(tailwindTheme, lightColors, darkColors) {
       }
     }
   }
+}
+
    
   // 글꼴 두께 변수
   if (tailwindTheme.fontWeight) {
@@ -580,7 +690,7 @@ function generateCSSVariables(tailwindTheme, lightColors, darkColors) {
     }
   }
   
-// 스페이싱 변수 - px 값을 rem으로 변환
+// 스페이싱 변수 - 단위 처리 개선
 if (tailwindTheme.spacing) {
   for (const key in tailwindTheme.spacing) {
     if (Object.prototype.hasOwnProperty.call(tailwindTheme.spacing, key)) {
@@ -589,21 +699,28 @@ if (tailwindTheme.spacing) {
         let varName = `spacing-${key}`;
         varName = removeDuplicatePrefix(varName);
         
-        // 숫자만 있는 경우 px 단위 추가 후 rem으로 변환
-        let spacingWithUnit = spacing;
-        // 0은 특별 케이스로 그대로 유지
-        if (spacingWithUnit !== '0' && spacingWithUnit !== 0) {
-          if (typeof spacingWithUnit === 'number' || (typeof spacingWithUnit === 'string' && 
-              !spacingWithUnit.endsWith('px') && !spacingWithUnit.endsWith('rem') && 
-              !spacingWithUnit.endsWith('em') && !spacingWithUnit.endsWith('%'))) {
-            spacingWithUnit = parseFloat(String(spacingWithUnit)) + 'px';
+        // 이미 rem 단위가 있으면 그대로 사용
+        if (typeof spacing === 'string' && spacing.endsWith('rem')) {
+          css += `  --${varName}: ${spacing};\n`;
+        } else {
+          // 숫자만 있는 경우 px 단위 추가 후 rem으로 변환
+          let spacingWithUnit = spacing;
+          // 0은 특별 케이스로 그대로 유지
+          if (spacingWithUnit !== '0' && spacingWithUnit !== 0) {
+            if (typeof spacingWithUnit === 'number' || (typeof spacingWithUnit === 'string' && 
+                !spacingWithUnit.endsWith('px') && !spacingWithUnit.endsWith('em') && 
+                !spacingWithUnit.endsWith('%'))) {
+              spacingWithUnit = parseFloat(String(spacingWithUnit)) + 'px';
+            }
+            
+            // px 값만 rem으로 변환
+            if (typeof spacingWithUnit === 'string' && spacingWithUnit.endsWith('px')) {
+              spacingWithUnit = pxToRem(spacingWithUnit);
+            }
           }
           
-          // px 값을 rem으로 변환
-          spacingWithUnit = pxToRem(spacingWithUnit);
+          css += `  --${varName}: ${spacingWithUnit};\n`;
         }
-        
-        css += `  --${varName}: ${spacingWithUnit};\n`;
       }
     }
   }
