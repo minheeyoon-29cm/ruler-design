@@ -32,12 +32,12 @@
     "extraBold-800": "800"
   },
   "lineHeight": {
-    "line-height-1": "100%",
-    "line-height-2": "120%",
-    "line-height-3": "136%",
-    "line-height-4": "140%",
-    "line-height-5": "150%",
-    "line-height-6": "160%"
+    "line-height-1": "1",
+    "line-height-2": "1.2",
+    "line-height-3": "1.36",
+    "line-height-4": "1.4",
+    "line-height-5": "1.5",
+    "line-height-6": "1.6"
   },
   "letterSpacing": {
     "narrow-base": {
