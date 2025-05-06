@@ -870,6 +870,70 @@ if (darkColors && darkColors.scale) {
 css += '  }\n'; // :root 블록 닫기
 css += '}\n\n'; // @media 블록 닫기
 
+// .light 클래스 기반 라이트 모드 (next-themes 지원)
+css += '/* next-themes 라이트 모드 지원 */\n';
+css += '.light {\n';
+
+// 라이트 모드(root)와 동일한 변수 복사
+if (lightColors && lightColors.scale) {
+  for (const key in lightColors.scale) {
+    if (Object.prototype.hasOwnProperty.call(lightColors.scale, key) && !key.includes('alpha')) {
+      const colorValue = processValue(lightColors.scale[key].value);
+      if (colorValue !== '') {
+        let varName = `color-scale-${key}`;
+        varName = removeDuplicatePrefix(varName);
+        css += `  --${varName}: ${colorValue};\n`;
+      }
+    }
+  }
+  
+  // 라이트 모드 알파 색상도 복사
+  for (const key in lightColors.scale) {
+    if (Object.prototype.hasOwnProperty.call(lightColors.scale, key) && key.includes('alpha')) {
+      const colorObj = lightColors.scale[key];
+      
+      if (colorObj.$extensions && 
+          colorObj.$extensions['studio.tokens'] && 
+          colorObj.$extensions['studio.tokens'].modify && 
+          colorObj.$extensions['studio.tokens'].modify.type === 'alpha') {
+        
+        const alpha = parseFloat(colorObj.$extensions['studio.tokens'].modify.value);
+        
+        // 참조 값 처리
+        let baseColor = colorObj.value;
+        if (typeof baseColor === 'string' && baseColor.startsWith('{') && baseColor.endsWith('}')) {
+          const resolvedColor = resolveReference(baseColor, lightColors, darkColors, staticColors);
+          if (resolvedColor && typeof resolvedColor === 'string' && resolvedColor.startsWith('#')) {
+            let varName = `color-scale-${key}`;
+            varName = removeDuplicatePrefix(varName);
+            css += `  --${varName}: ${hexToRgba(resolvedColor, alpha)};\n`;
+            continue;
+          }
+        }
+        
+        // 직접 값인 경우
+        if (typeof baseColor === 'string' && baseColor.startsWith('#')) {
+          let varName = `color-scale-${key}`;
+          varName = removeDuplicatePrefix(varName);
+          css += `  --${varName}: ${hexToRgba(baseColor, alpha)};\n`;
+          continue;
+        }
+      }
+      
+      // 알파값이 없는 경우 또는 처리할 수 없는 경우
+      const colorValue = processValue(colorObj.value);
+      if (colorValue !== '') {
+        let varName = `color-scale-${key}`;
+        varName = removeDuplicatePrefix(varName);
+        css += `  --${varName}: ${colorValue};\n`;
+      }
+    }
+  }
+}
+
+// .light 클래스 블록 닫기
+css += '}\n\n';
+
 // 클래스 기반 다크 모드 (.dark)
 css += '/* 클래스 기반 다크 모드 */\n';
 css += '.dark {\n';

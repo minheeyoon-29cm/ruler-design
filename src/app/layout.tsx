@@ -13,7 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ko" suppressHydrationWarning>
       <body>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           <header className="border-b py-4 px-6 flex justify-between items-center">
             <Link href="/" className="text-xl font-bold">Ruler</Link>
             <nav className="space-x-4 text-sm">

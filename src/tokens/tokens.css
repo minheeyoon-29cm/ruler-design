@@ -326,6 +326,90 @@
   }
 }
 
+/* next-themes 라이트 모드 지원 */
+.light {
+  --color-scale-gray-00: #ffffff;
+  --color-scale-gray-100: #f4f4f4;
+  --color-scale-gray-200: #e4e4e4;
+  --color-scale-gray-300: #c4c4c4;
+  --color-scale-gray-400: #a0a0a0;
+  --color-scale-gray-500: #5d5d5d;
+  --color-scale-gray-600: #474747;
+  --color-scale-gray-700: #303033;
+  --color-scale-gray-800: #27272A;
+  --color-scale-gray-900: #19191A;
+  --color-scale-gray-950: #000000;
+  --color-scale-orange-red-100: #ffefeb;
+  --color-scale-orange-red-200: #ffbfaa;
+  --color-scale-orange-red-300: #ff916c;
+  --color-scale-orange-red-400: #ff6933;
+  --color-scale-orange-red-500: #ff4800;
+  --color-scale-orange-red-600: #d53f00;
+  --color-scale-orange-red-700: #ab3803;
+  --color-scale-orange-red-800: #823107;
+  --color-scale-orange-red-900: #582609;
+  --color-scale-orange-red-950: #2e1608;
+  --color-scale-deep-red-100: #FFE6E6;
+  --color-scale-deep-red-200: #F2A9A9;
+  --color-scale-deep-red-300: #E67373;
+  --color-scale-deep-red-400: #D94141;
+  --color-scale-deep-red-500: #CC1414;
+  --color-scale-deep-red-600: #AD0700;
+  --color-scale-deep-red-700: #8F0B00;
+  --color-scale-deep-red-800: #700D00;
+  --color-scale-deep-red-900: #520D00;
+  --color-scale-deep-red-950: #330A00;
+  --color-scale-blue-100: #ebf1ff;
+  --color-scale-blue-200: #b8cdff;
+  --color-scale-blue-300: #86a5ff;
+  --color-scale-blue-400: #5b7fff;
+  --color-scale-blue-500: #375fff;
+  --color-scale-blue-600: #203ff6;
+  --color-scale-blue-700: #1025e5;
+  --color-scale-blue-800: #0611bd;
+  --color-scale-blue-900: #010474;
+  --color-scale-blue-950: #000033;
+  --color-scale-yellow-100: #fff7f0;
+  --color-scale-yellow-200: #ffdfb9;
+  --color-scale-yellow-300: #ffc97f;
+  --color-scale-yellow-400: #ffb741;
+  --color-scale-yellow-500: #ffa800;
+  --color-scale-yellow-600: #d18d16;
+  --color-scale-yellow-700: #a37021;
+  --color-scale-yellow-800: #755322;
+  --color-scale-yellow-900: #47341b;
+  --color-scale-yellow-950: #19130c;
+  --color-scale-green-100: #eefee6;
+  --color-scale-green-200: #c2eeb2;
+  --color-scale-green-300: #81dc71;
+  --color-scale-green-400: #3fcb3c;
+  --color-scale-green-500: #12ba23;
+  --color-scale-green-600: #139e14;
+  --color-scale-green-700: #1e8215;
+  --color-scale-green-800: #246616;
+  --color-scale-green-900: #234a15;
+  --color-scale-green-950: #1b2e11;
+  --color-scale-gray-alpha-200: rgba(93, 93, 93, 0.08);
+  --color-scale-gray-alpha-300: rgba(93, 93, 93, 0.16);
+  --color-scale-gray-alpha-400: rgba(93, 93, 93, 0.24);
+  --color-scale-gray-alpha-500: rgba(93, 93, 93, 0.4);
+  --color-scale-gray-alpha-600: rgba(93, 93, 93, 0.52);
+  --color-scale-gray-alpha-700: rgba(93, 93, 93, 0.64);
+  --color-scale-gray-alpha-800: rgba(93, 93, 93, 0.8);
+  --color-scale-orange-red-alpha-200: rgba(255, 72, 0, 0.08);
+  --color-scale-orange-red-alpha-300: rgba(255, 72, 0, 0.16);
+  --color-scale-orange-red-alpha-400: rgba(255, 72, 0, 0.24);
+  --color-scale-deep-red-alpha-200: rgba(204, 20, 20, 0.08);
+  --color-scale-deep-red-alpha-300: rgba(204, 20, 20, 0.16);
+  --color-scale-deep-red-alpha-400: rgba(204, 20, 20, 0.24);
+  --color-scale-blue-alpha-200: rgba(55, 95, 255, 0.08);
+  --color-scale-blue-alpha-300: rgba(55, 95, 255, 0.16);
+  --color-scale-blue-alpha-400: rgba(55, 95, 255, 0.24);
+  --color-scale-green-alpha-200: rgba(18, 186, 35, 0.08);
+  --color-scale-green-alpha-300: rgba(18, 186, 35, 0.16);
+  --color-scale-green-alpha-400: rgba(18, 186, 35, 0.24);
+}
+
 /* 클래스 기반 다크 모드 */
 .dark {
   --color-scale-gray-00: #000000;
