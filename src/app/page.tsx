@@ -4,7 +4,7 @@ import React from 'react';
 export default function HomePage() {
   return (
     <section className="px-md py-md max-w-4xl mx-auto">
-      <h1 className="title-xxl-bold text-primary font-bold mb-lg leading-tight text-left">
+      <h1 className="mb-lg leading-tight text-left">
         A system designed<br />for clarity, not memory.
       </h1>
       <p className="text-size-md text-secondary mb-md text-left">

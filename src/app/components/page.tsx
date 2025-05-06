@@ -14,7 +14,7 @@ export default function ComponentsPage() {
 
   return (
     <div className="px-md py-md">
-      <h1 className="text-size-xl text-primary mb-lg">컴포넌트</h1>
+      <h1 className="text-primary mb-lg">컴포넌트</h1>
       <p className="text-size-md text-secondary mb-lg">
         Ruler 디자인 시스템의 컴포넌트 라이브러리입니다. 각 컴포넌트는 29CM의 디자인 원칙을 따라 설계되었습니다.
       </p>

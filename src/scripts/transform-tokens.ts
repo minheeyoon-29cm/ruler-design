@@ -15,26 +15,48 @@ if (!fs.existsSync(path.join(outputDir, 'processed'))) {
 }
 
 // 색상을 hexadecimal에서 rgba로 변환하는 함수
-function hexToRgba(hex, alpha = 1) {
+function hexToRgba(hex: string | number, alpha = 1) {
+  // 숫자를 문자열로 변환
+  const hexString = typeof hex === 'number' ? hex.toString() : hex;
+  
   // HEX 값에서 # 기호 제거
-  hex = hex.replace('#', '');
+  const cleanHex = hexString.replace('#', '');
   
   // RGB 값 추출
   let r, g, b;
-  if (hex.length === 3) {
+  if (cleanHex.length === 3) {
     // 3자리 HEX 색상인 경우 (예: #FFF)
-    r = parseInt(hex.charAt(0) + hex.charAt(0), 16);
-    g = parseInt(hex.charAt(1) + hex.charAt(1), 16);
-    b = parseInt(hex.charAt(2) + hex.charAt(2), 16);
+    r = parseInt(cleanHex.charAt(0) + cleanHex.charAt(0), 16);
+    g = parseInt(cleanHex.charAt(1) + cleanHex.charAt(1), 16);
+    b = parseInt(cleanHex.charAt(2) + cleanHex.charAt(2), 16);
   } else {
     // 6자리 HEX 색상인 경우 (예: #FFFFFF)
-    r = parseInt(hex.substring(0, 2), 16);
-    g = parseInt(hex.substring(2, 4), 16);
-    b = parseInt(hex.substring(4, 6), 16);
+    r = parseInt(cleanHex.substring(0, 2), 16);
+    g = parseInt(cleanHex.substring(2, 4), 16);
+    b = parseInt(cleanHex.substring(4, 6), 16);
   }
   
   // rgba 문자열 반환
   return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+}
+
+// px를 rem으로 변환하는 함수 (기본값: 1rem = 16px)
+function pxToRem(pxValue: string | number, base = 16) {
+  if (typeof pxValue !== 'string' && typeof pxValue !== 'number') return pxValue;
+  
+  // px 단위 확인 및 제거
+  let value = pxValue;
+  if (typeof value === 'string') {
+    value = value.replace('px', '');
+  }
+  
+  // 숫자로 변환
+  const num = parseFloat(String(value));
+  if (isNaN(num)) return pxValue;
+  
+  // rem 값 계산 (소수점 4자리까지 반올림)
+  const remValue = Math.round((num / base) * 10000) / 10000;
+  return `${remValue}rem`;
 }
 
 // 참조 변수 처리 함수 (예: "{scale.gray-900}" -> "#f4f4f4")
@@ -139,7 +161,7 @@ function removeDuplicatePrefix(varName) {
   if (parts[0] === 'font' && parts[1] === 'weight' && parts.length >= 4) {
     return parts.slice(2).join('-'); // thin-100, bold-700 등의 형태로 변환
   }
-  
+
   // 기존 코드는 그대로 유지
   // 첫 번째 부분과 두 번째 이상의 부분이 일치하는지 확인
   const prefix = parts[0];
@@ -280,6 +302,9 @@ function processTypographyTokens() {
             // 값의 유형에 따라 추가 처리
             if (valueType === 'lineHeight' && typeof extractedValue === 'string') {
               extractedValue = processPercentageValue(extractedValue);
+            } else if (valueType === 'fontSize' && (typeof extractedValue === 'string' || typeof extractedValue === 'number')) {
+              // 폰트 사이즈는 rem으로 변환
+              extractedValue = pxToRem(extractedValue);
             }
             
             result[key] = extractedValue;
@@ -294,9 +319,9 @@ function processTypographyTokens() {
     return result;
   }
 
-  // 타이포그래피 토큰을 Tailwind 형식으로 변환 (lineHeight 특별 처리 추가)
+  // 타이포그래피 토큰을 Tailwind 형식으로 변환 (특별 처리 추가)
   const tailwindTypography = {
-    fontSize: extractAndProcessValues(fontSizes),
+    fontSize: extractAndProcessValues(fontSizes, 'fontSize'), // 폰트 사이즈는 rem으로 변환
     fontWeight: extractAndProcessValues(fontWeights),
     lineHeight: extractAndProcessValues(lineHeights, 'lineHeight'), // 백분율 값 처리를 위한 유형 지정
     letterSpacing: extractAndProcessValues(letterSpacings),
@@ -485,7 +510,7 @@ function generateCSSVariables(tailwindTheme, lightColors, darkColors) {
     }
   }
   
-  // 글꼴 크기 변수
+  // 글꼴 크기 변수 - px 값을 rem으로 변환
   if (tailwindTheme.fontSize) {
     for (const key in tailwindTheme.fontSize) {
       if (Object.prototype.hasOwnProperty.call(tailwindTheme.fontSize, key)) {
@@ -493,12 +518,21 @@ function generateCSSVariables(tailwindTheme, lightColors, darkColors) {
         if (fontSize !== '') {
           let varName = `font-size-${key}`;
           varName = removeDuplicatePrefix(varName);
-          css += `  --${varName}: ${fontSize};\n`;
+          
+          // 숫자만 있는 경우 px 단위 추가 후 rem으로 변환
+          let fontSizeWithUnit = fontSize;
+          if (typeof fontSize === 'number' || (typeof fontSize === 'string' && !fontSize.endsWith('rem') && !fontSize.endsWith('px') && !fontSize.endsWith('em'))) {
+            fontSizeWithUnit = parseFloat(String(fontSize)) + 'px';
+          }
+          
+          // px 값을 rem으로 변환
+          const remValue = pxToRem(fontSizeWithUnit);
+          css += `  --${varName}: ${remValue};\n`;
         }
       }
     }
   }
-  
+   
   // 글꼴 두께 변수
   if (tailwindTheme.fontWeight) {
     for (const key in tailwindTheme.fontWeight) {
@@ -546,19 +580,34 @@ function generateCSSVariables(tailwindTheme, lightColors, darkColors) {
     }
   }
   
-  // 스페이싱 변수
-  if (tailwindTheme.spacing) {
-    for (const key in tailwindTheme.spacing) {
-      if (Object.prototype.hasOwnProperty.call(tailwindTheme.spacing, key)) {
-        const spacing = processValue(tailwindTheme.spacing[key]);
-        if (spacing !== '') {
-          let varName = `spacing-${key}`;
-          varName = removeDuplicatePrefix(varName);
-          css += `  --${varName}: ${spacing};\n`;
+// 스페이싱 변수 - px 값을 rem으로 변환
+if (tailwindTheme.spacing) {
+  for (const key in tailwindTheme.spacing) {
+    if (Object.prototype.hasOwnProperty.call(tailwindTheme.spacing, key)) {
+      const spacing = processValue(tailwindTheme.spacing[key]);
+      if (spacing !== '') {
+        let varName = `spacing-${key}`;
+        varName = removeDuplicatePrefix(varName);
+        
+        // 숫자만 있는 경우 px 단위 추가 후 rem으로 변환
+        let spacingWithUnit = spacing;
+        // 0은 특별 케이스로 그대로 유지
+        if (spacingWithUnit !== '0' && spacingWithUnit !== 0) {
+          if (typeof spacingWithUnit === 'number' || (typeof spacingWithUnit === 'string' && 
+              !spacingWithUnit.endsWith('px') && !spacingWithUnit.endsWith('rem') && 
+              !spacingWithUnit.endsWith('em') && !spacingWithUnit.endsWith('%'))) {
+            spacingWithUnit = parseFloat(String(spacingWithUnit)) + 'px';
+          }
+          
+          // px 값을 rem으로 변환
+          spacingWithUnit = pxToRem(spacingWithUnit);
         }
+        
+        css += `  --${varName}: ${spacingWithUnit};\n`;
       }
     }
   }
+}
   
   // 모서리 반경 변수
   if (tailwindTheme.borderRadius) {
@@ -774,8 +823,6 @@ css += '}\n';
 fs.writeFileSync(path.join(outputDir, 'tokens.css'), css);
 console.log('CSS 변수가 성공적으로 생성되었습니다!');
 }
-
-
 
 // 메인 함수 실행
 function main() {
