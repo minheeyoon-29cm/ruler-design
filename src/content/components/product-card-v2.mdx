@@ -1,65 +1,211 @@
 ---
 title: "ProductCard V2"
-description: "브랜드명, 제품 정보, 메타데이터를 시각적으로 통합 표현하는 최신 카드 컴포넌트입니다."
+description: "29CM 내에서 파트너 브랜드의 상품을 고객에게 보여주기 위한 대표 카드형 컴포넌트입니다. 브랜드명, 제품 정보, 메타데이터를 시각적으로 통합 표현하며, 구매 판단에 필요한 핵심 정보를 포함하고 있습니다."
 status: "draft"
 version: "2.0.0"
 category: "pattern"
-tags: ["card", "product", "commerce"]
+tags: ["card", "product", "commerce", "sdui"]
 platforms: ["web", "ios", "android"]
 updated: "2025-06-01"
 ---
 
-
 # ProductCard V2
 
-브랜드명, 상품명, 가격, 뱃지 등 핵심 정보를 시각적으로 표현하는 **모듈형 카드 컴포넌트**입니다.  
-다양한 상품 리스트 및 콘텐츠 영역에서 활용됩니다.
+## 🎯 핵심 변경사항 (v1 → v2)
 
----
+- SDUI 대응 구조로 재설계되어 다양한 뷰에서 동적으로 조합 가능
+- 실시간 프로모션 배지 및 상태 표현 기능 강화
+- 데이터 구조 최적화로 백엔드 API 스키마와 일치
 
-## Purpose & Context
+## 🧱 구조 및 설계 개요
 
-- ProductCard V1의 한계를 개선한 최신 버전
-- 리스트 뷰, 추천 영역 등에서 정보 전달 최적화
-- 브랜드 경험 및 플랫폼 간 UI 일관성 제공
+ProductCard V2는 BaseCard 위에 Slot 형태로 구성되는 구조적 패턴입니다. 
+BaseCard는 padding, border-radius, touch-area 등을 공통적으로 제공하는 최소 단위의 레이아웃 컨테이너입니다. 
+이 위에 preview, header, productInfo, metadata, action 등의 Slot이 계층적으로 배치되며, 각 Slot은 독립적으로 렌더링 여부를 제어할 수 있습니다.
 
----
+CompactProductCard, TicketCard 등은 동일한 BaseCard 구조를 공유하며, 시각적 스타일과 Slot 구성이 일부 다릅니다.
 
-## Component Overview
+## 📦 사용 목적
+
+ProductCard는 29CM 내에서 파트너 브랜드의 상품을 Display하며, 구매를 원하는 고객이 판단에 필요한 정보를 명확히 인식할 수 있도록 구성된 카드형 컴포넌트입니다.
+
+- 상품 정보를 고객에게 직관적으로 제공
+- 마케팅 목적의 배지, 상태, 찜하기 등 주요 인터랙션 포함
+- 리스트/그리드/기획전 등 다양한 맥락에 대응 가능
+- SDUI 기반으로 서버에서 카드 구성 데이터를 제어 가능
+
+## 📱 시각적 예시
+
+### 기본 레이아웃
+![ProductCard 기본](https://img.29cm.co.kr/next-contents/2025/05/22/43bc0ef7a2564405914b873ba6ba4fa4_20250522185003.jpg?width=1920&format=webp)
+
+### experiments 적용 전후 비교
+- 기본: 배지 좌상단, 세로형 메타데이터
+- 실험 적용: 배지 우상단, 가로형 메타데이터
+
+## 👥 역할별 사용 가이드
+
+### 🎨 디자이너
+- 카드 레이아웃/스타일 설정 (default, compact 등)
+- 배지 위치 및 스타일 가이드 작성
+- 다크모드 디자인 추가 가능
+
+### 📋 PM
+- 배지 노출 조건 정의 (쿠폰, 신상품 등)
+- 할인율, 품절, 품절 대체 정책 수립
+- A/B 테스트용 변형 기획
+
+### 💻 개발자
+- ViewFragment 기반 Slot 구성
+- 상태 제어 및 핸들러 연결 (찜, 클릭)
+- 이미지 lazy loading 및 최적화 처리
+- 서버에서 내려오는 JSON 기반 SDUI 렌더링 처리
+
+## 📊 API 응답 예시
+
+```json
+{
+  "productId": "123456",
+  "productName": "비타민 바디워시",
+  "thumbnailUrl": "https://...jpg",
+  "isSoldOut": false,
+  "originalPrice": 39000,
+  "displayPrice": 31200,
+  "saleRate": 20,
+  "brandId": 789,
+  "brandName": "에르세띠",
+  "reviewScore": 4.8,
+  "reviewCount": 351,
+  "likeCount": 2439,
+  "isLiked": true,
+  "campaignBadges": [{ "text": "이굿위크" }],
+  "badges": [{ "text": "무료배송" }, { "text": "쿠폰" }],
+  "experiments": {
+    "badge-position": "top-right",
+    "show-rank": "true",
+    "price-emphasis": "sale-rate",
+    "metadata-layout": "horizontal"
+  }
+}
+```
+
+## ⚙️ 주요 Props
+
+- `data`: 상품에 대한 전체 정보 객체
+- `variant`: default 또는 compact 지정
+- `showBadges`: true일 경우 일반 뱃지 표시
+- `showMetadata`: 리뷰, 좋아요 등 표시 여부
+- `onClick`: 카드 클릭 시 호출할 핸들러
+- `onLike`: (productId, isLiked) 형태로 상태 포함하여 찜하기 토글 핸들러 제공
+- `config`: SDUI 설정값 (badge 위치, 가격표시 여부 등)
+
+## 🧩 SDUI 설정 예시
+
+```js
+const sduiConfig = {
+  layout: "grid",
+  badgePosition: "top-right",
+  showPrice: true,
+  showBrand: true,
+  metadataOrder: ["like", "review"]
+}
+```
+
+### 실험 영역 (`experiments`)
+
+`experiments` 필드는 마케팅팀이나 실험 설계자가 SDUI 형태로 카드 UI를 변형할 수 있도록 설계된 영역입니다. 예:
+- badge-position: 뱃지 위치 설정 (`top-left`, `top-right`, `bottom`)
+- show-rank: 순위 표시 여부
+- price-emphasis: 할인율 vs 가격 강조
+- metadata-layout: 메타데이터 레이아웃 (세로 vs 가로)
+
+## ⚠️ 예외 상황 처리
+
+### 품절 상품
+- `isSoldOut: true` 시 썸네일에 dimming 오버레이 표시
+- 클릭 및 찜하기 버튼 비활성화
+- 가격 정보는 흐린 스타일로 유지 표시
+
+### 이미지 로딩 실패
+- placeholder 이미지 fallback 처리
+- alt 텍스트 제공 필수 (접근성 보장)
+
+### API 데이터 누락
+- 필수값 누락 시 카드 전체 숨김 처리
+- 선택값 누락 시 해당 영역만 비노출
+
+## ⚡ 성능 고려사항
+
+- 10개 이상 렌더링 시 리스트 가상화 적용 권장
+- 이미지 lazy loading 필수 적용
+- 썸네일 사이즈에 맞는 최적화 이미지 요청 필요
+- 찜하기 버튼은 debounce(300ms) 적용 필요
+
+## ♿ 접근성 가이드
+
+- 카드 전체: `role="button"` 지정
+- `aria-label`로 상품 요약 텍스트 제공 (상품명, 브랜드, 가격 포함)
+- 찜하기 버튼: `aria-pressed` 활용
+- 키보드 Tab → 카드 포커스 → 좋아요 버튼 순서로 탐색 가능
+
+## 💻 실제 구현 예시
 
 ```tsx
-<ProductCardV2
-  brandName="Maison Kitsuné"
-  productInfo={{
-    name: 'Fox Head Patch Sweatshirt',
-    price: 210000,
-    saleRate: 15,
-    badges: ['NEW'],
-  }}
-  metadata={{
-    rating: 4.8,
-    reviewCount: 201,
-  }}
-/>
-``` 
+interface ProductCardProps {
+  data: ProductData;
+  variant?: 'default' | 'compact';
+  onClick?: (productId: string) => void;
+  onLike?: (productId: string, isLiked: boolean) => void;
+}
 
---- 
+const ProductCard: React.FC<ProductCardProps> = ({ 
+  data, 
+  variant = 'default',
+  onClick,
+  onLike 
+}) => {
+  const badgePosition = data.experiments?.['badge-position'] || 'top-left';
 
-## Props
+  return (
+    <BaseCard className={`product-card ${variant}`} onClick={() => onClick?.(data.productId)}>
+      {/* 실제 JSX 구조 생략 */}
+    </BaseCard>
+  );
+};
+```
 
+## 🧪 테스트 시나리오
 
---- 
+- 카드 클릭 시 상품 상세로 이동
+- 찜하기 토글 동작 정상 여부
+- 품절 시 인터랙션 비활성화 확인
+- `badge-position` 값에 따라 UI 반응 여부 확인
+- `price-emphasis` 변경에 따른 스타일 전환 테스트
+- 100개 이상 렌더링 시 스크롤 성능 확인
+- Lazy Load 이미지 동작 및 fallback 처리
 
-## Platform Notes
+## 🔄 마이그레이션 가이드
 
-- iOS/Android: 동일 UI 구성 사용 (React Native 기준)
-- 예외 케이스: 리스트 길이에 따른 scroll 설정 차이 존재
+기존 v1 사용자는 다음과 같이 변경 필요:
 
---- 
+```diff
+// Before (v1)
+- <ProductCard brand={data.brand} name={data.name} />
 
-## Changelog 
+// After (v2)
++ <ProductCard data={{productInfo: {brandName, productName}}} />
+```
 
-- 2025-06-01: ProductCard V2 정식 도입, ThemeToggle 연동 및 구조 개선
-- 2025-05-05: hover 시 zoom 모션 토큰 적용
-- 2025-04-18: productInfo slot 구조 개선
+## ✅ 개발자 체크리스트 (마이그레이션 시)
 
+- thumbnailUrl은 항상 full URL로 제공되어야 합니다.
+- `isLiked`는 상태값과 함께 전달되며, 외부 store와 동기화 필요
+- `campaignBadges`와 `badges`는 구분해서 처리해야 하며, 시각적으로는 동일 컴포넌트로 구성됨
+- `rank`, `experiments`는 Optional 필드로, 미존재 시 fallback 처리 필요
+- `onLike`는 productId와 isLiked를 함께 전달하도록 구현해야 함
+
+## 🔚 향후 고려 사항
+
+- Lottie 기반 찜하기 애니메이션 적용 가능성
+- Lazy Load Placeholder 구성
+- 실험용 experiment 필드 기반 동적 스타일 제어

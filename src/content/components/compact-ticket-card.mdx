@@ -1,0 +1,122 @@
+---
+title: "CompactTicketCard"
+description: "제한된 공간에서 이벤트/공연 정보를 간결하게 요약하여 제공하는 컴팩트 카드 컴포넌트입니다."
+status: "draft"
+version: "2.0.0"
+category: "pattern"
+tags: ["card", "ticket", "compact", "event", "mobile"]
+platforms: ["web", "ios", "android"]
+updated: "2025-06-01"
+---
+
+# CompactTicketCard
+
+> 📌 CompactTicketCard는 TicketCard와 별도로 독립된 용도와 구조로 분리 운영됩니다. 
+> 리스트형 화면, 모바일 UI 등 간결하고 빠른 정보 스캔이 필요한 경우에 최적화되어 있습니다.
+
+## 🎯 개요 및 목적
+
+CompactTicketCard는 공연/전시/이벤트 등의 정보를 리스트 뷰나 모바일 환경에서 최소한의 정보만으로 효율적으로 전달하기 위한 카드형 컴포넌트입니다. 
+날짜, 장소, 가격, 상태 정보를 간결하게 정리하여 사용자로 하여금 빠른 판단이 가능하도록 도와줍니다.
+
+## 🧱 구조 및 설계 개요
+
+- 가로형 썸네일 구조
+- 핵심 정보만 1~2줄로 요약하여 표시
+- 날짜 포맷 간략화 (예: MM.DD)
+- 상태 표시 아이콘 또는 텍스트 요약 (매진, 종료 등)
+- 북마크 아이콘은 선택적으로 노출 가능
+
+## 👥 역할별 사용 가이드
+
+### 🎨 디자이너
+- 이미지 비율 최적화 (4:3, 3:2 등)
+- 날짜 및 장소 정보 우선순위 설계
+- 상태 뱃지 or 텍스트 스타일 설계
+
+### 📋 PM
+- 상태별 우선순위 및 노출 조건 설정
+- 가격 범위 or 최저가 정책 정의
+- 예약 마감 등 CTA 유도 조건 기획
+
+### 💻 개발자
+- 날짜 포맷팅 처리 (`startDate` → `MM.DD 형식`)
+- 상태별 스타일 조건부 렌더링
+- 북마크 핸들링 및 SDUI 구조 연동
+
+## 📊 API 응답 예시
+
+```json
+{
+  "eventId": "EVT12345",
+  "title": "마티네 콘서트",
+  "venue": "롯데콘서트홀",
+  "startDate": "2025-07-02T11:00:00",
+  "price": {
+    "min": 20000,
+    "currency": "KRW"
+  },
+  "thumbnailUrl": "https://...jpg",
+  "saleStatus": "soldout"
+}
+```
+
+## ⚙️ 주요 Props
+
+- `data`: 이벤트 정보 데이터
+- `variant`: `'compact'` 고정
+- `onClick`: 카드 클릭 시 동작
+- `onBookmark`: 북마크 토글 핸들러 (선택)
+
+## ⚠️ 예외 상황 처리
+
+- `saleStatus: 'ended' | 'soldout'`일 경우 스타일 dim 처리 및 상호작용 제한
+- 날짜 미입력 시 `TBD` 또는 표시 생략
+- 이미지 로딩 실패 시 placeholder 처리
+
+## ⚡ 성능 고려사항
+
+- Lazy loading 필수 적용
+- 메타데이터 및 북마크 등은 조건부 렌더링
+- 반복 렌더링 시 key는 eventId 기준 지정
+
+## ♿ 접근성 가이드
+
+- 카드 전체에 `role="button"`, `aria-label` 구성
+- 북마크 버튼 `aria-pressed` 적용
+- 날짜/장소 정보는 스크린리더에 순차 제공
+
+## 💻 실제 구현 예시
+
+```tsx
+const CompactTicketCard: React.FC<CompactCardProps> = ({ data, onClick, onBookmark }) => {
+  const isSoldOut = data.saleStatus === 'soldout';
+  return (
+    <BaseCard 
+      className={`compact-ticket-card ${isSoldOut ? 'opacity-50 pointer-events-none' : ''}`}
+      onClick={() => onClick?.(data.eventId)}
+    >
+      <img src={data.thumbnailUrl} alt={data.title} loading="lazy" />
+      <div className="info">
+        <p className="title">{data.title}</p>
+        <p className="venue">{data.venue}</p>
+        <p className="date">{formatDate(data.startDate)}</p>
+        <p className="price">{data.price.min.toLocaleString()}원~</p>
+      </div>
+    </BaseCard>
+  );
+};
+```
+
+## 🧪 테스트 시나리오
+
+- 판매 상태별 스타일 처리 확인 (`available`, `soldout`, `ended` 등)
+- 날짜 포맷 렌더링 정상 여부
+- 북마크 인터랙션 동작
+- Lazy loading 및 이미지 fallback 처리
+
+## ✅ 마이그레이션 포인트
+
+- TicketCard와 별도 컴포넌트로 관리되며 구조 간섭 없음
+- 필드 구조는 TicketCard와 유사하되 렌더링 범위 최소화됨
+- Figma 상에서 Compact Ticket 스타일 별도 정의 필요

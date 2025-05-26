@@ -7,7 +7,8 @@ const nextConfig = {
     domains: [
       'd13fzx7h5ezopb.cloudfront.net',
       'img.29cm.co.kr',
-      'raw.githubusercontent.com'
+      'raw.githubusercontent.com',
+      'cdn.figma.com',
     ],
   },
 };
