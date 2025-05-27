@@ -1,14 +1,19 @@
 {
-"scripts": {
-  "dev": "next dev",
-  "build": "next build",
-  "start": "next start",
-  "export": "next build && next export",
-  "build:netlify": "NETLIFY=true npm run export",
-  "lint": "next lint",
-  "transform-tokens": "npx ts-node src/scripts/transform-tokens.ts",
-  "generate-mdx": "ts-node src/scripts/generate-mdx.js"
-},
+  "name": "ruler-design",
+  "version": "1.0.0",
+  "homepage": "https://29cm-developers.github.io/ruler-design",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next build && next export",
+    "build:netlify": "NETLIFY=true npm run export",
+    "lint": "next lint",
+    "transform-tokens": "npx ts-node src/scripts/transform-tokens.ts",
+    "generate-mdx": "ts-node src/scripts/generate-mdx.js",
+    "build:static": "EXPORT_STATIC=true next build && next export",
+    "deploy": "npm run build:static && echo > out/.nojekyll && gh-pages -d out"
+  },
   "dependencies": {
     "@mdx-js/loader": "^3.1.0",
     "@mdx-js/react": "^3.1.0",
@@ -33,6 +38,7 @@
     "@types/node": "^22.15.3",
     "@types/yargs": "^17.0.33",
     "autoprefixer": "^10.4.21",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17",
     "ts-node": "^10.9.2",
