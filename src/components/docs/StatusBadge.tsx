@@ -1,4 +1,4 @@
-import '@/styles/components/status-badge.css'; 
+import '../styles/components/status-badge.css'; 
 
 interface StatusBadgeProps {
     status: 'draft' | 'beta' | 'active' | 'deprecated';

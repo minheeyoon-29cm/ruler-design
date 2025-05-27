@@ -7,7 +7,7 @@ const nextConfig = {
   trailingSlash: true,
   output: 'export',
   basePath: `/${repoName}`,
-  assetPrefix: `/${repoName}/`,
+  assetPrefix: `/${repoName}`,
   images: {
     unoptimized: true,
     domains: [

@@ -1,5 +1,5 @@
 // src/app/layout.tsx
-import '@/styles/globals.css';
+import '../styles/globals.css';
 import { ThemeProvider } from 'next-themes';
 import Link from 'next/link';
 import PageThemeToggle from './components/pageThemeToggle';
