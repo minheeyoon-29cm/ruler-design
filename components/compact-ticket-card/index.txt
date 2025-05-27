@@ -1,5 +1,5 @@
 1:HL["/ruler-design/_next/static/css/73e3f5c62badb4ba.css","style",{"crossOrigin":""}]
-0:["NC_c3-kbvjLls32q9AHlg",[[["",{"children":["components",{"children":[["slug","compact-ticket-card","d"],{"children":["__PAGE__?{\"slug\":\"compact-ticket-card\"}",{}]}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/ruler-design/_next/static/css/73e3f5c62badb4ba.css","precedence":"next","crossOrigin":""}]],"$L3"]]]]
+0:["_c8KnuKExdLNBPwOlhf2e",[[["",{"children":["components",{"children":[["slug","compact-ticket-card","d"],{"children":["__PAGE__?{\"slug\":\"compact-ticket-card\"}",{}]}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/ruler-design/_next/static/css/73e3f5c62badb4ba.css","precedence":"next","crossOrigin":""}]],"$L3"]]]]
 4:I[9233,["326","static/chunks/326-298f8934337ffd37.js","185","static/chunks/app/layout-cabfa36cfde3a232.js"],"ThemeProvider"]
 5:I[8326,["326","static/chunks/326-298f8934337ffd37.js","540","static/chunks/app/components/page-575edf58bbe027a0.js"],""]
 6:I[4591,["326","static/chunks/326-298f8934337ffd37.js","185","static/chunks/app/layout-cabfa36cfde3a232.js"],""]
