@@ -1,0 +1,364 @@
+---
+title: "Icon Button"
+description: "사용자의 클릭 또는 터치를 통해 요구한 작업을 즉시 시작시키는 컨트롤입니다. Icon Button을 통해 사용자는 취소 및 선택, 페이지 이동과 같은 작업 수행에 조치를 취할 수 있습니다."
+status: "draft"
+version: "1.0.0"
+category: "component"
+tags: ["ui", "component"]
+platforms: ["web", "ios", "android"]
+updated: "2025-05-28"
+---
+
+# Icon Button
+
+사용자의 클릭 또는 터치를 통해 요구한 작업을 즉시 시작시키는 컨트롤입니다. Icon Button을 통해 사용자는 취소 및 선택, 페이지 이동과 같은 작업 수행에 조치를 취할 수 있습니다.
+
+## 사용법
+
+
+수정필요: component_usage_demo 컴포넌트는 수동 변환 필요 
+
+
+Icon Button은 Text Label 대신 아이콘을 표시하게 됩니다. 버튼의 목적을 쉽게 이해할 수 있는 경우에만 Icon Button을 사용해주세요.
+
+
+## Contents Guide
+
+
+버튼은 사용자가 버튼을 선택할 때 어떤 동작이 일어날지 예측할 수 있어야 합니다.  Icon Button에 경우 Text Label이 없어도 목적을 이해할 수 있는지 확인하여 사용해주세요.
+
+
+### ✅ Do
+
+![ 의미를 명확히 이해할 수 있는 메타포의 아이콘을 사용할 것](/images/components/icon-button/icon-button-usage-01-do.jpg)
+
+### ❌ Don't
+
+![의미를 추측할 수 없는 아이콘 메타포는 사용하지 말 것](/images/components/icon-button/icon-button-usage-01-dont.jpg)
+
+
+의미를 추측할 수 없는 아이콘보다 상황과 맥락에 맞게 사용자가 그 의미를 명확히 이해할 수 있는 메타포의 아이콘을 사용하는 것이 좋습니다.
+
+
+### ✅ Do
+
+![맥락을 파악하기 어려울 때에는 Button, 또는 Text Button을 사용할 것](/images/components/icon-button/icon-button-usage-02-do.jpg)
+
+### ❌ Don't
+
+![맥락을 파악하기 어려울 때 아이콘 버튼은 사용하지 말 것](/images/components/icon-button/icon-button-usage-02-dont.jpg)
+
+
+Icon Button을 단일로 사용할 경우 사용자는 그 맥락을 파악하기 어려울 수 있습니다. Button, 또는 Text Button의 Label을 포함하여 명확히 안내하는 것이 좋을 수 있습니다.
+
+
+## 미리보기
+
+
+## Hierarchy
+
+
+![icon button Hierarchy](/images/components/icon-button/icon-button-01-hierarchy.jpg)
+
+
+버튼의 Hierarchy는 서비스의 흐름 맥락에서 어떤 액션이 더 중요한지 강조하여 사용자의 작업 수행을 돕습니다.
+
+
+a. primary : 사용자가 작업을 완료하는데 가장 중요한 액션에 사용됩니다. 강한 강조를 띄우고 있으므로 페이지 안에서 아껴서 사용해야 합니다. 
+b. secondary : 약한 강조의 성격을 가지고 있어 primary보다 낮은 중요도의 사용자 액션에 사용될 수 있습니다. 
+c. tertiary : 낮은 강조의 성격으로 주로 취소, 해제, 건너뛰기와 같이 사용자의 목표 달성과 무관한 액션에 사용될 수 있습니다. 
+
+
+## isTransparent
+
+
+![icon button Appearance](/images/components/icon-button/icon-button-02-appearance.jpg)
+
+
+Icon Button은 isTransparent라는 영역은 존재하지만 배경색은 포함되지 않은 Appearance를 제공하고 있습니다. 
+
+
+## Disabled
+
+
+![Text button의 비활성화-Disabled 상태](/images/components/icon-button/icon-button-03-disabled.jpg)
+
+
+비활성화 상태는 현재 어떤 이유로 편집, 변경이 불가하여 사용할 수 없는 상태를 나타냅니다. 이후 해당 항목을 다시 사용할 수 있다는 맥락을 사용자에게 전달할 수 있습니다.
+
+
+
+## Size
+
+
+![Text Button의 사이즈](/images/components/icon-button/icon-button-04-size.jpg)
+
+
+Icon Button은 4가지 크기를 제공하며 Medium이 기본 값으로 자주 사용됩니다, 크기는 표현해야할 정보 구성에 따른 계층에 유의하여 사용해야 합니다
+
+
+## Behavior
+
+
+수정필요: multi_image 컴포넌트는 수동 변환 필요 
+
+
+### WEB
+
+
+기본적으로 버튼에는 hover와 pressed와 같이 사용자 행동으로 결정되는 속성들이 포함되어 있습니다. 이러한 속성은 사용자에게 즉각적인 피드백을 제공하며, 클릭 가능한 요소를 명확하게 기술하는 역할을 합니다
+
+
+수정필요: multi_image 컴포넌트는 수동 변환 필요 
+
+
+### Mobile
+
+
+모바일에 경우 hovered 속성은 생략하고 pressed 속성으로 피드백을 제공합니다
+
+
+![text button Keyboard Focus](/images/components/icon-button/icon-button-05-behavior06.jpg)
+
+
+### Keyboard Focus
+
+
+버튼은 키보드 Tab키로 탐색하여 Space 또는 Enter키를 통하여 버튼의 동작을 실행시킬 수 있습니다. 시각적으로는 파랑색 테두리를 추가하여 표현합니다.
+
+
+## 스타일 가이드
+
+
+## Props
+
+
+| name | value |
+| --- | --- |
+| priority | primary | secondary | tertiary  |
+| size | xSmall | small | medium | large |
+| isTransparent | boolean |
+
+
+## Color Spec
+
+
+![primary, enabled](/images/components/icon-button/icon-button-01-primary01.jpg)
+
+
+| part | color token |
+| --- | --- |
+| icon | semantic-color-text-on-color |
+| container | semantic-color-fill-primary |
+
+
+![primary, hover](/images/components/icon-button/icon-button-01-primary02.jpg)
+
+
+| part | color token |
+| --- | --- |
+| icon | semantic-color-text-on-color |
+| container | semantic-color-fill-primary-hover |
+
+
+![primary, pressed](/images/components/icon-button/icon-button-01-primary03.jpg)
+
+
+| part | color token |
+| --- | --- |
+| icon | semantic-color-text-on-color |
+| container | semantic-color-fill-primary-pressed |
+
+
+![primary, disabled](/images/components/icon-button/icon-button-01-primary04.jpg)
+
+
+| part | color token |
+| --- | --- |
+| icon | semantic-color-text-disabled |
+| container | semantic-color-fill-disabled |
+
+
+![secondary, enabled](/images/components/icon-button/icon-button-02-secondary01.jpg)
+
+
+| part | color token |
+| --- | --- |
+| icon | semantic-color-text-primary |
+| container | semantic-color-fill-silent |
+| outlined | semantic-color-border-line |
+
+
+![secondary, hover](/images/components/icon-button/icon-button-02-secondary02.jpg)
+
+
+| part | color token |
+| --- | --- |
+| icon | semantic-color-text-primary-hover |
+| container | semantic-color-fill-silent-hover |
+| outlined | semantic-color-border-line |
+
+
+![secondary, pressed](/images/components/icon-button/icon-button-02-secondary03.jpg)
+
+
+| part | color token |
+| --- | --- |
+| icon | semantic-color-text-primary-pressed |
+| container | semantic-color-fill-silent-pressed |
+| outlined | semantic-color-border-line |
+
+
+![secondary, disabled](/images/components/icon-button/icon-button-02-secondary04.jpg)
+
+
+| part | color token |
+| --- | --- |
+| icon | semantic-color-text-disabled |
+| container | semantic-color-fill-disabled |
+| outlined | semantic-color-border-line |
+
+
+![tertiary, enabled](/images/components/icon-button/icon-button-03-tertiary01.jpg)
+
+
+| part | color token |
+| --- | --- |
+| icon | semantic-color-text-primary |
+| container | semantic-color-fill-tertiary |
+
+
+![tertiary, hover](/images/components/icon-button/icon-button-03-tertiary02.jpg)
+
+
+| part | color token |
+| --- | --- |
+| icon | semantic-color-text-primary-hover |
+| container | semantic-color-fill-tertiary |
+
+
+![tertiary, pressed](/images/components/icon-button/icon-button-03-tertiary03.jpg)
+
+
+| part | color token |
+| --- | --- |
+| icon | semantic-color-text-primary-pressed |
+| container | semantic-color-fill-tertiary |
+
+
+![tertiary, disabled](/images/components/icon-button/icon-button-03-tertiary04.jpg)
+
+
+| part | color token |
+| --- | --- |
+| icon | semantic-color-text-disabled |
+| container | semantic-color-fill-disabled |
+
+
+![isTransparent, enabled](/images/components/icon-button/icon-button-04-is-transparent01.jpg)
+
+
+| part | color token |
+| --- | --- |
+| icon | semantic-color-text-primary |
+
+
+![isTransparent, hover](/images/components/icon-button/icon-button-04-is-transparent02.jpg)
+
+
+| part | color token |
+| --- | --- |
+| icon | semantic-color-text-primary-hover |
+
+
+![isTransparent, pressed](/images/components/icon-button/icon-button-04-is-transparent03.jpg)
+
+
+| part | color token |
+| --- | --- |
+| icon | semantic-color-text-primary-pressed |
+
+
+![ isTransparent, disabled](/images/components/icon-button/icon-button-04-is-transparent04.jpg)
+
+
+| part | color token |
+| --- | --- |
+| icon | semantic-color-text-disabled |
+
+
+## Size Spec
+
+
+![large](/images/components/icon-button/icon-button-05-size01.jpg)
+
+
+| part | size |
+| --- | --- |
+| container | 52x52 px |
+| icon | 24x24 px |
+
+
+![medium](/images/components/icon-button/icon-button-05-size02.jpg)
+
+
+| part | size |
+| --- | --- |
+| container | 44x44 px |
+| icon | 22x22 px |
+
+
+![small](/images/components/icon-button/icon-button-05-size03.jpg)
+
+
+| part | size |
+| --- | --- |
+| container | 36x36 px |
+| icon | 20x20 px |
+
+
+![xSmall](/images/components/icon-button/icon-button-05-size04.jpg)
+
+
+| part | size |
+| --- | --- |
+| container | 28x28 px |
+| icon | 16x16 px |
+
+
+## 상태
+
+
+## Anatomy
+
+
+![Icon Button Anatomy 이미지](/images/components/icon-button/icon-button-state01.jpg)
+
+
+a. Root : Icon Button을 감싸는 Container
+b. icon : 정보 또는 동작을 전달하는 아이콘
+
+
+## Programmatic State
+
+
+사용자 맥락에 의해 개발자가 코드로 조작하거나 설정하는 상태를 의미합니다.
+
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| isDisabled | boolean | false | true일 때 비활성화 되어 선택할 수 없음 |
+
+
+## Behavior State
+
+
+주로 사용자 인터랙션과 관련이 있으며, 디자이너가 사용자 경험을 디자인할 때 중요한 역할을 합니다. 사용자는 이 상태를 직접적으로 경험할 수 있으며, 이를 통해 직관적이고 즉각적인 피드백 경험을 줄 수 있습니다.
+
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| hover | boolean | false | 마우스 오버 시 true로 전환 |
+| pressed | boolean | false | 클릭 또는 탭시에 true로 전환 |
+| focus | boolean | false | 키보드 포커싱 시 true로 전환 |
+

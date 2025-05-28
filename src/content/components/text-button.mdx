@@ -1,0 +1,439 @@
+---
+title: "Text Button"
+description: "사용자의 클릭 또는 터치를 통해 요구한 작업을 즉시 시작시키는 컨트롤입니다. Text Button을 통해 사용자는 취소 및 선택, 페이지 이동과 같은 작업 수행에 조치를 취할 수 있습니다."
+status: "draft"
+version: "1.0.0"
+category: "component"
+tags: ["ui", "component"]
+platforms: ["web", "ios", "android"]
+updated: "2025-05-28"
+---
+
+# Text Button
+
+사용자의 클릭 또는 터치를 통해 요구한 작업을 즉시 시작시키는 컨트롤입니다. Text Button을 통해 사용자는 취소 및 선택, 페이지 이동과 같은 작업 수행에 조치를 취할 수 있습니다.
+
+## 사용법
+
+
+수정필요: component_usage_demo 컴포넌트는 수동 변환 필요 
+
+
+Text Button은 화면안에서 부수적인 사용자의 작업 수행을 돕습니다. 화면의 전체적인 맥락과 밀접한 연관이 없거나 주목도가 낮은 작업에 Text Button을 사용하세요. 
+
+
+## Contents Guide
+
+
+버튼은 사용자가 버튼을 선택할 때 어떤 동작이 일어날지 예측할 수 있어야 합니다. 행동을 장려하는 동사로 사용자를 이끌어주세요.
+
+
+![textButton에 동사 명사를 명확히 표현하라는 지침](/images/components/text-button/text-button-usage-00.png)
+
+
+완료, 닫기, 취소, 확인과 같은 일반적인 작업을 제외하고는 동사와 명사를 명확히 표현해주세요.
+
+
+### ✅ Do
+
+![textButton을 문장내부에 사용하는것이 더 좋다는 이미지](/images/components/text-button/text-button-usage-01-do.png)
+
+### ❌ Don't
+
+![textButton을 문장 밖에 사용하는 경우 사례 이미지, 권장하지 않음](/images/components/text-button/text-button-usage-01-dont.png)
+
+
+문장 끝에 여기 또는 클릭과 같은 문구를 사용하기보다 문장 내부에 사용하는 방식이 메세지와 목적을 더 빨리 전달할 수 있습니다.
+
+
+### ✅ Do
+
+![textButton을 문장내부에 사용하는것이 더 좋다는 이미지](/images/components/text-button/text-button-usage-02-do.png)
+
+### ❌ Don't
+
+![textButton을 문장 밖에 사용하는 경우 사례 이미지, 권장하지 않음](/images/components/text-button/text-button-usage-02-dont.png)
+
+
+사용자가 텍스트 버튼을 통해 어디로 연결되는지 설명하는 텍스트에 사용하세요. 또한 문장의 작은 부분이나 단일 용어에 사용하는 것이 국제화에 용이합니다.
+
+
+## 미리보기
+
+
+## Hierarchy
+
+
+![text button Hierarchy](/images/components/text-button/text-button-preview-00-hierarchy.jpg)
+
+
+버튼의 Hierarchy는 서비스의 흐름 맥락에서 어떤 액션이 더 중요한지 강조하여 사용자의 작업 수행을 돕습니다.
+
+
+a. primary : 사용자가 작업을 완료하는데 가장 중요한 액션에 사용됩니다. 강한 강조를 띄우고 있으므로 페이지 안에서 아껴서 사용해야 합니다. 
+b. secondary : 약한 강조의 성격을 가지고 있어 primary보다 낮은 중요도의 사용자 액션에 사용될 수 있습니다. 
+c. tertiary : 낮은 강조의 성격으로 주로 취소, 해제, 건너뛰기와 같이 사용자의 목표 달성과 무관한 액션에 사용될 수 있습니다. 
+
+
+## Appearance
+
+
+수정필요: multi_image 컴포넌트는 수동 변환 필요 
+
+
+Text Button은 default와 underlined 두 가지 Style을 제공합니다. Link와 같이 문장 또는 단락 안에서 표시하거나 단독으로 사용할 수 있습니다. 
+
+
+## Disabled
+
+
+![Text button의 비활성화-Disabled 상태](/images/components/text-button/text-button-preview-03-disabled.jpg)
+
+
+비활성화 상태는 현재 어떤 이유로 편집, 변경이 불가하여 사용할 수 없는 상태를 나타냅니다. 이후 해당 항목을 다시 사용할 수 있다는 맥락을 사용자에게 전달할 수 있습니다.
+
+
+
+## Size
+
+
+![Text Button의 사이즈](/images/components/text-button/text-button-preview-04-size.jpg)
+
+
+Text Button은 3가지 크기를 제공하며 Medium이 기본 값으로 자주 사용됩니다.크기는 표현해야할 정보 구성에 따른 계층에 유의하여 사용해야 합니다
+
+
+## Icon
+
+
+수정필요: multi_image 컴포넌트는 수동 변환 필요 
+
+
+버튼과 함께 사용되는 아이콘은 각 위치마다 역할이 정해져 있습니다. prefix(접두사)와 postfix(접미사)의 의미를 주의하여 사용해주세요.
+
+
+![Prefix Icon 사례 설명](/images/components/text-button/text-button-preview-07-prefix.jpg)
+
+
+### Prefix Icon
+
+
+prefix icon은 레이블 왼쪽에 위치하며 레이블의 텍스트의 의미를 강조하거나 보조할 때 사용합니다.
+
+
+![Postfix Icon 사례 설명](/images/components/text-button/text-button-preview-08-action.jpg)
+
+
+### Postfix Icon
+
+
+postfix icon은 레이블 오른쪽에 위치하며 사용자의 행동과 상호 작용을 암시합니다.  페이지 이동, 바텀시트 등장이 있을 수 있습니다. 때문에 사용자가 기대하는 액션이 무엇인지 고려하여 사용하길 권장합니다.
+
+
+## Behavior
+
+
+![Touch targets](/images/components/text-button/text-button-preview-09-begavior01.jpg)
+
+
+### Touch targets
+
+
+위와 같은 기준으로 터치 영역을 구축하면 손가락이 크거나 손 떨림, 장애가 있는 모든 사람들에게 도움이 될 수 있으며 한 손 또는 손가락의 일부로만 디바이스를 사용할 수 있어 터치 실수로 인한 사용자 이동을 최소화할 수 있습니다. 
+
+
+수정필요: multi_image 컴포넌트는 수동 변환 필요 
+
+
+### WEB
+
+
+기본적으로 버튼에는 hover와 pressed와 같이 사용자 행동으로 결정되는 속성들이 포함되어 있습니다. 이러한 속성은 사용자에게 즉각적인 피드백을 제공하며, 클릭 가능한 요소를 명확하게 기술하는 역할을 합니다
+
+
+수정필요: multi_image 컴포넌트는 수동 변환 필요 
+
+
+### Mobile
+
+
+모바일에 경우 hovered 속성은 생략하고 pressed 속성으로 피드백을 제공합니다
+
+
+![text button Keyboard Focus](/images/components/text-button/text-button-preview-09-begavior07.jpg)
+
+
+### Keyboard Focus
+
+
+버튼은 키보드 Tab키로 탐색하여 Space 또는 Enter키를 통하여 버튼의 동작을 실행시킬 수 있습니다. 시각적으로는 파랑색 테두리를 추가하여 표현합니다.
+
+
+## 스타일 가이드
+
+
+## Props
+
+
+| name | value |
+| --- | --- |
+| priority | primary | secondary | tertiary  |
+| size | small | medium | large |
+| prefixIcon | icon |
+| postfixIcon | icon |
+| isUnderlined | boolean |
+| isBold | boolean |
+| isWhite | boolean |
+
+
+## Color Spec
+
+
+![primary, enabled](/images/components/text-button/text-button-01-primary01.jpg)
+
+
+| part | color token |
+| --- | --- |
+| label | semantic-color-text-primary |
+| icon | semantic-color-text-primary |
+| underline | semantic-color-text-primary |
+
+
+![primary, hover](/images/components/text-button/text-button-01-primary02.jpg)
+
+
+| part | color token |
+| --- | --- |
+| label | semantic-color-text-primary-hover |
+| icon | semantic-color-text-primary-hover |
+| underline | semantic-color-text-primary-hover |
+
+
+![primary, pressed](/images/components/text-button/text-button-01-primary03.jpg)
+
+
+| part | color token |
+| --- | --- |
+| label | semantic-color-text-primary-pressed |
+| icon | semantic-color-text-primary-pressed |
+| underline | semantic-color-text-primary-pressed |
+
+
+![primary, disabled](/images/components/text-button/text-button-01-primary04.jpg)
+
+
+| part | color token |
+| --- | --- |
+| label | semantic-color-text-disabled |
+| icon | semantic-color-text-disabled |
+| underline | semantic-color-text-disabled |
+
+
+![secondary, enabled](/images/components/text-button/text-button-02-secondary01.jpg)
+
+
+| part | color token |
+| --- | --- |
+| label | semantic-color-text-secondary |
+| icon | semantic-color-text-secondary |
+| underline | semantic-color-text-secondary |
+
+
+![secondary, hover](/images/components/text-button/text-button-02-secondary02.jpg)
+
+
+| part | color token |
+| --- | --- |
+| label | semantic-color-text-secondary-hover |
+| icon | semantic-color-text-secondary-hover |
+| underline | semantic-color-text-secondary-hover |
+
+
+![secondary, pressed](/images/components/text-button/text-button-02-secondary03.jpg)
+
+
+| part | color token |
+| --- | --- |
+| label | semantic-color-text-secondary-pressed |
+| icon | semantic-color-text-secondary-pressed |
+| underline | semantic-color-text-secondary-pressed |
+
+
+![secondary, disabled](/images/components/text-button/text-button-02-secondary04.jpg)
+
+
+| part | color token |
+| --- | --- |
+| label | semantic-color-text-disabled |
+| icon | semantic-color-text-disabled |
+| underline | semantic-color-text-disabled |
+
+
+![tertiary, enabled](/images/components/text-button/text-button-03-tertiary01.jpg)
+
+
+| part | color token |
+| --- | --- |
+| label | semantic-color-text-tertiary |
+| icon | semantic-color-text-tertiary |
+| underline | semantic-color-text-tertiary |
+
+
+![tertiary, hover](/images/components/text-button/text-button-03-tertiary02.jpg)
+
+
+| part | color token |
+| --- | --- |
+| label | semantic-color-text-tertiary-hover |
+| icon | semantic-color-text-tertiary-hover |
+| underline | semantic-color-text-tertiary-hover |
+
+
+![tertiary, pressed](/images/components/text-button/text-button-03-tertiary03.jpg)
+
+
+| part | color token |
+| --- | --- |
+| label | semantic-color-text-tertiary-pressed |
+| icon | semantic-color-text-tertiary-pressed |
+| underline | semantic-color-text-tertiary-pressed |
+
+
+![tertiary, disabled](/images/components/text-button/text-button-03-tertiary04.jpg)
+
+
+| part | color token |
+| --- | --- |
+| label | semantic-color-text-disabled |
+| icon | semantic-color-text-disabled |
+| underline | semantic-color-text-disabled |
+
+
+![isWhite, enabled](/images/components/text-button/text-button-04-isWhite01.jpg)
+
+
+| part | color token |
+| --- | --- |
+| label | semantic-color-text-on-white |
+| icon | semantic-color-text-on-white |
+| underline | semantic-color-text-on-white |
+
+
+![isWhite, hover](/images/components/text-button/text-button-04-isWhite02.jpg)
+
+
+| part | color token |
+| --- | --- |
+| label | semantic-color-text-on-white-hover |
+| icon | semantic-color-text-on-white-hover |
+| underline | semantic-color-text-on-white-hover |
+
+
+![isWhite, pressed](/images/components/text-button/text-button-04-isWhite03.jpg)
+
+
+| part | color token |
+| --- | --- |
+| label | semantic-color-text-on-white-pressed |
+| icon | semantic-color-text-on-white-pressed |
+| underline | semantic-color-text-on-white-pressed |
+
+
+![isWhite, disabled](/images/components/text-button/text-button-04-isWhite04.jpg)
+
+
+| part | color token |
+| --- | --- |
+| label | semantic-color-text-disabled |
+| icon | semantic-color-text-disabled |
+| underline | semantic-color-text-disabled |
+
+
+## Size & Typography Spec
+
+
+![large](/images/components/text-button/text-button-05-size01.jpg)
+
+
+| part | size &amp; token |
+| --- | --- |
+| prefix icon | 18 x 18 px |
+| postfix icon | 18 x 18 px |
+| icon weight | bold |
+| label | semantic-typography-title-xs-bold |
+
+| gap | token |
+| --- | --- |
+| prefix icon , label | scale-dimension-size-50 |
+| postfix icon , label | scale-dimension-size-25 |
+
+
+![medium](/images/components/text-button/text-button-05-size02.jpg)
+
+
+| part | size &amp; token |
+| --- | --- |
+| prefix icon | 16 x 16 px |
+| postfix icon | 16 x 16 px |
+| icon weight | bold |
+| label | semantic-typography-text-xxl-bold |
+
+| gap | token |
+| --- | --- |
+| prefix icon , label | scale-dimension-size-25 |
+| postfix icon , label | scale-dimension-size-25 |
+
+
+![medium](/images/components/text-button/text-button-05-size03.jpg)
+
+
+| part | size &amp; token |
+| --- | --- |
+| prefix icon | 14 x 14 px |
+| postfix icon | 14 x 14 px |
+| icon weight | regular |
+| label | semantic-typography-text-l-bold |
+
+| gap | token |
+| --- | --- |
+| prefix icon , label | scale-dimension-size-25 |
+| postfix icon , label | scale-dimension-size-25 |
+
+## 상태
+
+
+## Anatomy
+
+
+![Text Button Anatomy 이미지](/images/components/text-button/text-button-state-01.jpg)
+
+
+a. Root : Button을 감싸는 Container
+b. Label : 정보를 전달하는 라벨
+c. Prefix icon : 정보를 전달하는 아이콘 
+d. Postfix icon : 동작을 암시하는 아이콘 
+
+
+## Programmatic State
+
+
+사용자 맥락에 의해 개발자가 코드로 조작하거나 설정하는 상태를 의미합니다.
+
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| isDisabled | boolean | false | true일 때 비활성화 되어 선택할 수 없음 |
+
+
+## Behavior State
+
+
+주로 사용자 인터랙션과 관련이 있으며, 디자이너가 사용자 경험을 디자인할 때 중요한 역할을 합니다. 사용자는 이 상태를 직접적으로 경험할 수 있으며, 이를 통해 직관적이고 즉각적인 피드백 경험을 줄 수 있습니다.
+
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| hover | boolean | false | 마우스 오버 시 true로 전환 |
+| pressed | boolean | false | 클릭 또는 탭시에 true로 전환 |
+| focus | boolean | false | 키보드 포커싱 시 true로 전환 |
+

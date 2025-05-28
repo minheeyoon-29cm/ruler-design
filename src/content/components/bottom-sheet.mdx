@@ -1,0 +1,239 @@
+---
+title: "Bottom Sheet"
+description: "Bottom Sheet는 추가 작업에 필요한 보조적인 컨텐츠를 포함할 수 있는 컨테이너 입니다. "
+status: "draft"
+version: "1.0.0"
+category: "component"
+tags: ["ui", "component"]
+platforms: ["web", "ios", "android"]
+updated: "2025-05-28"
+---
+
+# Bottom Sheet
+
+Bottom Sheet는 추가 작업에 필요한 보조적인 컨텐츠를 포함할 수 있는 컨테이너 입니다. 
+
+## 사용법
+
+
+수정필요: component_usage_demo 컴포넌트는 수동 변환 필요 
+
+
+기본적으로 Bottom Sheet의 타입은 modal이며, 사용자의 여정 중간에 간단한 작업을 제시하는 데 유용합니다. 사용자가 Sheet를 닫을 때 까지 이전 작업과 상호작용하지 못하도록 합니다.
+
+
+## Decision Tree
+
+
+비슷한 유형의 다른 컴포넌트와 사용 유형이 헷갈린다면 아래 질문을 따라가 주세요.
+체크박스가 지금 작업에 알맞는 컴포넌트인지 스스로 체크할 수 있습니다.
+
+
+![Decision Tree 설명 이미지](/images/components/bottom-sheet/usage-bs-01-tree.jpg)
+
+
+모든 항목의 NO가 나왔다면  #design_platform 슬랙 채널을 찾아주세요.
+
+
+## Contents Guide
+
+
+![Bottom Sheet는 오버레이 위에 올라오는 컨테이너를 지칭합니다.](/images/components/bottom-sheet/usage-bs-02.jpg)
+
+
+Bottom Sheet는 기본적으로 오버레이 위에 컨테이너를 지칭합니다.
+
+
+![바텀시트 내부의 컨테이너 영역 설명, 일부 템플릿으로 제공한다는 내용](/images/components/bottom-sheet/usage-bs-03.jpg)
+
+
+컨테이너는 다양한 맥락의 UI와 콘텐츠가 자유롭게 구성될 수 있는 상태로 제공됩니다. 
+
+
+서비스 내에서 자주 사용되는 구성요소와 레이아웃이 포함되어있는 형태는 활용도가 높기 때문에 디자이너와 개발자의 편의와 디자인 일관성을 위해 템플릿으로 별도 제공합니다.
+
+
+## Dismiss
+
+
+![바텀시트 해지 디폴트 동작 안내 - Drag Handle , Backdrop Touch](/images/components/bottom-sheet/usage-bs-04.jpg)
+
+
+Bottom Sheet는 주요 여정 중간에 나타나는 동작으로 사용자가 원할 때 언제든 쉽게 벗어날 수 있도록 안내되는 것이 좋습니다.  때문에 Bottom Sheet는 상단에 위치한 drag handle을 통해서 아래로 내리는 동작을 취하거나, background를 터치했을 때 해제되는 사용성을 기본적으로 제공합니다.
+
+
+![바텀시트 해지 옵션\(보조\) 동작 안내 - 버튼 사용](/images/components/bottom-sheet/usage-bs-05.jpg)
+
+
+ Bottom Sheet 내부에 닫기버튼, 해지 동작을 직접적으로 안내하고 제공할 수 있습니다. 이 경우 바텀시트에서 안내되는 내용에 사용자가 거절 의사를 표현할 때 Bottom Sheet가 자연스럽게 해지되도록 합니다.
+
+
+![Bottome Sheet 해지 동작을 구성할 때 사용자의 물리적인 가동범위를 고려하라는 안내](/images/components/bottom-sheet/usage-bs-06.jpg)
+
+
+각각의 Bottome Sheet 해지 동작을 구성할 때 사용자의 물리적인 가동범위를 고려하면 좋습니다. 내부 콘텐츠영역에 포함되는  내용이 많아 drag handle, 터치가능한 background 영역이 멀어지는 경우 하단에 닫기버튼을 구성하는 것을 권장합니다.
+
+
+## Full
+
+
+![화면 Full로 확장되는 바텀시트 안내](/images/components/bottom-sheet/usage-bs-07.gif)
+
+
+Ruler는 상단으로 펼쳐지며 확장되는 Bottom Sheet의 동작과 기능을 지원합니다. 단 해당 기능은 iOS, Android 플랫폼에 따라 다른 전개 방식으로 이어집니다. 이를 유의하여 화면을 구성하는 것이 좋습니다. 웹뷰에 경우 iOS의 동작을 따르게 됩니다. 
+
+
+![화면 Full로 확장되는 바텀시트 안내](/images/components/bottom-sheet/usage-bs-08.jpg)
+
+
+확장형 Bottom Sheet의 초기 실행 시 최대 높이는 화면의 50%입니다. Bottom Sheet 내부 콘텐츠가 적어 화면의 50%를 넘지 않는 경우는 그 상태로 표현됩니다. 
+
+
+## 미리보기
+
+
+## Contents
+
+
+![Contents 영역은 프로덕트 디자이너의 의도에 따라 자유롭게 구성될 수 있도록 제공](/images/components/bottom-sheet/preview-bs-01.jpg)
+
+
+Bottom Sheet 의 Contents 영역은 프로덕트 디자이너의 의도에 따라 자유롭게 구성될 수 있도록 제공됩니다.
+
+
+## Template
+
+
+![Contents 내부에 Layout이 지정되어 있는 형태](/images/components/bottom-sheet/preview-bs-02.jpg)
+
+
+Template는 사용할 수 있는 layout 과 각 요소 사이의 간격 및 크기가 지정되어 있습니다. 디자이너와 개발자의 편의를 위해 제공되며 Bottom Sheet내 최소한의 디자인 일관성을 유지시키는 역할을 합니다. 
+
+
+## Title
+
+
+![Bottom Sheet Template Title](/images/components/bottom-sheet/preview-bs-03.jpg)
+
+
+Bottom Sheet는 대부분의 경우 Title을 가지고 있어야 하며 사용자가 하려는 행동의 주요 효과나 선택 이 후에 상황과 결과 등 요점을 간결히 요약하여 전달할 수 있어야 합니다. 이를 통해 Bottom Sheet가 나타난 목적에 대해 사용자가 빠르게 인지할 수 있습니다.  타이틀 문구는 최대 2줄이 넘어가지 않도록 작성해주세요.
+
+
+## Description
+
+
+![Bottom Sheet Template Description](/images/components/bottom-sheet/preview-bs-04.jpg)
+
+
+Description Text는 필요에 따라 포함하지 않을 수 있습니다. 장문의 문장도 작성 가능하지만 최대 3줄 이상 넘어가지 않도록 작성하는 것을 권장합니다.
+
+
+## Layout & Item
+
+
+![Bottom Sheet Template Layout](/images/components/bottom-sheet/preview-bs-05.jpg)
+
+
+크게 2가지 Layout을 제공하며 프로덕트 디자이너는 상황에 따라 Layout을 선택해 표현할 수 있습니다.
+
+
+![Bottom Sheet Template Item](/images/components/bottom-sheet/preview-bs-06.gif)
+
+
+Item 내부는 Contents 영역과 마찬가지로 자유롭게 구성할 수 있습니다. 
+
+
+## Action 
+
+
+![Bottom Sheet Template Action](/images/components/bottom-sheet/preview-bs-07.jpg)
+
+
+Bottom Sheet 하단에 Action은 Primary , Secondary , Trertiary 최대 3가지 위계로 구성할 수 있습니다.
+
+
+## Behavior
+
+
+![Preview - Behavior](/images/components/bottom-sheet/preview-bs-08.jpg)
+
+
+### Touch targets
+
+
+Backgorund Overlay, Drag handle, Action들이 터치 타겟에 해당됩니다.
+
+
+![Preview - Behavior 2](/images/components/bottom-sheet/preview-bs-09.jpg)
+
+
+![Preview - Behavior 3](/images/components/bottom-sheet/preview-bs-10.jpg)
+
+
+### Keyboard Focus
+
+
+tab시 Primary Action으로 바로 이동되며 2번째 Tab시 Secondary Action으로 이동됩니다.space와 enter를 통해 사용자가 액션을 선택할 수 있습니다.
+
+
+![Preview - Behavior 4](/images/components/bottom-sheet/preview-bs-11.jpg)
+
+
+### Voice
+
+
+Bottom Sheet가 나타났음을 알리고 Bottom Sheet내부의 내용과 맥락을 알려줄 수 있어야 합니다.Title과 Text의 내용을 알려준 후 Primary Action과 Secondary Action을 선택할 수 있도록 안내해주세요.사용자가 혼선없이 본인에게 필요한 선택을 할 수 있도록 Bottom Sheet가 화면에 나타난 이후에는 뒷 배경에 다른 화면과의 상호작용을 막아주세요.
+
+
+## 스타일 가이드
+
+
+## Props
+
+
+| name | value |
+| --- | --- |
+| role | alertdialog | dialog |
+| secondaryAction | boolean |
+| tertiaryAction | boolean |
+
+
+## Design Spec
+
+
+![Design Spec 1](/images/components/bottom-sheet/sv-bt-spec-00.jpg)
+
+
+| root | value |
+| --- | --- |
+| title | title-s-bold |
+| description | text-xl  |
+
+
+## 상태
+
+
+## Anatomy
+
+
+![Bottem Sheet Anatomy 이미지](/images/components/bottom-sheet/state-bottom-sheet.jpg)
+
+
+a. Overlay : Bottom Sheet 뒤에 표시되는 Overlay 배경 입니다
+b. Darg handle(Option) :  Bottom Sheet를 닫거나, 설정된 높이로 전환할 수 있도록 돕는 어포던스 입니다
+c. Container : Bottom Sheet의 Contents가 담기는 배경 컨테이너입니다
+
+
+## Programmatic State
+
+
+사용자 맥락에 의해 개발자가 코드로 조작하거나 설정하는 상태를 의미합니다.
+
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| isOpen | boolean | false | Alert Dialog가 열려 있는지 여부 |
+| open | () =&gt; void | false | Alert Dialog가 열림 |
+| close | () =&gt; void | true | Alert Dialog가 닫힘 |
+
+

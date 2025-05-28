@@ -1,10 +1,8 @@
-/* src/styles/globals.css */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import '../tokens/tokens.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import '../tokens/tokens.css';
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
-
 
 /* 기본 box model 정리 */
 * {

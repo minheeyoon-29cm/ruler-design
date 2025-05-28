@@ -1,0 +1,285 @@
+---
+title: "Top Navigation"
+description: "브라우저 창이나 페이지 화면 상단에 위치하여 사용자들의 콘텐츠 계층 구조를 탐색하는 데 도움을 줍니다."
+status: "draft"
+version: "1.0.0"
+category: "component"
+tags: ["ui", "component"]
+platforms: ["web", "ios", "android"]
+updated: "2025-05-28"
+---
+
+# Top Navigation
+
+브라우저 창이나 페이지 화면 상단에 위치하여 사용자들의 콘텐츠 계층 구조를 탐색하는 데 도움을 줍니다.
+
+## 사용법
+
+
+수정필요: component_usage_demo 컴포넌트는 수동 변환 필요 
+
+
+Top Naviagtion은 화면 상단에 위치하여 화면 이동 및 흐름을 제어하고 사용자에게 현재 어떤 콘텐츠를 탐색하고 있는지 알려주는 역할을 합니다.
+
+
+## Back & Close
+
+
+수정필요: multi_image 컴포넌트는 수동 변환 필요 
+
+사용자의 탐색 흐름과 관련되어 있는 동작에는 back(뒤로가기)과 close(닫기)가 있습니다. 두 동작의 맥락을 고려하여 제품 설계시 적재적소하게 사용하길 권장합니다.
+
+
+![Back\(뒤로가기\) 동작을 표현하는 gif 이미지](/images/components/top-navigation/topnav-usage-01-back.gif)
+
+
+### Back(뒤로가기)
+
+
+Back은 다른 화면으로 이동하는 전환 과정을 가로 방향으로 보여줍니다. 자연스러운 화면 전환 방식으로 현재 화면과 맥락적으로 관련이 있는 흐름과 탐색 과정에서 사용됩니다.
+
+
+![Close\(닫기\) 동작을 표현하는 gif 이미지](/images/components/top-navigation/topnav-usage-01-close.gif)
+
+
+### Close(닫기)
+
+
+Close는 다른 화면으로 이동하는 전환 과정을 수직 방향으로 보여줍니다. 현재 화면과 맥락적으로 관련이 없거나, 사용자가 이동되는 화면으로 인해 새로운 과업을 수행해야하는 경우에 사용합니다.
+
+
+## Content Guide
+
+
+### ✅ Do
+
+![29CM 외에 다른 브랜드의 심볼은 titleArea에만 표현하길 권장하는 이미지](/images/components/top-navigation/topnav-usage-do-01.jpg)
+
+### ❌ Don't
+
+![29CM 외에 다른 브랜드의 심볼은 prefix영역에 들어갈 수 없음을 강하게 알리는 이미지](/images/components/top-navigation/topnav-usage-dont-01.jpg)
+
+
+29CM 외에 다른 브랜드의 심볼은 prefix영역에 들어갈 수 없습니다. 29CM 내에서 파트너 입점사, 또는 파트너 브랜드의 심볼을 표현해야하는 경우에는 title영역을 활용하여 표현해주세요.
+
+
+### ✅ Do
+
+![어떤 페이지인지 타이틀 영역에 표기하여 사용자를 안내해주세요](/images/components/top-navigation/topnav-usage-do-02.jpg)
+
+### ❌ Don't
+
+![타이틀 영역에 아무것도 안적는 경우는 때때로 사용자를 혼란스럽게한다](/images/components/top-navigation/topnav-usage-dont-02.jpg)
+
+
+Top Navigation의 Title은 사용자 스스로 목적을 달성하는 여정 속 어느 지점에 위치해 있는지 알려주는 역할을 합니다. 위치한 페이지가 어떤 역할을 하는 페이지인지 타이틀에 표기하여 사용자를 도와줄 수 있어야합니다.
+
+
+### ✅ Do
+
+![타이틀은 11자, 7자가 넘어가면 말줄임표를 사용하여 표현하길 권장하는 이미지](/images/components/top-navigation/topnav-usage-do-03.jpg)
+
+### ❌ Don't
+
+![텍스트가 넘쳐 2줄이 되는 케이스는 허용하지 않음을 안내하는 이미지](/images/components/top-navigation/topnav-usage-dont-03.jpg)
+
+
+Top Navigation의 Title은 영역에 따라 공백문자를 포함하여 최대 11자, 7자를 작성할 수 있습니다. 사용자가 인지할 수 있는 범위에 제목 길이라면 주어진 공간 안에서 말 줄임표를 사용하여 타이틀을 표현해 주세요
+
+
+### ✅ Do
+
+![말줄임을 사용한 케이스가 오히려 맥락전달이 안되는 경우에는 하단 콘텐츠 영역에서 풀어 설명하라는 이미지](/images/components/top-navigation/topnav-usage-do-04.jpg)
+
+### ❌ Don't
+
+![타이틀 영역 내 말줄임표를 한 케이스가 오히려 페이지 맥락을 전달하지 못하게 하는 경우는 없어야한다는 이미지](/images/components/top-navigation/topnav-usage-dont-04.jpg)
+
+
+타이틀 영역안에서 말 줄임표를 사용하여 제목이 가지고 있는 맥락을 사용자가 인지하기 어려운 경우 페이지 내부에서 그 맥락이 충분히 설명되어야 합니다.  타이틀이 지나치게 생략되어 사용자가 제목의 정보를 인지하기 어려운 것 보다 다른 방법으로 사용자가 페이지의 맥락을 명확히 인지할 수 있게 해주는 방법이 더 좋습니다.
+
+
+### ✅ Do
+
+![말줄임을 사용한 케이스가 오히려 맥락전달이 안되는 경우에는 하단 콘텐츠 영역에서 풀어 설명하라는 이미지 - PDP버전](/images/components/top-navigation/topnav-usage-do-05.jpg)
+
+### ❌ Don't
+
+![타이틀 영역 내 말줄임표를 한 케이스가 오히려 페이지 맥락을 전달하지 못하게 하는 경우는 없어야한다는 이미지 - PDP버전](/images/components/top-navigation/topnav-usage-dont-05.jpg)
+
+
+Product Details Page에서도 마찬가지로, 무리하게 상품명을 Top Navigation Title 영역 안에 표현하지 않아도 괜찮습니다. 사용자에게 있어 어떤 방식의 표기가 가장 직관적으로 페이지의 맥락과 정보를 파악할 수 있는지 고려하여 적절히 타이틀을 사용해주세요.
+
+
+## 미리보기
+
+
+![Top Navigation Part Name](/images/components/top-navigation/topnav-preview-00-part.jpg)
+
+
+Top Navigation은 크게 3개의 영역으로 구성됩니다. 효율적인 디자인과 개발을 위해 각각의 영역별로 들어갈 수 있는 아이템의 갯수와 종류가 지정되어 있습니다.
+
+
+a. prefixAea : 좌측 영역은 주로 push, present와 같은 동작을 담당합니다.
+b. titleArea : 중앙 영역은 페이지 또는 콘텐츠의 제목, 이미지 리소스와 같은 다양한 요소를 허용하고 있습니다.
+c. postfixArea : 우측 영역은 페이지 흐름별로 사용자에게 도움이 되는 추가적인 액션을 허용하고 있습니다. 
+
+
+## Prefix Area
+
+
+수정필요: multi_image 컴포넌트는 수동 변환 필요 
+
+
+Prefix Area에는 1개의 아이콘 버튼이 들어갈 수 있도록 제한되어 있습니다. 예외적인 경우가 아닌 이상 해당 영역에서는 화면 흐름과 관련된 아이콘과 동작만 사용할 것을 강하게 권장하고 있습니다.
+
+
+![prefix 영역에 29CM 심볼을 허용함을 알려주는 이미지](/images/components/top-navigation/topnav-preview-01-prefix03.jpg)
+
+
+해당 영역의 대표적인 예외 케이스로 Home Main 화면의 29CM의 브랜드 로고가 있습니다. 사용자가 29CM 애플리케이션을 실행하고 만나게 되는 첫 화면으로 페이지 전후의 맥락이 없으며 29CM의 가장 첫 화면임을 알려주는 역할로 권장 사항보다 높은 중요도를 가집니다.
+
+
+![prefix 영역에 Motion Symbol 리소스를 허용함을 알려주는 이미지 - json 양식의 리소스](/images/components/top-navigation/topnav-preview-01-prefix04.gif)
+
+
+29Play는 LottieFiles(.json)포맷의 Motion Symbol로 전사적으로 높은 중요도를 가진 프로모션을 홍보하는 것을 뜻합니다. 해당 케이스를 제외하고 Top Navigation에서 Prefix 영역에 다른 리소스를 허용하고 있지 않습니다.
+
+
+## Title Area
+
+
+![Toggled Tag의 on and off 동작방식을 설명하는 이미지](/images/components/top-navigation/topnav-preview-02-title.jpg)
+
+
+Title Area에는 페이지의 맥락에 따라 title text, disclosure, image assets과 같은 케이스의 UI를 허용하고 있습니다. 필요에 따라서는 타이틀 자체를 생략할 수도 있으나 이 경우 사용자가 어떤 흐름의 맥락에 있는지 알려줄 수 있는 대체 표기를 함께 포함하는 것을 권장합니다. 
+
+
+## Postfix Area
+
+
+![Toggled Tag은 항상 기본적으로 select되어있는 상태가 하나 있어야함을 설명하는 이미지](/images/components/top-navigation/topnav-preview-03-action.jpg)
+
+
+Postfix Area에는 텍스트 버튼은 1개, 아이콘 버튼을 최대 3개를 허용합니다. 대부분의 동작과 아이콘을 사용할 수 있습니다. 흐름에 있어서 사용자 또는 29CM 서비스에 있어 필요한 부가적인 액션을 함께 포함할 수 있습니다.
+
+
+## Appearance
+
+
+![Top Navigation 백그라운드를 설명하는 이미지](/images/components/top-navigation/topnav-preview-04-appearance.jpg)
+
+
+Top Navigation은 총 5가지의 Appearance(외형) 스타일을 가지며 29CM의 다양한 페이지와 콘텐츠에 따라 적재적소하게 사용할 수 있습니다. 
+
+
+a. default : 하얀색 배경으로 기본적으로 사용되는 스타일입니다.
+b. inverce : default를 반전시키는 개념으로 검은색 배경을 가지며 29CM에서 일부 검정 배경으로 표현되는 페이지, 또는 프로모션 페이지 등에서 사용됩니다.
+c. transparentWhite : 투명한 배경에 내부 item들은 하얀 색상으로 표현됩니다. 
+d. transparentBlack : 투명한 배경에 내부 item들은 검정 색상으로 표현됩니다. 
+
+
+## 스타일 가이드
+
+
+## Props
+
+
+| name | value |
+| --- | --- |
+| appearance | white | black | transparentWhite | transparentBlack |
+
+
+## Design Spec
+
+![Design Spec 1](/images/components/top-navigation/topnav-style-00-size.jpg)
+
+
+| root | value |
+| --- | --- |
+| min width | 320px |
+
+
+## 29Play Spec
+
+
+![29Play Spec 1](/images/components/top-navigation/topnav-style-00-29play.gif)
+
+
+## Color Spec
+
+
+![default](/images/components/top-navigation/topnav-style-01.jpg)
+
+
+| container | token |
+| --- | --- |
+| color | semantic-color-background-default |
+
+| item | token |
+| --- | --- |
+| prefixItem | semantic-color-text-primary |
+| titleItem | semantic-color-text-primary |
+| postfixItem | semantic-color-text-primary |
+
+
+![inverce](/images/components/top-navigation/topnav-style-02.jpg)
+
+
+| container | token |
+| --- | --- |
+| color | semantic-color-fill-primary(임시) |
+
+| item | token |
+| --- | --- |
+| prefixItem | semantic-color-on-color |
+| titleItem | semantic-color-on-color |
+| postfixItem | semantic-color-on-color |
+
+
+![transparentWhite](/images/components/top-navigation/topnav-style-03.jpg)
+
+
+| container | token |
+| --- | --- |
+| color | none |
+
+| item | token |
+| --- | --- |
+| prefixItem | semantic-color-on-white |
+| titleItem | semantic-color-on-white |
+| postfixItem | semantic-color-on-white |
+
+
+![transparentBlack](/images/components/top-navigation/topnav-style-04.jpg)
+
+
+| container | token |
+| --- | --- |
+| color | none |
+
+| item | token |
+| --- | --- |
+| prefixItem | semantic-color-surface-black(임시) |
+| titleItem | semantic-color-surface-black(임시) |
+| postfixItem | semantic-color-surface-black(임시) |
+
+
+## 상태
+
+
+## Anatomy
+
+
+![Top Navigation Anatomy 이미지](/images/components/top-navigation/topnav-state-00.jpg)
+
+
+a. Root : Top Navigation을 감싸는 컨테이너
+b. prefixArea : Top Navigation의 좌측 영역
+c. prefixItem : prefixArea 안에 들어가 있는 UI로 아이콘 버튼, 심볼과 같은 요소를 허용하고 있습니다.
+d. titleArea : Top Navigationd의 중앙 영역 
+e. titleItem : titleArea 안에 들어가는 UI로 사용자 흐름 맥락에 맞는 다양한 UI를 허용하고 있습니다. 
+f. postfixArea : Top Navigation의 우측 영역
+g. postfixItem : postfixArea에 들어가 있는 UI로 아이콘 버튼과 텍스트 버튼과 같은 요소를 허용하고 있습니다. 
+
+

@@ -1,0 +1,527 @@
+---
+title: "Tag"
+description: "Tag는 메타데이터의 한 종류로 부여받은 키워드를 입력, 선택, 필터링하여 보여줌으로 사용자가 더 쉽게 정보를 탐색할 수 있도록 돕습니다."
+status: "draft"
+version: "1.0.0"
+category: "component"
+tags: ["ui", "component"]
+platforms: ["web", "ios", "android"]
+updated: "2025-05-28"
+---
+
+# Tag
+
+Tag는 메타데이터의 한 종류로 부여받은 키워드를 입력, 선택, 필터링하여 보여줌으로
+사용자가 더 쉽게 정보를 탐색할 수 있도록 돕습니다. 
+
+## 사용법
+
+수정필요: component_usage_demo 컴포넌트는 수동 변환 필요 
+
+Tag는 UI 요소의 상태, 주요 속성 또는 카테고리를 표시하는 데 사용되는 정적이고 실행 가능한 구성 요소로, 사용자가 콘텐츠를 필터링하기 위해 정보를 입력할 수 있습니다. 태그에는 객체와 연관되거나 객체에 할당된 키워드가 포함됩니다. 태그는 단일 단어 또는 구문을 기반으로 태그와 관련된 요소를 식별, 분류 또는 찾는 데 도움이 됩니다.
+
+![tag component kind\(type\)](/images/components/tag/tag-usage-01-kind.jpg)
+
+29CM에서 Tag는 크게 Tag | Removable | Filter 3가지 종류로 제공되고 있습니다.
+각각의 Tag 종류는 다른 사용성과 동작방식을 가지지만 본질적으로 부여받은 옵션과 키워드를 통해 사용자의 탐색을 돕습니다.
+
+## Decision Tree
+
+비슷한 유형의 다른 컴포넌트와 사용 유형이 헷갈린다면 아래 질문을 따라가 주세요.
+Tag가 지금 작업에 알맞은 컴포넌트인지 스스로 체크할 수 있습니다.
+
+![tag Decision Tree](/images/components/tag/tag-usage-02-decision-tree.jpg)
+
+모든 항목의 NO가 나왔다면  #design_platform 슬랙 채널을 찾아주세요.
+
+## Content Guide
+
+![Tag를 그룹으로 묶어 사용하는 것을 권장하는 이미지](/images/components/tag/tag-usage-03-do-00.jpg)
+
+Tag는 그룹으로 묶어 세트로 사용하는 것을 권장합니다. 탐색에 필요한 키워드들을
+상위 페이지 또는 섹션, 지원하는 콘텐츠 맥락에 맞게 나열하여 사용자의 탐색 경험에 도움이 되어야 합니다.
+
+### ✅ Do
+
+![페이지 및 섹션에 상품이 단일로 정렬되는 기준이면 Tag를 사용하지 않고 다른 방법을 권장하는 이미지](/images/components/tag/tag-usage-03-do-01.jpg)
+
+### ❌ Don't
+
+![페이지 및 섹션에 상품이 단일로 정렬되는 기준이면 Tag를 사용하지 않고 다른 방법을 권장하는 이미지](/images/components/tag/tag-usage-03-dont-01.jpg)
+
+페이지, 또는 섹션에 콘텐츠가 정렬되는 명확한 단일 기준이 있다면 그 기준을 명확히 풀어서 작성하는 것이
+사용자가 자신의 작업 흐름안에서 페이지와 섹션의 맥락을 더 빨리 인지하고 탐색할 수 있습니다.
+
+### ✅ Do
+
+![Tag에 긴 문구나 동사가 아닌 명료한 단어로 키워드를 작성하길 권장하는 이미지](/images/components/tag/tag-usage-03-do-02.jpg)
+
+### ❌ Don't
+
+![Tag에 긴 문구나 동사가 아닌 명료한 단어로 키워드를 작성하길 권장하는 이미지](/images/components/tag/tag-usage-03-dont-02.jpg)
+
+Tag에 너무 긴 문구나 동사가 들어가는 것 보다 필터링되는 키워드를 명료한 단어로 표현하는 것이 사용자가 정보 분류 기준을 인지하는 데 더 효과적입니다. 
+
+한 페이지 또는 섹션에 사용자가 탐색해야 할 키워드의 종류나 수가 너무 많은 경우, 키워드의 성격에 따라 filter Tag로 묶어 정렬할 수 있습니다. 단 filter Tag는 탐색 키워드를 숨겨 사용자에게 요구하는 액션이 많아서 사용자가 탐색 자체를 고려하지 않을 수 있습니다. 필요한 경우에만 사용해 주세요.
+
+### ✅ Do
+
+![removable Tag는 입력 UI와 함께 사용하길 권장하는 이미지](/images/components/tag/tag-usage-03-do-03.jpg)
+
+### ❌ Don't
+
+![removable Tag는 입력 UI와 함께 사용하길 권장하는 이미지](/images/components/tag/tag-usage-03-dont-03.jpg)
+
+removable Tag는 입력 필드 또는 체크박스와 같은 사용자가 직접 값을 작성하거나 선택하는 UI와 함께 사용될 수 있습니다.
+사용자가 입력한 값의 이름이 반영될 수 있으며 사용자가 직접 지우거나, 탐색 여정에 벗어나지 않으면 지정 위치에 유지됩니다.
+
+## 미리보기
+
+![Tag가 동작하는 방식과 권장 표현 방식에 대한 Gif](/images/components/tag/tag-preview-00.gif)
+
+Tag는 그룹으로 묶어 세트로 사용하는 것을 권장합니다. 탐색에 필요한 키워드들을 상위 페이지 또는 섹션,
+지원하는 콘텐츠 맥락에 맞게 나열하여 사용자의 탐색 경험에 도움이 되어야 합니다. 
+
+## Tag Type
+
+수정필요: multi_image 컴포넌트는 수동 변환 필요 
+
+29CM에는 3가지 형태의 필터 유형들이 있습니다. 각각의 유형이 사용자에게 주는 경험과 동작이 다름으로 아래 사례들을 고려하여 알맞게 사용하길 권장합니다.
+
+## Toggled Tag
+
+![Toggled Tag의 on and off 동작방식을 설명하는 이미지](/images/components/tag/tag-preview-01-toggled01.jpg)
+
+Toggled Tag는 29CM에서 가장 기본적인 형태의 태그입니다. 키워드에 관한 내용을 On 또는 Off 하여 키워드에 해당하는 정보, 또는 콘텐츠만 필터링하고 노출하므로 사용자 정보탐색에 도움을 줍니다.
+
+![Toggled Tag은 항상 기본적으로 select되어있는 상태가 하나 있어야함을 설명하는 이미지](/images/components/tag/tag-preview-01-toggled02.jpg)
+
+Toggled Tag를 그룹으로 사용할 때 첫 번째 Tag는 항상 select 되어있어야 합니다. 이는 섹션 또는 페이지 내의 정보 정렬기준에 대해 사용자에게 명확하게 전달해주는 역할을 하여 오인지를 줄일 수 있습니다. 
+
+## Filter Tag
+
+![Toggled Tag은 항상 기본적으로 select되어있는 상태가 하나 있어야함을 설명하는 이미지](/images/components/tag/tag-preview-02-filter.gif)
+
+Filter Tag는 하나의 키워드가 가지고있는 하위 속성이나 옵션이 있거나, 더 세분된 분류가 필요할 때 사용할 수 있습니다. 탭 또는 클릭시에 키워드에 따른 하위 속성들이 담긴 바텀시트가 나타납니다.
+
+## Removable Tag
+
+수정필요: multi_image 컴포넌트는 수동 변환 필요 
+
+Removable Tag는 사용자가 직접 Tag를 제거할 수 있는 옵션이 있습니다. 주로 사용자가 직접 타이핑하거나 선택하여 키워드나 설정을 추가할 수 있는 입력창같은 UI들과 함께 사용되며 작은 닫기(🅧) 버튼이 포함되어 있습니다.
+
+## Pending
+
+![Pending은 데이터가 불러와지는 영역에서 표현하길 권장하는 이미지](/images/components/tag/tag-preview-04-pending.gif)
+
+Tag로 인해 특정 정보나 콘텐츠들을 불러올 때 처리과정에서 발생되는 대기중 상태는 Tag가 아닌 정보와 콘텐츠가 불러와지는 영역에서 표현해주세요. 
+
+## Behavior
+
+수정필요: multi_image 컴포넌트는 수동 변환 필요 
+
+### WEB
+
+기본적으로 버튼에는 hover와 pressed와 같이 사용자 행동으로 결정되는 속성들이 포함되어 있습니다.
+이러한 속성은 사용자에게 즉각적인 피드백을 제공하며, 클릭 가능한 요소를 명확하게 기술하는 역할을 합니다
+
+수정필요: multi_image 컴포넌트는 수동 변환 필요 
+
+### Mobile
+
+모바일에 경우 hovered 속성은 생략하고 pressed 속성으로 피드백을 제공합니다
+
+수정필요: multi_image 컴포넌트는 수동 변환 필요 
+
+### Keyboard Focus
+
+Tag는 키보드 Tab키로 탐색하고 Space 또는 Enter키를 통해 동작을 실행시킬 수 있습니다.
+시각적으로는 파랑색 테두리를 추가하여 표현합니다.
+
+## 스타일 가이드
+
+## Props
+
+| name | value |
+| --- | --- |
+| type | toggledTag | removableTag | filterTag |
+
+## Color Spec
+
+![toogledTag, enabled](/images/components/tag/tag-01-toggled01.jpg)
+
+| name | value |
+| --- | --- |
+| type | toggledTag |
+
+| container | token |
+| --- | --- |
+| color | semantic-color-fill-tertiary |
+
+| label | token |
+| --- | --- |
+| color | semantic-color-text-secondary |
+
+![toogledTag, hover](/images/components/tag/tag-01-toggled02.jpg)
+
+| name | value |
+| --- | --- |
+| type | toggledTag |
+
+| container | token |
+| --- | --- |
+| color | semantic-color-fill-tertiary |
+
+| label | token |
+| --- | --- |
+| color | semantic-color-text-secondary-hover |
+
+![toogledTag, pressed](/images/components/tag/tag-01-toggled03.jpg)
+
+| name | value |
+| --- | --- |
+| type | toggledTag |
+
+| container | token |
+| --- | --- |
+| color | semantic-color-fill-tertiary |
+
+| label | token |
+| --- | --- |
+| color | semantic-color-text-secondary-pressed |
+
+![toogledTag, select](/images/components/tag/tag-01-toggled04.jpg)
+
+| name | value |
+| --- | --- |
+| type | toggledTag |
+
+| container | token |
+| --- | --- |
+| color | semantic-color-fill-primary |
+
+| label | token |
+| --- | --- |
+| color | semantic-color-text-on-color |
+
+![toogledTag, select, hover](/images/components/tag/tag-01-toggled05.jpg)
+
+| name | value |
+| --- | --- |
+| type | toggledTag |
+
+| container | token |
+| --- | --- |
+| color | semantic-color-fill-primary-hover |
+
+| label | token |
+| --- | --- |
+| color | semantic-color-text-on-color |
+
+![toogledTag, select, pressed](/images/components/tag/tag-01-toggled06.jpg)
+
+| name | value |
+| --- | --- |
+| type | toggledTag |
+
+| container | token |
+| --- | --- |
+| color | semantic-color-fill-primary-pressed |
+
+| label | token |
+| --- | --- |
+| color | semantic-color-text-on-color |
+
+![toogledTag, disabled](/images/components/tag/tag-01-toggled07.jpg)
+
+| name | value |
+| --- | --- |
+| type | toggledTag |
+
+| container | token |
+| --- | --- |
+| color | semantic-color-fill-disabled |
+
+| label | token |
+| --- | --- |
+| color | semantic-color-text-disabled |
+
+![removableTag, enabled](/images/components/tag/tag-02-remove01.jpg)
+
+| name | value |
+| --- | --- |
+| type | removableTag |
+
+| container | token |
+| --- | --- |
+| color | semantic-color-fill-tertiary |
+
+| label | token |
+| --- | --- |
+| color | semantic-color-text-secondary |
+
+| icon | token |
+| --- | --- |
+| color | semantic-color-text-tertiary |
+
+![removableTag, hover](/images/components/tag/tag-02-remove02.jpg)
+
+| name | value |
+| --- | --- |
+| type | removableTag |
+
+| container | token |
+| --- | --- |
+| color | semantic-color-fill-tertiary |
+
+| label | token |
+| --- | --- |
+| color | semantic-color-text-secondary-hover |
+
+| icon | token |
+| --- | --- |
+| color | semantic-color-text-tertiary |
+
+![removableTag, pressed](/images/components/tag/tag-02-remove03.jpg)
+
+| name | value |
+| --- | --- |
+| type | removableTag |
+
+| container | token |
+| --- | --- |
+| color | semantic-color-fill-tertiary |
+
+| label | token |
+| --- | --- |
+| color | semantic-color-text-secondary-pressed |
+
+| icon | token |
+| --- | --- |
+| color | semantic-color-text-tertiary |
+
+![removableTag, disabled](/images/components/tag/tag-02-remove04.jpg)
+
+| name | value |
+| --- | --- |
+| type | removableTag |
+
+| container | token |
+| --- | --- |
+| color | semantic-color-fill-tertiary |
+
+| label | token |
+| --- | --- |
+| color | semantic-color-text-disabled |
+
+| icon | token |
+| --- | --- |
+| color | semantic-color-text-disabled |
+
+![filterTag, enabled](/images/components/tag/tag-03-filter01.jpg)
+
+| name | value |
+| --- | --- |
+| type | filterTag |
+
+| container | token |
+| --- | --- |
+| color | semantic-color-fill-tertiary |
+
+| label | token |
+| --- | --- |
+| color | semantic-color-text-secondary |
+
+| icon | token |
+| --- | --- |
+| color | semantic-color-text-secondary |
+
+![filterTag, hover](/images/components/tag/tag-03-filter02.jpg)
+
+| name | value |
+| --- | --- |
+| type | filterTag |
+
+| container | token |
+| --- | --- |
+| color | semantic-color-fill-tertiary |
+
+| label | token |
+| --- | --- |
+| color | semantic-color-text-secondary-hover |
+
+| icon | token |
+| --- | --- |
+| color | semantic-color-text-secondary |
+
+![filterTag, pressed](/images/components/tag/tag-03-filter03.jpg)
+
+| name | value |
+| --- | --- |
+| type | filterTag |
+
+| container | token |
+| --- | --- |
+| color | semantic-color-fill-tertiary |
+
+| label | token |
+| --- | --- |
+| color | semantic-color-text-secondary-pressed |
+
+| icon | token |
+| --- | --- |
+| color | semantic-color-text-secondary |
+
+![filterTag, select](/images/components/tag/tag-03-filter04.jpg)
+
+| name | value |
+| --- | --- |
+| type | filterTag |
+
+| container | token |
+| --- | --- |
+| color | semantic-color-fill-primary |
+
+| label | token |
+| --- | --- |
+| color | semantic-color-text-on-color |
+
+| icon | token |
+| --- | --- |
+| color | semantic-color-text-on-color |
+
+![filterTag, select, hover](/images/components/tag/tag-03-filter05.jpg)
+
+| name | value |
+| --- | --- |
+| type | filterTag |
+
+| container | token |
+| --- | --- |
+| color | semantic-color-fill-primary-hover |
+
+| label | token |
+| --- | --- |
+| color | semantic-color-text-on-color |
+
+| icon | token |
+| --- | --- |
+| color | semantic-color-text-on-color |
+
+![filterTag, select, preseed](/images/components/tag/tag-03-filter06.jpg)
+
+| name | value |
+| --- | --- |
+| type | filterTag |
+
+| container | token |
+| --- | --- |
+| color | semantic-color-fill-primary-pressed |
+
+| label | token |
+| --- | --- |
+| color | semantic-color-text-on-color |
+
+| icon | token |
+| --- | --- |
+| color | semantic-color-text-on-color |
+
+![filterTag, disabled](/images/components/tag/tag-03-filter07.jpg)
+
+| name | value |
+| --- | --- |
+| type | filterTag |
+
+| container | token |
+| --- | --- |
+| color | semantic-color-fill-disabled |
+
+| label | token |
+| --- | --- |
+| color | semantic-color-text-disabled |
+
+| icon | token |
+| --- | --- |
+| color | semantic-color-text-disabled |
+
+## Size Spec
+
+![toogledTag](/images/components/tag/tag-01-toggled01.jpg)
+
+| root | value |
+| --- | --- |
+| min width | 56px |
+| max width | undefined |
+
+| text | token |
+| --- | --- |
+| typo | text-m-medium |
+
+![removableTag](/images/components/tag/tag-02-remove01.jpg)
+
+| root | value |
+| --- | --- |
+| min width | 56px |
+| max width | undefined |
+
+| text | token |
+| --- | --- |
+| typo | text-m-medium |
+
+| action icon | value |
+| --- | --- |
+| size | 18 x 18px |
+| weight | fill |
+
+| gap | token |
+| --- | --- |
+| action icon , label | scale-dimension-50 |
+
+![filterTag](/images/components/tag/tag-03-filter01.jpg)
+
+| root | value |
+| --- | --- |
+| min width | 56px |
+| max width | undefined |
+
+| text | token |
+| --- | --- |
+| typo | text-m-medium |
+
+| action icon | value |
+| --- | --- |
+| size | 14 x 14px |
+| weight | bold |
+
+| gap | value |
+| --- | --- |
+| action icon , label | 6px |
+
+## 상태
+
+## Anatomy
+
+![Tag Anatomy 이미지](/images/components/tag/tag-state-01.jpg)
+
+a. Root : tag를 감싸는 Container
+b. Label : 검색어, 필터 또는 키워드를 나타내는 텍스트
+c. Postfix : delete trigger, 또는 openner와 같은 액션요소가 들어오는 영역 
+
+## Programmatic State
+
+사용자 맥락에 의해 개발자가 코드로 조작하거나 설정하는 상태를 의미합니다.
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| isDisabled | boolean | false | true일 경우 체크박스가 비활성화 되어 사용자가 선택할 수 없습니다 |
+| isSelected | boolean | false | 사용자가 선택하면 true로 전환합니다 |
+
+## Behavior State
+
+주로 사용자 인터랙션과 관련이 있으며, 디자이너가 사용자 경험을 디자인할 때 중요한 역할을 합니다. 사용자는 이 상태를 직접적으로 경험할 수 있으며, 이를 통해 직관적이고 즉각적인 피드백 경험을 줄 수 있습니다.
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| hover | boolean | false | 마우스 오버 시 true로 전환 |
+| pressed | boolean | false | 클릭 또는 탭시에 true로 전환 |
+| focus | boolean | false | 키보드 포커싱 시 true로 전환 |

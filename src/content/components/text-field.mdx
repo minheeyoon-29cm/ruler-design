@@ -1,0 +1,384 @@
+---
+title: "Text Field"
+description: "Text Field는 사용자가 서비스 이용에 있어 필요한 정보를 입력하는 데 사용됩니다. "
+status: "draft"
+version: "1.0.0"
+category: "component"
+tags: ["ui", "component"]
+platforms: ["web", "ios", "android"]
+updated: "2025-05-28"
+---
+
+# Text Field
+
+Text Field는 사용자가 서비스 이용에 있어 필요한 정보를 입력하는 데 사용됩니다. 
+
+## 사용법
+
+
+수정필요: component_usage_demo 컴포넌트는 수동 변환 필요 
+
+
+Text Field는 사용자가 키보드를 통해 직접 입력하고 편집한 정보를 수집하는 데 사용합니다. 주로 서비스 사용에 있어 필요한 정보를 제공받기 위해 사용하며, 필수 요구 사항을 전달하기 위해 다양한 옵션들과  함께 표시됩니다.
+
+
+## Content Guide
+
+
+![Text Field는 라벨, 플레이스 홀더, 도움말을 고려하여 구성하는 것이 좋습니다](/images/components/text-field/text-field-00.jpg)
+
+
+Text Field는 라벨, 플레이스 홀더, 도움말을 고려하여 구성하는 것이 좋습니다. 사용자가 무엇을 어떻게 입력해야하는지 충분히 설명하고 안내해주세요.
+
+
+### ✅ Do
+
+![모든 Text Field에는 Label이 있어야 합니다](/images/components/text-field/text-field-00-do-01.jpg)
+
+### ❌ Don't
+
+![모든 Text Field에는 Label이 있어야 합니다](/images/components/text-field/text-field-00-dont-01.jpg)
+
+
+Label은 Text Field에서 사용자에게 어떤 정보가 요청되는지 알려줍니다. 모든 Text Field에는 Label이 있어야 합니다.
+
+
+![프로덕트 디자인팀 판단하에 맥락이 충분한 경우, 드물게 Text Field에 Label이 포함되지 않을 수 있음](/images/components/text-field/text-field-01.jpg)
+
+
+프로덕트 디자인팀 판단하에 맥락이 충분한 경우, 드물게 Text Field에 Label이 포함되지 않을 수 있습니다. 단 접근성을 위해 HTML에 aria-label이 포함되어야 합니다.
+
+
+### ✅ Do
+
+![placeholder에 받아야할 입력값의 예시 양식을 사용하는 것 보다 help text자리에 사용하는 것이 더 좋습니다.](/images/components/text-field/text-field-00-do-04.jpg)
+
+### ❌ Don't
+
+![placeholder에 받아야할 입력값의 예시 양식을 사용하는 것 보다 help text자리에 사용하는 것이 더 좋습니다.](/images/components/text-field/text-field-00-dont-04.jpg)
+
+
+placeholder에 받아야할 입력값의 예시 양식을 사용하는 것 보다 help text자리에 사용하는 것이 더 좋습니다. 포커스 상태시 사라지는 placeholder내 예시 양식은 사용자의 단기기억에 부담을 줍니다. 사용자가 알아야할 정보를 명시적으로 표현해주세요.
+
+
+### ✅ Do
+
+![help text자리에 이미 메시지가 있는 상태에서 error가 발생되면 help text가 error문구로 대체됩니다](/images/components/text-field/text-field-00-do-05.jpg)
+
+### ❌ Don't
+
+![help text자리에 이미 메시지가 있는 상태에서 error가 발생되면 help text가 error문구로 대체됩니다](/images/components/text-field/text-field-00-dont-05.jpg)
+
+
+help text자리에 이미 메시지가 있는 상태에서 error가 발생되면 help text가 error문구로 대체됩니다. 이 경우 help text의 안내 문구와 error메시지의 문구가 같은 맥락을 전달하도록 해주세요. 
+
+
+### ✅ Do
+
+![help text자리에 이미 메시지가 있는 상태에서 error가 발생되면 help text가 error문구로 대체됩니다](/images/components/text-field/text-field-00-do-06.jpg)
+
+### ❌ Don't
+
+![help text자리에 이미 메시지가 있는 상태에서 error가 발생되면 help text가 error문구로 대체됩니다](/images/components/text-field/text-field-00-dont-06.jpg)
+
+
+error 메시지에 경우 짧고 단순한 문장의 해결 방법을 제시하는 문구로 작성해주세요. 사용자가 이해할 수 있는 어휘와 용법으로 보다 인간 중심으로 작성하는것이 좋습니다. 
+
+
+## 미리보기
+
+
+![Text Field validation\(유효성\) 종류](/images/components/text-field/pv-text-field-00.jpg)
+
+
+Text Field는 사용자의 입력값에 따라 적절한 안내를 제공하기 위한 validation(유효성) 케이스들을 포함하고 있습니다. 각 validation에 대한 대응을 고려하여 화면을 설계해 주세요.
+
+
+## Default &  isValue
+
+
+수정필요: multi_image 컴포넌트는 수동 변환 필요 
+
+
+사용자가 값을 입력하면 isFilled로 변환되며 텍스트 색상 스타일이 다르게 표현됩니다.
+
+
+## Required or Optional
+
+
+수정필요: multi_image 컴포넌트는 수동 변환 필요 
+
+
+isRequired 는 사용자의 입력이 반드시 필요한 항목을 나타내는 속성으로, 필수 입력 사항에 사용됩니다.
+
+
+수정필요: multi_image 컴포넌트는 수동 변환 필요 
+
+
+필수 및 선택 입력 양식의 수에 따라 표기 방식이 달라져야 합니다. 대부분의 입력 양식이 필수일 경우, 선택 입력 사항만을 강조하여 표기하는 것이 사용자가 전체 맥락을 파악하는 일에 더 도움이 됩니다. 반대로 대부분의 입력 양식이 선택일 경우에는 필수 입력 사항만을 강조하여 주세요.
+
+
+## isInvalid
+
+
+수정필요: multi_image 컴포넌트는 수동 변환 필요 
+
+
+사용자의 입력 내용이 유효하지 않거나 필수 입력 사항을 지나쳤을 경우 isInvalid로 상태가 변합니다. 사용자에게 적절한 안내 메시지를 포함하여 다시 올바른 값을 입력할 수 있도록 도와주세요.
+
+
+![Text Field에 지정한 글자수를 초과한 경우에는 초과된 글자수에 negative색상이 반영되어 안내됩니다.](/images/components/text-field/pv-text-field-03-03.jpg)
+
+
+Text Field에 지정한 글자수를 초과한 경우에는 초과된 글자수에 negative색상이 반영되어 안내됩니다.
+
+
+## Disabled & isReadonly
+
+
+수정필요: multi_image 컴포넌트는 수동 변환 필요 
+
+
+Disabled는 완전히 비활성화된 상태이며 상호 작용이 불가능한 반면, isReadonly는 읽기 전용이지만 특정한 경우에는 다른 요소와의 상호 작용이 가능할 수 있습니다. isReadonly 상태일 때 사용자는 해당 입력 필드를 읽을 수 있지만, 편집이나 수정할 수는 없습니다. 이것은 정보를 표시하되 수정은 허용하지 않을 때 사용됩니다.
+
+
+## Text Overflow
+
+
+![Label의 문구가 Text Field의 가로 길이를 초과하면 줄바꿈됩니다.](/images/components/text-field/pv-text-field-05-01.jpg)
+
+
+Label의 문구가 Text Field의 가로 길이를 초과하면 줄바꿈됩니다. 가능한 1줄 이내의 명확한 단어를 사용하여 작성하는 것이 권장됩니다.
+
+
+수정필요: multi_image 컴포넌트는 수동 변환 필요 
+
+
+Placeholder의 문구는 Text Field 영역을 넘어가지 않도록 글자 수를 조정하여 작성해주세요. 사용자가 입력한 텍스트의 길이가 필드의 가로 공간을 초과하는 경우, 해당 필드의 좌측으로 밀려납니다.
+
+
+수정필요: multi_image 컴포넌트는 수동 변환 필요 
+
+
+Description 문구가 Text Field의 가로 길이를 초과하면 줄바꿈됩니다. 글자수가 포함된 경우 글자수 영역만큼 Description이 표현될 수 있는 영역이 축소되어 나타납니다.
+
+
+## Prefix & Postfix Area
+
+
+![Label의 문구가 Text Field의 가로 길이를 초과하면 줄바꿈됩니다.](/images/components/text-field/pv-text-field-06-01.jpg)
+
+
+사용자가 입력해야하는 사항에 종류에 따라 적절하게 Prefix , Postfix 영역의 아이템을 활용할 수 있습니다.
+
+
+수정필요: multi_image 컴포넌트는 수동 변환 필요 
+
+
+Prefix 영역에는 정보를 보조하는 기호가 들어올 수 있습니다. Postfix 에는 사용자의 입력값을 지우거나, 입력 양식에 단위를 보조하는 텍스트와 기능이 허용됩니다. 단, 전체 입력 사항의 맥락을 고려하여 적절히 구성하길 권장합니다. 
+
+
+## Behavior
+
+
+수정필요: multi_image 컴포넌트는 수동 변환 필요 
+
+
+### WEB
+
+
+Text Field에도 hover와 Focus 같이 사용자 행동으로 결정되는 속성들이 포함되어 있습니다. 이러한 속성은 사용자에게 즉각적인 피드백을 제공하며, 클릭 가능한 요소, 활성화되어 사용가능한 상태를 명확하게 기술하는 역할을 합니다. 모바일에 경우 hover 속성은 생략합니다. Text Field에 경우 pressed와 동시에 focus상태로 변경되어 피드백을 제공합니다
+
+
+수정필요: multi_image 컴포넌트는 수동 변환 필요 
+
+
+### Mobile
+
+
+모바일에 경우 hover 속성은 생략합니다. pressed와 동시에 focus상태로 변경되어 피드백을 제공합니다
+
+
+수정필요: multi_image 컴포넌트는 수동 변환 필요 
+
+
+### Keyboard Focus
+
+
+기본 상태에서 사용자가 검색을 시작하기위해 Tab을 사용하여 search field를 활성화 하는 파랑색 테두리를 추가합니다. 이미 검색어가 있는 경우, 검색어가 전체 선택되며 사용자가 텍스트를 다시 타이핑하거나 삭제할 수 있도록 합니다.
+
+
+## 스타일 가이드
+
+
+## Props
+
+
+| name | value |
+| --- | --- |
+| prefixItem | icon |
+| postfixItem | icon | text |
+
+
+## Size Spec
+
+
+![Text Field Size Spec](/images/components/text-field/sv-text-field-01.jpg)
+
+
+## Color Spec
+
+
+![enabled](/images/components/text-field/sv-text-field-02.jpg)
+
+
+| part | token |
+| --- | --- |
+| container | semantic-color-fill-silent |
+| outlined | semantic-color-border-line |
+| label | semantic-color-text-primary |
+| placeholder | semantic-color-text-tertiary |
+| description | semantic-color-text-secondary |
+| character | semantic-color-text-secondary / semantic-color-text-tertiary |
+| prefix icon | semantic-color-text-primary |
+| postfix icon | semantic-color-text-tertiary |
+| postfix label | semantic-color-text-secondary |
+
+
+![enabled, isInvalid](/images/components/text-field/sv-text-field-03.jpg)
+
+
+| part | token |
+| --- | --- |
+| container | semantic-color-fill-silent |
+| outlined | semantic-color-border-line-negative |
+| label | semantic-color-text-primary |
+| placeholder | semantic-color-text-tertiary |
+| description | semantic-color-text-negative |
+| character | semantic-color-text-negative / semantic-color-text-tertiary |
+| prefix icon | semantic-color-text-primary |
+| postfix icon | semantic-color-text-tertiary |
+| postfix label | semantic-color-text-secondary |
+
+
+![focus](/images/components/text-field/sv-text-field-04.jpg)
+
+
+| part | token |
+| --- | --- |
+| container | semantic-color-fill-silent |
+| outlined | semantic-color-border-line |
+| label | semantic-color-text-primary |
+| value | semantic-color-text-primary |
+| description | semantic-color-text-secondary |
+| character | semantic-color-text-negative / semantic-color-text-tertiary |
+| prefix icon | semantic-color-text-primary |
+| postfix icon | semantic-color-text-tertiary |
+| postfix label | semantic-color-text-secondary |
+
+
+![focus, isInvalid](/images/components/text-field/sv-text-field-05.jpg)
+
+
+| part | token |
+| --- | --- |
+| container | semantic-color-fill-silent |
+| outlined | semantic-color-border-line-negative |
+| label | semantic-color-text-primary |
+| value | semantic-color-text-primary |
+| description | semantic-color-text-negative |
+| character | semantic-color-text-negative / semantic-color-text-tertiary |
+| prefix icon | semantic-color-text-primary |
+| postfix icon | semantic-color-text-tertiary |
+| postfix label | semantic-color-text-secondary |
+
+
+![disabled](/images/components/text-field/sv-text-field-06.jpg)
+
+
+| part | token |
+| --- | --- |
+| container | semantic-color-fill-disabled |
+| outlined | semantic-color-border-line-disabled |
+| label | semantic-color-text-primary |
+| placeholder | semantic-color-text-disabled |
+| description | semantic-color-text-disabled |
+| character | semantic-color-text-disabled / semantic-color-text-tertiary |
+| prefix icon | semantic-color-text-primary |
+| postfix icon | semantic-color-text-disabled |
+| postfix label | semantic-color-text-disabled |
+
+
+![readonly](/images/components/text-field/sv-text-field-07.jpg)
+
+
+| part | token |
+| --- | --- |
+| container | semantic-color-fill-disabled |
+| outlined | semantic-color-border-line-disabled |
+| label | semantic-color-text-primary |
+| value | semantic-color-text-secondary |
+| description | semantic-color-text-secondary |
+| character | semantic-color-text-disabled / semantic-color-text-tertiary |
+| prefix icon | semantic-color-text-primary |
+| postfix icon | semantic-color-text-disabled |
+| postfix label | semantic-color-text-secondary |
+
+
+## Typography Spec
+
+
+![isFilled, focus](/images/components/text-field/sv-text-field-08.jpg)
+
+
+| part | token |
+| --- | --- |
+| label | semantic-typography-text-l-medium  |
+| placeholder | semantic-typography-text-l |
+| description | semantic-typography-text-m |
+| character | semantic-typography-text-m |
+| postfix label | semantic-typography-text-m |
+
+
+## 상태
+
+
+## Anatomy
+
+
+![Text Field Anatomy 이미지](/images/components/text-field/text-field-states-00.jpg)
+
+
+a. Label : 사용자에게 요구해야할 정보를 안내하는 Label
+b. Input : 사용자가 값을 직접 입력하는 인풋
+c. Placeholder : Input 내부에 표기되는 힌트 텍스트 
+d. Value : 사용자가 직접 입력하는 값 
+e. Description : input 하단에서 표기되는 힌트 텍스트 
+f. Error : 사용자의 입력값이 유효하지 않은 값일 경우 나타나는 힌트 텍스트
+
+
+## Programmatic State
+
+
+사용자 맥락에 의해 개발자가 코드로 조작하거나 설정하는 상태를 의미합니다.
+
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| isDisabled | boolean | false | true일 때 비활성화 되어 선택할 수 없음 |
+| isInvalid | boolean | false | true일 때 유효하지 않은 값임을 나타냄 |
+| isRequired | boolean | false | true일 때 필수 입력 값임을 나타냄 |
+| isReadonly | boolean | false | true일 때 값을 수정할 수 없음 |
+
+
+## Behavior State
+
+
+주로 사용자 인터랙션과 관련이 있으며, 디자이너가 사용자 경험을 디자인할 때 중요한 역할을 합니다. 사용자는 이 상태를 직접적으로 경험할 수 있으며, 이를 통해 직관적이고 즉각적인 피드백 경험을 줄 수 있습니다.
+
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| focus | boolean | false | 탭, 또는 클릭시 true로 전환 |
+
+

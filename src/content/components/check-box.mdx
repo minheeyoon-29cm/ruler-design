@@ -1,0 +1,411 @@
+---
+title: "Check Box"
+description: "사용자가 1개 이상의 단일, 또는 중복 옵션을 선택할 때 사용할 수 있습니다."
+status: "draft"
+version: "1.0.0"
+category: "component"
+tags: ["ui", "component"]
+platforms: ["web", "ios", "android"]
+updated: "2025-05-28"
+---
+
+# Check Box
+
+사용자가 1개 이상의 단일, 또는 중복 옵션을 선택할 때 사용할 수 있습니다.
+
+## 사용법
+
+
+수정필요: component_usage_demo 컴포넌트는 수동 변환 필요 
+
+
+체크박스는 제한된 수의 옵션에서 하나 이상의 옵션을 선택할 수 있도록 하는 데 사용합니다.
+단일 옵션을 선택하거나 설정/해제하기 위해 체크 표시를 단독으로 사용할 수도 있습니다.
+일반적으로 설정, 기본 설정, 양식, 설문조사, 용어 및 조건  같은 상황에서 사용됩니다.
+
+
+## Decision Tree
+
+
+비슷한 유형의 다른 컴포넌트와 사용 유형이 헷갈린다면 아래 질문을 따라가 주세요.
+체크박스가 지금 작업에 알맞는 컴포넌트인지 스스로 체크할 수 있습니다.
+
+
+![Decision Tree 설명 이미지](/images/components/check-box/checkbox-decision-tree.jpg)
+
+
+모든 항목의 NO가 나왔다면  #design_platform 슬랙 채널을 찾아주세요.
+
+
+## Contents Guide
+
+
+수정필요: do_dont_text 컴포넌트는 수동 변환 필요 
+
+
+체크박스 라벨의 문구는 제공되는 옵션에 대한 맥락이 사용자에게 충분히 전달되어야 합니다.
+
+
+수정필요: do_dont_text 컴포넌트는 수동 변환 필요 
+
+
+단일 문장, 단어의 경우 쉼표를 써 구분 짓거나 구두점으로 끝나지 않게 유의해 주세요.
+
+### ✅ Do
+
+![그룹 체크박스 하위 옵션 설명 맥락 가이드 이미지](/images/components/check-box/checkbox-contents-guide-context-do.jpg)
+
+### ❌ Don't
+
+![그룹 체크박스 하위 옵션 설명 맥락 가이드 이미지](/images/components/check-box/checkbox-contents-guide-context-dont.jpg)
+
+
+그룹 체크박스의 경우 하위 옵션들을 설명하는 상위 맥락이 반드시 포함되어야 합니다.
+무엇에 대한 선택인지 사용자에게 안내해 주세요.
+
+
+### ✅ Do
+
+![부정적 표현 대신 긍정적 표현 관련 가이드 이미지](/images/components/check-box/checkbox-contents-guide-negative-do.jpg)
+
+### ❌ Don't
+
+![부정적 표현 대신 긍정적 표현 관련 가이드 이미지](/images/components/check-box/checkbox-contents-guide-negative-dont.jpg)
+
+
+부정적인 문구를 사용하지 마세요. 사용자가 원하지 않는 것보다 원하는 것을 선택하도록 요청하는 것이 더 명확하고 좋습니다.
+
+## 미리보기
+
+
+![체크박스 용도 설명](/images/components/check-box/checkbox-preview.jpg)
+
+
+체크박스는 제한된 수의 옵션에서 하나 이상의 옵션을 선택할 수 있도록 하는 데 사용합니다.
+
+
+## Select
+
+
+![Preview - Select](/images/components/check-box/checkbox-select.jpg)
+
+
+체크박스는 indeterminate | select | unSelect 중 1개의 상태를 가질 수 있습니다.
+
+
+a. indeterminate : 하위에 포함하고 있는 여러 개의 옵션 중 하나라도 동일한 선택 값을 가지고 있지 않을 때 사용합니다.
+b. select : 사용자의 선택 여부의 선택을 표현합니다.
+c. unselect : 사용자의 선택 여부의 선택하지 않음을 표현합니다.
+
+
+## Disabled
+
+
+![Preview - Disabled](/images/components/check-box/checkbox-disabled.jpg)
+
+
+비활성화 상태는 현재 어떤 이유로 편집, 변경이 불가하여 사용할 수 없는 상태를 나타냅니다.이후 해당 항목을 다시 사용할 수 있다는 맥락을 사용자에게 전달할 수 있습니다.
+
+
+## Size
+
+
+![Preview - Size](/images/components/check-box/checkbox-size.jpg)
+
+
+체크박스는 Medium, Small 두 가지 크기를 제공하며 Medium이 기본 값으로 가장 자주 사용됩니다.
+표현해야할 정보 구성에 따른 계층을 유의하여 사용해야 합니다.
+
+
+## Context
+
+
+![Preview - Context](/images/components/check-box/checkbox-context-1.jpg)
+
+
+체크박스는 항상 선택 옵션에 대한 맥락과 함께 사용되어야 합니다. 체크박스의 컨트롤만 단독으로 사용될 수 없습니다.
+
+
+![Preview - Context 2](/images/components/check-box/checkbox-context-2.jpg)
+
+
+맥락에는 다른 텍스트 외 다른 UI가 들어올 수 있습니다.
+사용자가 무엇에 대한 옵션을 선택하는 것인지 명확히 인지할 수 있게 돕는 것이 중요합니다.
+
+
+## Layout
+
+
+수정필요: multi_image 컴포넌트는 수동 변환 필요 
+
+
+context의 위치는 오른쪽, 왼쪽 변경할 수 있습니다. 구성하게 될 화면과 Flow에 따라 적절한 판단이 필요합니다.
+
+
+a. right : 보편적으로 데스크탑 환경에서 사용되거나 선택가능한 옵션이 1개일 경우 사용합니다.
+b. left : 보편적으로 모바일 환경에서 사용됩니다.
+
+
+체크박스의 너비는 조절할 수 있습니다. 디바이스와 화면 내 영역을 고려하여 구성해주세요.
+
+
+![Preview - Layout 2](/images/components/check-box/checkbox-layout-2.jpg)
+
+
+![Preview - Layout 3](/images/components/check-box/checkbox-layout-3.jpg)
+
+
+체크박스의 라벨은 1줄 이내의 간결한 내용으로 작성해야 하지만, 경우에 따라 더 길어질 수 있습니다.
+라벨이 가로 공간보다 더 길어지면 다음 줄로 줄 바꿈 처리합니다.
+
+
+## Behavior
+
+
+수정필요: multi_image 컴포넌트는 수동 변환 필요 
+
+
+### Touch targets
+
+
+a. WEB : 체크박스 터치 대상에 라벨을 포함합니다. 작은 영역은 정확하게 클릭하기 어렵고 오류와 불만을 야기할 가능성이 높습니다.
+b. Mobile : 모바일은 Cell 전체가 체크박스의 터치 대상이 되도록 포함합니다. List Item의 어떤 곳을 탭하던 컨트롤이 활성화 될 수 있습니다.
+
+
+위와 같은 기준으로 터치 영역을 구축하면 손가락이 크거나 손 떨림, 장애가 있는 모든 사람들에게 도움이 될 수 있으며 한 손 또는 손가락의 일부로만 디바이스를 사용할 수 있어 터치 실수로 인한 사용자 이동을 최소화할 수 있습니다.
+
+
+수정필요: multi_image 컴포넌트는 수동 변환 필요 
+
+
+### WEB
+
+
+unSelect 와 Select 사이에는 hover와 press와 같이 사용자 행동으로 결정되는 속성들이 있습니다.
+이러한 속성은 사용자에게 즉각적인 피드백을 제공하며, 클릭 가능한 요소를 명확하게 기술하는 역할을 합니다.
+
+
+수정필요: multi_image 컴포넌트는 수동 변환 필요 
+
+
+### Mobile
+
+
+모바일에 경우 hover 속성은 생략하고 press 속성으로 피드백을 제공합니다.
+
+
+수정필요: multi_image 컴포넌트는 수동 변환 필요 
+
+
+### Keyboard Focus & Voice
+
+
+Keyboard Focus와 같은 속성은 접근성과 관련한 속성입니다.
+이러한 속성은 피그마에 표현은 해두었으나 각 플랫폼에서 제공하는 기본 시스템 UI를 사용하여 표현합니다.
+
+
+a. Keyboard : 각 체크박스는 키보드 탭키로 이동하고 스페이스로 선택할 수 있습니다.
+b. Voice : 체크박스와 라벨을 끊어읽지 않도록 유의하여 맥락을 이해할 수 있도록 설계합니다.
+
+
+## 스타일 가이드
+
+
+## Props
+
+
+| name | value |
+| --- | --- |
+| size | medium | large |
+| width | default | stretch |
+| position | topLeft | topRight |
+
+
+## Color Spec
+
+
+![Color Spec 설명 이미지](/images/components/check-box/color-spec-1.jpg)
+
+
+| color | token |
+| --- | --- |
+| color | semantic-color-fill-silent |
+| outline | semantic-color-border-line |
+
+| icon | token |
+| --- | --- |
+| color | semantic-color-text-tertiary |
+
+| text | token |
+| --- | --- |
+| color | semantic-text-primary-hover |
+
+
+![Color Spec 설명 이미지](/images/components/check-box/color-spec-2.jpg)
+
+
+| color | token |
+| --- | --- |
+| color | semantic-color-fill-silent-hover |
+| outline | semantic-color-border-line |
+
+| icon | token |
+| --- | --- |
+| color | semantic-color-text-tertiary |
+
+| text | token |
+| --- | --- |
+| color | semantic-text-primary-hover |
+
+
+![Color Spec 설명 이미지](/images/components/check-box/color-spec-3.jpg)
+
+
+| color | token |
+| --- | --- |
+| color | semantic-color-fill-silent-pressed |
+| outline | semantic-color-border-line |
+
+| icon | token |
+| --- | --- |
+| color | semantic-color-text-tertiary |
+
+| text | token |
+| --- | --- |
+| color | semantic-text-primary-pressed |
+
+
+![Color Spec 설명 이미지](/images/components/check-box/color-spec-4.jpg)
+
+
+| color | token |
+| --- | --- |
+| color | semantic-color-fill-primary |
+
+| icon | token |
+| --- | --- |
+| color | semantic-color-text-on-color |
+
+| text | token |
+| --- | --- |
+| color | semantic-color-text-primary |
+
+
+![Color Spec 설명 이미지](/images/components/check-box/color-spec-5.jpg)
+
+
+| color | token |
+| --- | --- |
+| color | semantic-color-fill-primary-hover |
+
+| icon | token |
+| --- | --- |
+| color | semantic-color-text-on-color |
+
+| text | token |
+| --- | --- |
+| color | semantic-text-primary-hover |
+
+
+![Color Spec 설명 이미지](/images/components/check-box/color-spec-6.jpg)
+
+
+| color | token |
+| --- | --- |
+| color | semantic-color-fill-primary-pressed |
+
+| icon | token |
+| --- | --- |
+| color | semantic-color-text-on-color |
+
+| text | token |
+| --- | --- |
+| color | semantic-text-primary-pressed |
+
+
+## Size & Typography Spec
+
+
+![Size & Typography Spec 설명 이미지](/images/components/check-box/size-typography-spec-1.jpg)
+
+
+| root | token |
+| --- | --- |
+| min width | 88px |
+| max width | undefined |
+
+| control | token |
+| --- | --- |
+| size | 24px |
+| corner radius | scale-corner-radius-25 |
+
+| gap | token |
+| --- | --- |
+| padding | scale-dimension-size-100 |
+
+| text | token |
+| --- | --- |
+| color | semantic-typography-text-xxl |
+
+
+![Size & Typography Spec 설명 이미지](/images/components/check-box/size-typography-spec-2.jpg)
+
+
+| root | token |
+| --- | --- |
+| min width | 70px |
+| max width | undefined |
+
+| control | token |
+| --- | --- |
+| size | 18px |
+| corner radius | scale-corner-radius-25 |
+
+| gap | token |
+| --- | --- |
+| padding | scale-dimension-size-100 |
+
+| text | token |
+| --- | --- |
+| color | semantic-typography-text-m |
+
+## 상태
+
+
+## Anatomy
+
+
+![CheckBox Anatomy 이미지](/images/components/check-box/checkbox-anatomy.jpg)
+
+
+a. Root : Check Box를 감싸는 Container
+b. Control : Check Box의 상태를 표현하는 요소
+c. Context : 사용자에게 Check Box 에 대한 정보를 제공하는
+
+
+## Programmatic State
+
+
+사용자 맥락에 의해 개발자가 코드로 조작하거나 설정하는 상태를 의미합니다.
+
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| isDisabled | boolean | false | true일 경우 체크박스가 비활성화 되어 사용자가 선택할 수 없습니다 |
+| isSelected | boolean | false | 사용자가 Check box를 선택하면 true로 전환합니다 |
+| isIndeterminate | boolean | false | false |
+
+
+## Behavior State
+
+
+주로 사용자 인터랙션과 관련이 있으며, 디자이너가 사용자 경험을 디자인할 때 중요한 역할을 합니다. 사용자는 이 상태를 직접적으로 경험할 수 있으며, 이를 통해 직관적이고 즉각적인 피드백 경험을 줄 수 있습니다.
+
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| hover | boolean | false | false |
+| pressed | boolean | false | false |
+| focus | boolean | false | false |
+
+

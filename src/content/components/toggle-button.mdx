@@ -1,0 +1,353 @@
+---
+title: "Toggle Button"
+description: "toggle button 은 두 가지 상태를 전환하는 동작을 나타냅니다. 기본 상태는 off를 나타내며 선택된 상태는 on을 나타냅니다."
+status: "draft"
+version: "1.0.0"
+category: "component"
+tags: ["ui", "component"]
+platforms: ["web", "ios", "android"]
+updated: "2025-05-28"
+---
+
+# Toggle Button
+
+toggle button 은 두 가지 상태를 전환하는 동작을 나타냅니다. 기본 상태는 off를 나타내며 선택된 상태는 on을 나타냅니다.
+
+## 사용법
+
+
+수정필요: component_usage_demo 컴포넌트는 수동 변환 필요 
+
+
+toggle button을 사용하면 두 상태의 전환을 Label을 통해 사용자에게 명시적으로 안내할 수 있습니다.  
+
+
+## Contents Guide
+
+
+비슷한 유형의 다른 컴포넌트와 사용 유형이 헷갈린다면 아래 질문을 따라가 주세요.
+체크박스가 지금 작업에 알맞는 컴포넌트인지 스스로 체크할 수 있습니다.
+
+
+![Decision Tree 설명 이미지](/images/components/toggle-button/us-togglebtn-00.jpg)
+
+
+모든 항목의 NO가 나왔다면  #design_platform 슬랙 채널을 찾아주세요.
+
+
+## Contents Guide
+
+
+toggled button은 toggle이 가진 On/Off의 기능적인 맥락을 label을 통해 명시적으로 안내하며 icon은 작성된 label의 이해를 도와주는데 보조적인 역할을 합니다.
+
+
+![toggled 했을 때 아이콘이 변경되는 경우도 허용한다는 맥락](/images/components/toggle-button/us-togglebtn-01.jpg)
+
+
+label의 맥락을 icon 을 사용하여 더 효과적으로 전달할 수 있습니다. 사용자의 이해를 돕기 위한 수단으로 적절히 label과 icon을 매칭하여 사용해주세요.
+
+
+### ✅ Do
+
+![icon과 label이 의미 맥락 매칭을 맞출 것](/images/components/toggle-button/us-togglebtn-02-do.jpg)
+
+### ❌ Don't
+
+![ icon과 label이 매칭이 안되는 경우를 주의할 것](/images/components/toggle-button/us-togglebtn-02-dont.jpg)
+
+
+toggle의 기능적으로는 on/off가 맞지만, 내부에 표현되는 icon과 label이 매칭되지 않는 경우 사용자에게 혼란을 줄 수 있습니다. (ex. 예시의 icon은 꺼져있는데, label은 켜짐으로 작성됌) 이런 경우, on/off 기능을 하나의 맥락으로 표현하는거나 아이콘만으로 전달하는 것이 더 효과적일 수 있습니다.
+
+
+### ✅ Do
+
+![Toggle의 selected을 반대로 사용하지 않도록 주의할 것](/images/components/toggle-button/us-togglebtn-03-do.jpg)
+
+### ❌ Don't
+
+![Toggle의 selected을 반대로 사용하지 않도록 주의할 것](/images/components/toggle-button/us-togglebtn-03-dont.jpg)
+
+
+29CM은 사용자가 실행해야 하는 주요 액션들을 Primary(검정색)으로 표현하고 있습니다. Toggle의 selected을 반대로 사용하지 않도록 주의하고, 어떤 행동을 우선적으로 배치할 것인지 고려하여 사용하는 것이 좋습니다.
+
+
+## 미리보기
+
+
+## Selected
+
+
+![Selected](/images/components/toggle-button/preview-toggle-button-01.jpg)
+
+
+아이콘 내부가 채워진(fill) 스타일로 Selected 상태를 나타냅니다. Default 스타일에 경우 배경과 아이콘 색상이 함께 변경됩니다.
+
+
+## Prefix Icon
+
+
+![Prefix Icon](/images/components/toggle-button/preview-toggle-button-02.jpg)
+
+
+prefix icon은 레이블 왼쪽에 위치하며 toggle되는 기능의 맥락을 보조하여 한내할 때 사용합니다. 다양한 아이콘이 들어올 수 있습니다.
+
+
+## Postfix Icon
+
+
+![Postfix Icon](/images/components/toggle-button/preview-toggle-button-03.jpg)
+
+
+postfix icon은 레이블 오른쪽에 위치하며 사용자의 행동과 상호 작용을 암시합니다. toggle의 즉각적인 실행을 나타낼 수 있는 아이콘들만 한정적으로 사용하게 되어있습니다.
+
+
+## Disabled
+
+
+![Disabled](/images/components/toggle-button/preview-toggle-button-04.jpg)
+
+
+비활성화 상태의 버튼은 사용자에게 원래는 동작할 수 있지만 현재 어떤 이유로 사용할 수 없음의 맥락을 전달합니다. 추 후에 다시 사용할 수 있다는 맥락을 사용자에게 전달하여 배치하세요.
+
+
+## Size
+
+
+![Size](/images/components/toggle-button/preview-toggle-button-05.jpg)
+
+
+Toggle Button은 4가지 크기를 제공하며 Medium이 기본 값으로 자주 사용됩니다, 크기는 표현해야할 정보 구성에 따른 계층에 유의하여 사용해야 합니다
+
+
+### Min Width
+
+
+레이블 길이가 짧을 경우를 대비하여 모든 버튼에는 Minimum Width가 포함되어 있습니다. 버튼은 이보다 작은 가로폭을 가질 수 없습니다.
+
+
+## Behavior
+
+
+![Toggle Button WEB Behavior](/images/components/toggle-button/preview-toggle-button-06.jpg)
+
+
+### WEB
+
+
+기본적으로 버튼에는 hover와 pressed와 같이 사용자 행동으로 결정되는 속성들이 포함되어 있습니다. 이러한 속성은 사용자에게 즉각적인 피드백을 제공하며, 클릭 가능한 요소를 명확하게 기술하는 역할을 합니다
+
+
+![Toggle Button Mobile Behavior](/images/components/toggle-button/preview-toggle-button-07.jpg)
+
+
+### Mobile
+
+
+모바일에 경우 hovered 속성은 생략하고 pressed 속성으로 피드백을 제공합니다
+
+
+![Keyboard Focus](/images/components/toggle-button/preview-toggle-button-08.jpg)
+
+
+### Keyboard Focus
+
+
+Toggle Button을 키보드 Tab키로 탐색하고 Space 또는 Enter키를 통하여 Selected 상태를 전환할 수 있습니다. 시각적으로는 파랑색 테두리를 추가하여 표현합니다.
+
+
+## 스타일 가이드
+
+
+## Props
+
+
+| name | value |
+| --- | --- |
+| size | xSmall | small | medium | large |
+| prefixIcon | icon |
+| postfixIcon | icon |
+
+
+## Color Spec
+
+
+![default](/images/components/toggle-button/sv-toggle-button-01.jpg)
+
+
+| part | color token |
+| --- | --- |
+| icon | semantic-color-text-on-color |
+| label | semantic-color-text-on-color |
+| container | semantic-color-fill-primary |
+
+| part : isSelected | color token |
+| --- | --- |
+| icon | semantic-color-text-primary |
+| label | semantic-color-text-primary |
+| container | semantic-color-fill-tertiary |
+
+
+![default, hover](/images/components/toggle-button/sv-toggle-button-02.jpg)
+
+
+| part | color token |
+| --- | --- |
+| icon | semantic-color-text-on-color |
+| label | semantic-color-text-on-color |
+| container | semantic-color-fill-primary-hover |
+
+| part : isSelected | color token |
+| --- | --- |
+| icon | semantic-color-text-primary-hover |
+| label | semantic-color-text-primary-hover |
+| container | semantic-color-fill-tertiary |
+
+
+![default, pressed](/images/components/toggle-button/sv-toggle-button-03.jpg)
+
+
+| part | color token |
+| --- | --- |
+| icon | semantic-color-text-on-color |
+| label | semantic-color-text-on-color |
+| container | semantic-color-fill-primary-pressed |
+
+| part : isSelected | color token |
+| --- | --- |
+| icon | semantic-color-text-primary-pressed |
+| label | semantic-color-text-primary-pressed |
+| container | semantic-color-fill-tertiary |
+
+
+![default, disabled](/images/components/toggle-button/sv-toggle-button-04.jpg)
+
+
+| part | color token |
+| --- | --- |
+| icon | semantic-color-text-disabled |
+| label | semantic-color-text-disabled |
+| container | semantic-color-fill-disabled |
+
+
+## Size Spec
+
+
+![large](/images/components/toggle-button/sv-toggle-button-05-size.jpg)
+
+
+| part | size |
+| --- | --- |
+| corner | corner-radius-50 |
+| min width | 88px |
+| height | 52px |
+| prefix icon | 18 x 18 px |
+| typography | semantic-typography-text-l-bold |
+| postfix icon | 18 x 18 px |
+| weight | Bold |
+| spinner | 20 x 20px |
+
+| gap | token |
+| --- | --- |
+| prefix icon , label | scale-dimension-size-50 |
+| postfix icon , label | scale-dimension-size-25 |
+
+
+![medium](/images/components/toggle-button/sv-toggle-button-06-size.jpg)
+
+
+| part | size |
+| --- | --- |
+| corner | corner-radius-50 |
+| min width | 84px |
+| height | 44px |
+| prefix icon | 16 x 16 px |
+| typography | semantic-typography-text-l-bold |
+| postfix icon | 16 x 16 px |
+| weight | Bold |
+| spinner | 20 x 20px |
+
+| gap | token |
+| --- | --- |
+| prefix icon , label | scale-dimension-size-25 |
+| postfix icon , label | scale-dimension-size-25 |
+
+![small](/images/components/toggle-button/sv-toggle-button-07-size.jpg)
+
+
+| part | size |
+| --- | --- |
+| corner | corner-radius-25 |
+| min width | 66px |
+| height | 36px |
+| prefix icon | 14 x 14 px |
+| typography | semantic-typography-text-xs-medium |
+| postfix icon | 14 x 14 px |
+| weight | regular |
+| spinner | 16 x 16px |
+
+| gap | token |
+| --- | --- |
+| prefix icon , label | scale-dimension-size-25 |
+| postfix icon , label | scale-dimension-size-25 |
+
+
+![xSmall](/images/components/toggle-button/sv-toggle-button-08-size.jpg)
+
+
+| part | size |
+| --- | --- |
+| corner | corner-radius-25 |
+| min width | 60px |
+| height | 28px |
+| prefix icon | 12 x 12 px |
+| typography | semantic-typography-text-xs |
+| postfix icon | 12 x 12 px |
+| weight | regular |
+| spinner | 12 x 12px |
+
+| gap | token |
+| --- | --- |
+| prefix icon , label | scale-dimension-size-25 |
+| postfix icon , label | scale-dimension-size-25 |
+
+
+## 상태
+
+
+## Anatomy
+
+
+![Toggle Button Anatomy 이미지](/images/components/toggle-button/states-toogle-button-00.jpg)
+
+
+a. Root : Toggle Button을 감싸는 Container
+b. Label : 정보를 전달하는 라벨
+c. Prefix icon : 정보를 전달하는 아이콘
+d. Postfix icon : 동작을 암시하는 아이콘
+
+
+## Programmatic State
+
+
+사용자 맥락에 의해 개발자가 코드로 조작하거나 설정하는 상태를 의미합니다.
+
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| isDisabled | boolean | false | true일 때 비활성화 되어 선택할 수 없음 |
+| isSelected | boolean | false | 사용자 선택 시 true로 전환 |
+| isPending | boolean | false | true일 경우 Label대신 spinner가 나타남 |
+
+
+## Behavior State
+
+
+주로 사용자 인터랙션과 관련이 있으며, 디자이너가 사용자 경험을 디자인할 때 중요한 역할을 합니다. 사용자는 이 상태를 직접적으로 경험할 수 있으며, 이를 통해 직관적이고 즉각적인 피드백 경험을 줄 수 있습니다.
+
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| hover | boolean | false | 마우스 오버 시 true로 전환 |
+| pressed | boolean | false | 클릭 또는 탭시에 true로 전환 |
+| focus | boolean | false | 키보드 포커싱 시 true로 전환 |
+

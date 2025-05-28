@@ -16,10 +16,23 @@ class JsonToMdxConverter {
       .toLowerCase();
   }
 
-  // 마크다운 특수 문자 이스케이프
+  // 마크다운 특수 문자 이스케이프 (HTML 태그 처리 포함)
   escapeMarkdown(text) {
     if (!text) return '';
     return text
+      // HTML 태그 정리
+      .replace(/<br\s*\/?>/gi, '\n\n')  // <br>, </br>, <br/> → 줄바꿈
+      .replace(/<\/br>/gi, '\n\n')      // </br> → 줄바꿈
+      .replace(/<p\s*>/gi, '\n\n')      // <p> → 줄바꿈
+      .replace(/<\/p>/gi, '\n\n')       // </p> → 줄바꿈
+      .replace(/<strong>(.*?)<\/strong>/gi, '**$1**')  // <strong> → **bold**
+      .replace(/<b>(.*?)<\/b>/gi, '**$1**')            // <b> → **bold**
+      .replace(/<em>(.*?)<\/em>/gi, '_$1_')            // <em> → _italic_
+      .replace(/<i>(.*?)<\/i>/gi, '_$1_')              // <i> → _italic_
+      .replace(/<code>(.*?)<\/code>/gi, '`$1`')        // <code> → `code`
+      // 기타 HTML 태그 제거
+      .replace(/<[^>]*>/g, '')
+      // 마크다운 특수 문자 이스케이프
       .replace(/\\/g, '\\\\')
       .replace(/\*/g, '\\*')
       .replace(/_/g, '\\_')
@@ -31,26 +44,40 @@ class JsonToMdxConverter {
       .replace(/~/g, '\\~')
       .replace(/>/g, '\\>')
       .replace(/#/g, '\\#')
-      .replace(/\|/g, '\\|');
+      .replace(/\|/g, '\\|')
+      // 연속된 줄바꿈 정리
+      .replace(/\n{3,}/g, '\n\n')
+      .trim();
   }
 
   // URL 안전성 처리
   escapeUrl(url) {
     if (!url) return '';
-    // URL에 공백이나 특수 문자가 있으면 인코딩
     return encodeURI(url);
   }
 
-  // 안전한 텍스트 처리
+  // 안전한 텍스트 처리 (프론트매터용)
   safeText(text) {
     if (!text) return '';
-    // 기본적인 HTML 이스케이프
     return text
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#x27;');
+      // HTML 태그 정리 (escapeMarkdown과 동일)
+      .replace(/<br\s*\/?>/gi, ' ')     // <br> → 공백
+      .replace(/<\/br>/gi, ' ')         // </br> → 공백
+      .replace(/<p\s*>/gi, ' ')         // <p> → 공백
+      .replace(/<\/p>/gi, ' ')          // </p> → 공백
+      .replace(/<strong>(.*?)<\/strong>/gi, '$1')  // <strong> 태그 제거
+      .replace(/<b>(.*?)<\/b>/gi, '$1')            // <b> 태그 제거
+      .replace(/<em>(.*?)<\/em>/gi, '$1')          // <em> 태그 제거
+      .replace(/<i>(.*?)<\/i>/gi, '$1')            // <i> 태그 제거
+      .replace(/<code>(.*?)<\/code>/gi, '$1')      // <code> 태그 제거
+      .replace(/<[^>]*>/g, '')                     // 기타 HTML 태그 제거
+      // YAML용 특수 문자 처리
+      .replace(/"/g, '\\"')             // 따옴표 이스케이프
+      .replace(/'/g, "\\'")             // 작은따옴표 이스케이프
+      .replace(/\n/g, ' ')              // 줄바꿈 → 공백
+      .replace(/\r/g, ' ')              // 캐리지 리턴 → 공백
+      .replace(/\s+/g, ' ')             // 연속 공백 → 단일 공백
+      .trim();
   }
 
   // 프론트매터 생성
@@ -80,62 +107,108 @@ updated: "${new Date().toISOString().split('T')[0]}"
     return coverComponent?.contents?.description || '컴포넌트 설명';
   }
 
+  // 이미지 URL을 로컬 경로로 변환 (개선된 버전)
+  convertImageUrl(originalUrl, componentName) {
+    if (!originalUrl) return '';
+    
+    // GitHub raw URL인 경우 로컬 경로로 변환
+    if (originalUrl.includes('raw.githubusercontent.com')) {
+      const urlParts = originalUrl.split('/');
+      const fileName = urlParts[urlParts.length - 1];
+      
+      // 경로 구조: /images/components/component-name/filename
+      return `/images/components/${componentName}/${fileName}`;
+    }
+    
+    // 로컬 파일 시스템 경로인 경우 (file://)
+    if (originalUrl.startsWith('file://')) {
+      const urlParts = originalUrl.split('/');
+      const fileName = urlParts[urlParts.length - 1];
+      return `/images/components/${componentName}/${fileName}`;
+    }
+    
+    // 상대 경로인 경우
+    if (originalUrl.startsWith('./') || originalUrl.startsWith('../')) {
+      const fileName = path.basename(originalUrl);
+      return `/images/components/${componentName}/${fileName}`;
+    }
+    
+    return originalUrl;
+  }
+
   // 이미지 컴포넌트 변환
   convertImage(imageComponent) {
     const { image } = imageComponent.contents;
     const webImage = image.web || image.mobile;
     
-    // 이미지 설명에서 특수 문자 이스케이프
+    const componentName = this.extractComponentName();
     const safeDescription = this.escapeMarkdown(image.description || 'Image');
-    const safeUrl = this.escapeUrl(webImage.image_url);
+    const localImageUrl = this.convertImageUrl(webImage.image_url, componentName);
     
-    return `<img src="${safeUrl}" alt="${safeDescription}" />
+    return `![${safeDescription}](${localImageUrl})
 
 `;
   }
 
-  // 텍스트 컴포넌트 변환
+  // 컴포넌트 이름 추출
+  extractComponentName() {
+    const title = this.jsonData.page_name.replace('Component - ', '');
+    return this.toKebabCase(title);
+  }
+
+  // 텍스트 컴포넌트 변환 (HTML 태그 처리 개선)
   convertText(textComponent) {
     const { text } = textComponent.contents;
-    const safeText = text || '';
+    
+    // HTML 태그를 마크다운으로 변환
+    let processedText = (text || '')
+      .replace(/<br\s*\/?>/gi, '\n\n')           // <br> → 줄바꿈
+      .replace(/<\/br>/gi, '\n\n')               // </br> → 줄바꿈
+      .replace(/<p\s*>/gi, '\n\n')               // <p> → 줄바꿈
+      .replace(/<\/p>/gi, '\n\n')                // </p> → 줄바꿈
+      .replace(/<strong>(.*?)<\/strong>/gi, '**$1**')  // <strong> → **bold**
+      .replace(/<b>(.*?)<\/b>/gi, '**$1**')            // <b> → **bold**
+      .replace(/<em>(.*?)<\/em>/gi, '_$1_')            // <em> → _italic_
+      .replace(/<i>(.*?)<\/i>/gi, '_$1_')              // <i> → _italic_
+      .replace(/<code>(.*?)<\/code>/gi, '`$1`')        // <code> → `code`
+      .replace(/<ul>/gi, '')                           // <ul> 제거
+      .replace(/<\/ul>/gi, '')                         // </ul> 제거
+      .replace(/<li>/gi, '- ')                         // <li> → 리스트 아이템
+      .replace(/<\/li>/gi, '\n')                       // </li> → 줄바꿈
+      .replace(/<[^>]*>/g, '')                         // 기타 HTML 태그 제거
+      .replace(/\n{3,}/g, '\n\n')                      // 연속 줄바꿈 정리
+      .trim();
     
     switch (textComponent.type) {
       case 'text_title_h3':
-        return `## ${safeText}
-
-`;
+        return `## ${processedText}\n\n`;
       case 'text_title_h4':
-        return `### ${safeText}
-
-`;
+        return `### ${processedText}\n\n`;
       case 'text_body':
-        return `${safeText}
-
-`;
+        return `${processedText}\n\n`;
       default:
-        return `${safeText}
-
-`;
+        return `${processedText}\n\n`;
     }
   }
 
   // Do/Don't 이미지 변환
   convertDoDontImage(component) {
     const { do_image, dont_image } = component.contents;
+    const componentName = this.extractComponentName();
     
-    const doImageUrl = this.escapeUrl(do_image.web?.image_url || do_image.mobile?.image_url || '');
-    const dontImageUrl = this.escapeUrl(dont_image.web?.image_url || dont_image.mobile?.image_url || '');
+    const doImageUrl = this.convertImageUrl(do_image.web?.image_url || do_image.mobile?.image_url || '', componentName);
+    const dontImageUrl = this.convertImageUrl(dont_image.web?.image_url || dont_image.mobile?.image_url || '', componentName);
     
     const doDescription = this.safeText(do_image.description || 'Do example');
     const dontDescription = this.safeText(dont_image.description || 'Don\'t example');
     
     return `### ✅ Do
 
-<img src="${doImageUrl}" alt="${doDescription}" />
+![${doDescription}](${doImageUrl})
 
 ### ❌ Don't
 
-<img src="${dontImageUrl}" alt="${dontDescription}" />
+![${dontDescription}](${dontImageUrl})
 
 `;
   }
@@ -148,11 +221,9 @@ updated: "${new Date().toISOString().split('T')[0]}"
       return '<!-- 테이블 데이터가 올바르지 않습니다 -->\n\n';
     }
     
-    // 테이블 헤더
     let markdown = '| ' + head.map(h => this.safeText(h.title || '')).join(' | ') + ' |\n';
     markdown += '| ' + head.map(() => '---').join(' | ') + ' |\n';
     
-    // 테이블 바디
     body.forEach(row => {
       if (Array.isArray(row)) {
         markdown += '| ' + row.map(cell => this.safeText(cell.content || '')).join(' | ') + ' |\n';
@@ -202,7 +273,7 @@ updated: "${new Date().toISOString().split('T')[0]}"
         return this.convertBulletList(component);
       
       case 'spacing':
-        return '\n'; // 스페이싱은 간단한 줄바꿈으로
+        return '\n';
       
       default:
         return `<!-- ${component.type} 컴포넌트는 수동 변환 필요 -->\n\n`;
@@ -218,7 +289,6 @@ updated: "${new Date().toISOString().split('T')[0]}"
     }
     
     Object.entries(this.jsonData.feed_components).forEach(([tabId, components]) => {
-      // 탭 제목
       const tabTitles = {
         usage: '## 사용법',
         preview: '## 미리보기', 
@@ -228,7 +298,6 @@ updated: "${new Date().toISOString().split('T')[0]}"
       
       markdown += `${tabTitles[tabId] || `## ${tabId}`}\n\n`;
       
-      // 각 컴포넌트 변환
       if (Array.isArray(components)) {
         components.forEach(component => {
           try {
@@ -248,20 +317,16 @@ updated: "${new Date().toISOString().split('T')[0]}"
   convert() {
     let mdxContent = '';
     
-    // 프론트매터 추가
     mdxContent += this.generateFrontmatter();
     
-    // 컴포넌트 제목
     const title = this.jsonData.page_name.replace('Component - ', '');
     mdxContent += `# ${title}\n\n`;
     
-    // 컴포넌트 설명
     const description = this.extractDescription();
     if (description && description !== '컴포넌트 설명') {
       mdxContent += `${description}\n\n`;
     }
     
-    // 피드 컴포넌트들 변환
     if (this.jsonData.feed_components) {
       mdxContent += this.convertFeedComponents();
     } else {
@@ -277,7 +342,6 @@ updated: "${new Date().toISOString().split('T')[0]}"
     const fileName = this.toKebabCase(title) + '.mdx';
     const filePath = path.join(this.outputDir, fileName);
     
-    // 디렉토리가 없으면 생성
     if (!fs.existsSync(this.outputDir)) {
       fs.mkdirSync(this.outputDir, { recursive: true });
     }
@@ -290,14 +354,173 @@ updated: "${new Date().toISOString().split('T')[0]}"
   }
 }
 
-// 일괄 변환 클래스
-class BatchConverter {
+// 이미지 복사 클래스 (개선된 버전)
+class ImageCopier {
   constructor(sourceDir, outputDir) {
-    this.sourceDir = sourceDir; // /Users/minhee/Desktop/ruler-static-contents-main/pages/component
-    this.outputDir = outputDir; // /Users/minhee/Documents/29cm/ruler-design/src/content/components
+    this.sourceDir = sourceDir;
+    this.outputDir = outputDir;
   }
 
-  // 모든 컴포넌트 폴더 찾기
+  // 특정 컴포넌트의 이미지만 복사
+  copySingleComponentImages(componentName) {
+    const componentPath = path.join(this.sourceDir, componentName);
+    const resourcesPath = path.join(componentPath, 'resources');
+    
+    if (!fs.existsSync(resourcesPath)) {
+      console.log(`⚠️ ${componentName}에 이미지가 없습니다`);
+      return false;
+    }
+
+    const targetPath = path.join(this.outputDir, componentName);
+    
+    try {
+      if (!fs.existsSync(targetPath)) {
+        fs.mkdirSync(targetPath, { recursive: true });
+      }
+      
+      // web 폴더가 있으면 우선 복사
+      const webPath = path.join(resourcesPath, 'web');
+      if (fs.existsSync(webPath)) {
+        this.copyDirectoryContents(webPath, targetPath);
+      } else {
+        // web 폴더가 없으면 전체 resources 복사
+        this.copyDirectoryContents(resourcesPath, targetPath);
+      }
+      
+      console.log(`✅ ${componentName} 이미지 복사 완료`);
+      return true;
+    } catch (error) {
+      console.error(`❌ ${componentName} 이미지 복사 실패:`, error.message);
+      return false;
+    }
+  }
+
+  // 모든 이미지 복사
+  copyAllImages() {
+    if (!fs.existsSync(this.outputDir)) {
+      fs.mkdirSync(this.outputDir, { recursive: true });
+    }
+
+    const componentDirs = fs.readdirSync(this.sourceDir);
+    let copiedCount = 0;
+
+    componentDirs.forEach(componentName => {
+      const componentPath = path.join(this.sourceDir, componentName);
+      
+      if (fs.statSync(componentPath).isDirectory()) {
+        if (this.copySingleComponentImages(componentName)) {
+          copiedCount++;
+        }
+      }
+    });
+
+    console.log(`🎉 총 ${copiedCount}개 컴포넌트의 이미지 복사 완료!`);
+    return copiedCount;
+  }
+
+  // 디렉토리 내용 복사 (개선된 버전)
+  copyDirectoryContents(src, dest) {
+    if (!fs.existsSync(dest)) {
+      fs.mkdirSync(dest, { recursive: true });
+    }
+    
+    const items = fs.readdirSync(src);
+    
+    items.forEach(item => {
+      const srcPath = path.join(src, item);
+      const destPath = path.join(dest, item);
+      
+      const stats = fs.statSync(srcPath);
+      
+      if (stats.isDirectory()) {
+        this.copyDirectoryContents(srcPath, destPath);
+      } else {
+        // 이미지 파일만 복사 (확장자 체크)
+        const ext = path.extname(item).toLowerCase();
+        if (['.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp'].includes(ext)) {
+          fs.copyFileSync(srcPath, destPath);
+        }
+      }
+    });
+  }
+}
+
+// 통합 변환 클래스 (이미지 복사 + MDX 변환)
+class IntegratedConverter {
+  constructor(sourceDir, outputDir, imageOutputDir) {
+    this.sourceDir = sourceDir;
+    this.outputDir = outputDir;
+    this.imageOutputDir = imageOutputDir;
+  }
+
+  // 이미지 복사와 MDX 변환을 한번에 실행
+  convertWithImages() {
+    console.log('🚀 통합 변환 시작: 이미지 복사 + MDX 변환');
+    console.log();
+
+    // 1. 이미지 복사
+    console.log('📸 1단계: 이미지 복사');
+    const imageCopier = new ImageCopier(this.sourceDir, this.imageOutputDir);
+    const imagesCopied = imageCopier.copyAllImages();
+    console.log();
+
+    // 2. MDX 변환
+    console.log('📝 2단계: MDX 변환');
+    const batchConverter = new BatchConverter(this.sourceDir, this.outputDir);
+    const conversionResults = batchConverter.convertAll();
+    console.log();
+
+    // 3. 결과 요약
+    const successCount = conversionResults.filter(r => r.success).length;
+    const failureCount = conversionResults.filter(r => !r.success).length;
+
+    console.log('🎊 통합 변환 완료!');
+    console.log(`📸 이미지 복사: ${imagesCopied}개 컴포넌트`);
+    console.log(`📝 MDX 변환 성공: ${successCount}개`);
+    console.log(`❌ MDX 변환 실패: ${failureCount}개`);
+
+    return {
+      imagesCopied,
+      mdxSuccess: successCount,
+      mdxFailure: failureCount,
+      results: conversionResults
+    };
+  }
+
+  // 특정 컴포넌트만 변환 (이미지 + MDX)
+  convertSingleWithImages(componentName) {
+    console.log(`🔄 단일 컴포넌트 통합 변환: ${componentName}`);
+
+    const componentJsonPath = path.join(this.sourceDir, componentName, 'contents.json');
+    
+    if (!fs.existsSync(componentJsonPath)) {
+      console.error(`❌ contents.json이 없습니다: ${componentJsonPath}`);
+      return false;
+    }
+
+    // 1. 이미지 복사
+    const imageCopier = new ImageCopier(this.sourceDir, this.imageOutputDir);
+    imageCopier.copySingleComponentImages(componentName);
+
+    // 2. MDX 변환
+    try {
+      const converter = new JsonToMdxConverter(componentJsonPath, this.outputDir);
+      converter.saveToFile();
+      console.log(`✅ ${componentName} 통합 변환 완료`);
+      return true;
+    } catch (error) {
+      console.error(`❌ ${componentName} MDX 변환 실패:`, error.message);
+      return false;
+    }
+  }
+}
+
+class BatchConverter {
+  constructor(sourceDir, outputDir) {
+    this.sourceDir = sourceDir;
+    this.outputDir = outputDir;
+  }
+
   findComponentDirectories() {
     if (!fs.existsSync(this.sourceDir)) {
       throw new Error(`소스 디렉토리가 존재하지 않습니다: ${this.sourceDir}`);
@@ -310,7 +533,6 @@ class BatchConverter {
       const itemPath = path.join(this.sourceDir, item);
       const contentsJsonPath = path.join(itemPath, 'contents.json');
 
-      // 디렉토리이고 contents.json이 있는 경우만
       if (fs.statSync(itemPath).isDirectory() && fs.existsSync(contentsJsonPath)) {
         componentDirs.push({
           name: item,
@@ -322,7 +544,6 @@ class BatchConverter {
     return componentDirs;
   }
 
-  // 단일 컴포넌트 변환
   convertSingleComponent(componentDir) {
     try {
       console.log(`🔄 변환 중: ${componentDir.name}`);
@@ -335,7 +556,6 @@ class BatchConverter {
     }
   }
 
-  // 모든 컴포넌트 일괄 변환
   convertAll() {
     console.log(`📂 소스 디렉토리: ${this.sourceDir}`);
     console.log(`📁 출력 디렉토리: ${this.outputDir}`);
@@ -353,13 +573,11 @@ class BatchConverter {
       results.push(result);
     });
 
-    // 결과 요약
     console.log();
     console.log('🎉 변환 완료!');
     console.log(`✅ 성공: ${results.filter(r => r.success).length}개`);
     console.log(`❌ 실패: ${results.filter(r => !r.success).length}개`);
 
-    // 실패한 컴포넌트 목록
     const failures = results.filter(r => !r.success);
     if (failures.length > 0) {
       console.log();
@@ -385,19 +603,17 @@ function convertSingleFile(jsonFilePath, outputDir = 'src/content/components') {
   }
 }
 
-// CLI 실행 부분
+// CLI 실행 부분 (확장된 버전)
 if (require.main === module) {
   const [,, action, ...args] = process.argv;
 
   switch (action) {
     case 'single':
-      // 단일 파일 변환: node convert-components-to-mdx.js single <json파일경로> [출력디렉토리]
       const jsonFile = args[0];
       const outputDir = args[1] || 'src/content/components';
       
       if (!jsonFile) {
         console.log('사용법: node convert-components-to-mdx.js single <json파일경로> [출력디렉토리]');
-        console.log('예시: node convert-components-to-mdx.js single /path/to/contents.json src/content/components');
         process.exit(1);
       }
       
@@ -405,13 +621,11 @@ if (require.main === module) {
       break;
 
     case 'batch':
-      // 일괄 변환: node convert-components-to-mdx.js batch <소스디렉토리> [출력디렉토리]
       const sourceDir = args[0];
       const batchOutputDir = args[1] || 'src/content/components';
       
       if (!sourceDir) {
         console.log('사용법: node convert-components-to-mdx.js batch <소스디렉토리> [출력디렉토리]');
-        console.log('예시: node convert-components-to-mdx.js batch /Users/minhee/Desktop/ruler-static-contents-main/pages/component src/content/components');
         process.exit(1);
       }
       
@@ -419,34 +633,92 @@ if (require.main === module) {
       batchConverter.convertAll();
       break;
 
+    case 'copy-images':
+      // 이미지만 복사
+      const imgSourceDir = args[0];
+      const imgOutputDir = args[1] || 'public/images/components';
+      
+      if (!imgSourceDir) {
+        console.log('사용법: node convert-components-to-mdx.js copy-images <소스디렉토리> [이미지출력디렉토리]');
+        console.log('예시: node convert-components-to-mdx.js copy-images /path/to/ruler-static-contents/pages/component public/images/components');
+        process.exit(1);
+      }
+      
+      const imageCopier = new ImageCopier(imgSourceDir, imgOutputDir);
+      imageCopier.copyAllImages();
+      break;
+
+    case 'integrated':
+      // 이미지 복사 + MDX 변환 통합
+      const intSourceDir = args[0];
+      const intMdxOutputDir = args[1] || 'src/content/components';
+      const intImageOutputDir = args[2] || 'public/images/components';
+      
+      if (!intSourceDir) {
+        console.log('사용법: node convert-components-to-mdx.js integrated <소스디렉토리> [MDX출력디렉토리] [이미지출력디렉토리]');
+        console.log('예시: node convert-components-to-mdx.js integrated /path/to/ruler-static-contents/pages/component src/content/components public/images/components');
+        process.exit(1);
+      }
+      
+      const integratedConverter = new IntegratedConverter(intSourceDir, intMdxOutputDir, intImageOutputDir);
+      integratedConverter.convertWithImages();
+      break;
+
+    case 'single-integrated':
+      // 특정 컴포넌트만 통합 변환
+      const singleSourceDir = args[0];
+      const componentName = args[1];
+      const singleMdxOutputDir = args[2] || 'src/content/components';
+      const singleImageOutputDir = args[3] || 'public/images/components';
+      
+      if (!singleSourceDir || !componentName) {
+        console.log('사용법: node convert-components-to-mdx.js single-integrated <소스디렉토리> <컴포넌트명> [MDX출력디렉토리] [이미지출력디렉토리]');
+        console.log('예시: node convert-components-to-mdx.js single-integrated /path/to/ruler-static-contents/pages/component alert-dialog');
+        process.exit(1);
+      }
+      
+      const singleIntegratedConverter = new IntegratedConverter(singleSourceDir, singleMdxOutputDir, singleImageOutputDir);
+      singleIntegratedConverter.convertSingleWithImages(componentName);
+      break;
+
     case 'alert-dialog':
-      // 특정 alert-dialog 변환
+      // 빠른 테스트용
       const alertDialogPath = '/Users/minhee/Desktop/ruler-static-contents-main/pages/component/alert-dialog/contents.json';
       const rulerOutputDir = '/Users/minhee/Documents/29cm/ruler-design/src/content/components';
+      const rulerImageDir = '/Users/minhee/Documents/29cm/ruler-design/public/images/components';
       
-      console.log('🔄 Alert Dialog 컴포넌트 변환 시작...');
+      console.log('🔄 Alert Dialog 컴포넌트 통합 변환 시작...');
+      
+      // 이미지 복사
+      const testImageCopier = new ImageCopier('/Users/minhee/Desktop/ruler-static-contents-main/pages/component', rulerImageDir);
+      testImageCopier.copySingleComponentImages('alert-dialog');
+      
+      // MDX 변환
       convertSingleFile(alertDialogPath, rulerOutputDir);
       break;
 
     default:
-      console.log('📖 JSON to MDX 변환기');
+      console.log('📖 JSON to MDX 변환기 (이미지 복사 포함)');
       console.log();
       console.log('사용법:');
       console.log('  node convert-components-to-mdx.js single <json파일경로> [출력디렉토리]');
       console.log('  node convert-components-to-mdx.js batch <소스디렉토리> [출력디렉토리]');
+      console.log('  node convert-components-to-mdx.js copy-images <소스디렉토리> [이미지출력디렉토리]');
+      console.log('  node convert-components-to-mdx.js integrated <소스디렉토리> [MDX출력] [이미지출력]');
+      console.log('  node convert-components-to-mdx.js single-integrated <소스디렉토리> <컴포넌트명> [MDX출력] [이미지출력]');
       console.log('  node convert-components-to-mdx.js alert-dialog');
       console.log();
       console.log('예시:');
-      console.log('  # 단일 파일 변환');
-      console.log('  node convert-components-to-mdx.js single /path/to/contents.json');
+      console.log('  # 이미지만 복사');
+      console.log('  node convert-components-to-mdx.js copy-images /Users/minhee/Desktop/ruler-static-contents-main/pages/component');
       console.log();
-      console.log('  # 모든 컴포넌트 일괄 변환');
-      console.log('  node convert-components-to-mdx.js batch /Users/minhee/Desktop/ruler-static-contents-main/pages/component');
+      console.log('  # 이미지 복사 + MDX 변환 통합');
+      console.log('  node convert-components-to-mdx.js integrated /Users/minhee/Desktop/ruler-static-contents-main/pages/component');
       console.log();
-      console.log('  # Alert Dialog만 변환');
-      console.log('  node convert-components-to-mdx.js alert-dialog');
+      console.log('  # 특정 컴포넌트만 통합 변환');
+      console.log('  node convert-components-to-mdx.js single-integrated /path/to/source button');
       break;
   }
 }
 
-module.exports = { JsonToMdxConverter, BatchConverter, convertSingleFile };
+module.exports = { JsonToMdxConverter, BatchConverter, ImageCopier, IntegratedConverter, convertSingleFile };
