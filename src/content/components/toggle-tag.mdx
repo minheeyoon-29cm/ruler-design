@@ -1,0 +1,94 @@
+---
+title: "ToggleTag"
+description: "Toggled Tag는 가장 기본적인 형태의 태그입니다. 키워드에 관한 내용을 On 또는 Off 하여 키워드에 해당하는 정보, 또는 콘텐츠만 필터링하고 노출하므로 사용자 정보탐색에 도움을 줍니다."
+status: "draft"
+version: "1.0.0"
+category: "component"
+tags: ["ui", "component"]
+platforms: ["web", "ios", "android"]
+updated: "2025-05-29"
+---
+
+# Toggle Tag
+
+Toggled Tag는 가장 기본적인 형태의 태그입니다. 키워드에 관한 내용을 On 또는 Off 하여 키워드에 해당하는 정보, 또는 콘텐츠만 필터링하고 노출하므로 사용자 정보탐색에 도움을 줍니다.
+
+---
+
+**customColor**
+
+기획전, 프로모션 성격에 맞는 색상을 주입할 수 있는 옵션입니다. 이는 특수한 경우에만 사용될 수 있으며 오남용을 엄격히 금합니다.
+
+- custumColor옵션은 toggled:true 상태에서 반영됩니다.
+- custumColor옵션은 hover, pressed시에 opacity로 표현됩니다.
+
+---
+
+![heroImage](https://img.29cm.co.kr/next-edition/2024/07/17/54ca04ef4c2d436a990d6c5373b8e804_20240717021658.jpg)
+
+Toggled Tag를 그룹으로 사용할 때 첫 번째 Tag는 항상 select 되어있어야 합니다. 이는 섹션 또는 페이지 내의 정보 정렬기준에 대해 사용자에게 명확하게 전달해주는 역할을 하여 오인지를 줄일 수 있습니다.
+
+### Pending
+
+![heroImage](https://d13fzx7h5ezopb.cloudfront.net/ruler-static-contents/main/pages/component/tag/resources/web/preview/tag-preview-04-pending.gif?t=1721150456466)
+
+Tag로 인해 특정 정보나 콘텐츠들을 불러올 때 처리과정에서 발생되는 대기중 상태는 Tag가 아닌 정보와 콘텐츠가 불러와지는 영역에서 표현해주세요.
+
+![heroImage](https://img.29cm.co.kr/next-edition/2024/07/17/35f4178480b14f91a88c6510b8ba6781_20240717022343.png)
+
+페이지, 또는 섹션에 콘텐츠가 정렬되는 명확한 단일 기준이 있다면 그 기준을 명확히 풀어서 작성하는 것이 사용자가 자신의 작업 흐름안에서 페이지와 섹션의 맥락을 더 빨리 인지하고 탐색할 수 있습니다.
+
+---
+
+# Tags
+
+Tag는 메타데이터의 한 종류로 부여받은 키워드를 입력, 선택, 필터링하여 보여줌으로 사용자가 더 쉽게 정보를 탐색할 수 있도록 돕습니다.
+
+![heroImage](https://img.29cm.co.kr/next-edition/2024/07/17/488f1590e0a94917bbe488f3b30afaa4_20240717014022.png)
+
+29CM에서는 Tag를 크게 ToggleTag, RemovableTag, FilterTag 세 가지 종류로 제공합니다. 각각의 Tag는 다른 사용성과 동작 방식을 가지지만, 본질적으로 부여받은 옵션과 키워드를 통해 사용자의 탐색을 돕습니다.
+
+![태그는 그룹으로 묶어 사용하라는 권장사항](https://d13fzx7h5ezopb.cloudfront.net/ruler-static-contents/main/pages/component/tag/resources/web/usage/tag-usage-03-do-00.jpg?t=1721148434029)
+
+Tag는 그룹으로 묶어 세트로 사용하는 것을 권장합니다. 탐색에 필요한 키워드들을 상위 페이지 또는 섹션, 지원하는 콘텐츠 맥락에 맞게 나열하여 사용자의 탐색 경험에 도움이 되어야 합니다.
+
+### Decision Tree
+
+비슷한 유형의 다른 컴포넌트와 사용 유형이 헷갈린다면 아래 질문을 따라가 주세요. Tag가 지금 작업에 알맞은 컴포넌트인지 스스로 체크할 수 있습니다.
+
+![Decision Tree](https://d13fzx7h5ezopb.cloudfront.net/ruler-static-contents/main/pages/component/tag/resources/web/usage/tag-usage-02-decision-tree.jpg?t=1721148288720)
+
+모든 항목의 NO가 나왔다면 #design_platform 슬랙 채널을 찾아주세요.## Props
+
+| name | value |
+| --- | --- |
+| 속성명 | 값 |
+
+## Color Spec
+
+수정필요: Color Spec 섹션 추가 필요
+
+## Size & Typography Spec
+
+수정필요: Size Spec 섹션 추가 필요
+
+## 상태
+
+## Anatomy
+
+![ToggleTag Anatomy](/images/components/toggletag/states/toggletag-anatomy.jpg)
+
+## Programmatic State
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| isDisabled | boolean | false | 비활성화 상태 |
+
+## Behavior State
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| hover | boolean | false | 마우스 오버 상태 |
+| pressed | boolean | false | 클릭/탭 상태 |
+| focus | boolean | false | 키보드 포커스 상태 |
+

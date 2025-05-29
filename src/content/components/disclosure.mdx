@@ -1,0 +1,96 @@
+---
+title: "Disclosures"
+description: "Disclosure는 사용자가 인터페이스의 특정 영역을 확장하여 추가 정보를 열람하거나 더 많은 콘텐츠를 확인할 수 있도록 하는 요소입니다."
+status: "draft"
+version: "1.0.0"
+category: "component"
+tags: ["ui", "component"]
+platforms: ["web", "ios", "android"]
+updated: "2025-05-29"
+---
+
+# Disclosures
+
+Disclosure는 사용자가 인터페이스의 특정 영역을 확장하여 추가 정보를 열람하거나 더 많은 콘텐츠를 확인할 수 있도록 하는 요소입니다. 
+
+![heroImage](https://img.29cm.co.kr/next-edition/2024/08/26/52a0e84c3ed34d79b3707f71ad0b8627_20240826154603.jpg)
+
+- 🅐 Root : Disclosure 컴포넌트의 전체 컨테이너로, 모든 구성 요소들을 감싸는 루트 컨테이너입니다.
+- 🅑 Disclosure Headers : 사용자가 클릭하거나 터치하여 콘텐츠를 열거나 닫을 수 있는 영역입니다.
+- 🅒 Disclosure : Disclosure UI의 상호작용 아이콘으로, 대개 화살표, 플러스/마이너스 아이콘 등으로 구성되는 컨트롤입니다.
+- 🅓 Contents : 사용자가 Disclosure Header를 클릭해 확장할 때 표시되는 콘텐츠 영역입니다.
+
+---
+
+### isExpand(펼치기) & isCollapse(접기) 
+
+![Image](https://img.29cm.co.kr/next-edition/2024/08/26/8e9727feb17b45dd93633d876bab2148_20240826160616.gif)
+
+Disclosure UI는 `isExpand`와 `isCollapse` 두 가지 상태를 가집니다. 이 상태들은 각각 사용자가 특정 섹션을 선택할 때 콘텐츠가 화면에 표시되거나 숨겨지는 동작을 제어합니다.
+
+- isExpand: 사용자가 섹션을 선택하면 해당 섹션의 숨겨져 있던 콘텐츠가 화면에 나타나는 상태입니다. 이를 통해 추가적인 정보나 세부 사항이 노출됩니다.
+- isCollapse: 반대로 사용자가 섹션을 다시 선택하면 이미 펼쳐진 콘텐츠가 다시 숨겨져, 화면이 기본 상태로 돌아갑니다.
+
+이 두 상태는 사용자 인터페이스에서 필요에 따라 콘텐츠를 동적으로 제어하는 중요한 역할을 하며, 더 많은 정보를 필요로 할 때는 펼쳐서 볼 수 있게 하고, 불필요한 정보는 접어서 간결하게 유지합니다.
+
+### Disclosure Headers & Disclosure 
+
+![Image](https://img.29cm.co.kr/next-edition/2024/08/26/b203b04cedff4db5840ff5b984b904c1_20240826162234.jpg)
+
+Disclosure는 단독으로 사용될 수 있으며 맥락에 따라 다양한 아이콘으로 표현될 수 있습니다.
+
+Disclosure Headers를 통해 콘텐츠의 간략한 요약을 제공할 수 있으며, Headers 영역을 클릭 또는 터치하면 상세 콘텐츠를 표시하도록 합니다. 
+
+---
+
+### Contents Guide
+
+![Image](https://img.29cm.co.kr/next-edition/2024/09/15/d68e76043cab465ebf1f30fdcd39a84b_20240915154852.jpg)
+
+Disclosure UI를 사용할 때에는 정보의 중요도에 따라 계층화를 특히 신경써주세요. 
+모든 정보를 한 번에 보여주기보다는, 사용자가 필요할 때마다 점진적으로 탐색할 수 있도록 정보의 계층화를 고려하세요. 중요도에 따라 주요 정보는 처음에 표시하고, 추가적인 정보는 Disclosure UI를 통해 감추어 두는 것이 좋습니다.
+
+- 중요한 정보는 기본적으로 표시하고, 부가적인 정보만 디스클로저 UI에 숨기세요.
+
+![Image](https://img.29cm.co.kr/next-edition/2024/09/15/6c1836a0084f44df9d3c7f986c644974_20240915155251.png)
+
+"자세히 보기"와 같은 일반적인 용어보다는 구체적인 설명을 레이블로 사용하세요.
+
+![Image](https://img.29cm.co.kr/next-edition/2024/09/15/b524f8e10ba846ebac2c6e754e93c2a1_20240915155645.png)
+
+너무 많은 디스클로저 UI를 사용하여 사용자가 주요 정보를 찾기 어렵게 만들지 마세요.
+
+-  디스클로저를 열린 상태로 유지할지, 닫힌 상태로 유지할지를 고민하고, 사용자의 맥락에 따라 그 기본값을 설정하세요.## Props
+
+| name | value |
+| --- | --- |
+| 속성명 | 값 |
+
+## Color Spec
+
+수정필요: Color Spec 섹션 추가 필요
+
+## Size & Typography Spec
+
+수정필요: Size Spec 섹션 추가 필요
+
+## 상태
+
+## Anatomy
+
+![Disclosures Anatomy](/images/components/disclosures/states/disclosures-anatomy.jpg)
+
+## Programmatic State
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| isDisabled | boolean | false | 비활성화 상태 |
+
+## Behavior State
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| hover | boolean | false | 마우스 오버 상태 |
+| pressed | boolean | false | 클릭/탭 상태 |
+| focus | boolean | false | 키보드 포커스 상태 |
+

@@ -1,0 +1,77 @@
+---
+title: "RemovableTag"
+description: "Removable Tag는 사용자가 직접 Tag를 제거할 수 있는 옵션이 있습니다."
+status: "draft"
+version: "1.0.0"
+category: "component"
+tags: ["ui", "component"]
+platforms: ["web", "ios", "android"]
+updated: "2025-05-29"
+---
+
+# Removable Tag
+
+Removable Tag는 사용자가 직접 Tag를 제거할 수 있는 옵션이 있습니다.
+
+![Removable Tag가 실제 사용되는 사례를 보여줍니다](https://img.29cm.co.kr/next-edition/2024/07/17/d054f03c89de4e2ba2eaf9f7f390ba70_20240717015149.png)
+
+Removable Tag는 사용자가 직접 Tag를 제거할 수 있는 옵션이 있습니다. 주로 사용자가 직접 타이핑하거나 선택하여 키워드나 설정을 추가할 수 있는 입력창같은 UI들과 함께 사용되며 작은 닫기(🅧) 버튼이 포함되어 있습니다.
+
+![Do-Dont 사례를 보여줍니다.](https://img.29cm.co.kr/next-edition/2024/07/17/966a81fb1637487fb5a416024dd6c590_20240717015541.png)
+
+removable Tag는 입력 필드 또는 체크박스와 같은 사용자가 직접 값을 작성하거나 선택하는 UI와 함께 사용될 수 있습니다. 사용자가 입력한 값의 이름이 반영될 수 있으며 사용자가 직접 지우거나, 탐색 여정에 벗어나지 않으면 지정 위치에 유지됩니다.
+
+---
+
+# Tags
+
+Tag는 메타데이터의 한 종류로 부여받은 키워드를 입력, 선택, 필터링하여 보여줌으로 사용자가 더 쉽게 정보를 탐색할 수 있도록 돕습니다.
+
+![heroImage](https://img.29cm.co.kr/next-edition/2024/07/17/488f1590e0a94917bbe488f3b30afaa4_20240717014022.png)
+
+29CM에서는 Tag를 크게 ToggleTag, RemovableTag, FilterTag 세 가지 종류로 제공합니다. 각각의 Tag는 다른 사용성과 동작 방식을 가지지만, 본질적으로 부여받은 옵션과 키워드를 통해 사용자의 탐색을 돕습니다.
+
+![태그는 그룹으로 묶어 사용하라는 권장사항](https://d13fzx7h5ezopb.cloudfront.net/ruler-static-contents/main/pages/component/tag/resources/web/usage/tag-usage-03-do-00.jpg?t=1721148434029)
+
+Tag는 그룹으로 묶어 세트로 사용하는 것을 권장합니다. 탐색에 필요한 키워드들을 상위 페이지 또는 섹션, 지원하는 콘텐츠 맥락에 맞게 나열하여 사용자의 탐색 경험에 도움이 되어야 합니다.
+
+### Decision Tree
+
+비슷한 유형의 다른 컴포넌트와 사용 유형이 헷갈린다면 아래 질문을 따라가 주세요. Tag가 지금 작업에 알맞은 컴포넌트인지 스스로 체크할 수 있습니다.
+
+![Decision Tree](https://d13fzx7h5ezopb.cloudfront.net/ruler-static-contents/main/pages/component/tag/resources/web/usage/tag-usage-02-decision-tree.jpg?t=1721148288720)
+
+모든 항목의 NO가 나왔다면 #design_platform 슬랙 채널을 찾아주세요.## Props
+
+| name | value |
+| --- | --- |
+| 속성명 | 값 |
+
+## Color Spec
+
+수정필요: Color Spec 섹션 추가 필요
+
+## Size & Typography Spec
+
+수정필요: Size Spec 섹션 추가 필요
+
+## 상태
+
+## Anatomy
+
+![RemovableTag Anatomy](/images/components/removabletag/states/removabletag-anatomy.jpg)
+
+## Programmatic State
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| isDisabled | boolean | false | 비활성화 상태 |
+
+## Behavior State
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| hover | boolean | false | 마우스 오버 상태 |
+| pressed | boolean | false | 클릭/탭 상태 |
+| focus | boolean | false | 키보드 포커스 상태 |
+

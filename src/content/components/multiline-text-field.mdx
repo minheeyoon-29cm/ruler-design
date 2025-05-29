@@ -1,6 +1,6 @@
 ---
-title: "TextField"
-description: "Text Field는 사용자가 서비스 이용에 있어 필요한 정보를 입력하는 데 사용됩니다."
+title: "MultilineTextField"
+description: "Multiline Text Field는 여러 줄의 텍스트를 입력받기 위한 인터페이스 요소로, 기본적으로 텍스트 영역을 넓게 제공하여 사용자가 긴 문장이나 여러 줄의 텍스트를 입력할 수 있도록 합니다."
 status: "draft"
 version: "1.0.0"
 category: "component"
@@ -9,11 +9,12 @@ platforms: ["web", "ios", "android"]
 updated: "2025-05-29"
 ---
 
-# Text Field 
+# Multiline Text Field 
 
-Text Field는 사용자가 서비스 이용에 있어 필요한 정보를 입력하는 데 사용됩니다.
+Multiline Text Field는 여러 줄의 텍스트를 입력받기 위한 인터페이스 요소로, 
+기본적으로 텍스트 영역을 넓게 제공하여 사용자가 긴 문장이나 여러 줄의 텍스트를 입력할 수 있도록 합니다.
 
-![Image](https://img.29cm.co.kr/next-edition/2024/09/02/61c0419b3cf047d088773e0670ae2bd9_20240902130933.jpg)
+![Image](https://img.29cm.co.kr/next-edition/2024/09/02/f136219176ac4bf3bed159620a9c5c17_20240902130102.jpg)
 
 - 🅐 Label : 사용자가 텍스트 필드에 입력해야 하는 내용이나 정보를 알려주는 텍스트입니다. 
 - 🅑 Input : 사용자가 텍스트를 입력할 수 있는 영역입니다. 
@@ -21,105 +22,97 @@ Text Field는 사용자가 서비스 이용에 있어 필요한 정보를 입력
 - 🅓 Value : 사용자가 실제로 입력한 텍스트입니다. 
 - 🅔 Description : 필드에 대한 추가 설명이나 도움말을 제공하는 텍스트입니다. 
 - 🅕 Error : 사용자가 입력한 내용이 올바르지 않을 때 표시되는 오류 메시지입니다.
+- 🅖 Character :  사용자가 입력한 문자의 총 개수를 나타냅니다. 
+- 🅗 Max Length : 사용자가 입력할 수 있는 최대 문자 수를 표시합니다.
 
 ---
 
 ### Validation
 
-![Image](https://img.29cm.co.kr/next-edition/2024/09/02/cbaa40c2b08840c494517eda92390628_20240902163939.jpg)
+![Image](https://img.29cm.co.kr/next-edition/2024/09/02/072f87f7bb9d4f52a0e5d2e83f390b4b_20240902163228.jpg)
 
 Text Field는 사용자의 입력값에 따라 적절한 안내를 제공하기 위한 validation(유효성) 케이스들을 포함하고 있습니다. 
 각 validation에 대한 대응을 고려하여 화면을 설계해 주세요.
 
 ### Default & isValue
 
-![Image](https://img.29cm.co.kr/next-edition/2024/09/02/cf2afa57a8ac4969bea0d04531ac7865_20240902165003.jpg)
+![Image](https://img.29cm.co.kr/next-edition/2024/09/02/9e01fa77b981491085d90a51e8ca040c_20240902165003.jpg)
 
 사용자가 값을 입력하면 `isValue`로 변환되며 텍스트 색상 스타일이 다르게 표현됩니다.
 
 ### Required or Optional
 
-![Image](https://img.29cm.co.kr/next-edition/2024/09/03/b7dfe22b48fb46df85c15e6b6242a708_20240903112854.jpg)
+![Image](https://img.29cm.co.kr/next-edition/2024/09/03/1788224d0f814310ac44835c18900584_20240903112854.jpg)
 
 `isRequired` 는 사용자의 입력이 반드시 필요한 항목을 나타내는 속성으로, 필수 입력 사항에 사용됩니다.
 
-![Image](https://img.29cm.co.kr/next-edition/2024/09/03/928f732c50b74c6eb22cbfcfb1df5a12_20240903112854.jpg)
+![Image](https://img.29cm.co.kr/next-edition/2024/09/03/652fc6e0a18e49dbbd7555b998929494_20240903112854.jpg)
 
 필수 및 선택 입력 양식의 수에 따라 표기 방식이 달라져야 합니다. 
 대부분의 입력 양식이 필수일 경우, 선택 입력 사항만을 강조하여 표기하는 것이 사용자가 전체 맥락을 파악하는 일에 더 도움이 됩니다. 반대로 대부분의 입력 양식이 선택일 경우에는 필수 입력 사항만을 강조하여 주세요.
 
 ### isInvalid 
 
-![Image](https://img.29cm.co.kr/next-edition/2024/09/03/f4bc51d68220489e9ca04c10a26a9b77_20240903113906.jpg)
+![Image](https://img.29cm.co.kr/next-edition/2024/09/03/48286e0f54304ddb9521cae2b67ac508_20240903113906.jpg)
 
- isInvalid 상태는 사용자가 입력한 데이터가 유효하지 않을 때 이를 시각적으로 표시하여 사용자가 수정할 수 있도록 안내합니다. 
- 예를 들어, 필수 입력사항을 지나쳤을 때, 특정 형식에 맞지 않는 입력을 했을 때 발생합니다.
+ `isInvalid` 상태는 사용자가 입력한 데이터가 유효하지 않을 때 이를 시각적으로 표시하여 사용자가 수정할 수 있도록 안내합니다. 
+ 예를 들어, 글자 수 제한을 넘거나 부족할 때, 특정 형식에 맞지 않는 입력을 했을 때 발생합니다.
 
-![Image](https://img.29cm.co.kr/next-edition/2024/09/03/b223397d4b3d4f3ab1ef5d6ddc03762b_20240903114451.jpg)
-
-지정한 글자수를 초과한 경우에는 초과된 글자수에 negative색상이 반영되어 안내됩니다.
+ 
 
 ### Disabled & isReadonly
 
-![Image](https://img.29cm.co.kr/next-edition/2024/09/03/4466c3d22d274842b55f9c75c6085349_20240903152256.jpg)
+![Image](https://img.29cm.co.kr/next-edition/2024/09/03/9d591b2e095e494c983b9980ab2f4547_20240903152256.jpg)
 
 `isDisabled`는 완전히 비활성화된 상태이며 상호 작용이 불가능한 반면, 
 `isReadonly`는 읽기 전용이지만 특정한 경우에는 다른 요소와의 상호 작용이 가능할 수 있습니다. 
 `isReadonly` 상태일 때 사용자는 해당 입력 필드를 읽을 수 있지만, 편집이나 수정할 수는 없습니다. 
 이것은 정보를 표시하되 수정은 허용하지 않을 때 사용됩니다.
- 
 
 ### Text Overflow
 
-![Image](https://img.29cm.co.kr/next-edition/2024/09/03/665e5445478a4bf588977295fb08f814_20240903155033.jpg)
+![Image](https://img.29cm.co.kr/next-edition/2024/09/03/47eaef7f6a394c1e9f0b01b07c70a3b2_20240903155033.jpg)
 
-Label의 문구가 Text Field의 가로 길이를 초과하면 줄바꿈됩니다. 
+Label의 문구가 Text Field의 가로 길이를 초과하면 줄바꿈됩니다.
 가능한 1줄 이내의 명확한 단어를 사용하여 작성하는 것이 권장됩니다.
 
-![Image](https://img.29cm.co.kr/next-edition/2024/09/03/43919e088639428d88c137ec11d630bb_20240903155240.jpg)
+![Image](https://img.29cm.co.kr/next-edition/2024/09/03/bf9a94e8f5604f4e9cfbf94043dd48d2_20240903155033.jpg)
 
-Placeholder의 문구는 Text Field 영역을 넘어가지 않도록 글자 수를 조정하여 작성해주세요. 
-사용자가 입력한 텍스트의 길이가 필드의 가로 공간을 초과하는 경우, 해당 필드의 좌측으로 밀려납니다.
+Multiline Text Field의 Placeholder의 문구가 필드 너비보다 넓어질 경우 줄바뀜 되어 표현됩니다.  
+또한 사용자가 입력한 텍스트의 길이가 필드의 너비만큼 길어지면 줄바뀜 되며, 일정 높이값을 초과할 경우 필드의 높이도 함께 늘어납니다.
 
-![Image](https://img.29cm.co.kr/next-edition/2024/09/03/8b4186eb364641dc8eca38a95fb17a95_20240903155033.jpg)
+![Image](https://img.29cm.co.kr/next-edition/2024/09/03/a9548f30baed4f168b201fbec2e9fb84_20240903160243.jpg)
+
+Input의 최대 높이값을 지정한 경우, 최대 높이값 만큼만 늘어나며 Input내에 스크롤이 생깁니다. 
+높이값은 설계에 따라 변경될 수 있으나 기본적으로 92px의 높이로 제공됩니다. 
+
+![Image](https://img.29cm.co.kr/next-edition/2024/09/03/d0979be0803943edb14b06ca8f5585b8_20240903155033.jpg)
 
 Description 문구가 Text Field의 가로 길이를 초과하면 줄바꿈됩니다.
 글자수가 포함된 경우 글자수 영역만큼 Description이 표현될 수 있는 영역이 축소되어 나타납니다.
-
-### Prefix & Postfix Area
- 
- ![Image](https://img.29cm.co.kr/next-edition/2024/09/04/e37fde168eb143d891ad8dc32ae9ab8a_20240904140703.jpg)
-
-사용자가 입력해야하는 사항에 종류에 따라 적절하게 Prefix , Postfix 영역의 아이템을 활용할 수 있습니다.
-
- ![Image](https://img.29cm.co.kr/next-edition/2024/09/04/145b7036e2e4441b89dbebd9d740d034_20240904164525.jpg)
-
-Prefix 영역에는 정보를 보조하는 기호가 들어올 수 있습니다. Postfix 에는 사용자의 입력값을 지우거나, 
-입력 양식에 단위를 보조하는 텍스트와 기능이 허용됩니다. 
-단, 전체 입력 사항의 맥락을 고려하여 적절히 구성하길 권장합니다.
 
 ---
 
 ### Contents Guide
 
- ![Image](https://img.29cm.co.kr/next-edition/2024/09/04/0fd1703af76742e39cad346d244ce1ed_20240904175742.jpg)
+ ![Image](https://img.29cm.co.kr/next-edition/2024/09/04/b482130bebba4381a4580dbdcf17fffc_20240904175742.jpg)
 
 모든 입력 필드에는 라벨, 플레이스 홀더, 도움말을 고려하여 구성하는 것이 좋습니다. 사용자가 무엇을 어떻게 입력해야하는지 충분히 설명하고 안내해주세요.
 
- ![Image](https://img.29cm.co.kr/next-edition/2024/09/04/1f32edd92d074e38bee8183981f142ad_20240904181003.png)
+ ![Image](https://img.29cm.co.kr/next-edition/2024/09/04/a72dabba2fae4ea18aed7aaddf64cd29_20240904181003.png)
 
 모든 입력필드는 명확한 지시사항과 컨텍스트 제공해야 합니다. 사용자가 정확히 어떤 정보를 입력해야 하는지에 대해 명확히 이해할 수 있도록 Label을 확용하여 지시 사항을 구체적으로 제공합니다.
 
 화면 구성에서 충분히 입력 사항에 대한 컨텍스트를 제공하고 있다면,
 라벨을 사용하지 않을 수 있습니다. 
 
- ![Image](https://img.29cm.co.kr/next-edition/2024/09/04/f801c5990caa4dc987f22bd0db55ec87_20240904181003.png)
+ ![Image](https://img.29cm.co.kr/next-edition/2024/09/04/6985143624cb487eb186bcdf465b107d_20240904181003.png)
 
 Placeholder에 입력값의 예시를 사용하는 것은 사용자가 필드에 포커스를 맞출 때 예시가 사라져 기억하기 어렵습니다. 입력값의 예시나 형식을 Description 자리에서 제공하세요.
 
 Description에는 입력 형식이나 예시와 같은 부가 정보를 제공하고, Placeholder는 단순한 힌트를 제공하여 사용자가 쉽게 이해할 수 있도록 합니다.
 
- ![Image](https://img.29cm.co.kr/next-edition/2024/09/04/8b216653291446d9864f6720ed7cf4f3_20240904182143.png)
+ ![Image](https://img.29cm.co.kr/next-edition/2024/09/04/3c79b9efd01b41b3bf4981db19543d8d_20240904182143.png)
 
 사용자가 이해하기 어려운 오류 메시지를 제공하거나, 오류의 원인에 대한 설명이 부족할 때 사용자 경험이 저하될 수 있습니다. 오류 메시지는 항상 구체적이고 명확해야 하며, 사용자가 문제를 이해하고 수정할 수 있도록 안내해야 합니다.
 
@@ -141,7 +134,7 @@ Description에는 입력 형식이나 예시와 같은 부가 정보를 제공�
 
 ## Anatomy
 
-![TextField Anatomy](/images/components/textfield/states/textfield-anatomy.jpg)
+![MultilineTextField  Anatomy](/images/components/multilinetextfield /states/multilinetextfield -anatomy.jpg)
 
 ## Programmatic State
 

@@ -1,0 +1,84 @@
+---
+title: "RatingGroup"
+description: "Rating Group은 사용자가 항목의 품질이나 선호도를 별이나 숫자 등의 형태로 평가할 수 있게 하는 UI 요소입니다. 이를 통해 사용자에게 직관적인 평가 수단을 제공합니다."
+status: "draft"
+version: "1.0.0"
+category: "component"
+tags: ["ui", "component"]
+platforms: ["web", "ios", "android"]
+updated: "2025-05-29"
+---
+
+# Rating Group 
+
+Rating Group은 사용자가 항목의 품질이나 선호도를 별이나 숫자 등의 형태로 평가할 수 있게 하는 UI 요소입니다. 이를 통해 사용자에게 직관적인 평가 수단을 제공합니다.
+
+![heroImage](https://img.29cm.co.kr/next-edition/2024/08/27/76cafe350bb140bc8c465daf222cfd4e_20240827231650.jpg)
+
+---
+
+### Selected
+
+![heroImage](https://img.29cm.co.kr/next-edition/2024/08/28/47d6a1cd7b494c30b1ba8d17bae78082_20240828114313.gif)
+
+별점을 사용자가 선택했는지 여부를 나타냅니다. 선택되면 별이 채워지고, 그렇지 않으면 빈 별이 됩니다. 
+
+### isReadonly
+
+![Image](https://img.29cm.co.kr/next-edition/2024/08/28/c69251ac7d4247a9a46c85f969078af1_20240828114824.jpg)
+
+ `isReadonly` 상태에서는 사용자 상호작용이 제한되고, 별점을 수정할 수 없습니다. 
+ 별점이 이미 설정되어 있고 사용자가 이를 변경하지 못하게 하려면 isReadonly: true로 설정합니다. 리뷰를 작성한 후, 다시 별점을 변경할 수 없게 만드는 상황에 자주 사용됩니다.
+
+### Size
+
+![Image](https://img.29cm.co.kr/next-edition/2024/08/28/10919b1466f54d2db394466bdbd691d0_20240828133909.jpg)
+
+UI에서 별점의 중요도나 가시성을 조절할 때 사용합니다. 
+예를 들어, 리뷰에서 중요한 부분으로 보이게 하려면 medium 크기를, 세부적으로 덜 중요한 경우 small을 사용합니다.
+
+### Rating
+
+![Image](https://img.29cm.co.kr/next-edition/2024/08/28/88b2483653ba4f0fb8598bebf129f6d1_20240828134444.jpg)
+
+사용자가 선택한 점수를 나타냅니다. 일반적으로 0에서 5까지의 값을 가지며, 소수점도 포함할 수 있습니다 (예: 4.75점).
+사용자의 평가 점수를 기반으로 시각적으로 반영됩니다. 예를 들어, 4.75점일 경우 별 4개는 가득 채워지고, 1개의 별은 절반만 채워집니다.
+
+---
+
+### Contents Guide
+
+작성중## Props
+
+| name | value |
+| --- | --- |
+| 속성명 | 값 |
+
+## Color Spec
+
+수정필요: Color Spec 섹션 추가 필요
+
+## Size & Typography Spec
+
+수정필요: Size Spec 섹션 추가 필요
+
+## 상태
+
+## Anatomy
+
+![RatingGroup Anatomy](/images/components/ratinggroup/states/ratinggroup-anatomy.jpg)
+
+## Programmatic State
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| isDisabled | boolean | false | 비활성화 상태 |
+
+## Behavior State
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| hover | boolean | false | 마우스 오버 상태 |
+| pressed | boolean | false | 클릭/탭 상태 |
+| focus | boolean | false | 키보드 포커스 상태 |
+

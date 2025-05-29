@@ -1,0 +1,98 @@
+---
+title: "PromotionBanner"
+description: "Promotion Banner는 주로 마케팅 목적의 광고나 프로모션 정보를 전달하는 데 사용됩니다. 사용자에게 특정 제품이나 이벤트, 할인 혜택 등을 홍보하는 것이 주요 목적입니다."
+status: "draft"
+version: "1.0.0"
+category: "component"
+tags: ["ui", "component"]
+platforms: ["web", "ios", "android"]
+updated: "2025-05-29"
+---
+
+# Promotion Banner 
+
+Promotion Banner는 주로 마케팅 목적의 광고나 프로모션 정보를 전달하는 데 사용됩니다. 사용자에게 특정 제품이나 이벤트, 할인 혜택 등을 홍보하는 것이 주요 목적입니다.
+
+![heroImage](https://img.29cm.co.kr/next-edition/2024/08/22/98cfdc9844a8411ab5d7c2065d521622_20240822002634.jpg)
+
+### Anatomy
+
+![Image](https://img.29cm.co.kr/next-edition/2024/08/28/d66892e86544463aa33340b7fcac6d98_20240828140227.jpg)
+
+-  Preview(Optional) : 정보를 효과적으로 강조할 수 있는 이미지
+-  Information : 전달하고자 하는 정보의 메시지 영역입니다.  
+-  Category(Optional): 노출되는 Banner의 종류, 상위 카테고리를 표기할 수 있습니다.  
+-  Dismissable(Optional): 닫기 동작을 유도하는 Affordance를 사용할 수 있습니다.  
+-  Badge(Optional) : 타이틀에 Badge를 선택적으로 사용할 수 있습니다.
+
+### Preview 
+
+![Image](https://img.29cm.co.kr/next-edition/2024/08/22/d35aba1df517435fa8aed7538ac53ba9_20240822020458.jpg)
+
+설계 의도에 따라 Preview 이미지의 포지션과 노출, 비노출과 위치를 제어할 수 있습니다. 
+디자인 일관성을 위해 현재 `1:1` , `5:4` 비율의 이미지만 사용할 수 있도록 제공됩니다. 
+
+### Information
+
+![Image](https://img.29cm.co.kr/next-edition/2024/08/22/f97e7124406a43e089968f3bb48bcd6f_20240822021631.jpg)
+
+Information 영역에 Title과 Description에 주의해주세요. 
+이미지 유무에 따라 Width가 짧아져 포함할 수 있는 내용이 줄어듭니다. 
+- Title : 1줄 내로 간결한 내용으로 작성해주세요. Title에는 설계 의도나 필요에 따라 Badge를 사용할 수 있습니다.
+- Description : 최대 2줄까지 작성가능합니다. 
+
+![Image](https://img.29cm.co.kr/next-edition/2024/08/22/b0f534c1592c4db4b3bf68dd0282e46f_20240822022323.jpg)
+
+Description 외에 TextButton을 사용하여 사용자를 유도할 수 있습니다. 
+
+### Dismissable
+
+![Image](https://img.29cm.co.kr/next-edition/2024/08/22/dac3180183ce44328c3a04e224ed4e74_20240822022939.jpg)
+
+Dismissable를 통해 사용자가 원하지 않으면 언제든 광고 배너를 보지 않을 수 있습니다.  
+
+### Custom Color
+
+![Image](https://img.29cm.co.kr/next-edition/2024/08/22/c35203d5b6ed4d88a04d5e17e33fa61d_20240822031752.jpg)
+
+Promotion Banner는 배경 색상을 Custom하게 변경할 수 있습니다. 이는 전사적으로 중요한 기획전과 같이 아주 특별한 경우에서만 사용해야 합니다. 
+- Text 색상은 하얀색으로 고정입니다. 하얀색상과의 대비척도를 고려하여 고대비의 배경색상으로 디자인 해주세요.
+
+---
+
+### Contents Guide
+
+작성중## Props
+
+| name | value |
+| --- | --- |
+| 속성명 | 값 |
+
+## Color Spec
+
+수정필요: Color Spec 섹션 추가 필요
+
+## Size & Typography Spec
+
+수정필요: Size Spec 섹션 추가 필요
+
+## 상태
+
+## Anatomy
+
+![PromotionBanner Anatomy](/images/components/promotionbanner/states/promotionbanner-anatomy.jpg)
+
+## Programmatic State
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| isDisabled | boolean | false | 비활성화 상태 |
+
+## Behavior State
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| hover | boolean | false | 마우스 오버 상태 |
+| pressed | boolean | false | 클릭/탭 상태 |
+| focus | boolean | false | 키보드 포커스 상태 |
+

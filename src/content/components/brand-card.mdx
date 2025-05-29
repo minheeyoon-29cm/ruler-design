@@ -1,167 +1,114 @@
 ---
-title: "Brand Card"
+title: "BrandCard"
 description: "29CM내에서 파트너 브랜드를 Display하며 브랜드 탐색을 원하는 고객에게 브랜드 홈으로의 방문을 안내합니다."
 status: "draft"
 version: "1.0.0"
 category: "component"
 tags: ["ui", "component"]
 platforms: ["web", "ios", "android"]
-updated: "2025-05-28"
+updated: "2025-05-29"
 ---
 
-# Brand Card
+# BrandCard
 
 29CM내에서 파트너 브랜드를 Display하며 브랜드 탐색을 원하는 고객에게 브랜드 홈으로의 방문을 안내합니다.
 
-## 사용법
+![heroImage](https://img.29cm.co.kr/next-edition/2024/07/02/e1342b20a7d5436bbc6e16f69ba3378e_20240702011952.png)
 
-수정필요: component_usage_demo 컴포넌트는 수동 변환 필요 
+Brand Card는 29CM 서비스안에서 파트너의 브랜드로 연결해주는 트리거입니다. 브랜드의 영문, 국문 이름을 표기하고 브랜드 홈으로 안내합니다.
 
-![브랜드 카드 미리보기](/images/components/brand-card/preview/brand-card-00.jpg)
+### Content Guide
 
-Brand Card는 29CM 서비스안에서 파트너의 브랜드로 연결해주는 트리거입니다. 브랜드의 영문, 국문 이름을 표기하고 브랜드 홈으로 안내합니다. 
-
-## Contents Guide
-
-![브랜드 카드 표기 규칙](/images/components/brand-card/preview/brand-card-01.jpg)
+![heroImage](https://img.29cm.co.kr/next-edition/2024/07/02/c157773a7ca74105988185785e9941ed_20240702011952.png)
 
 브랜드 카드는 기본적으로 크게 3가지 정보가 제공되어야 합니다.
 
-a. 브랜드 이미지 : 브랜드를 추정할 수 있는 로고(심볼), 대표 상품 또는 29CM에서 기본으로 제공되는 이미지가 반영되어야 합니다.
-b. 브랜드 영문명 : 정보 위계에서 브랜드 영문명을 우선 작성해주세요. 영문명은 대소문자를 구분하여 작성되어야 합니다.
-c. 브랜드 국문명 : 브랜드가 제공하는 공식 국문명을 작성해주세요 
+- 🅐 브랜드 이미지 : 브랜드를 추정할 수 있는 로고(심볼), 대표 상품 또는 29CM에서 기본으로 제공되는 이미지가 반영되어야 합니다.
+- 🅑 브랜드 영문명 : 정보 위계에서 브랜드 영문명을 우선 작성해주세요. 영문명은 대소문자를 구분하여 작성되어야 합니다.
+- 🅒 브랜드 국문명 : 브랜드가 제공하는 공식 국문명을 작성해주세요.
 
-![브랜드 좋아요 숫자 표기](/images/components/brand-card/preview/brand-card-02.jpg)
+### 브랜드 좋아요 숫자 표기
+
+![비워둠](https://img.29cm.co.kr/next-edition/2024/07/02/757c21156af549bab1ad365c1ed18498_20240702011952.png)
 
 좋아요 숫자가 1,000단위를 넘어가면 1K로 표기됩니다. 1,450과 같은 경우에는 1.4K로 표기해주시면 됩니다.
-
 고객에게는 정확한 숫자보다 얼마나 많은 사람이 함께 좋아하냐가 더 중요한 맥락일 수 있습니다.
 
-### ✅ Do
+![비워둠](https://img.29cm.co.kr/next-edition/2024/07/02/f7db15db839a4cf4847b19ee83b446fe_20240702011952.png)
 
-![Product Card 내부에 지정된 정보 요소의 역할을 지키고 고객의 선택에 도움이 되는 정보들로만 구성하는것이 좋습니다.](/images/components/brand-card/usage/us-product-card-05-do.jpg)
+영문과 국문 표기 순서에 주의해주세요. 브랜드 카드에서는 항상 영문이 먼저이며 영문 표기시 대소문자를 함께 사용해야 합니다.
 
-### ❌ Don't
+![비워둠](https://img.29cm.co.kr/next-edition/2024/07/11/5cf2be36cb2d45bbaf5c296d8e5a142d_20240711202953.jpg)
 
-![너무 많은 혜택과 후킹 요소는 고객이 상품을 선택할 때 분별력을 저하시킬 수 있습니다.](/images/components/brand-card/usage/us-product-card-05-dont.jpg)
+- 29CM 초기 입점된 브랜드에 경우 영문 브랜드 명이 없거나, 국문 브랜드명이 없을 수 있습니다. 이 경우 둘 중 하나를 비노출하지 않고 가지고 있는 브랜드명을 기준으로 모두 노출되도록 처리되어 있습니다.(발견시 제보 부탁드려요)
 
-Ruler Product Card의 Badge 갯수 표현은 최대 3개만 노출 가능하도록 지정되어 있습니다. 또한 랭킹 뱃지를 다른 정보를 표현하는데 사용할 수 없습니다.
+![비워둠](https://img.29cm.co.kr/next-edition/2024/07/02/220e61ab187b4b83bd4648b15b1309b6_20240702011952.png)
 
-### ✅ Do
+브랜드 카드 Postfix 영역에 “좋아요" 와 “페이지 이동" 외 다른 기능을 하는 UI가 필요한 경우 #design_platform 으로 제보해주세요. 29CM에서 브랜드 카드의 공통 디자인 패턴으로 추가되어 제공할지 논의를 이어나갈 수 있습니다.
 
-![정보 분별력 있게 구성하라](/images/components/brand-card/usage/us-product-card-05-02-do.jpg)
+---
 
-### ❌ Don't
+# Preview
 
-![대체 고객에게 중요한게 무엇인가](/images/components/brand-card/usage/us-product-card-05-02-dont.jpg)
+### Appearance
 
-너무 많은 혜택과 후킹 요소는 고객이 상품을 선택할 때 분별력을 저하시킬 수 있습니다. 또한 랭킹 뱃지를 다른 정보를 표현하는데 사용할 수 없습니다. 고객의 맥락과 상황에 따라 선택에 도움이 되는 정보가 무엇인지 판단하고 정보를 구성하는 것이 고객의 선택에 더 도움이 될 수 있습니다.
+![비워둠](https://img.29cm.co.kr/next-edition/2024/07/09/ba04900a4aa748b79b3c1a1fe3a77716_20240709094208.jpg)
 
-### ✅ Do
+브랜드 카드는 총 2가지의 Appearance(외형) 스타일을 가지며  29CM의 다양한 페이지와 콘텐츠에 따라 적재적소하게 사용할 수 있습니다.
 
-![제공되는 Ruler Component의 Property 를 활용하여 강조하세요](/images/components/brand-card/usage/us-product-card-06-do.jpg)
+![비워둠](https://img.29cm.co.kr/next-edition/2024/07/09/4f177b5edab5430a87ec5f4eae57c1a1_20240709094208.jpg)
 
-### ❌ Don't
+### Size
 
-![특정 정보를 강조하기 위해 Product Card내부 정보 요소의 색상을 변경하지말라](/images/components/brand-card/usage/us-product-card-06-dont.jpg)
+![비워둠](https://img.29cm.co.kr/next-edition/2024/07/09/821a279a930e46e5900c6347990cc671_20240709094208.jpg)
 
-특정 정보를 강조하기 위해 Product Card 내부의 정보 요소 색상을 변경하는 대신, 제공되는 Ruler Component의 속성을 활용하는 것이 더 좋습니다.
+브랜드 카드는 Medium, Small 두 가지 크기를 제공하며 Medium이 기본 값으로 가장 자주 사용됩니다. 표현해야할 정보 구성에 따른 계층을 유의하여 사용해야 합니다.
 
-## 미리보기
+### Type
 
-![Product Card Part Name](/images/components/brand-card/preview/prev-product-card-01.jpg)
+![비워둠](https://img.29cm.co.kr/next-edition/2024/07/09/d79db83b7aeb4b45897c0e1727406387_20240709094208.jpg)
 
-Product Card는크게 2개의 영역으로 구성됩니다. 효율적인 디자인과 개발을 위해 information 영역별로 들어갈 수 있는 아이템의 갯수와 종류가 지정되어 있습니다.
+postfix 영역은 기본적으로는 defulat가 쓰이며 필요에 따라 Like Type으로 브랜드 좋아요를 유도할 수 있습니다. 사이즈에 따라 표현이 달라질 수 있습니다.
 
-a. Preview : 파트너 브랜드의 상품 이미지가 1:1 비율로 보여집니다
-b. Infomation : 브랜드 , 상품 명과 같은 상품의 정보가 들어오는 Body영역 입니다
+---
 
-![Information Part Optional](/images/components/brand-card/preview/prev-product-card-02.jpg)
+# Behavior
 
-information 영역에는 Default 정보와 Optional 정보가 구분되어 제공됩니다. 할인, Badge, Metadata 등이 Optional에 해당됩니다
-
-## hasPadding
-
-![Product Card Type](/images/components/brand-card/preview/prev-product-card-04.jpg)
-
-Product Card의 hasPadding 속성으로 Product Card 의 좌우 여백을 조정할 수 있습니다. hasPadding이 true일 경우 좌우 영역에 여백을 사용할 수 있습니다.
-
-![hasPadding의 Grid View 사례](/images/components/brand-card/preview/prev-product-card-05.jpg)
-
-hasPadding : true 는 주로 Mobile 화면에서 좌우 마진이 없는 Grid View에서 사용됩니다.
-
-![Statdard Tpye의 Gird View 활용 사례](/images/components/brand-card/preview/prev-product-card-06.gif)
-
-섹션과 섹션 간의 구분 및 하위 컨텐츠와의 연계를 고려할 때 hasPadding : false  을 활용하여 표현할 수 있습니다.
-
-## Pause
-
-![상품 판매가 일시 중지 되는 케이스 설명](/images/components/brand-card/preview/prev-product-card-06-02.jpg)
-
-Product Card내부의 상품이 일시품절과 같은 사유로 잠시 판매 활동을 할 수 없을 때 가격 정보의 색상이 disabled로 변경되고 뱃지에는 판매 활동이 일시 정지된 사유를 나타냅니다. 판매가 중지된 상품도 탐색할 수 있도록 하고, 고객이 상품을 29CM에게 요청할 수 있도록 PDP로의 이동, 상품 탐색과 같은 동작은 disabled되지 않습니다.  크리티컬한 사유로 상품의 판매 활동이 중지되는 경우는 리스트에서 상품 노출을 제외해야합니다. 
-
-## Point of change
-
-![Top Navigation 백그라운드를 설명하는 이미지](/images/components/brand-card/preview/prev-product-card-06-01.gif)
-
-WEB Grid View에서 hasPadding : false는 540기점에서 true로 변경됩니다.
-
-## Point of change
-
-![Behavior 터치 영역 안내 이미지](/images/components/brand-card/preview/prev-product-card-07.jpg)
+![비워둠](https://img.29cm.co.kr/next-edition/2024/07/12/bb0fffd799f146ef88fe94d606205ef6_20240712103721.jpg)
 
 ### Touch targets
 
-Card의 터치 영역은 Card를 감싸는 Container 영역과 동일합니다, product card에 경우 포함된 toggle icon button의 영역을 확보하고 상위에 위치시켜 주세요.
-
-![Behavior 터치 영역 안내 이미지](/images/components/brand-card/preview/prev-product-card-09.jpg)
-
-product card에 다른 coontrol 요소가 배치되는 경우도 충분히 영역을 확보하고 상위에 위치시켜 터치 오류를 방지해 주세요.
-
-![Product Card 내부에 별도의 컨트롤 UI를 사용할 경우 안내 이미지](/images/components/brand-card/preview/prev-product-card-11.jpg)
-
-![Product Card 내부에 별도의 컨트롤 UI를 사용할 경우 안내 이미지](/images/components/brand-card/preview/prev-product-card-12.jpg)
-
-### Keyboard Focus
-
-tab시 Card Grid 첫번 째 배열의 Card Container로 포커스되며 2번째 Tab시 내부 Toggile Icon Button(좋아요)로 포커스가 이동됩니다. 이 후 다음 배열의 Card에서도 같은 동작이 반복됩니다.
-
-![Product Card 내부에 별도의 컨트롤 UI를 사용할 경우 안내 이미지](/images/components/brand-card/preview/prev-product-card-13.jpg)
-
-### Voice
-
-Product Card가 선택되었음을 알리고, 상품 정보의 내용을 알려준 뒤 좋아요 버튼에 대한 고지를 할 수 있어야 합니다. 다음 카드로 이동됐을 때 두번째 카드 또는 다음과 같은 안내를 추가하여 안내해주세요.
-
-## 스타일 가이드
-
-## Props
+Card의 터치 영역은 Card를 감싸는 Container 영역과 동일합니다. Container 내부 액션 영역을 확보해주세요.## Props
 
 | name | value |
 | --- | --- |
-| hasPadding | boolean |
+| 속성명 | 값 |
 
-## Design Spec
+## Color Spec
 
-![Design Spec 1](/images/components/brand-card/style-varient/sv-product-card-spec-01.jpg)
+수정필요: Color Spec 섹션 추가 필요
 
-| container | value |
-| --- | --- |
-| max width | 370px |
+## Size & Typography Spec
 
-![Design Spec 2](/images/components/brand-card/style-varient/sv-product-card-spec-02.jpg)
-
-| root | value |
-| --- | --- |
-| width | stretch |
+수정필요: Size Spec 섹션 추가 필요
 
 ## 상태
 
 ## Anatomy
 
-![Product Card Anatomy 이미지](/images/components/brand-card/states/product-card-anatomy-00.jpg)
+![BrandCard Anatomy](/images/components/brandcard/states/brandcard-anatomy.jpg)
 
-a. Root : Card를 감싸는 컨테이너
-b. card.preview : Image와 같은 리소스를 미리보여주는 영역
-c. card.header : Card의 주요 정보를 포함하는 영역
-d. card.body : Card의 보조, 맥락을 포함하는 영역 
-e. card.footer : Card의 Optional한 맥락 또는 기능을 포함하는 영역
+## Programmatic State
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| isDisabled | boolean | false | 비활성화 상태 |
+
+## Behavior State
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| hover | boolean | false | 마우스 오버 상태 |
+| pressed | boolean | false | 클릭/탭 상태 |
+| focus | boolean | false | 키보드 포커스 상태 |
+

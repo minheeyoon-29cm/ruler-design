@@ -6,252 +6,139 @@ version: "1.0.0"
 category: "component"
 tags: ["ui", "component"]
 platforms: ["web", "ios", "android"]
-updated: "2025-05-28"
+updated: "2025-05-29"
 ---
 
 # Badge
 
 Badge는 메타데이터를 표시하여 정보를 전달하거나 사용자의 관심을 유도하는 표시자입니다. 포함한 정보의 중요도에 따라 색상, 크기를 조정하여 사용자에게 전달할 수 있습니다.
 
-## 사용법
+![heroImage](https://img.29cm.co.kr/next-edition/2024/08/28/6f1e4a520c4b46dfbd07c612a2e800ab_20240828140607.jpg)
 
+- 🅐 Root : Badge를 감싸는 Container
+- 🅑 Label : Data를 표시하는 텍스트
+- 🅒 Prefix : Label의 Data를 보조하는 아이콘 기호가 들어오는 영역
 
-수정필요: component_usage_demo 컴포넌트는 수동 변환 필요 
+---
 
+![Image](https://img.29cm.co.kr/next-edition/2024/08/28/d7097fd552ae436b9d141f47f2219ec7_20240828144136.jpg)
 
-Badge는 주로 UI에서 특정 데이터나 주요 속성을 강조하여 사용자에게 정보를 시각적으로 전달하는 요소로 사용됩니다. Badge는 동작을 수행하지 않고, 대신 사용자에게 특정 데이터의 중요성을 부각시키는 역할을 합니다. 이를 통해 사용자는 특정 정보를 쉽게 파악하고, 빠르게 의사결정을 내릴 수 있도록 도움을 받을 수 있습니다.
+Badge는 크게 2가지의 Appearance(외형) 종류 가지며 정보의 성격과 사용되는 UI에 따라 용례가 제한됩니다.
 
+### Defulat 
 
+![Image](https://img.29cm.co.kr/next-edition/2024/08/28/d9f0f6c1156c438aa3cf9511c770e4b5_20240828145103.jpg)
 
-## Decision Tree
+Defulat는 Badge를 사용하면 기본적으로 설정되어 있는 스타일이며 
+주로 Product Card의 상품 정보 표기 또는 페이지와 섹션의 그룹화 상품 목록들에 사용됩니다. 
+랭킹, 쿠폰 사용 유무, 무료배송 등 상품의 정보 중 사용자의 구매 결정에 도움이 되는 정보를 나타내는 데 유용합니다.
 
+### Tone 
 
-비슷한 유형의 다른 컴포넌트와 사용 유형이 헷갈린다면 아래 질문을 따라가 주세요.Badge가 지금 작업에 알맞은 컴포넌트인지 스스로 체크할 수 있습니다.
+![Image](https://img.29cm.co.kr/next-edition/2024/08/28/b6b93f5ecd5a4363b1aecfb480a8ddca_20240828150005.jpg)
 
+Tone은 다양한 UI 메시지의 성격을 구분하여 사용자에게 더 명확하고 직관적인 피드백을 제공하기 위해 정의된 Props입니다. 
+이 속성은 주로 UI의 알림, 상태, 경고 등을 시각적으로 구분하여 사용자의 주의를 효과적으로 유도하는 역할을 합니다.
 
-![Badge Decision Tree](/images/components/badge/usage/usage-badge-00.jpg)
+![Image](https://img.29cm.co.kr/next-edition/2024/08/28/4f0a0106c1a14e6bb6cf330ef1a9445d_20240828150521.jpg)
 
+각 Tone은 특정 상황에 맞는 색상과 메시지 스타일로 설정됩니다. 
+이를 통해 사용자가 메시지를 보다 쉽게 이해하고, 상황에 적절하게 반응할 수 있도록 합니다.
 
-모든 항목의 NO가 나왔다면  #design_platform 슬랙 채널을 찾아주세요.
+- Default(기본) : 일반적인 정보 제공이나 안내 메시지를 표시할 때 사용됩니다.
+- Information(정보) : 중요한 정보나 사용자에게 주의를 기울이도록 알릴 때 사용됩니다.
+- Positive (긍정적 상태) : 긍정적인 피드백이나 성공적인 작업 완료를 알릴 때 사용됩니다.
+- Negative (부정적 상태) : 오류나 문제가 발생했을 때 사용자에게 이를 알릴 때 사용됩니다.
 
+### Priority 
 
-## Content Guide
+![Image](https://img.29cm.co.kr/next-edition/2024/08/28/596dece6c6404032a8d19fd0123b7cbf_20240828152013.jpg)
 
+Priority는 디자인 시스템에서 특정 UI 요소가 사용자에게 얼마나 중요한지를 나타내는 개념입니다. 
+이는 사용자가 화면을 처음 봤을 때 어느 요소가 더 눈에 띄어야 하고, 어떤 정보가 가장 먼저 전달되어야 하는지를 결정합니다. 
 
-![Badge의 타입 defulat와 information](/images/components/badge/usage/usage-badge-01.jpg)
+- Primary: 가장 높은 우선순위를 가지며, 사용자에게 가장 눈에 띄는 스타일이 적용됩니다.
+- Secondary: Primary보다는 덜 강조되지만 여전히 주목할 만한 중요성을 가집니다.
+- Tertiary: 가장 낮은 우선순위를 가지며, 강조도가 매우 낮아 배경처럼 느껴질 수 있습니다.
 
+*Tone에는 `tertiary`가 지원되지 않고 있습니다.
 
-Badge는 크게 defulat(기본) | isBlur(불투명스타일)  2가지 종류로 제공되며 각각의 종류는 아래와 같은 상황에서 사용되고 있으며 용도가 분리되어 있습니다.
+### Size 
 
+![Image](https://img.29cm.co.kr/next-edition/2024/08/28/38b9a1d0fd044727af2406a18cd9efbf_20240828153859.jpg)
 
-a. defulat : 상품 또는 브랜드가 이미 가지고 있는 속성이나 데이터 중 1개를 강조하여 고객에게 알리고 싶을 때 기본으로 29CM에서 사용하는 Badge입니다.
-b. isBlur : 이미지나 영상 위에 올라가는 불투명 배경의 뱃지 스타일입니다. 
+Badge에는 `small`| `medium` 두 가지 사이즈를 제공합니다. 
 
+### Prefix Icon 
 
-![Badge의 Primary와 Secondary에 따른 정보 강조 정도](/images/components/badge/usage/usage-badge-02.jpg)
+![Image](https://img.29cm.co.kr/next-edition/2024/08/28/131976784faf4b2fa470fce13af095b9_20240828154017.jpg)
 
+Badge는 Label과 Prefix로 구성되며 Prefix는 필요에 따라 추가하거나 감출 수 있습니다.
+- 🅐 label : 뱃지의 필수 정보 값으로 Badge는 Label이 없어서는 안됩니다.
+- 🅑 prefixIcon : 필요에 따라 Badge에 있을수도, 없을수도 있으며 label의 정보 인지를 돕는 아이콘이 들어올 수 있습니다.
 
-Primary, Secondary, tertiary 는 정보 강조의 정도를 뜻합니다. 표현되는 정보를 더 가시적으로 표현하여 사용자의 인지정도를 시각적으로 조정할 수 있습니다. 프로덕트 디자이너의 의도에 따라 같은 정보여도  고객에게 강한 시각 위계로 노출할 수 있습니다. 또는 기간이나 진행 상태에 따라 시각적인 위계를 다르게 표현할 수도 있습니다.
+### isBlur & isWhite
+ 
 
+![Image](https://img.29cm.co.kr/next-edition/2024/08/28/7b3dd6df48484d8cb1f3e5dee81d4e81_20240828154707.jpg)
 
-### ✅ Do
+`isBlur`| `isWhite` 속성은 각각 Appearance에 해당되며 이미지 위, 특정 배경위에 올라가는 경우에 사용하는 스타일 속성입니다. 
+별도의 Priority 를 가지지 않으며 아주 예외적으로 사용됩니다.
 
-![Badge에 표현되는 정보나 상태에는 너무 긴 문구나 동사가 들어가는 것 보다 명료하게 요점만 표현하하는 것을 권장](/images/components/badge/usage/usage-bg-do-01.jpg)
+---
 
-### ❌ Don't
+### Content Guide
 
-![Badge에 표현되는 정보나 상태에는 너무 긴 문구나 동사가 들어가는 것 보다 명료하게 요점만 표현하하는 것을 권장](/images/components/badge/usage/usage-bg-dont-01.jpg)
+![Image](https://img.29cm.co.kr/next-edition/2024/08/28/44dd7095198a4a1f849957047428b4b8_20240828154950.jpg)
 
+비슷한 유형의 다른 컴포넌트와 사용 유형이 헷갈린다면 아래 질문을 따라가 주세요.
+Badge가 지금 작업에 알맞은 컴포넌트인지 스스로 체크할 수 있습니다.
+*모든 항목의 NO가 나왔다면 #design_platform 슬랙 채널을 찾아주세요.
 
-Badge에 표현되는 정보나 상태에는 너무 긴 문구나 동사가 들어가는 것 보다 명료하게 요점만 표현하는 것이 사용자의 결정에 더 도움이 됩니다. 영업 또는 판매의 의도가 담긴 문구는 단기적으로 좋은 효과를 가져올 수 있으나 장기적으로 노출되는 상품들의 분별력을 저하해 사용자에게 아무런 감흥을 불러일으키지 못하는 정보로 인지될 수 있습니다.
+![Image](https://img.29cm.co.kr/next-edition/2024/08/28/0060b0ddef974003b7a24d222bf191bf_20240828155200.png)
 
+Badge에 표현되는 정보나 상태에는 너무 긴 문구나 동사가 들어가는 것 보다 명료하게 요점만 표현하는 것이 사용자의 결정에 더 도움이 됩니다. 
+영업 또는 판매의 의도가 담긴 문구는 단기적으로 좋은 효과를 가져올 수 있으나 장기적으로 노출되는 상품들의 분별력을 저하해 사용자에게 아무런 감흥을 불러일으키지 못하는 정보로 인지될 수 있습니다.
 
-### ✅ Do
+![Image](https://img.29cm.co.kr/next-edition/2024/08/28/c0cf1affe50845bf8c2b3b1f784d6535_20240828155200.png)
 
-![최소한의 주어와 맥락을 담은 뱃지](/images/components/badge/usage/usage-bg-do-02.jpg)
+지나치게 간소화된 정보는 사용자가 Badge 내부의 정보의 맥락을 파악하기 힘들 수 있습니다. 
+사용자가 직관적으로 정보를 파악할 수 있는 최소한의 맥락을 담아주세요.
 
-### ❌ Don't
+![Image](https://img.29cm.co.kr/next-edition/2024/08/28/46e2d8ae890e4a66aca615931287dc60_20240828155200.png)
 
-![지나치게 간소화 된 정보의 뱃지](/images/components/badge/usage/usage-bg-dont-02.jpg)
-
-
-지나치게 간소화된 정보는 사용자가 Badge 내부의 정보의 맥락을 파악하기 힘들 수 있습니다. 사용자가 직관적으로 정보를 파악할 수 있는 최소한의 맥락을 담아주세요. 
-
-
-### ✅ Do
-
-![information badge 오남용 금지](/images/components/badge/usage/usage-bg-do-03.jpg)
-
-### ❌ Don't
-
-![information badge 오남용 금지](/images/components/badge/usage/usage-bg-dont-03.jpg)
-
-
-information badge는 고객의 요청사항에 응답 또는 처리 과정이 필요한 Flow에서 해당 정보를 보여주는 Badge입니다. 쿠폰보유, 가격에 대한 혜택 안내에는 Primary,Secondary를 사용해주세요
-
-
-## 미리보기
-
-
-## Badge Part
-
-
-![Badge Part Image](/images/components/badge/preview/pv-badge-00.jpg)
-
-
-Badge는 Label과 Prefix로 구성되며 Prefix는 필요에 따라 추가하거나 감출 수 있습니다. 
-
-
-a. label : 뱃지의 필수 정보 값으로 Badge는 Label이 없어서는 안됩니다.
-b. prefixIcon : 필요에 따라 Badge에 있을수도, 없을수도 있으며 label의 정보 인지를 돕는 아이콘이 들어올 수 있습니다. 
-
-
-## Appearance
-
-
-수정필요: multi_image 컴포넌트는 수동 변환 필요 
-
-
-Badge는 총 2가지의 Appearance(외형) 스타일을 가지며 정보와 사용되는 UI에 따라 용례가 제한됩니다. 
-
-
-## Defulat
-
-
-수정필요: multi_image 컴포넌트는 수동 변환 필요 
-
-
-Defulat는 Badge를 사용하면 기본적으로 설정되어 있는 스타일이며 주로 Product Card의 상품 정보 표기 또는 페이지와 섹션의 그룹화 상품 목록들에 사용됩니다. 랭킹, 쿠폰 사용 유무, 무료배송 등 상품의 정보 중 사용자의 구매 결정에 도움이 되는 정보를 나타내는 데 유용합니다.
-
-
-![Badge의 Primary와 Secondary에 따른 정보 강조 정도](/images/components/badge/preview/pv-badge-06.jpg)
-
-
-Defulat는 상품의 다양한 정보를 품을 수 있는 만큼 특정 정보를 강조하기 위한 Priority 속성이 포함되어 있습니다. 프로덕트 디자이너의 판단에 따라 특정 정보를 Primary로 표현할 수 있으나 기본적으로 Secondary를 권장하며 Primary는 아껴서 사용해야 합니다.
-
-
-## Information
-
-
-수정필요: multi_image 컴포넌트는 수동 변환 필요 
-
-
-Information은 진행 또는 상태의 대기 및 완료 처럼 29CM의 일처리 단계와 같은 정보를 나타낼 때 사용됩니다. 이 외의 사례에서는 사용될 수 없습니다. 해당 뱃지를 상품의 할인, 쿠폰과 같은 정보 표기에 사용하지 않도록 유의해주세요.
-
-
-## isBlur
-
-
-![Toggled Tag은 항상 기본적으로 select되어있는 상태가 하나 있어야함을 설명하는 이미지](/images/components/badge/preview/pv-badge-09.jpg)
-
-
-isBlur는 이미지 위에 올라가 표현되는 Badge입니다. 주로 사용자에게 맞춤화된 정보를 표현하기 위해서 사용되며 그 외의 경우에는 아주 예외적으로 사용됩니다.
-
-
-## 스타일 가이드
-
-
-## Props
-
+information badge는 고객의 요청사항에 응답 또는 처리 과정이 필요한 Flow에서 해당 정보를 보여주는 Badge입니다. 
+쿠폰보유, 가격에 대한 혜택 안내에는 Primary,Secondary를 사용해주세요## Props
 
 | name | value |
 | --- | --- |
-| priority | primary | secondary | tertiary | information |
-| size | small | medium  |
-| prefixItem | icon |
-| appearance | isBlur |
-
+| 속성명 | 값 |
 
 ## Color Spec
 
+수정필요: Color Spec 섹션 추가 필요
 
-![default-primary](/images/components/badge/style-variant/sv-badge-01.jpg)
+## Size & Typography Spec
 
-
-| part | token |
-| --- | --- |
-| container | semantic-color-fill-primary |
-| label | semantic-color-text-on-color |
-| prefix icon | semantic-color-text-on-color |
-
-
-![default, secondary](/images/components/badge/style-varient/sv-badge-02.jpg)
-
-
-| part | token |
-| --- | --- |
-| container | semantic-color-fill-tertiary |
-| label | semantic-color-text-secondary |
-| prefix icon | semantic-color-text-secondary |
-
-
-![default, tertiary](/images/components/badge/style-varient/sv-badge-03.jpg)
-
-
-| part | token |
-| --- | --- |
-| container | semantic-color-fill-tertiary |
-| label | semantic-color-text-tertiary |
-| prefix icon | semantic-color-text-tertiary |
-
-
-![isInformation](/images/components/badge/style-varient/sv-badge-04.jpg)
-
-
-| part | token |
-| --- | --- |
-| container | semantic-color-fill-interactive-low |
-| label | semantic-color-text-interactive |
-| prefix icon | semantic-color-text-interactive |
-
-
-![badge Appearance : isBlur](/images/components/badge/style-varient/sv-badge-05.jpg)
-
-
-| part | token |
-| --- | --- |
-| container | rgba(93, 93, 93, 0.50) |
-| backdrop-filter | blur(5px) |
-| label | semantic-color-text-on-color |
-| prefix icon | semantic-color-text-on-color |
-
-
-## Size Spec
-
-
-![small](/images/components/badge/style-varient/sv-badge-06.jpg)
-
-
-| part | token |
-| --- | --- |
-| container | (prefix) min width : 24px | min width : 20px |
-| label | text-xxs-medium |
-| gap | scale-dimension-dimension-25 |
-| prefix icon | 10x10px |
-
-
-![medium](/images/components/badge/style-varient/sv-badge-07.jpg)
-
-
-| part | token |
-| --- | --- |
-| container | (prefix) min width : 34px | min width : 26px |
-| label | text-s-medium |
-| gap | scale-dimension-dimension-25 |
-| prefix icon | 12x12px |
-
+수정필요: Size Spec 섹션 추가 필요
 
 ## 상태
 
-
 ## Anatomy
 
+![Badge Anatomy](/images/components/badge/states/badge-anatomy.jpg)
 
-![Badge Anatomy 이미지](/images/components/badge/states/state-badge-00.jpg)
+## Programmatic State
 
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| isDisabled | boolean | false | 비활성화 상태 |
 
-a. Root : Badge를 감싸는 Container
-b. Label : Data를 표시하는 텍스트
-c. Prefix : Label의 Data를 보조하는 아이콘 기호가 들어오는 영역
+## Behavior State
 
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| hover | boolean | false | 마우스 오버 상태 |
+| pressed | boolean | false | 클릭/탭 상태 |
+| focus | boolean | false | 키보드 포커스 상태 |
 

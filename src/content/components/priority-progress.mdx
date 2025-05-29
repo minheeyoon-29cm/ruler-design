@@ -1,0 +1,115 @@
+---
+title: "Ruler Priority Progress"
+description: "**우선순위 설정 기준** br/ **P0** : 29CM 전체 화면에 아주 많이 사용되며 PD분들이 자주 씀 br/ **P1** : 29CM 전체 화면에 많이 사용되며 PDP에 필요함 br/ **P2** : 사용빈도 낮으나 필요할 가능성이 높음 br/ **P3** : 그 외 모두 br/"
+status: "draft"
+version: "1.0.0"
+category: "component"
+tags: ["ui", "component"]
+platforms: ["web", "ios", "android"]
+updated: "2025-05-29"
+---
+
+# Ruler Priority Progress
+
+**우선순위 설정 기준** 
+
+**P0** : 29CM 전체 화면에 아주 많이 사용되며 PD분들이 자주 씀 
+
+**P1** : 29CM 전체 화면에 많이 사용되며 PDP에 필요함 
+
+**P2** : 사용빈도 낮으나 필요할 가능성이 높음 
+
+**P3** : 그 외 모두 
+
+**Status** 
+
+✅ : Tailwind / 📦 : Emotion / NONE : 미개발 컴포넌트
+
+## Pritority 0
+
+ item.priority === PRIORITY.P0)
+    .map((item, index) => [
+      index + 1,
+      item.name,
+      item.design,
+      item.ios,
+      item.android,
+      item.fe.includes(STATUS.TAILWIND_DONE) ? '✅' : item.fe.includes(STATUS.EMOTION_DONE) ? '📦' : 'NONE',
+      item.etc ?? '-',
+    ])}
+/>
+
+## Pritority 1
+
+ item.priority === PRIORITY.P1)
+    .map((item, index) => [
+      index + 1,
+      item.name,
+      item.design,
+      item.ios,
+      item.android,
+      item.fe.includes(STATUS.TAILWIND_DONE) ? '✅' : item.fe.includes(STATUS.EMOTION_DONE) ? '📦' : 'NONE',
+      item.etc ?? '-',
+    ])}
+/>
+
+## Pritority 2
+
+ item.priority === PRIORITY.P2)
+    .map((item, index) => [
+      index + 1,
+      item.name,
+      item.design,
+      item.ios,
+      item.android,
+      item.fe.includes(STATUS.TAILWIND_DONE) ? '✅' : item.fe.includes(STATUS.EMOTION_DONE) ? '📦' : 'NONE',
+      item.etc ?? '-',
+    ])}
+/>
+
+## Pritority 3
+
+ item.priority === PRIORITY.P3)
+    .map((item, index) => [
+      index + 1,
+      item.name,
+      item.design,
+      item.ios,
+      item.android,
+      item.fe.includes(STATUS.TAILWIND_DONE) ? '✅' : item.fe.includes(STATUS.EMOTION_DONE) ? '📦' : 'NONE',
+      item.etc ?? '-',
+    ])}
+/>## Props
+
+| name | value |
+| --- | --- |
+| 속성명 | 값 |
+
+## Color Spec
+
+수정필요: Color Spec 섹션 추가 필요
+
+## Size & Typography Spec
+
+수정필요: Size Spec 섹션 추가 필요
+
+## 상태
+
+## Anatomy
+
+![Ruler Priority Progress Anatomy](/images/components/ruler priority progress/states/ruler priority progress-anatomy.jpg)
+
+## Programmatic State
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| isDisabled | boolean | false | 비활성화 상태 |
+
+## Behavior State
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| hover | boolean | false | 마우스 오버 상태 |
+| pressed | boolean | false | 클릭/탭 상태 |
+| focus | boolean | false | 키보드 포커스 상태 |
+

@@ -1,0 +1,104 @@
+---
+title: "ProductHorizontalCard"
+description: "img src=\"https://img.29cm.co.kr/next-edition/2024/07/11/78d7a85e050446b1afcb3ef3dd180fda_20240711175834.jpg\" alt=\"heroImage\" style={{ width: \'100%\', height: \'auto\', borderRadius: \'12px\' }} / 29CM내에서 파"
+status: "draft"
+version: "1.0.0"
+category: "component"
+tags: ["ui", "component"]
+platforms: ["web", "ios", "android"]
+updated: "2025-05-29"
+---
+
+# Product Horizontal Card
+
+![heroImage](https://img.29cm.co.kr/next-edition/2024/07/11/78d7a85e050446b1afcb3ef3dd180fda_20240711175834.jpg)
+29CM내에서 파트너 브랜드의 특정 상품을 선별하여 Display합니다. 고객의 판단에 필요한 기본적인 정보 모음들을 Conents영역 내부에
+포함하고 있습니다.
+
+### Content Guide
+
+![heroImage](https://img.29cm.co.kr/next-edition/2024/07/11/727be5ba26654df4be8af78874268650_20240711175431.jpg)
+
+Product Horizontal Card는 주로 셀렉션을 표현하는 역할을 합니다. 브랜드 또는 스토리텔링 형태의 기획전의 셀렉션의 의도에 맞게 제공 제공 정보들의 노출 - 비노출을 선택할 수 있습니다.
+또는 디자이너의 의도에 따라 다양하게 활용될 수 있습니다.
+
+![heroImage](https://img.29cm.co.kr/next-edition/2024/07/11/c403c27efbd74ee09c95bbe992565c45_20240711190144.jpg)
+
+Product Horizontal Card의 기본 형태는 Preview, Information, Postfix 를 포함합니다.
+Preview는 사용자가 상품을 인지하는데 가장 중요한 역할을 하므로 필수로 포함되어야 합니다.
+
+### Information
+
+![heroImage](https://img.29cm.co.kr/next-edition/2024/07/11/cdb017891bb24597a3e4916d4a3a266f_20240711190924.jpg)
+
+Information 영역의 브랜드 이름, 상품명, 가격과 같은 정보는 디자이너와 개발자의 판단에 의해서 모두 제어할 수 있습니다.
+다만 각 정보별 순서는 고정이며 변경될 수 없습니다.
+
+![heroImage](https://img.29cm.co.kr/next-edition/2024/07/11/6612c7e2a4aa4f55bc889075c01fb4be_20240711192810.png)
+
+사용자의 상품 판단을 위해 최소 2개 이상의 정보를 조합하여 노출하는 것이 더 좋습니다. 사용자 여정의 전후 맥락에 따라 적절한 정보를 조합하여 제공해주세요.
+
+### Extra Badge
+
+![heroImage](https://img.29cm.co.kr/next-edition/2024/07/12/f17eeeb0f7a847778ae5531521a70739_20240712175244.jpg)
+
+Product Horizontal Card 에는 기본적으로 badge를 제공하지 않습니다. 단 고객에게 전사적으로 높은 중요도를 가진 기획전, 프로모션 또는 그 정도 정보에 해당하는 경우에만 사용할 수 있는 Extra Badge를 제공하고 있습니다.
+
+![heroImage](https://img.29cm.co.kr/next-edition/2024/07/12/5d0f3731f8164804a06d2c220ee87ca4_20240712175729.png)
+
+일반 상품 혜택 정보를 Extra Badge 로 사용할 수 없습니다. 꼭 사용해야 한다면 Product Card Component를 사용해주세요.
+
+### Postfix
+
+![heroImage](https://img.29cm.co.kr/next-edition/2024/07/11/f016a9d5f0ce47d58fb4d53744e63b7a_20240711191546.jpg)
+
+디자이너와 개발자의 판단에 의해서 Postfix 영역을 제어할 수 있습니다. 좋아요 외 다른 액션유도가 가능하도록 icon button을 추가적으로 제공합니다.
+
+![heroImage](https://img.29cm.co.kr/next-edition/2024/07/11/022a9b85e936463e855028babe802c66_20240711200355.png)
+
+지정된 컴포넌트 외 다른 컴포넌트나 스타일을 사용하는 것은 임시로 제한하고 있습니다.  
+제공하는 형태 외의 UI가 필요한 경우 #design_platform 으로 제보해주세요.
+공통 디자인 패턴으로 추가되어 제공할지 논의를 이어나갈 수 있습니다.
+
+---
+
+# Behavior
+
+![비워둠](https://img.29cm.co.kr/next-edition/2024/07/12/6e77d1e75f3245138a7b96d71ebb4266_20240712104832.jpg)
+
+### Touch targets
+
+Card의 터치 영역은 Card를 감싸는 Container 영역과 동일합니다. Container 내부 액션 영역을 확보해주세요.## Props
+
+| name | value |
+| --- | --- |
+| 속성명 | 값 |
+
+## Color Spec
+
+수정필요: Color Spec 섹션 추가 필요
+
+## Size & Typography Spec
+
+수정필요: Size Spec 섹션 추가 필요
+
+## 상태
+
+## Anatomy
+
+![ProductHorizontalCard Anatomy](/images/components/producthorizontalcard/states/producthorizontalcard-anatomy.jpg)
+
+## Programmatic State
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| isDisabled | boolean | false | 비활성화 상태 |
+
+## Behavior State
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| hover | boolean | false | 마우스 오버 상태 |
+| pressed | boolean | false | 클릭/탭 상태 |
+| focus | boolean | false | 키보드 포커스 상태 |
+

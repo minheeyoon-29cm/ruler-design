@@ -1,0 +1,124 @@
+---
+title: "Select"
+description: "Select는 사용자가 여러 옵션 중 하나를 선택할 수 있도록 하는 인터페이스 요소입니다. 이 컴포넌트는 사용자에게 선택 가능 항목을 제공하고, 사용자가 선택한 항목을 명확하게 보여주는 역할을 합니다."
+status: "draft"
+version: "1.0.0"
+category: "component"
+tags: ["ui", "component"]
+platforms: ["web", "ios", "android"]
+updated: "2025-05-29"
+---
+
+# Select 
+
+Select는 사용자가 여러 옵션 중 하나를 선택할 수 있도록 하는 인터페이스 요소입니다. 
+이 컴포넌트는 사용자에게 선택 가능 항목을 제공하고, 사용자가 선택한 항목을 명확하게 보여주는 역할을 합니다. 
+
+![Image](https://img.29cm.co.kr/next-edition/2024/09/05/a2561c0da037403881d498a7cd147175_20240905143242.jpg)
+
+- 🅐 Label : Select의 목적이나 기능을 이해할 수 있도록 돕는 텍스트입니다. 
+- 🅑 Trigger : Select를 작동시키는 버튼이나 클릭 가능한 요소입니다. 
+- 🅒 Content : 트리거를 클릭했을 때 나타나는 선택 가능한 옵션들의 목록 영역입니다. 이 영역은 사용자가 선택할 수 있는 여러 옵션(Item)을 포함하고 있습니다.
+- 🅓 Item : 사용자가 선택할 수 있는 개별 옵션을 나타냅니다. 각각의 Item은 목록에서 선택할 수 있는 옵션으로, 일반적으로 텍스트 형식으로 제공되지만, 아이콘이나 이미지를 포함할 수도 있습니다.
+
+---
+
+### Validation
+
+![Image](https://img.29cm.co.kr/next-edition/2024/09/11/efe5f0c2afcd4abc86c96d5e12ead525_20240911175929.jpg)
+
+Select에는 사용자가 올바른 데이터를 입력하고 선택하도록 돕도록 적절히 Validation을 제공하는 것이 좋습니다. 
+이를 통해 사용자는 선택 과정에서 실수를 줄이고, 시스템은 적절한 데이터를 수집할 수 있습니다.
+
+---
+
+### Active & isSelected
+
+![Image](https://img.29cm.co.kr/next-edition/2024/09/11/37499788f99b424b911bdf2dc49e2bb3_20240911185048.gif)
+
+사용자가 Select를 클릭하거나 탭하는 경우 Select가 Active되며 선택가능한 옵션 목록이 나타납니다.
+옵션 목록 중 한 가지를 선택하는 경우 선택된 옵션이 Select에 표기되게 됩니다. 
+
+![Image](https://img.29cm.co.kr/next-edition/2024/09/11/12efcbc2db8f43c5847a90c77400497e_20240911185146.jpg)
+
+Default, Active, isSelecte 사용자가 Select를 통해 항목을 선택하는 과정에서 중요한 피드백을 제공합니다. 
+각 상태는 사용자가 상호작용하는 시점과 상황에 따라 시각적으로 구분되어, 명확하고 직관적인 사용자 경험을 제공합니다.
+
+---
+
+### Trigger
+
+![Image](https://img.29cm.co.kr/next-edition/2024/09/12/73e3793a2e304d62a68d221258e6fba8_20240912001221.png)
+
+Select UI는 기본적으로 사용자가 **하나의 옵션** 을 선택할 수 있도록 만든 컴포넌트입니다. 
+일반적으로 **클릭 가능한 버튼 형태(트리거)** 를 클릭하면 아래로 펼쳐지거나 바텀시트 형태로 여러 옵션이 나타납니다.
+
+트리거는 사용자가 상호작용하여 선택 가능한 옵션 리스트를 열도록 하는 요소를 의미하며, 이를 위해 여러 UI 요소들이 사용될 수 있습니다. 
+각 트리거는 특정 사용 시나리오와 디자인 목표에 맞추어 선택되어야 합니다. 
+
+---
+
+### Option List 
+
+![Image](https://img.29cm.co.kr/next-edition/2024/09/11/25acb6777cea4ab08f836ed818d3595d_20240911235251.jpg)
+
+데스크탑에서는 화면 크기가 크고 마우스로 빠르게 선택할 수 있으므로 트리거 아래에 바로 옵션 리스트를 표시하는 방식이 더 적합합니다.
+주로 사용자가 Select 컴포넌트를 클릭하면 선택된 트리거 바로 아래에 옵션 리스트가 펼쳐져 나타납니다.
+
+![Image](https://img.29cm.co.kr/next-edition/2024/09/11/00e9d2e55c1a4a919f17afdce8ae170a_20240911235154.gif)
+
+모바일에 경우 화면 크기가 작고 터치 인터페이스를 사용하는 환경에서 바텀시트를 사용하는 방식이 공간 활용과 접근성 측면에서 더 유리합니다.
+사용자가 Select 컴포넌트를 클릭하면 화면 하단에서 옵션 리스트가 바텀시트 형태로 나타납니다. 이는 특히, 긴 옵션 리스트를 보여줄 때 유용합니다.
+
+데스크탑과 모바일에서 Select의 옵션 리스트가 나타나는 방식의 차이는 각 기기의 특성과 사용자 경험에 맞춘 최적화된 설계입니다.
+
+![Image](https://img.29cm.co.kr/next-edition/2024/09/12/a0b42d965bdc4df9a3673c45f5bc95ff_20240912004733.jpg)
+
+옵션 리스트의 Prefix 영역에서는 사용자가 옵션을 더 쉽게 이해할 수 있도록 돕기 위해 아이콘이나 이미지 자산(Asset)을 사용할 수 있습니다. 
+
+---
+
+### Contents Guide
+
+![Image](https://img.29cm.co.kr/next-edition/2024/09/12/94efbe80c894475daadecb4c3a4cd29a_20240912031850.png)
+
+너무 많은 옵션이 나열되면 사용자가 혼란스러울 수 있습니다. 
+따라서 5개 이상의 옵션이 있는 경우에는 Select UI 대신 다른 방식을 고려하거나, 
+모바일 환경에서는 바텀시트를 활용하여 선택지를 나열하는 것이 좋습니다. 
+
+- 기본 옵션, 또는 적절한 문구가 없는 경우 플레이스 홀더를 "선택"으로 시작하세요.
+- 필요한 옵션을 쉽게 찾을 수 있도록 알파벳순 또는 다른 논리적 순서로 나열하세요. 
+- 옵션의 기능에 따라 명확하게 Label을 지정해주세요.## Props
+
+| name | value |
+| --- | --- |
+| 속성명 | 값 |
+
+## Color Spec
+
+수정필요: Color Spec 섹션 추가 필요
+
+## Size & Typography Spec
+
+수정필요: Size Spec 섹션 추가 필요
+
+## 상태
+
+## Anatomy
+
+![Select  Anatomy](/images/components/select /states/select -anatomy.jpg)
+
+## Programmatic State
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| isDisabled | boolean | false | 비활성화 상태 |
+
+## Behavior State
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| hover | boolean | false | 마우스 오버 상태 |
+| pressed | boolean | false | 클릭/탭 상태 |
+| focus | boolean | false | 키보드 포커스 상태 |
+

@@ -1,0 +1,99 @@
+---
+title: "CalloutCard"
+description: "Callout Card는 중요한 정보를 강조하고, 사용자의 주의를 끌기 위해 사용되는 UI 컴포넌트입니다. 사용자에게 빠르고 직관적으로 필요한 행동을 유도하는 데 효과적입니다."
+status: "draft"
+version: "1.0.0"
+category: "component"
+tags: ["ui", "component"]
+platforms: ["web", "ios", "android"]
+updated: "2025-05-29"
+---
+
+# Callout Card 
+
+Callout Card는 중요한 정보를 강조하고, 사용자의 주의를 끌기 위해 사용되는 UI 컴포넌트입니다. 사용자에게 빠르고 직관적으로 필요한 행동을 유도하는 데 효과적입니다.
+
+![heroImage](https://img.29cm.co.kr/next-edition/2024/08/22/acb8b4cd7cc24159b09a8b32f4055b7e_20240822002634.jpg)
+
+---
+
+### Anatomy
+
+![Image](https://img.29cm.co.kr/next-edition/2024/08/23/0d7b45d3649d4b10ae8607004a788ad0_20240823143747.jpg)
+
+-  Preview(Optional) : 정보를 효과적으로 강조할 수 있는 이미지
+-  Dismissable(Optional): 닫기 동작을 유도하는 Affordance를 사용할 수 있습니다.
+-  Information : 전달하고자 하는 정보의 메시지 영역입니다.
+-  Action : 사용자가 특정 행동을 취하도록 유도하는 영역입니다. 예를 들어, CTA(Call to Action) 버튼이 위치하는 공간입니다.
+
+---
+
+### Flex Layout 
+
+![Image](https://img.29cm.co.kr/next-edition/2024/08/23/09a85953008240f99d619bf2e7328a04_20240823144154.jpg)
+
+Callout Card는 flex옵션을 통해 수직, 수평으로 배치할 수 있습니다.
+
+### Preview
+
+![Image](https://img.29cm.co.kr/next-edition/2024/08/23/41702e9fe6a04464b6c0511b6a96fe6a_20240823145454.jpg)
+
+설계 의도에 따라 Preview 이미지의 노출, 비노출을 제어할 수 있습니다. 
+
+![Image](https://img.29cm.co.kr/next-edition/2024/08/23/26aa95386371456e887a97763433ef0d_20240823160743.jpg)
+
+Preview 이미지의 기본 제공 이미지 비율은 `flex:false - 2:1` | `flex:true - 1:1`입니다. 외에 8가지의 이미지 비율을 제공하지만 9:16, 1:2는 지양합니다.
+
+### Dismissable
+
+![Image](https://img.29cm.co.kr/next-edition/2024/08/26/0e61e311890e4e9287d0f79e0a0b9fc8_20240826135326.jpg)
+
+Dismissable를 통해 사용자가 원하지 않으면 언제든 Callout Card를 보지 않을 수 있습니다.  
+
+### PriorityAction 
+
+![Image](https://img.29cm.co.kr/next-edition/2024/08/26/79b39148126743f3a8d8a3a40c89723b_20240826140512.jpg)
+
+Callout Card는 기본 형태와 calloutCardPriorityAction두 종류의 타입을 제공합니다. 
+
+- 기본 Callout Card : 단순하고 덜 강조된 인터페이스로, 선택지가 중요하지 않은 상황에서 사용. 사용자에게 자연스럽게 선택의 기회를 제공하면서도 주의를 강하게 끌지 않는 것이 특징입니다.
+- PriorityAction : 주요 액션을 강조하고, 사용자에게 명확하게 행동을 유도해야 하는 경우 사용.Priority 타입은 사용자가 반드시 주목해야 하거나 중요한 액션을 취해야 할 때 사용됩니다. 이 유형은 사용자에게 더욱 강한 시각적 신호를 제공하여 클릭이나 선택을 유도하는 데 목적이 있습니다. 다음 여정으로 이어지는 Flow가 있는 경우 사용합니다.
+
+---
+
+### Contents Guide
+
+작성중## Props
+
+| name | value |
+| --- | --- |
+| 속성명 | 값 |
+
+## Color Spec
+
+수정필요: Color Spec 섹션 추가 필요
+
+## Size & Typography Spec
+
+수정필요: Size Spec 섹션 추가 필요
+
+## 상태
+
+## Anatomy
+
+![CalloutCard Anatomy](/images/components/calloutcard/states/calloutcard-anatomy.jpg)
+
+## Programmatic State
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| isDisabled | boolean | false | 비활성화 상태 |
+
+## Behavior State
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| hover | boolean | false | 마우스 오버 상태 |
+| pressed | boolean | false | 클릭/탭 상태 |
+| focus | boolean | false | 키보드 포커스 상태 |
+

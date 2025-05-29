@@ -1,0 +1,120 @@
+---
+title: "Tabs"
+description: "탭은 탐색 구성 요소로 콘텐츠 섹션 간의 이동을 도와줍니다. 각 탭 아래의 콘텐츠는 서로 관련이 있어야 하며, 일관된 주제를 형성해야 합니다."
+status: "draft"
+version: "1.0.0"
+category: "component"
+tags: ["ui", "component"]
+platforms: ["web", "ios", "android"]
+updated: "2025-05-29"
+---
+
+# Tabs
+
+탭은 탐색 구성 요소로 콘텐츠 섹션 간의 이동을 도와줍니다. 각 탭 아래의 콘텐츠는 서로 관련이 있어야 하며, 일관된 주제를 형성해야 합니다.
+
+탭을 통해 페이지 구조를 명확하게 구분하여 사용자가 현재 위치를 쉽게 이해하고, 원하는 콘텐츠로 쉽게 이동할 수 있게 합니다.
+
+![Image](https://img.29cm.co.kr/next-edition/2024/07/30/8ea04e5e9e2a40ad958fc9552ce746ef_20240730001545.jpg)
+
+- 🅐 Root : Tabs를 감싸는 Container
+- 🅑 Tab Container : Tab Item 하나를 감싸는 Container
+- 🅒 Tab Item : Tabs를 구성하는 개별 Tab
+- 🅓 Indicator Track : Indicator의 트랙
+- 🅔 Selected Indicator : 현재 Content의 위치를 알려주는 표시 Bar
+- 🅕 Contents : Tab하나가 가지고 있는 섹션, 또는 하위 페이지 패널
+
+---
+
+### isFilled
+
+![Image](https://img.29cm.co.kr/next-edition/2024/07/30/7900f0478ca7478c800b8ddcebbc7ea4_20240730004649.png)
+
+Tabs는 `isFilled` 속성을 가지고 있으며 기본적으로 `true` 입니다.
+Tabs에 표현되는 콘텐츠의 양에 따라 선택하여 사용할 수 있습니다.
+
+![isFilled의 너비 스펙을 간단하게 안내합니다](https://img.29cm.co.kr/next-edition/2024/07/25/bf5d9b8c797f49dc82416435778e08c7_20240725233625.jpg)
+
+`isFilled`는 컨테이너에 맞게 탭의 너비를 넓힙니다.
+각 탭의 너비는 컨테이너 너비를 탭의 갯수로 나눈 값으로 정의되며
+너비에 따라 글자수가 조정됩니다.
+
+![isFilled의 대표적인 사용 사례](https://img.29cm.co.kr/next-edition/2024/07/26/774717a27a664b4192117442100cc5a7_20240726003813.jpg)
+
+`isFilled`를 사용하면 각 탭이 컨테이너 안에 알맞게 들어가기 때문에 탭의 내용이 모두 잘리지 않고 온전히 표시됩니다.
+사용자가 한 눈에 페이지의 분류 내용을 이해할 수 있습니다.
+
+### isFilled : fasle
+
+![isFilled 가 False일 때의 너비 스펙을 간단하게 안내합니다](https://img.29cm.co.kr/next-edition/2024/07/26/2706c305f71544ca81d8ddae3c52d551_20240726014008.jpg)
+
+탭의 갯수가 4개 이상일 경우 `isFilled:false`를 사용할 수 있습니다. 많은 갯수의 탭이 허용되어 가로 스크롤을 할 수 있도록 합니다.
+
+![Image](https://img.29cm.co.kr/next-edition/2024/07/30/36fc9c27f62a48b198e703bc35e4db06_20240730012607.gif)
+
+`isFilled :false ` 는 drag 동작으로 좌우 스크롤이 가능하며 우측에 Tab을 선택할 때 가로로 스크롤 되며 overflowe된 탭이 나타나게 됩니다.
+
+![isFilled 가 False일 때의 너비 스펙을 간단하게 안내합니다](https://img.29cm.co.kr/next-edition/2024/07/26/5b5d7f9a94d64c8294065c61a36ae004_20240726021424.jpg)
+
+각 탭의 너비가 레이블의 길이에 맞춰 조정되므로, 다양한 길이의 텍스트를 효과적으로 수용하며 많은 양의 컨텐츠를 탐색할 수 있도록 도울 수 있습니다.
+
+### isSelected
+
+![Tabs가 동작하는 사례를 보여줍니다.](https://img.29cm.co.kr/next-edition/2024/07/24/3d8c962075f14f38986da66304b07b4d_20240724195513.gif)
+
+사용자가 선택한 Tab으로 Indicator가 이동되며, 현재 위치한 Content를 알려주는 역할을 합니다.
+
+### isDisabled
+
+![Image](https://img.29cm.co.kr/next-edition/2024/07/30/8bd85a26f6224be98ee15e9cf9783319_20240730003336.jpg)
+
+`isDisabled`은 비활성화 상태는 현재 어떤 이유로 일시적으로 선택, 편집, 변경이 불가하여 사용할 수 없는 상태를 나타냅니다. 이후 해당 항목을 다시 사용할 수 있다는 맥락을 사용자에게 전달할 수 있습니다.
+
+---
+
+### Contents Guide
+
+![Image](https://img.29cm.co.kr/next-edition/2024/07/29/422afdf9ab8b48edaf029ba4022790e1_20240729234439.png)
+
+`isFilled`는 width에 맞추어 글자수가 조정됩니다. Tab의 명칭을 말줄임표로 표현하는 것보다 모두 명시하고 `isFilled : false `로 표현하는 것이 더 좋습니다.
+
+![Image](https://img.29cm.co.kr/next-edition/2024/07/30/94a0f70375e344d2957ea5eb01ee2da5_20240730013918.png)
+
+여러 레벨의 Tabs을 중첩하는 것 보다 하위 탐색 항목을 Tag를 사용하여 필터링 하여 탐색하게 하는것이 더 좋습니다.
+
+![Image](https://img.29cm.co.kr/next-edition/2024/07/30/98292db5dc8943ef8b2354158e8f84e8_20240730014637.png)
+
+페이지 맥락에 맞추어 Tab의 Label은 명료하게 작성하는 것이 좋습니다. 사용자가 인지해야할 정보를 간소화하여 제공할 수 있도록 합니다.## Props
+
+| name | value |
+| --- | --- |
+| 속성명 | 값 |
+
+## Color Spec
+
+수정필요: Color Spec 섹션 추가 필요
+
+## Size & Typography Spec
+
+수정필요: Size Spec 섹션 추가 필요
+
+## 상태
+
+## Anatomy
+
+![Tabs Anatomy](/images/components/tabs/states/tabs-anatomy.jpg)
+
+## Programmatic State
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| isDisabled | boolean | false | 비활성화 상태 |
+
+## Behavior State
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| hover | boolean | false | 마우스 오버 상태 |
+| pressed | boolean | false | 클릭/탭 상태 |
+| focus | boolean | false | 키보드 포커스 상태 |
+

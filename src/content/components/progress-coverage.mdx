@@ -1,0 +1,79 @@
+---
+title: "Coverage Progress"
+description: "---"
+status: "draft"
+version: "1.0.0"
+category: "component"
+tags: ["ui", "component"]
+platforms: ["web", "ios", "android"]
+updated: "2025-05-29"
+---
+
+# Coverage Progress
+
+---
+
+**우선순위 기준과 예시는 개발자와 논의 후 변경될 수 있음**
+
+- **P1: Ruler가 이미 반영된 상태에서 전체 디자인 일관성을 높일 수 있는 빠른 수정 작업**
+
+  설명: 이미 적용된 Ruler 컴포넌트의 스타일 조정만으로 디자인 일관성을 빠르게 높일 수 있는 작업. 적은 공수로 큰 효과를 기대할 수 있어 즉시 반영이 필요함.
+  예시: 그리드 레이아웃에서 Ruler 스타일 미적용된 부분을 수정하여 일관성 확보
+
+- **P2: Ruler에서 제작/제공되고 있으며, 특정 페이지나 섹션에서 반복적으로 사용되는 인터페이스 반영 작업**
+
+  설명: 특정 페이지나 섹션에서 빈번하게 사용되며, 사용자 흐름과 상호작용에 큰 영향을 미치는 Ruler 컴포넌트의 비일관성 문제를 해결하는 작업.
+  예시: 필터, 네비게이션 메뉴, 주요 버튼 등의 스타일 통일화.
+
+- **P3: 사용자가 쉽게 발견할 수 있는 주요 페이지에서 Ruler 디자인 시스템이 지면의 50% 이상 사용되지 않는 경우**
+
+  설명: 주요 페이지(메인 페이지, 상품 상세 페이지 등)에서 Ruler가 충분히 적용되지 않아, 페이지 일관성에 문제가 발생하는 경우. Ruler의 적용을 확대하여 일관성을 높이는 작업.
+  예시: Ruler 파운데이션 시스템 적용, 모듈화가 필요한 부분 제작 및 반영 
+
+- **P4: 비주요 페이지나 특정 기능에 Ruler 디자인 시스템 신규 적용 작업**
+
+  설명: 사용자 경험에 큰 영향을 미치지 않는 비주요 페이지나 기능에 Ruler 디자인 시스템을 신규로 적용하여 전체적인 디자인 일관성을 높이는 작업.
+  예시: FAQ 페이지, 설정 페이지, 고객센터 페이지 등.
+
+- **P5: 일회성 페이지, 또는 특정 도메인에서만 사용되는 페이지의 Ruler 디자인 시스템 적용 및 유지보수 작업**
+
+  설명: 일회성 페이지 또는 특정 도메인(이벤트 페이지, 캠페인 페이지 등)에서만 사용되는 페이지에 Ruler 디자인 시스템을 적용하거나 유지보수하는 작업.
+  예시: 특정 프로모션 페이지 스타일, 스토리 뷰 등
+
+- **P6: 디자인 확정 전 논의가 필요한 작업**
+
+  설명: 디자인이 변경될 가능성이 높아, 우선적으로 디자인 논의 후 확정된 이후에 반영해야 하는 작업.
+  예시: 신규 페이지나 리뉴얼, 모듈 설계 작업, 디자인 시스템에 새로운 컴포넌트를 추가할 때 논의가 필요한 작업.## Props
+
+| name | value |
+| --- | --- |
+| 속성명 | 값 |
+
+## Color Spec
+
+수정필요: Color Spec 섹션 추가 필요
+
+## Size & Typography Spec
+
+수정필요: Size Spec 섹션 추가 필요
+
+## 상태
+
+## Anatomy
+
+![Coverage Progress Anatomy](/images/components/coverage progress/states/coverage progress-anatomy.jpg)
+
+## Programmatic State
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| isDisabled | boolean | false | 비활성화 상태 |
+
+## Behavior State
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| hover | boolean | false | 마우스 오버 상태 |
+| pressed | boolean | false | 클릭/탭 상태 |
+| focus | boolean | false | 키보드 포커스 상태 |
+

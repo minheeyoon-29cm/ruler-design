@@ -1,0 +1,113 @@
+---
+title: "BaseCard"
+description: "Base Card는 정보가 유연하게 그룹화되어 사용자가 관련 항목과 작업을 쉽게 탐색할 수 있도록 도와주는 컨테이너입니다."
+status: "draft"
+version: "1.0.0"
+category: "component"
+tags: ["ui", "component"]
+platforms: ["web", "ios", "android"]
+updated: "2025-05-29"
+---
+
+# Base Card
+
+Base Card는 정보가 유연하게 그룹화되어 사용자가 관련 항목과 작업을 쉽게 탐색할 수 있도록 도와주는 컨테이너입니다.
+
+![Image](https://img.29cm.co.kr/next-edition/2024/07/31/ce0eff3762f74994ae333c0e15777cf5_20240731224414.jpg)
+
+- 🅐 Root : Base Card를 감싸는 Container
+- 🅑 card.preview : 정보의 설명을 도와주는 이미지나 에셋과 같은 그래픽 요소
+- 🅒 card.header (Required) : Base Card의 가장 중요하거나 필수적인 정보
+- 🅓 card.contents : 추가적인 정보나 세부 내용을 제공하는 영역
+- 🅔 card.footer : 카드의 맨 아래에 위치하며, 부가적인 정보나 액션 버튼과 같은 요소를 포함하는 영역
+
+---
+
+### Base Card Structure
+
+Base Card는 의도에 따라 표현할 정보를 노출할 수 있도록 유연한 구조를 제공하고 있습니다.
+
+![Image](https://img.29cm.co.kr/next-edition/2024/07/31/e264af1d31414864be712232d0fbce61_20240731234327.jpg)
+
+`card.header` 는 필수 포함 정보입니다. 사용자가 정보를 인지하는데 필요한 최소 요구 조건입니다.
+
+타이틀, 짧은 문구의 요소이거나 특정한 구성요소일 수 있습니다.
+대부분의 카드는 `card.header`의 주요 정보를 보조해주는 `card.contents` 와 함께 사용합니다.
+`card.contents` 는 주요 정보를 보조하기 위한 여러 다른 구성 요소를 포함할 수 있습니다.
+
+![Image](https://img.29cm.co.kr/next-edition/2024/07/31/6b14ede4c7284a7886c36ff93855ab5d_20240731234327.jpg)
+
+`card.preview` 으로 정보의 내용을 시각적으로 안내하는 이미지나 그래픽을 포함할 수 있습니다.
+
+![Image](https://img.29cm.co.kr/next-edition/2024/07/31/f1ef328a8ee44d738780cddd7cf4a072_20240731234327.jpg)
+
+`card.footer` 에는 옵셔널한 정보나 유도장치를 포함할 수 있습니다. metadata, 버튼, 상태와 같이 사용자가 정보를 인지하는데 없어도 크게 상관없는 요소들이여야 합니다.
+
+{' '}
+
+### Flex Layout
+
+![Image](https://img.29cm.co.kr/next-edition/2024/08/01/478ae55a526142d4ade7560e424fe81f_20240801000815.jpg)
+
+Base Card는 `flex`옵션을 통해 수직, 수평으로 배치할 수 있습니다.
+
+{' '}
+
+### Card Preview Ratio
+
+![Image](https://img.29cm.co.kr/next-edition/2024/08/01/b77fbc5928af4e86a81ac223e7ca2f4b_20240801002654.jpg)
+
+`card.preview` 썸네일의 기본 제공 이미지 비율은 1:1입니다. 1:1외에 8가지의 이미지 비율을 제공하지만 `9:16`, `1:2`는 지양합니다.
+
+{' '}
+
+---
+
+{' '}
+
+### Contents Guide
+
+![Image](https://img.29cm.co.kr/next-edition/2024/08/01/598ddc8dd092402aae14480812fbcbdc_20240801005545.png)
+
+너무 많은 행동 유도 버튼이나 링크를 피는게 좋습니다 카드 하나당 행동 요구는 가능한 하나만 사용하는 것이 좋습니다.
+
+![Image](https://img.29cm.co.kr/next-edition/2024/08/01/25f5fc5b00d44a73b608e9e956e9a332_20240801011646.png)
+
+- 콘텐츠 제목에 "NEW"나 할인정보를 포함하지 마세요. 더 이상 콘텐츠가 새롭지 않을 때 카드의 제목을 수정해줘야 하는 등의 추가 공수가 들어갈 수 있습니다.
+  대신 뱃지와 같은 다른 운영가능한 구성요소를 활용하여 관련 정보를 표현해주세요.
+
+- 콘텐츠 톤을 의식하세요. 카드의 목적과 용도에 따라 카드의 콘텐츠를 표현하는 톤이 달라질 수 있습니다.
+  29CM은 전반적으로 콘텐츠 스토리에 자연스럽게 상품을 안내하는 방식의 톤을 유지하고 있습니다. 29CM에 어울리지 않는 너무 강한 후킹 문구는 지양합니다.## Props
+
+| name | value |
+| --- | --- |
+| 속성명 | 값 |
+
+## Color Spec
+
+수정필요: Color Spec 섹션 추가 필요
+
+## Size & Typography Spec
+
+수정필요: Size Spec 섹션 추가 필요
+
+## 상태
+
+## Anatomy
+
+![BaseCard Anatomy](/images/components/basecard/states/basecard-anatomy.jpg)
+
+## Programmatic State
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| isDisabled | boolean | false | 비활성화 상태 |
+
+## Behavior State
+
+| State | Value | Default | Description |
+| --- | --- | --- | --- |
+| hover | boolean | false | 마우스 오버 상태 |
+| pressed | boolean | false | 클릭/탭 상태 |
+| focus | boolean | false | 키보드 포커스 상태 |
+
