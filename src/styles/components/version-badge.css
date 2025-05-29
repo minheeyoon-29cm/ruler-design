@@ -1,0 +1,36 @@
+@import '../globals.css';
+@import '../../tokens/tokens.css';
+
+.version-badge {
+  display: inline-block;
+  font-size: var(--font-size-100);  /* StatusBadge와 동일 */
+  font-weight: var(--semibold-600); /* StatusBadge와 동일 */
+  line-height: var(--line-height-3); /* StatusBadge와 동일 */
+  padding: var(--spacing-dimension-100) var(--spacing-dimension-200); /* StatusBadge와 동일 */
+  border-radius: 9999px;
+  white-space: nowrap;
+  background-color: var(--color-scale-gray-300);
+  color: var(--color-semantic-text-primary);
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+  
+  /* 정렬 개선 */
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.version-badge--small {
+  font-size: var(--font-size-75);
+  padding: var(--spacing-dimension-75) var(--spacing-dimension-150);
+}
+
+.version-badge--medium {
+  font-size: var(--font-size-100);
+  padding: var(--spacing-dimension-100) var(--spacing-dimension-200);
+}
+
+.version-badge--latest {
+  background-color: var(--color-scale-orange-red-200);
+  color: var(--color-scale-orange-red-800);
+}

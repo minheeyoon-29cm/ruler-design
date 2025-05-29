@@ -1,4 +1,3 @@
-
 @import '../globals.css';
 @import '../../tokens/tokens.css';
 
@@ -10,40 +9,46 @@
     padding: var(--spacing-dimension-100) var(--spacing-dimension-200);
     border-radius: 9999px;
     white-space: nowrap;
-  }
-  
-  /* DRAFT = 초안 (그레이톤) */
-  .status-badge--draft {
+}
+
+/* DRAFT = 초안 (그레이톤) */
+.status-badge--draft {
     background-color: var(--color-scale-gray-300);
     color: var(--color-scale-gray-800);
-  }
-  
-  /* BETA = 테스트 중 (옐로우톤) */
-  .status-badge--beta {
+}
+
+/* BETA = 테스트 중 (옐로우톤) */
+.status-badge--review {
     background-color: var(--color-scale-yellow-300);
     color: var(--color-scale-yellow-800);
-  }
-  
-  /* ACTIVE = 안정화됨 (그린톤 또는 브랜드톤) */
-  .status-badge--active {
+}
+
+/* ACTIVE = 안정화됨 (그린톤) */
+.status-badge--active {
     background-color: var(--color-scale-green-200);
     color: var(--color-scale-green-800);
-  }
-  
-  /* DEPRECATED = 폐기 예정 (붉은계열 또는 강조) */
-  .status-badge--deprecated {
+}
+
+/* DEPRECATED = 폐기 예정 (붉은계열) */
+.status-badge--deprecated {
     background-color: var(--color-scale-deep-red-100);
     color: var(--color-scale-deep-red-600);
-  }
-  
-  .componentPatternCard {
+}
+
+/* HOLD = 보류 중 (오렌지톤) - 새로 추가 */
+.status-badge--hold {
+    background-color: var(--color-scale-orange-red-200);
+    color: var(--color-scale-orange-red-800);
+}
+
+.componentPatternCard {
     border: 1px solid var(--color-scale-gray-alpha-200);
     border-radius: var(--corner-radius-50);
     padding: var(--spacing-dimension-150);
     background-color: var(--color-scale-gray-100);
-  }
+}
 
-  .componentPatternCard:hover {
+.componentPatternCard:hover {
     cursor: pointer;
     background-color: var(--color-scale-gray-200);
-  }
+}
