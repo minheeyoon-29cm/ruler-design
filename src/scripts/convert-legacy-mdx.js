@@ -208,6 +208,22 @@ updated: "${today}"
     return null;
   }
 
+  // 변수 참조 제거 (개선된 버전)
+  removeVariableReferences(content) {
+    return content
+      // docsStyles에서 import된 변수들 제거
+      .replace(/\b(coreComponents|patternComponentData|allComponent|STATUS)\b/g, '<!-- 변수 참조 제거됨 -->')
+      // 중괄호로 감싸진 변수 참조 제거
+      .replace(/\{(coreComponents|patternComponentData|allComponent|STATUS)[^}]*\}/g, '<!-- 변수 참조 제거됨 -->')
+      // 배열이나 객체 접근 제거
+      .replace(/\b(coreComponents|patternComponentData|allComponent|STATUS)\.[^}\s]*/g, '<!-- 변수 참조 제거됨 -->')
+      .replace(/\b(coreComponents|patternComponentData|allComponent|STATUS)\[[^\]]*\]/g, '<!-- 변수 참조 제거됨 -->')
+      // JSX 표현식에서의 변수 사용 제거
+      .replace(/\{\s*(coreComponents|patternComponentData|allComponent|STATUS)[^}]*\}/g, '<!-- 변수 참조 제거됨 -->')
+      // 연속된 주석 정리
+      .replace(/(<!-- 변수 참조 제거됨 -->\s*){2,}/g, '<!-- 변수 참조 제거됨 -->\n\n');
+  }
+
   // CSS 클래스 참조 제거
   removeCSSReferences(content) {
     return content
@@ -338,7 +354,10 @@ updated: "${today}"
       // 3. 테이블 변환
       convertedContent = this.convertTables(convertedContent);
       
-      // 4. CSS 참조 제거
+      // 4. 변수 참조 제거 (coreComponents 등)
+      convertedContent = this.removeVariableReferences(convertedContent);
+      
+      // 5. CSS 참조 제거
       convertedContent = this.removeCSSReferences(convertedContent);
       
       // 5. HTML 태그 변환
