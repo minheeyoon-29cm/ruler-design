@@ -122,11 +122,12 @@ pre {
   margin-bottom: var(--spacing-dimension-300);
 }
 code {
-  background-color: var(--color-semantic-background-codeblock);
   padding: var(--spacing-dimension-50) var(--spacing-dimension-100);
-  border-radius: var(--radius-corner-radius-50);
-  font-size: var(--font-size-100);
+  border-radius: var(--corner-radius-50);
+  font-size: var(--font-size-75);
   font-family: var(--font-family-mono);
+  color : var(--color-semantic-text-primary);
+  border : 1px solid var(--color-scale-gray-900)
 }
 
 /* footer or site meta text */
