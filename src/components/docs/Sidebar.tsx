@@ -28,6 +28,7 @@ function normalizeStatus(status: string): 'draft' | 'review' | 'active' | 'depre
  * - Foundation 섹션에서는 디자인 토큰 개요와 컬러·타이포·스페이싱 등의 세부 항목을 제공합니다.
  * - Component 섹션에서는 MDX 기반 컴포넌트 목록을 자동으로 나열하고 상태 뱃지를 표시합니다.
  */
+
 export default function Sidebar() {
   const pathname = usePathname();
 
@@ -43,7 +44,7 @@ export default function Sidebar() {
         {/* 로드맵은 외부 페이지로 */}
         <li>
           <a
-            href="https://confluence.example.com/ruler/roadmap"
+            href="https://jira.team.musinsa.com/jira/software/c/projects/M29CMPROD/boards/1337"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-between px-2 py-1 rounded hover:text-blue-600"
@@ -61,7 +62,16 @@ export default function Sidebar() {
             </summary>
             <ul className="mt-1 space-y-1 pl-4">
               {/* 디자인 토큰 개요 페이지 */}
-    
+        <li>
+                <Link
+                  href="/foundation"
+                  className={`block px-2 py-1 rounded ${
+                    pathname === '/foundation' ? 'font-semibold text-blue-600' : 'hover:text-blue-600'
+                  }`}
+                >
+                  Overview
+                </Link>
+              </li>
               {/* 세부 항목 */}
               {foundationItems.map((item) => (
                 <li key={item.slug}>

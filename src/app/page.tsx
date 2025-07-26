@@ -30,7 +30,7 @@ export default function HomePage() {
         >컴포넌트 보러가기
         </a>
 
-        <a href="/tokens" className="secondary-button">디자인 토큰</a>
+        <a href="/foundation" className="secondary-button">파운데이션</a>
       </div>
     </section>
   );
