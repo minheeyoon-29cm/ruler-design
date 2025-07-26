@@ -1,0 +1,37 @@
+/* src/styles/layout.css */
+
+/* 헤더 영역 (TopNav) */
+.header {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  border-bottom: 1px solid var(--color-scale-gray-200);
+  background-color: var(--color-semantic-fill-silent);
+  color: var(--color-semantic-fill-primary);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo img {
+  height: 24px;
+  width: auto;
+}
+
+/* 콘텐츠 영역의 최대 너비 설정 (TOC 포함 시 확장) */
+.main-content {
+  @apply mx-auto px-6;
+  max-width: 1200px;
+}
+
+footer {
+  font-size: var(--font-size-100);
+  color: var(--color-semantic-text-secondary);
+  margin-top: var(--spacing-dimension-400);
+  text-align: center;
+}

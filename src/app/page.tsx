@@ -1,6 +1,6 @@
 export default function HomePage() {
   return (
-    <section className="container py-md">
+    <section className="container">
       <h1>
         A system designed<br />for clarity, not memory.
       </h1>
