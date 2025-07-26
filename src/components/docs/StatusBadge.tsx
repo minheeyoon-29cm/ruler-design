@@ -1,7 +1,7 @@
 import '../../styles/components/status-badge.css'; 
 
 interface StatusBadgeProps {
-    status: 'draft' | 'review' | 'active' | 'deprecated' | 'hold'; // hold 추가
+    status: 'draft' | 'review' | 'active' | 'deprecated' | 'hold'; 
 }
 
 const statusClassMap: Record<StatusBadgeProps['status'], string> = {
@@ -9,7 +9,7 @@ const statusClassMap: Record<StatusBadgeProps['status'], string> = {
     review: 'status-badge status-badge--review', 
     active: 'status-badge status-badge--active',
     deprecated: 'status-badge status-badge--deprecated',
-    hold: 'status-badge status-badge--hold', // 추가
+    hold: 'status-badge status-badge--hold', 
 };
 
 export const StatusBadge = ({ status }: StatusBadgeProps) => {
