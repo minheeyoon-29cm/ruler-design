@@ -32,8 +32,6 @@ body {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: var(--spacing-dimension-150);
-  padding-right: var(--spacing-dimension-150);
 }
 
 /* Ruler Heading Styles (h1~h6) */

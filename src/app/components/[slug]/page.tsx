@@ -2,6 +2,10 @@
 import { allComponents } from 'contentlayer/generated';
 import { notFound } from 'next/navigation';
 import { MDXContent } from '../../../components/MDXContents';
+import { StatusBadge } from '@/components/docs/StatusBadge';
+
+import dynamic from 'next/dynamic';
+const TableOfContents = dynamic(() => import('../../../components/docs/TableOfContents'), { ssr: false });
 
 // 페이지 파라미터 타입 정의
 interface PageProps {
@@ -18,34 +22,36 @@ export async function generateStaticParams() {
 }
 
 export default function ComponentPage({ params }: PageProps) {
-  // slug로 컴포넌트 찾기
   const component = allComponents.find((c) => c.slug === params.slug);
-  
+
   if (!component) {
     notFound();
   }
 
   return (
-    <div className="container mx-auto py-12 px-4">
-      <div className="flex flex-wrap items-center gap-4 mb-2">
-        <h1 className="text-4xl font-bold">{component.title}</h1>
-        <span className={`text-sm px-3 py-1 rounded-full ${
-          component.status === 'active' ? 'bg-green-100 text-green-700' : 
-          component.status === 'beta' ? 'bg-yellow-100 text-yellow-700' : 
-          'bg-blue-100 text-blue-700'
-        }`}>
-          {component.status} v{component.version}
-        </span>
+    <div className="container"> 
+      {/* === 본문 === */}
+      <div className="flex-1 min-w-0">
+        <div className="flex flex-wrap items-center gap-4 mb-2">
+          <h1 className="text-4xl font-bold">{component.title}</h1>
+          <StatusBadge status={component.status} />
+          <span>v{component.version}</span>
+        </div>
+
+        <p className="text-xl text-gray-600 mb-4">{component.description}</p>
+
+        <div className="text-sm text-gray-500 mb-8">
+          마지막 업데이트: {new Date(component.updated).toLocaleDateString()}
+        </div>
+
+        <div className="prose prose-slate max-w-none">
+          <MDXContent code={component.body.code} />
+        </div>
       </div>
-      
-      <p className="text-xl text-gray-600 mb-4">{component.description}</p>
-      
-      <div className="text-sm text-gray-500 mb-8">
-        마지막 업데이트: {new Date(component.updated).toLocaleDateString()}
-      </div>
-      
-      <div className="prose prose-slate max-w-none">
-        <MDXContent code={component.body.code} />
+
+      {/* === TOC === */}
+      <div className="hidden xl:block w-64 shrink-0">
+        <TableOfContents />
       </div>
     </div>
   );

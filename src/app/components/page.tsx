@@ -7,7 +7,7 @@ import { StatusBadge } from '../../components/docs/StatusBadge';
 import { VersionBadge } from '../../components/docs/VersionBadge';
 import { ToggleTag } from '../../components/docs/ToggleTag'; // 추가
 
-type StatusFilter = 'all' | 'draft' | 'review' | 'active' | 'deprecated' | 'hold';
+type StatusFilter = 'all' | 'draft' | 'review' | 'active' | 'deprecated' ;
 
 export default function ComponentsPage() {
   const [selectedStatus, setSelectedStatus] = useState<StatusFilter>('all');
@@ -41,7 +41,7 @@ export default function ComponentsPage() {
           onClick={() => setSelectedStatus('all')}
         />
         
-        {(['draft', 'review', 'active', 'deprecated', 'hold'] as const).map((status) => {
+        {(['draft', 'review', 'active', 'deprecated'] as const).map((status) => {
           const count = allComponents.filter(c => c.status === status).length;
           return (
             <ToggleTag
@@ -70,7 +70,7 @@ export default function ComponentsPage() {
                   <h3 className="title-l-bold">{component.title}</h3>
                   
                   <div className="flex gap-2">
-                    <StatusBadge status={component.status as 'draft' | 'review' | 'active' | 'deprecated' | 'hold'} />
+                    <StatusBadge status={component.status as 'draft' | 'review' | 'active' | 'deprecated' } />
                     <VersionBadge version={component.version} size="small" />
                   </div>
                 </div>

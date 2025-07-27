@@ -1,10 +1,11 @@
-// src/components/docs/TOC.tsx
+// src/components/docs/TableOfContents.tsx
+
 'use client';
 import { useEffect, useState } from 'react';
 
 interface TOCItem { id: string; text: string; level: number; }
 
-export default function TOC() {
+export default function TableOfContents() {
   const [items, setItems] = useState<TOCItem[]>([]);
 
   useEffect(() => {

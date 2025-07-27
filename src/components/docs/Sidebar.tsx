@@ -2,57 +2,30 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { allComponents } from 'contentlayer/generated';
-import { StatusBadge } from './StatusBadge';
+import { allComponents, allFoundations } from 'contentlayer/generated';
+import { StatusBadge, type Status } from './StatusBadge';
 
-
-function normalizeStatus(status: string): 'draft' | 'review' | 'active' | 'deprecated' | 'hold' {
+function normalizeStatus(status: string): Status {
   switch (status) {
-    case 'beta':
-      return 'review';
     case 'draft':
     case 'review':
     case 'active':
     case 'deprecated':
-    case 'hold':
       return status;
     default:
       return 'draft';
   }
 }
 
-/**
- * 사이드바 메뉴 컴포넌트.
- *
- * - Roadmap은 외부 컨플루언스 링크로 연결합니다.
- * - Foundation 섹션에서는 디자인 토큰 개요와 컬러·타이포·스페이싱 등의 세부 항목을 제공합니다.
- * - Component 섹션에서는 MDX 기반 컴포넌트 목록을 자동으로 나열하고 상태 뱃지를 표시합니다.
- */
-
 export default function Sidebar() {
   const pathname = usePathname();
 
-  const foundationItems = [
-    { title: '컬러', slug: 'colors' },
-    { title: '타이포', slug: 'typography' },
-    { title: '스페이싱', slug: 'spacing' },
-  ];
+  const sortedFoundations = allFoundations.sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
 
   return (
     <nav className="w-64 border-r border-gray-200 dark:border-gray-700 p-4 overflow-y-auto">
       <ul className="space-y-2 text-sm">
-        {/* 로드맵은 외부 페이지로 */}
-        <li>
-          <a
-            href="https://jira.team.musinsa.com/jira/software/c/projects/M29CMPROD/boards/1337"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-between px-2 py-1 rounded hover:text-blue-600"
-          >
-            <span>Roadmap</span>
-            <span className="text-xs">↗</span>
-          </a>
-        </li>
+ 
 
         {/* Foundation 섹션 */}
         <li>
@@ -61,8 +34,7 @@ export default function Sidebar() {
               Foundation
             </summary>
             <ul className="mt-1 space-y-1 pl-4">
-              {/* 디자인 토큰 개요 페이지 */}
-        <li>
+              <li>
                 <Link
                   href="/foundation"
                   className={`block px-2 py-1 rounded ${
@@ -72,16 +44,15 @@ export default function Sidebar() {
                   Overview
                 </Link>
               </li>
-              {/* 세부 항목 */}
-              {foundationItems.map((item) => (
-                <li key={item.slug}>
+              {sortedFoundations.map((foundation) => (
+                <li key={foundation.slug}>
                   <Link
-                    href={`/foundation/${item.slug}`}
+                    href={`/foundation/${foundation.slug}`}
                     className={`block px-2 py-1 rounded ${
-                      pathname === `/foundation/${item.slug}` ? 'font-semibold text-blue-600' : 'hover:text-blue-600'
+                      pathname === `/foundation/${foundation.slug}` ? 'font-semibold text-blue-600' : 'hover:text-blue-600'
                     }`}
                   >
-                    {item.title}
+                    {foundation.title}
                   </Link>
                 </li>
               ))}
@@ -123,6 +94,19 @@ export default function Sidebar() {
               ))}
             </ul>
           </details>
+        </li>
+
+        {/* Roadmap 섹션 */}
+        <li>
+          <a
+            href="https://jira.team.musinsa.com/jira/software/c/projects/M29CMPROD/boards/1337"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-between px-2 py-1 rounded hover:text-blue-600"
+          >
+            <span>Roadmap</span>
+            <span className="text-xs">↗</span>
+          </a>
         </li>
       </ul>
     </nav>

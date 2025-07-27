@@ -1,16 +1,16 @@
 {
-    "tailwindCSS.includeLanguages": {
-      "plaintext": "html",
-      "javascript": "javascript",
-      "typescript": "typescript",
-      "typescriptreact": "typescriptreact",
-      "css": "css"
-    },
-    "editor.quickSuggestions": {
-      "strings": true
-    },
-    "css.validate": false,
-    "scss.validate": false,
-    "less.validate": false
-  }
-  
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html",
+    "javascript": "javascript",
+    "typescript": "typescript",
+    "typescriptreact": "typescriptreact",
+    "css": "css"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "css.validate": false,
+  "scss.validate": false,
+  "less.validate": false,
+  "css.customData": ["./src/styles/tokens/processed/tokens.custom-data.json"]
+}

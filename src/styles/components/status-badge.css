@@ -1,54 +1,54 @@
-@import '../globals.css';
-@import '../../tokens/tokens.css';
+@import "../globals.css";
+@import "../../tokens/tokens.css";
 
 .status-badge {
-    display: inline-block;
-    font-size: var(--font-size-100);
-    font-weight: var(--semibold-600);
-    line-height: var(--line-height-3);
-    padding: var(--spacing-dimension-100) var(--spacing-dimension-200);
-    border-radius: 9999px;
-    white-space: nowrap;
+  display: inline-block;
+  font-size: var(--font-size-50);
+  font-weight: var(--semibold-500);
+  line-height: var(--line-height-3);
+  padding: var(--spacing-dimension-50) var(--spacing-dimension-100);
+  border-radius: 9999px;
+  white-space: nowrap;
 }
 
 /* DRAFT = 초안 (그레이톤) */
 .status-badge--draft {
-    background-color: var(--color-scale-gray-300);
-    color: var(--color-scale-gray-800);
+  background-color: var(--color-scale-gray-100);
+  color: var(--color-scale-gray-600);
 }
 
-/* BETA = 테스트 중 (옐로우톤) */
+/* DRAFT = 테스트 중 (옐로우톤) */
 .status-badge--review {
-    background-color: var(--color-scale-yellow-300);
-    color: var(--color-scale-yellow-800);
+  background-color: var(--color-scale-yellow-200);
+  color: var(--color-scale-yellow-600);
 }
 
 /* ACTIVE = 안정화됨 (그린톤) */
 .status-badge--active {
-    background-color: var(--color-scale-green-200);
-    color: var(--color-scale-green-800);
+  background-color: var(--color-scale-green-alpha-300);
+  color: var(--color-scale-green-800);
 }
 
 /* DEPRECATED = 폐기 예정 (붉은계열) */
 .status-badge--deprecated {
-    background-color: var(--color-scale-deep-red-100);
-    color: var(--color-scale-deep-red-600);
+  background-color: var(--color-scale-deep-red-100);
+  color: var(--color-scale-deep-red-600);
 }
 
-/* HOLD = 보류 중 (오렌지톤) - 새로 추가 */
+/* HOLD = 보류 중 (오렌지톤) => 삭제해야함 */
 .status-badge--hold {
-    background-color: var(--color-scale-orange-red-200);
-    color: var(--color-scale-orange-red-800);
+  background-color: var(--color-scale-orange-red-200);
+  color: var(--color-scale-orange-red-800);
 }
 
 .componentPatternCard {
-    border: 1px solid var(--color-scale-gray-alpha-200);
-    border-radius: var(--corner-radius-50);
-    padding: var(--spacing-dimension-150);
-    background-color: var(--color-scale-gray-100);
+  border: 1px solid var(--color-scale-gray-alpha-200);
+  border-radius: var(--corner-radius-50);
+  padding: var(--spacing-dimension-150);
+  background-color: var(--color-scale-gray-100);
 }
 
 .componentPatternCard:hover {
-    cursor: pointer;
-    background-color: var(--color-scale-gray-200);
+  cursor: pointer;
+  background-color: var(--color-scale-gray-200);
 }

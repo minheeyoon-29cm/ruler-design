@@ -1,30 +1,55 @@
+// src/app/foundation/[slug]/page.tsx
+
+import { allFoundations } from 'contentlayer/generated';
 import { notFound } from 'next/navigation';
+import { MDXContent } from '../../../components/MDXContents';
+import { StatusBadge } from '@/components/docs/StatusBadge';
+import TableOfContents from '../../../components/docs/TableOfContents';
 
-// Foundation 항목 정의
-const foundationItems = [
-  { slug: 'colors', title: '컬러' },
-  { slug: 'typography', title: '타이포' },
-  { slug: 'spacing', title: '스페이싱' },
-  // 필요 시 추가
-];
+interface PageProps {
+  params: {
+    slug: string;
+  };
+}
 
-// 정적 경로 생성
-export function generateStaticParams() {
-  return foundationItems.map((item) => ({
-    slug: item.slug,
+export async function generateStaticParams() {
+  return allFoundations.map((foundation) => ({
+    slug: foundation.slug,
   }));
 }
 
-export default function FoundationItemPage({ params }: { params: { slug: string } }) {
-  const item = foundationItems.find((i) => i.slug === params.slug);
-  if (!item) {
+export default function FoundationPage({ params }: PageProps) {
+  const foundation = allFoundations.find((f) => f.slug === params.slug);
+
+  if (!foundation) {
     notFound();
   }
 
   return (
-    <div className="prose dark:prose-invert">
-      <h1>{item!.title}</h1>
-      <p>이 페이지는 {item!.title}에 대한 내용을 설명할 예정입니다. 추후 MDX 문서로 내용을 추가해 주세요.</p>
+    <div className="container">
+      {/* === 본문 === */}
+      <div className="flex-1 min-w-0">
+        <div className="flex flex-wrap items-center gap-4 mb-2">
+          <h1 className="text-4xl font-bold">{foundation.title}</h1>
+          <StatusBadge status={foundation.status} />
+          <span>v{foundation.version}</span>
+        </div>
+
+        <p className="text-xl text-gray-600 mb-4">{foundation.description}</p>
+
+        <div className="text-sm text-gray-500 mb-8">
+          마지막 업데이트: {new Date(foundation.updated).toLocaleDateString()}
+        </div>
+
+        <div className="prose prose-slate max-w-none">
+          <MDXContent code={foundation.body.code} />
+        </div>
+      </div>
+
+      {/* === TOC === */}
+      <div className="hidden xl:block w-64 shrink-0">
+        <TableOfContents />
+      </div>
     </div>
   );
 }
