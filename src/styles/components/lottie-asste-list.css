@@ -7,6 +7,7 @@
   justify-content: center;
   min-height: 400px;
   padding: var(--spacing-dimension-400);
+  background-color: aqua;
 }
 
 .password-form-wrapper {
