@@ -408,7 +408,7 @@
   --color-scale-green-alpha-200: rgba(18, 186, 35, 0.08);
   --color-scale-green-alpha-300: rgba(18, 186, 35, 0.16);
   --color-scale-green-alpha-400: rgba(18, 186, 35, 0.24);
-  --color-fill-header: var(--color-static-white-alpha-900);
+  --color-fill-navigation: var(--color-static-white-alpha-500);
 }
 
 /* 클래스 기반 다크 모드 */
@@ -493,5 +493,5 @@
   --color-scale-green-alpha-200: rgba(36, 102, 22, 0.08);
   --color-scale-green-alpha-300: rgba(36, 102, 22, 0.16);
   --color-scale-green-alpha-400: rgba(36, 102, 22, 0.24);
-  --color-fill-header: var(--color-static-black-alpha-900);
+  --color-fill-navigation: var(--color-static-black-alpha-900);
 }

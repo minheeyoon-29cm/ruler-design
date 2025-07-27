@@ -1,0 +1,54 @@
+/* src/styles/toc.css */
+
+.toc-container {
+  position: sticky;
+  top: 90px; /* 헤더 높이 + 여유분 */
+  padding: var(--spacing-dimension-200);
+}
+
+.toc-title {
+  margin-bottom: var(--spacing-dimension-150);
+  padding-bottom: var(--spacing-dimension-100);
+  border-bottom: 1px solid var(--color-scale-gray-200);
+  color: var(--color-semantic-text-primary);
+  font-size: var(--font-size-100);
+  font-weight: var(--bold-700);
+}
+
+.toc-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.toc-item {
+  margin-bottom: var(--spacing-dimension-75);
+}
+
+.toc-item-sub {
+  margin-left: var(--spacing-dimension-200);
+}
+
+.toc-link {
+  display: block;
+  padding: var(--spacing-dimension-50) var(--spacing-dimension-100);
+  border-left: 2px solid transparent;
+  border-radius: var(--corner-radius-50);
+  color: var(--color-semantic-text-secondary);
+  font-size: var(--font-size-75);
+  text-decoration: none;
+  transition: all var(--duration-150);
+}
+
+.toc-link:hover {
+  border-left-color: var(--color-semantic-fill-primary);
+  background-color: var(--color-semantic-fill-surface-contents);
+  color: var(--color-semantic-text-primary);
+}
+
+.toc-item-active .toc-link {
+  border-left-color: var(--color-semantic-fill-primary);
+  background-color: rgba(59, 130, 246, 0.1);
+  color: var(--color-semantic-fill-primary);
+  font-weight: var(--medium-500);
+}

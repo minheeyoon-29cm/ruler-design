@@ -5,14 +5,16 @@ import Link from 'next/link';
 import { ThemeProvider } from 'next-themes';
 import PageThemeToggle from './components/pageThemeToggle';
 import Sidebar from '../components/docs/Sidebar';
+import TableOfContents from '../components/docs/TableOfContents';
 
+// src/app/layout.tsx
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko">
       <body>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           <div>
-          {/* 상단 헤더 */}
+            {/* 고정 상단 헤더 */}
             <header className="header">
               <Link href="/" className="logo">
                 <img
@@ -28,10 +30,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </Link>
               <PageThemeToggle />
             </header>
-            {/* 아래 영역: 사이드바 + 메인 */}
-            <div className="flex">
-              <Sidebar />
-              <main className="container">{children}</main>
+            
+            {/* 고정 사이드바 - main-wrapper 밖으로 빼기 */}
+            <Sidebar />
+            
+            {/* 메인 콘텐츠만 wrapper에 넣기 */}
+            <div className="main-wrapper">
+              <main className="main-content">
+                <div className="container-wrapper">
+                  {children}
+                  <TableOfContents />
+                </div>
+              </main>
+            
             </div>
           </div>
         </ThemeProvider>

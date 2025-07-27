@@ -1,12 +1,20 @@
 
 nav {
-  min-width: 300px;
-  height: 100vh;
-  margin-right: 32px;
-  padding: var(--spacing-dimension-300);
-  overflow-y: scroll;
-  border-right: 1px solid var(--color-scale-gray-200);
-  cursor: pointer;
+position: fixed;
+top: 0;
+left: 0;
+z-index: 50;
+min-width: 300px;
+height: calc(100vh - 72px);
+margin-top: 72px;
+margin-right: 32px;
+padding: var(--spacing-dimension-300);
+overflow-y: auto;
+border-right: 1px solid var(--color-scale-gray-200);
+background-color: var(--color-fill-navigation);
+cursor: pointer;
+backdrop-filter: blur(12px); 
+-webkit-backdrop-filter: blur(12px);
 }
 
 
