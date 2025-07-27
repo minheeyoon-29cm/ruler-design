@@ -2,17 +2,13 @@
 
 .toc-container {
   position: sticky;
-  top: 90px; /* 헤더 높이 + 여유분 */
-  padding: var(--spacing-dimension-200);
+  top: 90px;
+  min-width: 240px;
+  height: auto
 }
 
 .toc-title {
-  margin-bottom: var(--spacing-dimension-150);
-  padding-bottom: var(--spacing-dimension-100);
-  border-bottom: 1px solid var(--color-scale-gray-200);
-  color: var(--color-semantic-text-primary);
-  font-size: var(--font-size-100);
-  font-weight: var(--bold-700);
+
 }
 
 .toc-list {
@@ -41,13 +37,11 @@
 }
 
 .toc-link:hover {
-  border-left-color: var(--color-semantic-fill-primary);
   background-color: var(--color-semantic-fill-surface-contents);
   color: var(--color-semantic-text-primary);
 }
 
 .toc-item-active .toc-link {
-  border-left-color: var(--color-semantic-fill-primary);
   background-color: rgba(59, 130, 246, 0.1);
   color: var(--color-semantic-fill-primary);
   font-weight: var(--medium-500);

@@ -31,7 +31,7 @@ export default function ComponentPage({ params }: PageProps) {
   return (
     <div className="container"> 
       {/* === 본문 === */}
-      <div className="flex-1 min-w-0">
+      <div className="last-container">
         <div className="flex flex-wrap items-center gap-4 mb-2">
           <h1 className="text-4xl font-bold">{component.title}</h1>
           <StatusBadge status={component.status} />
@@ -48,11 +48,8 @@ export default function ComponentPage({ params }: PageProps) {
           <MDXContent code={component.body.code} />
         </div>
       </div>
-
       {/* === TOC === */}
-      <div className="hidden xl:block w-64 shrink-0">
-        <TableOfContents />
-      </div>
+      <TableOfContents/>
     </div>
   );
 }

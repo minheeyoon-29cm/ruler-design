@@ -1,6 +1,6 @@
 export default function HomePage() {
   return (
-    <section className="container">
+    <section className="last-container">
       <h1>
         A system designed<br />for clarity, not memory.
       </h1>

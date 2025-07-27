@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { ThemeProvider } from 'next-themes';
 import PageThemeToggle from './components/pageThemeToggle';
 import Sidebar from '../components/docs/Sidebar';
-import TableOfContents from '../components/docs/TableOfContents';
 
 // src/app/layout.tsx
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -39,10 +38,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <main className="main-content">
                 <div className="container-wrapper">
                   {children}
-                  <TableOfContents />
                 </div>
               </main>
-            
+
             </div>
           </div>
         </ThemeProvider>

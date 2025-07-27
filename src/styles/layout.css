@@ -38,7 +38,6 @@
 }
 
 .main-content {
-  display: flex;
   height: 100vh;
   padding: var(--spacing-dimension-400);
   padding-top: 72px;
@@ -49,6 +48,19 @@
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.container {
+  display: flex;
+  gap: var(--spacing-dimension-400);
+  width: 100%;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.last-container {
+  width: 100%;
 }
 
 
