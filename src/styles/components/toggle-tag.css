@@ -1,26 +1,23 @@
-@import '../globals.css';
-@import '../../tokens/tokens.css';
-
 .toggle-tag {
   display: inline-block;
-  font-weight: var(--medium-500);
-  line-height: var(--line-height-3);
-  border-radius: 9999px;
-  white-space: nowrap;
   border: 1px solid var(--color-semantic-border-line);
-  background-color: var(--color-semantic-background-default);
-  color: var(--color-semantic-text-secondary);
-  cursor: pointer;
-  transition: all var(--duration-250);
-  
+  border-radius: 9999px;
+
   /* 버튼 스타일 리셋 */
   outline: none;
+  background-color: var(--color-semantic-background-default);
+  color: var(--color-semantic-text-secondary);
+  font-weight: var(--medium-500);
+  line-height: var(--line-height-3);
   text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all var(--duration-250);
 }
 
 .toggle-tag:hover:not(.toggle-tag--disabled) {
-  background-color: var(--color-semantic-fill-surface-contents);
   border-color: var(--color-semantic-border-line-hover);
+  background-color: var(--color-semantic-fill-surface-contents);
 }
 
 .toggle-tag:focus {
@@ -29,31 +26,31 @@
 
 /* Selected 상태 */
 .toggle-tag--selected {
+  border-color: var(--color-semantic-fill-primary);
   background-color: var(--color-semantic-fill-primary);
   color: var(--color-semantic-text-on-color);
-  border-color: var(--color-semantic-fill-primary);
 }
 
 .toggle-tag--selected:hover {
-  background-color: var(--color-semantic-fill-primary-hover);
   border-color: var(--color-semantic-fill-primary-hover);
+  background-color: var(--color-semantic-fill-primary-hover);
 }
 
 /* Size 변형 */
 .toggle-tag--small {
-  font-size: var(--font-size-75);
   padding: var(--spacing-dimension-75) var(--spacing-dimension-150);
+  font-size: var(--font-size-75);
 }
 
 .toggle-tag--medium {
-  font-size: var(--font-size-100);
   padding: var(--spacing-dimension-100) var(--spacing-dimension-200);
+  font-size: var(--font-size-100);
 }
 
 /* Disabled 상태 */
 .toggle-tag--disabled {
+  border-color: var(--color-semantic-border-line-disabled);
   background-color: var(--color-semantic-fill-disabled);
   color: var(--color-semantic-text-disabled);
-  border-color: var(--color-semantic-border-line-disabled);
   cursor: not-allowed;
 }

@@ -2,8 +2,11 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 import { allComponents, allFoundations } from 'contentlayer/generated';
 import { StatusBadge, type Status } from './StatusBadge';
+import "../../styles/sidebar.css";
+import { ChevronIcon } from '../../../public/icon/ChevronIcon';
 
 function normalizeStatus(status: string): Status {
   switch (status) {
@@ -19,21 +22,33 @@ function normalizeStatus(status: string): Status {
 
 export default function Sidebar() {
   const pathname = usePathname();
+  const [isFoundationOpen, setIsFoundationOpen] = useState(true);
+  const [isComponentOpen, setIsComponentOpen] = useState(true);
 
   const sortedFoundations = allFoundations.sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
 
-  return (
-    <nav className="w-64 border-r border-gray-200 dark:border-gray-700 p-4 overflow-y-auto">
-      <ul className="space-y-2 text-sm">
- 
+  const handleFoundationToggle = () => {
+    setIsFoundationOpen(!isFoundationOpen);
+  };
 
+  const handleComponentToggle = () => {
+    setIsComponentOpen(!isComponentOpen);
+  };
+
+  return (
+    <nav className="">
+      <ul className="">
+ 
         {/* Foundation 섹션 */}
         <li>
-          <details open>
-            <summary className="cursor-pointer px-2 py-1 font-semibold text-gray-700 dark:text-gray-300">
+          <details open={isFoundationOpen} onToggle={handleFoundationToggle}>
+            <summary className="sidebar-opener">
               Foundation
+    
+              <ChevronIcon isOpen={isFoundationOpen} size={22} />
+             
             </summary>
-            <ul className="mt-1 space-y-1 pl-4">
+            <ul className="">
               <li>
                 <Link
                   href="/foundation"
@@ -62,11 +77,13 @@ export default function Sidebar() {
 
         {/* Component 섹션 */}
         <li>
-          <details open>
-            <summary className="cursor-pointer px-2 py-1 font-semibold text-gray-700 dark:text-gray-300">
+          <details open={isComponentOpen} onToggle={handleComponentToggle}>
+            <summary className="sidebar-opener">
               Component
+              
+              <ChevronIcon isOpen={isFoundationOpen} size={22} />
             </summary>
-            <ul className="mt-1 space-y-1 pl-4">
+            <ul className="">
               <li>
                 <Link
                   href="/components"
@@ -102,7 +119,7 @@ export default function Sidebar() {
             href="https://jira.team.musinsa.com/jira/software/c/projects/M29CMPROD/boards/1337"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-between px-2 py-1 rounded hover:text-blue-600"
+            className=""
           >
             <span>Roadmap</span>
             <span className="text-xs">↗</span>

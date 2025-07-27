@@ -1212,39 +1212,3 @@ function main() {
 }
 
 main();
-
-// ---------------------------------------------------------------------
-// ✅ 추가: VSCode 자동완성용 tokens.custom-data.json 생성
-// ---------------------------------------------------------------------
-
-try {
-  const tokensCssPath = path.resolve(__dirname, "../tokens/tokens.css");
-  const customDataPath = path.resolve(
-    __dirname,
-    "../tokens/processed/tokens.custom-data.json"
-  );
-
-  const css = fs.readFileSync(tokensCssPath, "utf-8");
-
-  // CSS 변수 전체 추출: --foo-bar: 의 형식
-  const matches = Array.from(css.matchAll(/--([a-zA-Z0-9-_]+)\s*:/g));
-
-  // 중복 제거 + 정렬
-  const varNames = Array.from(new Set(matches.map((m) => `--${m[1]}`))).sort();
-
-  const properties = varNames.map((name) => ({
-    name,
-    description: `Design Token: ${name}`,
-    browsers: ["last 2 versions"], // 선택 사항
-    relevance: 100, // 선택 사항
-  }));
-
-  fs.writeFileSync(
-    customDataPath,
-    JSON.stringify({ version: 1.1, properties }, null, 2)
-  );
-
-  console.log("✅ tokens.custom-data.json 자동완성 파일이 생성되었습니다.");
-} catch (err) {
-  console.error("❌ 자동완성용 custom-data.json 생성 중 오류 발생:", err);
-}

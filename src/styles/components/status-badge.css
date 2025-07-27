@@ -1,13 +1,10 @@
-@import "../globals.css";
-@import "../../tokens/tokens.css";
-
 .status-badge {
   display: inline-block;
+  padding: var(--spacing-dimension-50) var(--spacing-dimension-100);
+  border-radius: 9999px;
   font-size: var(--font-size-50);
   font-weight: var(--semibold-500);
   line-height: var(--line-height-3);
-  padding: var(--spacing-dimension-50) var(--spacing-dimension-100);
-  border-radius: 9999px;
   white-space: nowrap;
 }
 
@@ -42,13 +39,13 @@
 }
 
 .componentPatternCard {
+  padding: var(--spacing-dimension-150);
   border: 1px solid var(--color-scale-gray-alpha-200);
   border-radius: var(--corner-radius-50);
-  padding: var(--spacing-dimension-150);
   background-color: var(--color-scale-gray-100);
 }
 
 .componentPatternCard:hover {
-  cursor: pointer;
   background-color: var(--color-scale-gray-200);
+  cursor: pointer;
 }
