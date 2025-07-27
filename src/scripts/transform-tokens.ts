@@ -1221,15 +1221,22 @@ try {
   const tokensCssPath = path.resolve(__dirname, "../tokens/tokens.css");
   const customDataPath = path.resolve(
     __dirname,
-    "../styles/tokens/processed/tokens.custom-data.json"
+    "../tokens/processed/tokens.custom-data.json"
   );
 
   const css = fs.readFileSync(tokensCssPath, "utf-8");
+
+  // CSS 변수 전체 추출: --foo-bar: 의 형식
   const matches = Array.from(css.matchAll(/--([a-zA-Z0-9-_]+)\s*:/g));
 
-  const properties = matches.map((match) => ({
-    name: `--${match[1]}`,
-    description: `Design Token: ${match[1]}`,
+  // 중복 제거 + 정렬
+  const varNames = Array.from(new Set(matches.map((m) => `--${m[1]}`))).sort();
+
+  const properties = varNames.map((name) => ({
+    name,
+    description: `Design Token: ${name}`,
+    browsers: ["last 2 versions"], // 선택 사항
+    relevance: 100, // 선택 사항
   }));
 
   fs.writeFileSync(

@@ -12,5 +12,5 @@
   "css.validate": false,
   "scss.validate": false,
   "less.validate": false,
-  "css.customData": ["./src/styles/tokens/processed/tokens.custom-data.json"]
+  "css.customData": ["./src/tokens/processed/tokens.custom-data.json"]
 }

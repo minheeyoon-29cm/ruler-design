@@ -2,1920 +2,1438 @@
   "version": 1.1,
   "properties": [
     {
-      "name": "--color-static-black",
-      "description": "CSS variable `color-static-black` from tokens.css"
+      "name": "--bold-700",
+      "description": "Design Token: --bold-700",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-static-white",
-      "description": "CSS variable `color-static-white` from tokens.css"
+      "name": "--color-scale-blue-100",
+      "description": "Design Token: --color-scale-blue-100",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-static-white-alpha-200",
-      "description": "CSS variable `color-static-white-alpha-200` from tokens.css"
+      "name": "--color-scale-blue-200",
+      "description": "Design Token: --color-scale-blue-200",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-static-white-alpha-500",
-      "description": "CSS variable `color-static-white-alpha-500` from tokens.css"
+      "name": "--color-scale-blue-300",
+      "description": "Design Token: --color-scale-blue-300",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-static-white-alpha-900",
-      "description": "CSS variable `color-static-white-alpha-900` from tokens.css"
+      "name": "--color-scale-blue-400",
+      "description": "Design Token: --color-scale-blue-400",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-static-black-alpha-200",
-      "description": "CSS variable `color-static-black-alpha-200` from tokens.css"
+      "name": "--color-scale-blue-500",
+      "description": "Design Token: --color-scale-blue-500",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-static-black-alpha-500",
-      "description": "CSS variable `color-static-black-alpha-500` from tokens.css"
+      "name": "--color-scale-blue-600",
+      "description": "Design Token: --color-scale-blue-600",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-static-black-alpha-900",
-      "description": "CSS variable `color-static-black-alpha-900` from tokens.css"
+      "name": "--color-scale-blue-700",
+      "description": "Design Token: --color-scale-blue-700",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-shadow-100-value-x",
-      "description": "CSS variable `color-shadow-100-value-x` from tokens.css"
+      "name": "--color-scale-blue-800",
+      "description": "Design Token: --color-scale-blue-800",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-shadow-100-value-y",
-      "description": "CSS variable `color-shadow-100-value-y` from tokens.css"
+      "name": "--color-scale-blue-900",
+      "description": "Design Token: --color-scale-blue-900",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-shadow-100-value-blur",
-      "description": "CSS variable `color-shadow-100-value-blur` from tokens.css"
+      "name": "--color-scale-blue-950",
+      "description": "Design Token: --color-scale-blue-950",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-shadow-100-value-spread",
-      "description": "CSS variable `color-shadow-100-value-spread` from tokens.css"
+      "name": "--color-scale-blue-alpha-200",
+      "description": "Design Token: --color-scale-blue-alpha-200",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-shadow-100-value-color",
-      "description": "CSS variable `color-shadow-100-value-color` from tokens.css"
+      "name": "--color-scale-blue-alpha-300",
+      "description": "Design Token: --color-scale-blue-alpha-300",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-shadow-100-value-type",
-      "description": "CSS variable `color-shadow-100-value-type` from tokens.css"
+      "name": "--color-scale-blue-alpha-400",
+      "description": "Design Token: --color-scale-blue-alpha-400",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-shadow-100-type",
-      "description": "CSS variable `color-shadow-100-type` from tokens.css"
+      "name": "--color-scale-deep-red-100",
+      "description": "Design Token: --color-scale-deep-red-100",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-semantic-text-on-color",
-      "description": "CSS variable `color-semantic-text-on-color` from tokens.css"
+      "name": "--color-scale-deep-red-200",
+      "description": "Design Token: --color-scale-deep-red-200",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-semantic-text-primary",
-      "description": "CSS variable `color-semantic-text-primary` from tokens.css"
+      "name": "--color-scale-deep-red-300",
+      "description": "Design Token: --color-scale-deep-red-300",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-semantic-text-primary-hover",
-      "description": "CSS variable `color-semantic-text-primary-hover` from tokens.css"
+      "name": "--color-scale-deep-red-400",
+      "description": "Design Token: --color-scale-deep-red-400",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-semantic-text-primary-pressed",
-      "description": "CSS variable `color-semantic-text-primary-pressed` from tokens.css"
+      "name": "--color-scale-deep-red-500",
+      "description": "Design Token: --color-scale-deep-red-500",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-semantic-text-secondary",
-      "description": "CSS variable `color-semantic-text-secondary` from tokens.css"
+      "name": "--color-scale-deep-red-600",
+      "description": "Design Token: --color-scale-deep-red-600",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-semantic-text-secondary-hover",
-      "description": "CSS variable `color-semantic-text-secondary-hover` from tokens.css"
+      "name": "--color-scale-deep-red-700",
+      "description": "Design Token: --color-scale-deep-red-700",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-semantic-text-secondary-pressed",
-      "description": "CSS variable `color-semantic-text-secondary-pressed` from tokens.css"
+      "name": "--color-scale-deep-red-800",
+      "description": "Design Token: --color-scale-deep-red-800",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-semantic-text-tertiary",
-      "description": "CSS variable `color-semantic-text-tertiary` from tokens.css"
+      "name": "--color-scale-deep-red-900",
+      "description": "Design Token: --color-scale-deep-red-900",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-semantic-text-tertiary-hover",
-      "description": "CSS variable `color-semantic-text-tertiary-hover` from tokens.css"
+      "name": "--color-scale-deep-red-950",
+      "description": "Design Token: --color-scale-deep-red-950",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-semantic-text-tertiary-pressed",
-      "description": "CSS variable `color-semantic-text-tertiary-pressed` from tokens.css"
+      "name": "--color-scale-deep-red-alpha-200",
+      "description": "Design Token: --color-scale-deep-red-alpha-200",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-semantic-text-disabled",
-      "description": "CSS variable `color-semantic-text-disabled` from tokens.css"
+      "name": "--color-scale-deep-red-alpha-300",
+      "description": "Design Token: --color-scale-deep-red-alpha-300",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-semantic-common-interactive-low",
-      "description": "CSS variable `color-semantic-common-interactive-low` from tokens.css"
+      "name": "--color-scale-deep-red-alpha-400",
+      "description": "Design Token: --color-scale-deep-red-alpha-400",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-semantic-common-interactive",
-      "description": "CSS variable `color-semantic-common-interactive` from tokens.css"
+      "name": "--color-scale-gray-00",
+      "description": "Design Token: --color-scale-gray-00",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-semantic-common-interactive-hover",
-      "description": "CSS variable `color-semantic-common-interactive-hover` from tokens.css"
+      "name": "--color-scale-gray-100",
+      "description": "Design Token: --color-scale-gray-100",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-semantic-common-interactive-pressed",
-      "description": "CSS variable `color-semantic-common-interactive-pressed` from tokens.css"
+      "name": "--color-scale-gray-200",
+      "description": "Design Token: --color-scale-gray-200",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-semantic-common-positive-low",
-      "description": "CSS variable `color-semantic-common-positive-low` from tokens.css"
+      "name": "--color-scale-gray-300",
+      "description": "Design Token: --color-scale-gray-300",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-semantic-common-positive",
-      "description": "CSS variable `color-semantic-common-positive` from tokens.css"
+      "name": "--color-scale-gray-400",
+      "description": "Design Token: --color-scale-gray-400",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-semantic-common-positive-hover",
-      "description": "CSS variable `color-semantic-common-positive-hover` from tokens.css"
+      "name": "--color-scale-gray-500",
+      "description": "Design Token: --color-scale-gray-500",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-semantic-common-positive-pressed",
-      "description": "CSS variable `color-semantic-common-positive-pressed` from tokens.css"
+      "name": "--color-scale-gray-600",
+      "description": "Design Token: --color-scale-gray-600",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-semantic-common-accent-low",
-      "description": "CSS variable `color-semantic-common-accent-low` from tokens.css"
+      "name": "--color-scale-gray-700",
+      "description": "Design Token: --color-scale-gray-700",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-semantic-common-accent",
-      "description": "CSS variable `color-semantic-common-accent` from tokens.css"
+      "name": "--color-scale-gray-800",
+      "description": "Design Token: --color-scale-gray-800",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-semantic-common-negative",
-      "description": "CSS variable `color-semantic-common-negative` from tokens.css"
+      "name": "--color-scale-gray-900",
+      "description": "Design Token: --color-scale-gray-900",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-semantic-common-negative-hover",
-      "description": "CSS variable `color-semantic-common-negative-hover` from tokens.css"
+      "name": "--color-scale-gray-950",
+      "description": "Design Token: --color-scale-gray-950",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-semantic-common-negative-pressed",
-      "description": "CSS variable `color-semantic-common-negative-pressed` from tokens.css"
+      "name": "--color-scale-gray-alpha-200",
+      "description": "Design Token: --color-scale-gray-alpha-200",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-semantic-common-on-white",
-      "description": "CSS variable `color-semantic-common-on-white` from tokens.css"
+      "name": "--color-scale-gray-alpha-300",
+      "description": "Design Token: --color-scale-gray-alpha-300",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-semantic-common-on-white-pressed",
-      "description": "CSS variable `color-semantic-common-on-white-pressed` from tokens.css"
+      "name": "--color-scale-gray-alpha-400",
+      "description": "Design Token: --color-scale-gray-alpha-400",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-semantic-common-on-white-hover",
-      "description": "CSS variable `color-semantic-common-on-white-hover` from tokens.css"
+      "name": "--color-scale-gray-alpha-500",
+      "description": "Design Token: --color-scale-gray-alpha-500",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-semantic-common-on-black",
-      "description": "CSS variable `color-semantic-common-on-black` from tokens.css"
+      "name": "--color-scale-gray-alpha-600",
+      "description": "Design Token: --color-scale-gray-alpha-600",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-semantic-common-on-black-hover",
-      "description": "CSS variable `color-semantic-common-on-black-hover` from tokens.css"
+      "name": "--color-scale-gray-alpha-700",
+      "description": "Design Token: --color-scale-gray-alpha-700",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-semantic-common-on-black-pressed",
-      "description": "CSS variable `color-semantic-common-on-black-pressed` from tokens.css"
+      "name": "--color-scale-gray-alpha-800",
+      "description": "Design Token: --color-scale-gray-alpha-800",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-green-100",
+      "description": "Design Token: --color-scale-green-100",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-green-200",
+      "description": "Design Token: --color-scale-green-200",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-green-300",
+      "description": "Design Token: --color-scale-green-300",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-green-400",
+      "description": "Design Token: --color-scale-green-400",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-green-500",
+      "description": "Design Token: --color-scale-green-500",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-green-600",
+      "description": "Design Token: --color-scale-green-600",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-green-700",
+      "description": "Design Token: --color-scale-green-700",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-green-800",
+      "description": "Design Token: --color-scale-green-800",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-green-900",
+      "description": "Design Token: --color-scale-green-900",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-green-950",
+      "description": "Design Token: --color-scale-green-950",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-green-alpha-200",
+      "description": "Design Token: --color-scale-green-alpha-200",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-green-alpha-300",
+      "description": "Design Token: --color-scale-green-alpha-300",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-green-alpha-400",
+      "description": "Design Token: --color-scale-green-alpha-400",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-orange-red-100",
+      "description": "Design Token: --color-scale-orange-red-100",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-orange-red-200",
+      "description": "Design Token: --color-scale-orange-red-200",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-orange-red-300",
+      "description": "Design Token: --color-scale-orange-red-300",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-orange-red-400",
+      "description": "Design Token: --color-scale-orange-red-400",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-orange-red-500",
+      "description": "Design Token: --color-scale-orange-red-500",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-orange-red-600",
+      "description": "Design Token: --color-scale-orange-red-600",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-orange-red-700",
+      "description": "Design Token: --color-scale-orange-red-700",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-orange-red-800",
+      "description": "Design Token: --color-scale-orange-red-800",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-orange-red-900",
+      "description": "Design Token: --color-scale-orange-red-900",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-orange-red-950",
+      "description": "Design Token: --color-scale-orange-red-950",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-orange-red-alpha-200",
+      "description": "Design Token: --color-scale-orange-red-alpha-200",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-orange-red-alpha-300",
+      "description": "Design Token: --color-scale-orange-red-alpha-300",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-orange-red-alpha-400",
+      "description": "Design Token: --color-scale-orange-red-alpha-400",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-yellow-100",
+      "description": "Design Token: --color-scale-yellow-100",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-yellow-200",
+      "description": "Design Token: --color-scale-yellow-200",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-yellow-300",
+      "description": "Design Token: --color-scale-yellow-300",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-yellow-400",
+      "description": "Design Token: --color-scale-yellow-400",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-yellow-500",
+      "description": "Design Token: --color-scale-yellow-500",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-yellow-600",
+      "description": "Design Token: --color-scale-yellow-600",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-yellow-700",
+      "description": "Design Token: --color-scale-yellow-700",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-yellow-800",
+      "description": "Design Token: --color-scale-yellow-800",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-yellow-900",
+      "description": "Design Token: --color-scale-yellow-900",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-scale-yellow-950",
+      "description": "Design Token: --color-scale-yellow-950",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
       "name": "--color-semantic-background-default",
-      "description": "CSS variable `color-semantic-background-default` from tokens.css"
+      "description": "Design Token: --color-semantic-background-default",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
       "name": "--color-semantic-background-default-black",
-      "description": "CSS variable `color-semantic-background-default-black` from tokens.css"
-    },
-    {
-      "name": "--color-semantic-fill-primary",
-      "description": "CSS variable `color-semantic-fill-primary` from tokens.css"
-    },
-    {
-      "name": "--color-semantic-fill-primary-hover",
-      "description": "CSS variable `color-semantic-fill-primary-hover` from tokens.css"
-    },
-    {
-      "name": "--color-semantic-fill-primary-pressed",
-      "description": "CSS variable `color-semantic-fill-primary-pressed` from tokens.css"
-    },
-    {
-      "name": "--color-semantic-fill-secondary",
-      "description": "CSS variable `color-semantic-fill-secondary` from tokens.css"
-    },
-    {
-      "name": "--color-semantic-fill-tertiary",
-      "description": "CSS variable `color-semantic-fill-tertiary` from tokens.css"
-    },
-    {
-      "name": "--color-semantic-fill-silent",
-      "description": "CSS variable `color-semantic-fill-silent` from tokens.css"
-    },
-    {
-      "name": "--color-semantic-fill-silent-hover",
-      "description": "CSS variable `color-semantic-fill-silent-hover` from tokens.css"
-    },
-    {
-      "name": "--color-semantic-fill-silent-pressed",
-      "description": "CSS variable `color-semantic-fill-silent-pressed` from tokens.css"
-    },
-    {
-      "name": "--color-semantic-fill-disabled",
-      "description": "CSS variable `color-semantic-fill-disabled` from tokens.css"
-    },
-    {
-      "name": "--color-semantic-fill-surface-contents",
-      "description": "CSS variable `color-semantic-fill-surface-contents` from tokens.css"
-    },
-    {
-      "name": "--color-semantic-fill-surface-floating",
-      "description": "CSS variable `color-semantic-fill-surface-floating` from tokens.css"
-    },
-    {
-      "name": "--color-semantic-fill-surface-dialog",
-      "description": "CSS variable `color-semantic-fill-surface-dialog` from tokens.css"
-    },
-    {
-      "name": "--color-semantic-fill-surface-sheet",
-      "description": "CSS variable `color-semantic-fill-surface-sheet` from tokens.css"
-    },
-    {
-      "name": "--color-semantic-fill-surface-black",
-      "description": "CSS variable `color-semantic-fill-surface-black` from tokens.css"
-    },
-    {
-      "name": "--color-semantic-border-divider-strong",
-      "description": "CSS variable `color-semantic-border-divider-strong` from tokens.css"
+      "description": "Design Token: --color-semantic-background-default-black",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
       "name": "--color-semantic-border-divider",
-      "description": "CSS variable `color-semantic-border-divider` from tokens.css"
+      "description": "Design Token: --color-semantic-border-divider",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-border-divider-strong",
+      "description": "Design Token: --color-semantic-border-divider-strong",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
       "name": "--color-semantic-border-line",
-      "description": "CSS variable `color-semantic-border-line` from tokens.css"
-    },
-    {
-      "name": "--color-semantic-border-line-hover",
-      "description": "CSS variable `color-semantic-border-line-hover` from tokens.css"
-    },
-    {
-      "name": "--color-semantic-border-line-pressed",
-      "description": "CSS variable `color-semantic-border-line-pressed` from tokens.css"
-    },
-    {
-      "name": "--color-semantic-border-line-selected",
-      "description": "CSS variable `color-semantic-border-line-selected` from tokens.css"
+      "description": "Design Token: --color-semantic-border-line",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
       "name": "--color-semantic-border-line-disabled",
-      "description": "CSS variable `color-semantic-border-line-disabled` from tokens.css"
+      "description": "Design Token: --color-semantic-border-line-disabled",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-border-line-hover",
+      "description": "Design Token: --color-semantic-border-line-hover",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-border-line-pressed",
+      "description": "Design Token: --color-semantic-border-line-pressed",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-border-line-selected",
+      "description": "Design Token: --color-semantic-border-line-selected",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-common-accent",
+      "description": "Design Token: --color-semantic-common-accent",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-common-accent-low",
+      "description": "Design Token: --color-semantic-common-accent-low",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-common-interactive",
+      "description": "Design Token: --color-semantic-common-interactive",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-common-interactive-hover",
+      "description": "Design Token: --color-semantic-common-interactive-hover",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-common-interactive-low",
+      "description": "Design Token: --color-semantic-common-interactive-low",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-common-interactive-pressed",
+      "description": "Design Token: --color-semantic-common-interactive-pressed",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-common-negative",
+      "description": "Design Token: --color-semantic-common-negative",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-common-negative-hover",
+      "description": "Design Token: --color-semantic-common-negative-hover",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-common-negative-pressed",
+      "description": "Design Token: --color-semantic-common-negative-pressed",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-common-on-black",
+      "description": "Design Token: --color-semantic-common-on-black",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-common-on-black-hover",
+      "description": "Design Token: --color-semantic-common-on-black-hover",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-common-on-black-pressed",
+      "description": "Design Token: --color-semantic-common-on-black-pressed",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-common-on-white",
+      "description": "Design Token: --color-semantic-common-on-white",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-common-on-white-hover",
+      "description": "Design Token: --color-semantic-common-on-white-hover",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-common-on-white-pressed",
+      "description": "Design Token: --color-semantic-common-on-white-pressed",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-common-positive",
+      "description": "Design Token: --color-semantic-common-positive",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-common-positive-hover",
+      "description": "Design Token: --color-semantic-common-positive-hover",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-common-positive-low",
+      "description": "Design Token: --color-semantic-common-positive-low",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-common-positive-pressed",
+      "description": "Design Token: --color-semantic-common-positive-pressed",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-fill-disabled",
+      "description": "Design Token: --color-semantic-fill-disabled",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-fill-primary",
+      "description": "Design Token: --color-semantic-fill-primary",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-fill-primary-hover",
+      "description": "Design Token: --color-semantic-fill-primary-hover",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-fill-primary-pressed",
+      "description": "Design Token: --color-semantic-fill-primary-pressed",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-fill-secondary",
+      "description": "Design Token: --color-semantic-fill-secondary",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-fill-silent",
+      "description": "Design Token: --color-semantic-fill-silent",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-fill-silent-hover",
+      "description": "Design Token: --color-semantic-fill-silent-hover",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-fill-silent-pressed",
+      "description": "Design Token: --color-semantic-fill-silent-pressed",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-fill-surface-black",
+      "description": "Design Token: --color-semantic-fill-surface-black",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-fill-surface-contents",
+      "description": "Design Token: --color-semantic-fill-surface-contents",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-fill-surface-dialog",
+      "description": "Design Token: --color-semantic-fill-surface-dialog",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-fill-surface-floating",
+      "description": "Design Token: --color-semantic-fill-surface-floating",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-fill-surface-sheet",
+      "description": "Design Token: --color-semantic-fill-surface-sheet",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--color-semantic-fill-tertiary",
+      "description": "Design Token: --color-semantic-fill-tertiary",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
       "name": "--color-semantic-overlay-dimmed",
-      "description": "CSS variable `color-semantic-overlay-dimmed` from tokens.css"
+      "description": "Design Token: --color-semantic-overlay-dimmed",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--font-size-25",
-      "description": "CSS variable `font-size-25` from tokens.css"
+      "name": "--color-semantic-text-disabled",
+      "description": "Design Token: --color-semantic-text-disabled",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--font-size-50",
-      "description": "CSS variable `font-size-50` from tokens.css"
+      "name": "--color-semantic-text-on-color",
+      "description": "Design Token: --color-semantic-text-on-color",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--font-size-75",
-      "description": "CSS variable `font-size-75` from tokens.css"
+      "name": "--color-semantic-text-primary",
+      "description": "Design Token: --color-semantic-text-primary",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--font-size-100",
-      "description": "CSS variable `font-size-100` from tokens.css"
+      "name": "--color-semantic-text-primary-hover",
+      "description": "Design Token: --color-semantic-text-primary-hover",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--font-size-125",
-      "description": "CSS variable `font-size-125` from tokens.css"
+      "name": "--color-semantic-text-primary-pressed",
+      "description": "Design Token: --color-semantic-text-primary-pressed",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--font-size-150",
-      "description": "CSS variable `font-size-150` from tokens.css"
+      "name": "--color-semantic-text-secondary",
+      "description": "Design Token: --color-semantic-text-secondary",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--font-size-200",
-      "description": "CSS variable `font-size-200` from tokens.css"
+      "name": "--color-semantic-text-secondary-hover",
+      "description": "Design Token: --color-semantic-text-secondary-hover",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--font-size-250",
-      "description": "CSS variable `font-size-250` from tokens.css"
+      "name": "--color-semantic-text-secondary-pressed",
+      "description": "Design Token: --color-semantic-text-secondary-pressed",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--font-size-300",
-      "description": "CSS variable `font-size-300` from tokens.css"
+      "name": "--color-semantic-text-tertiary",
+      "description": "Design Token: --color-semantic-text-tertiary",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--font-size-350",
-      "description": "CSS variable `font-size-350` from tokens.css"
+      "name": "--color-semantic-text-tertiary-hover",
+      "description": "Design Token: --color-semantic-text-tertiary-hover",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--font-size-400",
-      "description": "CSS variable `font-size-400` from tokens.css"
+      "name": "--color-semantic-text-tertiary-pressed",
+      "description": "Design Token: --color-semantic-text-tertiary-pressed",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--font-size-500",
-      "description": "CSS variable `font-size-500` from tokens.css"
+      "name": "--color-shadow-100-type",
+      "description": "Design Token: --color-shadow-100-type",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--font-size-550",
-      "description": "CSS variable `font-size-550` from tokens.css"
+      "name": "--color-shadow-100-value-blur",
+      "description": "Design Token: --color-shadow-100-value-blur",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--font-size-600",
-      "description": "CSS variable `font-size-600` from tokens.css"
+      "name": "--color-shadow-100-value-color",
+      "description": "Design Token: --color-shadow-100-value-color",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--font-size-1000",
-      "description": "CSS variable `font-size-1000` from tokens.css"
+      "name": "--color-shadow-100-value-spread",
+      "description": "Design Token: --color-shadow-100-value-spread",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--font-size-1300",
-      "description": "CSS variable `font-size-1300` from tokens.css"
+      "name": "--color-shadow-100-value-type",
+      "description": "Design Token: --color-shadow-100-value-type",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--font-size-1400",
-      "description": "CSS variable `font-size-1400` from tokens.css"
+      "name": "--color-shadow-100-value-x",
+      "description": "Design Token: --color-shadow-100-value-x",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--font-size-1500",
-      "description": "CSS variable `font-size-1500` from tokens.css"
+      "name": "--color-shadow-100-value-y",
+      "description": "Design Token: --color-shadow-100-value-y",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--font-size-1600",
-      "description": "CSS variable `font-size-1600` from tokens.css"
+      "name": "--color-static-black",
+      "description": "Design Token: --color-static-black",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--font-size-2100",
-      "description": "CSS variable `font-size-2100` from tokens.css"
+      "name": "--color-static-black-alpha-200",
+      "description": "Design Token: --color-static-black-alpha-200",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--thin-100",
-      "description": "CSS variable `thin-100` from tokens.css"
+      "name": "--color-static-black-alpha-500",
+      "description": "Design Token: --color-static-black-alpha-500",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--extraLight-200",
-      "description": "CSS variable `extraLight-200` from tokens.css"
+      "name": "--color-static-black-alpha-900",
+      "description": "Design Token: --color-static-black-alpha-900",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--light-300",
-      "description": "CSS variable `light-300` from tokens.css"
+      "name": "--color-static-white",
+      "description": "Design Token: --color-static-white",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--regular-400",
-      "description": "CSS variable `regular-400` from tokens.css"
+      "name": "--color-static-white-alpha-200",
+      "description": "Design Token: --color-static-white-alpha-200",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--medium-500",
-      "description": "CSS variable `medium-500` from tokens.css"
+      "name": "--color-static-white-alpha-500",
+      "description": "Design Token: --color-static-white-alpha-500",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--semibold-600",
-      "description": "CSS variable `semibold-600` from tokens.css"
-    },
-    {
-      "name": "--bold-700",
-      "description": "CSS variable `bold-700` from tokens.css"
-    },
-    {
-      "name": "--extraBold-800",
-      "description": "CSS variable `extraBold-800` from tokens.css"
-    },
-    {
-      "name": "--line-height-1",
-      "description": "CSS variable `line-height-1` from tokens.css"
-    },
-    {
-      "name": "--line-height-2",
-      "description": "CSS variable `line-height-2` from tokens.css"
-    },
-    {
-      "name": "--line-height-3",
-      "description": "CSS variable `line-height-3` from tokens.css"
-    },
-    {
-      "name": "--line-height-4",
-      "description": "CSS variable `line-height-4` from tokens.css"
-    },
-    {
-      "name": "--line-height-5",
-      "description": "CSS variable `line-height-5` from tokens.css"
-    },
-    {
-      "name": "--line-height-6",
-      "description": "CSS variable `line-height-6` from tokens.css"
-    },
-    {
-      "name": "--duration-150",
-      "description": "CSS variable `duration-150` from tokens.css"
-    },
-    {
-      "name": "--duration-250",
-      "description": "CSS variable `duration-250` from tokens.css"
-    },
-    {
-      "name": "--duration-350",
-      "description": "CSS variable `duration-350` from tokens.css"
-    },
-    {
-      "name": "--duration-400",
-      "description": "CSS variable `duration-400` from tokens.css"
-    },
-    {
-      "name": "--duration-500",
-      "description": "CSS variable `duration-500` from tokens.css"
-    },
-    {
-      "name": "--duration-800",
-      "description": "CSS variable `duration-800` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-00",
-      "description": "CSS variable `spacing-dimension-00` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-25",
-      "description": "CSS variable `spacing-dimension-25` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-50",
-      "description": "CSS variable `spacing-dimension-50` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-75",
-      "description": "CSS variable `spacing-dimension-75` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-100",
-      "description": "CSS variable `spacing-dimension-100` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-125",
-      "description": "CSS variable `spacing-dimension-125` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-150",
-      "description": "CSS variable `spacing-dimension-150` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-200",
-      "description": "CSS variable `spacing-dimension-200` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-225",
-      "description": "CSS variable `spacing-dimension-225` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-250",
-      "description": "CSS variable `spacing-dimension-250` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-300",
-      "description": "CSS variable `spacing-dimension-300` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-350",
-      "description": "CSS variable `spacing-dimension-350` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-375",
-      "description": "CSS variable `spacing-dimension-375` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-400",
-      "description": "CSS variable `spacing-dimension-400` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-500",
-      "description": "CSS variable `spacing-dimension-500` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-600",
-      "description": "CSS variable `spacing-dimension-600` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-700",
-      "description": "CSS variable `spacing-dimension-700` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-750",
-      "description": "CSS variable `spacing-dimension-750` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-800",
-      "description": "CSS variable `spacing-dimension-800` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-900",
-      "description": "CSS variable `spacing-dimension-900` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-950",
-      "description": "CSS variable `spacing-dimension-950` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-1000",
-      "description": "CSS variable `spacing-dimension-1000` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-1100",
-      "description": "CSS variable `spacing-dimension-1100` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-1150",
-      "description": "CSS variable `spacing-dimension-1150` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-1200",
-      "description": "CSS variable `spacing-dimension-1200` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-1300",
-      "description": "CSS variable `spacing-dimension-1300` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-1400",
-      "description": "CSS variable `spacing-dimension-1400` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-1500",
-      "description": "CSS variable `spacing-dimension-1500` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-1600",
-      "description": "CSS variable `spacing-dimension-1600` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-1700",
-      "description": "CSS variable `spacing-dimension-1700` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-1800",
-      "description": "CSS variable `spacing-dimension-1800` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-1900",
-      "description": "CSS variable `spacing-dimension-1900` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-2000",
-      "description": "CSS variable `spacing-dimension-2000` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-2100",
-      "description": "CSS variable `spacing-dimension-2100` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-2200",
-      "description": "CSS variable `spacing-dimension-2200` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-2300",
-      "description": "CSS variable `spacing-dimension-2300` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-2400",
-      "description": "CSS variable `spacing-dimension-2400` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-2500",
-      "description": "CSS variable `spacing-dimension-2500` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-2600",
-      "description": "CSS variable `spacing-dimension-2600` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-2700",
-      "description": "CSS variable `spacing-dimension-2700` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-2800",
-      "description": "CSS variable `spacing-dimension-2800` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-2900",
-      "description": "CSS variable `spacing-dimension-2900` from tokens.css"
-    },
-    {
-      "name": "--spacing-dimension-3000",
-      "description": "CSS variable `spacing-dimension-3000` from tokens.css"
-    },
-    {
-      "name": "--corner-radius-25",
-      "description": "CSS variable `corner-radius-25` from tokens.css"
-    },
-    {
-      "name": "--corner-radius-50",
-      "description": "CSS variable `corner-radius-50` from tokens.css"
-    },
-    {
-      "name": "--corner-radius-75",
-      "description": "CSS variable `corner-radius-75` from tokens.css"
+      "name": "--color-static-white-alpha-900",
+      "description": "Design Token: --color-static-white-alpha-900",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
       "name": "--corner-radius-100",
-      "description": "CSS variable `corner-radius-100` from tokens.css"
+      "description": "Design Token: --corner-radius-100",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
       "name": "--corner-radius-200",
-      "description": "CSS variable `corner-radius-200` from tokens.css"
+      "description": "Design Token: --corner-radius-200",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--corner-radius-25",
+      "description": "Design Token: --corner-radius-25",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
       "name": "--corner-radius-250",
-      "description": "CSS variable `corner-radius-250` from tokens.css"
+      "description": "Design Token: --corner-radius-250",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--corner-radius-50",
+      "description": "Design Token: --corner-radius-50",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
+    },
+    {
+      "name": "--corner-radius-75",
+      "description": "Design Token: --corner-radius-75",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
       "name": "--corner-radius-full",
-      "description": "CSS variable `corner-radius-full` from tokens.css"
+      "description": "Design Token: --corner-radius-full",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-gray-00",
-      "description": "CSS variable `color-scale-gray-00` from tokens.css"
+      "name": "--duration-150",
+      "description": "Design Token: --duration-150",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-gray-100",
-      "description": "CSS variable `color-scale-gray-100` from tokens.css"
+      "name": "--duration-250",
+      "description": "Design Token: --duration-250",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-gray-200",
-      "description": "CSS variable `color-scale-gray-200` from tokens.css"
+      "name": "--duration-350",
+      "description": "Design Token: --duration-350",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-gray-300",
-      "description": "CSS variable `color-scale-gray-300` from tokens.css"
+      "name": "--duration-400",
+      "description": "Design Token: --duration-400",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-gray-400",
-      "description": "CSS variable `color-scale-gray-400` from tokens.css"
+      "name": "--duration-500",
+      "description": "Design Token: --duration-500",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-gray-500",
-      "description": "CSS variable `color-scale-gray-500` from tokens.css"
+      "name": "--duration-800",
+      "description": "Design Token: --duration-800",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-gray-600",
-      "description": "CSS variable `color-scale-gray-600` from tokens.css"
+      "name": "--extraBold-800",
+      "description": "Design Token: --extraBold-800",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-gray-700",
-      "description": "CSS variable `color-scale-gray-700` from tokens.css"
+      "name": "--extraLight-200",
+      "description": "Design Token: --extraLight-200",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-gray-800",
-      "description": "CSS variable `color-scale-gray-800` from tokens.css"
+      "name": "--font-size-100",
+      "description": "Design Token: --font-size-100",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-gray-900",
-      "description": "CSS variable `color-scale-gray-900` from tokens.css"
+      "name": "--font-size-1000",
+      "description": "Design Token: --font-size-1000",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-gray-950",
-      "description": "CSS variable `color-scale-gray-950` from tokens.css"
+      "name": "--font-size-125",
+      "description": "Design Token: --font-size-125",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-orange-red-100",
-      "description": "CSS variable `color-scale-orange-red-100` from tokens.css"
+      "name": "--font-size-1300",
+      "description": "Design Token: --font-size-1300",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-orange-red-200",
-      "description": "CSS variable `color-scale-orange-red-200` from tokens.css"
+      "name": "--font-size-1400",
+      "description": "Design Token: --font-size-1400",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-orange-red-300",
-      "description": "CSS variable `color-scale-orange-red-300` from tokens.css"
+      "name": "--font-size-150",
+      "description": "Design Token: --font-size-150",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-orange-red-400",
-      "description": "CSS variable `color-scale-orange-red-400` from tokens.css"
+      "name": "--font-size-1500",
+      "description": "Design Token: --font-size-1500",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-orange-red-500",
-      "description": "CSS variable `color-scale-orange-red-500` from tokens.css"
+      "name": "--font-size-1600",
+      "description": "Design Token: --font-size-1600",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-orange-red-600",
-      "description": "CSS variable `color-scale-orange-red-600` from tokens.css"
+      "name": "--font-size-200",
+      "description": "Design Token: --font-size-200",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-orange-red-700",
-      "description": "CSS variable `color-scale-orange-red-700` from tokens.css"
+      "name": "--font-size-2100",
+      "description": "Design Token: --font-size-2100",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-orange-red-800",
-      "description": "CSS variable `color-scale-orange-red-800` from tokens.css"
+      "name": "--font-size-25",
+      "description": "Design Token: --font-size-25",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-orange-red-900",
-      "description": "CSS variable `color-scale-orange-red-900` from tokens.css"
+      "name": "--font-size-250",
+      "description": "Design Token: --font-size-250",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-orange-red-950",
-      "description": "CSS variable `color-scale-orange-red-950` from tokens.css"
+      "name": "--font-size-300",
+      "description": "Design Token: --font-size-300",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-deep-red-100",
-      "description": "CSS variable `color-scale-deep-red-100` from tokens.css"
+      "name": "--font-size-350",
+      "description": "Design Token: --font-size-350",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-deep-red-200",
-      "description": "CSS variable `color-scale-deep-red-200` from tokens.css"
+      "name": "--font-size-400",
+      "description": "Design Token: --font-size-400",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-deep-red-300",
-      "description": "CSS variable `color-scale-deep-red-300` from tokens.css"
+      "name": "--font-size-50",
+      "description": "Design Token: --font-size-50",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-deep-red-400",
-      "description": "CSS variable `color-scale-deep-red-400` from tokens.css"
+      "name": "--font-size-500",
+      "description": "Design Token: --font-size-500",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-deep-red-500",
-      "description": "CSS variable `color-scale-deep-red-500` from tokens.css"
+      "name": "--font-size-550",
+      "description": "Design Token: --font-size-550",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-deep-red-600",
-      "description": "CSS variable `color-scale-deep-red-600` from tokens.css"
+      "name": "--font-size-600",
+      "description": "Design Token: --font-size-600",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-deep-red-700",
-      "description": "CSS variable `color-scale-deep-red-700` from tokens.css"
+      "name": "--font-size-75",
+      "description": "Design Token: --font-size-75",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-deep-red-800",
-      "description": "CSS variable `color-scale-deep-red-800` from tokens.css"
+      "name": "--light-300",
+      "description": "Design Token: --light-300",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-deep-red-900",
-      "description": "CSS variable `color-scale-deep-red-900` from tokens.css"
+      "name": "--line-height-1",
+      "description": "Design Token: --line-height-1",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-deep-red-950",
-      "description": "CSS variable `color-scale-deep-red-950` from tokens.css"
+      "name": "--line-height-2",
+      "description": "Design Token: --line-height-2",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-blue-100",
-      "description": "CSS variable `color-scale-blue-100` from tokens.css"
+      "name": "--line-height-3",
+      "description": "Design Token: --line-height-3",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-blue-200",
-      "description": "CSS variable `color-scale-blue-200` from tokens.css"
+      "name": "--line-height-4",
+      "description": "Design Token: --line-height-4",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-blue-300",
-      "description": "CSS variable `color-scale-blue-300` from tokens.css"
+      "name": "--line-height-5",
+      "description": "Design Token: --line-height-5",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-blue-400",
-      "description": "CSS variable `color-scale-blue-400` from tokens.css"
+      "name": "--line-height-6",
+      "description": "Design Token: --line-height-6",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-blue-500",
-      "description": "CSS variable `color-scale-blue-500` from tokens.css"
+      "name": "--medium-500",
+      "description": "Design Token: --medium-500",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-blue-600",
-      "description": "CSS variable `color-scale-blue-600` from tokens.css"
+      "name": "--regular-400",
+      "description": "Design Token: --regular-400",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-blue-700",
-      "description": "CSS variable `color-scale-blue-700` from tokens.css"
+      "name": "--semibold-600",
+      "description": "Design Token: --semibold-600",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-blue-800",
-      "description": "CSS variable `color-scale-blue-800` from tokens.css"
+      "name": "--spacing-dimension-00",
+      "description": "Design Token: --spacing-dimension-00",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-blue-900",
-      "description": "CSS variable `color-scale-blue-900` from tokens.css"
+      "name": "--spacing-dimension-100",
+      "description": "Design Token: --spacing-dimension-100",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-blue-950",
-      "description": "CSS variable `color-scale-blue-950` from tokens.css"
+      "name": "--spacing-dimension-1000",
+      "description": "Design Token: --spacing-dimension-1000",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-yellow-100",
-      "description": "CSS variable `color-scale-yellow-100` from tokens.css"
+      "name": "--spacing-dimension-1100",
+      "description": "Design Token: --spacing-dimension-1100",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-yellow-200",
-      "description": "CSS variable `color-scale-yellow-200` from tokens.css"
+      "name": "--spacing-dimension-1150",
+      "description": "Design Token: --spacing-dimension-1150",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-yellow-300",
-      "description": "CSS variable `color-scale-yellow-300` from tokens.css"
+      "name": "--spacing-dimension-1200",
+      "description": "Design Token: --spacing-dimension-1200",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-yellow-400",
-      "description": "CSS variable `color-scale-yellow-400` from tokens.css"
+      "name": "--spacing-dimension-125",
+      "description": "Design Token: --spacing-dimension-125",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-yellow-500",
-      "description": "CSS variable `color-scale-yellow-500` from tokens.css"
+      "name": "--spacing-dimension-1300",
+      "description": "Design Token: --spacing-dimension-1300",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-yellow-600",
-      "description": "CSS variable `color-scale-yellow-600` from tokens.css"
+      "name": "--spacing-dimension-1400",
+      "description": "Design Token: --spacing-dimension-1400",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-yellow-700",
-      "description": "CSS variable `color-scale-yellow-700` from tokens.css"
+      "name": "--spacing-dimension-150",
+      "description": "Design Token: --spacing-dimension-150",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-yellow-800",
-      "description": "CSS variable `color-scale-yellow-800` from tokens.css"
+      "name": "--spacing-dimension-1500",
+      "description": "Design Token: --spacing-dimension-1500",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-yellow-900",
-      "description": "CSS variable `color-scale-yellow-900` from tokens.css"
+      "name": "--spacing-dimension-1600",
+      "description": "Design Token: --spacing-dimension-1600",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-yellow-950",
-      "description": "CSS variable `color-scale-yellow-950` from tokens.css"
+      "name": "--spacing-dimension-1700",
+      "description": "Design Token: --spacing-dimension-1700",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-green-100",
-      "description": "CSS variable `color-scale-green-100` from tokens.css"
+      "name": "--spacing-dimension-1800",
+      "description": "Design Token: --spacing-dimension-1800",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-green-200",
-      "description": "CSS variable `color-scale-green-200` from tokens.css"
+      "name": "--spacing-dimension-1900",
+      "description": "Design Token: --spacing-dimension-1900",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-green-300",
-      "description": "CSS variable `color-scale-green-300` from tokens.css"
+      "name": "--spacing-dimension-200",
+      "description": "Design Token: --spacing-dimension-200",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-green-400",
-      "description": "CSS variable `color-scale-green-400` from tokens.css"
+      "name": "--spacing-dimension-2000",
+      "description": "Design Token: --spacing-dimension-2000",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-green-500",
-      "description": "CSS variable `color-scale-green-500` from tokens.css"
+      "name": "--spacing-dimension-2100",
+      "description": "Design Token: --spacing-dimension-2100",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-green-600",
-      "description": "CSS variable `color-scale-green-600` from tokens.css"
+      "name": "--spacing-dimension-2200",
+      "description": "Design Token: --spacing-dimension-2200",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-green-700",
-      "description": "CSS variable `color-scale-green-700` from tokens.css"
+      "name": "--spacing-dimension-225",
+      "description": "Design Token: --spacing-dimension-225",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-green-800",
-      "description": "CSS variable `color-scale-green-800` from tokens.css"
+      "name": "--spacing-dimension-2300",
+      "description": "Design Token: --spacing-dimension-2300",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-green-900",
-      "description": "CSS variable `color-scale-green-900` from tokens.css"
+      "name": "--spacing-dimension-2400",
+      "description": "Design Token: --spacing-dimension-2400",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-green-950",
-      "description": "CSS variable `color-scale-green-950` from tokens.css"
+      "name": "--spacing-dimension-25",
+      "description": "Design Token: --spacing-dimension-25",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-gray-alpha-200",
-      "description": "CSS variable `color-scale-gray-alpha-200` from tokens.css"
+      "name": "--spacing-dimension-250",
+      "description": "Design Token: --spacing-dimension-250",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-gray-alpha-300",
-      "description": "CSS variable `color-scale-gray-alpha-300` from tokens.css"
+      "name": "--spacing-dimension-2500",
+      "description": "Design Token: --spacing-dimension-2500",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-gray-alpha-400",
-      "description": "CSS variable `color-scale-gray-alpha-400` from tokens.css"
+      "name": "--spacing-dimension-2600",
+      "description": "Design Token: --spacing-dimension-2600",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-gray-alpha-500",
-      "description": "CSS variable `color-scale-gray-alpha-500` from tokens.css"
+      "name": "--spacing-dimension-2700",
+      "description": "Design Token: --spacing-dimension-2700",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-gray-alpha-600",
-      "description": "CSS variable `color-scale-gray-alpha-600` from tokens.css"
+      "name": "--spacing-dimension-2800",
+      "description": "Design Token: --spacing-dimension-2800",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-gray-alpha-700",
-      "description": "CSS variable `color-scale-gray-alpha-700` from tokens.css"
+      "name": "--spacing-dimension-2900",
+      "description": "Design Token: --spacing-dimension-2900",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-gray-alpha-800",
-      "description": "CSS variable `color-scale-gray-alpha-800` from tokens.css"
+      "name": "--spacing-dimension-300",
+      "description": "Design Token: --spacing-dimension-300",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-orange-red-alpha-200",
-      "description": "CSS variable `color-scale-orange-red-alpha-200` from tokens.css"
+      "name": "--spacing-dimension-3000",
+      "description": "Design Token: --spacing-dimension-3000",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-orange-red-alpha-300",
-      "description": "CSS variable `color-scale-orange-red-alpha-300` from tokens.css"
+      "name": "--spacing-dimension-350",
+      "description": "Design Token: --spacing-dimension-350",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-orange-red-alpha-400",
-      "description": "CSS variable `color-scale-orange-red-alpha-400` from tokens.css"
+      "name": "--spacing-dimension-375",
+      "description": "Design Token: --spacing-dimension-375",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-deep-red-alpha-200",
-      "description": "CSS variable `color-scale-deep-red-alpha-200` from tokens.css"
+      "name": "--spacing-dimension-400",
+      "description": "Design Token: --spacing-dimension-400",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-deep-red-alpha-300",
-      "description": "CSS variable `color-scale-deep-red-alpha-300` from tokens.css"
+      "name": "--spacing-dimension-50",
+      "description": "Design Token: --spacing-dimension-50",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-deep-red-alpha-400",
-      "description": "CSS variable `color-scale-deep-red-alpha-400` from tokens.css"
+      "name": "--spacing-dimension-500",
+      "description": "Design Token: --spacing-dimension-500",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-blue-alpha-200",
-      "description": "CSS variable `color-scale-blue-alpha-200` from tokens.css"
+      "name": "--spacing-dimension-600",
+      "description": "Design Token: --spacing-dimension-600",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-blue-alpha-300",
-      "description": "CSS variable `color-scale-blue-alpha-300` from tokens.css"
+      "name": "--spacing-dimension-700",
+      "description": "Design Token: --spacing-dimension-700",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-blue-alpha-400",
-      "description": "CSS variable `color-scale-blue-alpha-400` from tokens.css"
+      "name": "--spacing-dimension-75",
+      "description": "Design Token: --spacing-dimension-75",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-green-alpha-200",
-      "description": "CSS variable `color-scale-green-alpha-200` from tokens.css"
+      "name": "--spacing-dimension-750",
+      "description": "Design Token: --spacing-dimension-750",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-green-alpha-300",
-      "description": "CSS variable `color-scale-green-alpha-300` from tokens.css"
+      "name": "--spacing-dimension-800",
+      "description": "Design Token: --spacing-dimension-800",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-green-alpha-400",
-      "description": "CSS variable `color-scale-green-alpha-400` from tokens.css"
+      "name": "--spacing-dimension-900",
+      "description": "Design Token: --spacing-dimension-900",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-gray-00",
-      "description": "CSS variable `color-scale-gray-00` from tokens.css"
+      "name": "--spacing-dimension-950",
+      "description": "Design Token: --spacing-dimension-950",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     },
     {
-      "name": "--color-scale-gray-100",
-      "description": "CSS variable `color-scale-gray-100` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-200",
-      "description": "CSS variable `color-scale-gray-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-300",
-      "description": "CSS variable `color-scale-gray-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-400",
-      "description": "CSS variable `color-scale-gray-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-500",
-      "description": "CSS variable `color-scale-gray-500` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-600",
-      "description": "CSS variable `color-scale-gray-600` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-700",
-      "description": "CSS variable `color-scale-gray-700` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-800",
-      "description": "CSS variable `color-scale-gray-800` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-900",
-      "description": "CSS variable `color-scale-gray-900` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-950",
-      "description": "CSS variable `color-scale-gray-950` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-100",
-      "description": "CSS variable `color-scale-orange-red-100` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-200",
-      "description": "CSS variable `color-scale-orange-red-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-300",
-      "description": "CSS variable `color-scale-orange-red-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-400",
-      "description": "CSS variable `color-scale-orange-red-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-500",
-      "description": "CSS variable `color-scale-orange-red-500` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-600",
-      "description": "CSS variable `color-scale-orange-red-600` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-700",
-      "description": "CSS variable `color-scale-orange-red-700` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-800",
-      "description": "CSS variable `color-scale-orange-red-800` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-900",
-      "description": "CSS variable `color-scale-orange-red-900` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-950",
-      "description": "CSS variable `color-scale-orange-red-950` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-100",
-      "description": "CSS variable `color-scale-deep-red-100` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-200",
-      "description": "CSS variable `color-scale-deep-red-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-300",
-      "description": "CSS variable `color-scale-deep-red-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-400",
-      "description": "CSS variable `color-scale-deep-red-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-500",
-      "description": "CSS variable `color-scale-deep-red-500` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-600",
-      "description": "CSS variable `color-scale-deep-red-600` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-700",
-      "description": "CSS variable `color-scale-deep-red-700` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-800",
-      "description": "CSS variable `color-scale-deep-red-800` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-900",
-      "description": "CSS variable `color-scale-deep-red-900` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-950",
-      "description": "CSS variable `color-scale-deep-red-950` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-100",
-      "description": "CSS variable `color-scale-blue-100` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-200",
-      "description": "CSS variable `color-scale-blue-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-300",
-      "description": "CSS variable `color-scale-blue-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-400",
-      "description": "CSS variable `color-scale-blue-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-500",
-      "description": "CSS variable `color-scale-blue-500` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-600",
-      "description": "CSS variable `color-scale-blue-600` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-700",
-      "description": "CSS variable `color-scale-blue-700` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-800",
-      "description": "CSS variable `color-scale-blue-800` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-900",
-      "description": "CSS variable `color-scale-blue-900` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-950",
-      "description": "CSS variable `color-scale-blue-950` from tokens.css"
-    },
-    {
-      "name": "--color-scale-yellow-100",
-      "description": "CSS variable `color-scale-yellow-100` from tokens.css"
-    },
-    {
-      "name": "--color-scale-yellow-200",
-      "description": "CSS variable `color-scale-yellow-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-yellow-300",
-      "description": "CSS variable `color-scale-yellow-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-yellow-400",
-      "description": "CSS variable `color-scale-yellow-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-yellow-500",
-      "description": "CSS variable `color-scale-yellow-500` from tokens.css"
-    },
-    {
-      "name": "--color-scale-yellow-600",
-      "description": "CSS variable `color-scale-yellow-600` from tokens.css"
-    },
-    {
-      "name": "--color-scale-yellow-700",
-      "description": "CSS variable `color-scale-yellow-700` from tokens.css"
-    },
-    {
-      "name": "--color-scale-yellow-800",
-      "description": "CSS variable `color-scale-yellow-800` from tokens.css"
-    },
-    {
-      "name": "--color-scale-yellow-900",
-      "description": "CSS variable `color-scale-yellow-900` from tokens.css"
-    },
-    {
-      "name": "--color-scale-yellow-950",
-      "description": "CSS variable `color-scale-yellow-950` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-100",
-      "description": "CSS variable `color-scale-green-100` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-200",
-      "description": "CSS variable `color-scale-green-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-300",
-      "description": "CSS variable `color-scale-green-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-400",
-      "description": "CSS variable `color-scale-green-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-500",
-      "description": "CSS variable `color-scale-green-500` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-600",
-      "description": "CSS variable `color-scale-green-600` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-700",
-      "description": "CSS variable `color-scale-green-700` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-800",
-      "description": "CSS variable `color-scale-green-800` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-900",
-      "description": "CSS variable `color-scale-green-900` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-950",
-      "description": "CSS variable `color-scale-green-950` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-alpha-200",
-      "description": "CSS variable `color-scale-gray-alpha-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-alpha-300",
-      "description": "CSS variable `color-scale-gray-alpha-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-alpha-400",
-      "description": "CSS variable `color-scale-gray-alpha-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-alpha-500",
-      "description": "CSS variable `color-scale-gray-alpha-500` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-alpha-600",
-      "description": "CSS variable `color-scale-gray-alpha-600` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-alpha-700",
-      "description": "CSS variable `color-scale-gray-alpha-700` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-alpha-800",
-      "description": "CSS variable `color-scale-gray-alpha-800` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-alpha-200",
-      "description": "CSS variable `color-scale-orange-red-alpha-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-alpha-300",
-      "description": "CSS variable `color-scale-orange-red-alpha-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-alpha-400",
-      "description": "CSS variable `color-scale-orange-red-alpha-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-alpha-200",
-      "description": "CSS variable `color-scale-deep-red-alpha-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-alpha-300",
-      "description": "CSS variable `color-scale-deep-red-alpha-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-alpha-400",
-      "description": "CSS variable `color-scale-deep-red-alpha-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-alpha-200",
-      "description": "CSS variable `color-scale-blue-alpha-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-alpha-300",
-      "description": "CSS variable `color-scale-blue-alpha-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-alpha-400",
-      "description": "CSS variable `color-scale-blue-alpha-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-alpha-200",
-      "description": "CSS variable `color-scale-green-alpha-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-alpha-300",
-      "description": "CSS variable `color-scale-green-alpha-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-alpha-400",
-      "description": "CSS variable `color-scale-green-alpha-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-00",
-      "description": "CSS variable `color-scale-gray-00` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-100",
-      "description": "CSS variable `color-scale-gray-100` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-200",
-      "description": "CSS variable `color-scale-gray-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-300",
-      "description": "CSS variable `color-scale-gray-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-400",
-      "description": "CSS variable `color-scale-gray-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-500",
-      "description": "CSS variable `color-scale-gray-500` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-600",
-      "description": "CSS variable `color-scale-gray-600` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-700",
-      "description": "CSS variable `color-scale-gray-700` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-800",
-      "description": "CSS variable `color-scale-gray-800` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-900",
-      "description": "CSS variable `color-scale-gray-900` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-950",
-      "description": "CSS variable `color-scale-gray-950` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-100",
-      "description": "CSS variable `color-scale-orange-red-100` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-200",
-      "description": "CSS variable `color-scale-orange-red-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-300",
-      "description": "CSS variable `color-scale-orange-red-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-400",
-      "description": "CSS variable `color-scale-orange-red-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-500",
-      "description": "CSS variable `color-scale-orange-red-500` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-600",
-      "description": "CSS variable `color-scale-orange-red-600` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-700",
-      "description": "CSS variable `color-scale-orange-red-700` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-800",
-      "description": "CSS variable `color-scale-orange-red-800` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-900",
-      "description": "CSS variable `color-scale-orange-red-900` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-950",
-      "description": "CSS variable `color-scale-orange-red-950` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-100",
-      "description": "CSS variable `color-scale-deep-red-100` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-200",
-      "description": "CSS variable `color-scale-deep-red-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-300",
-      "description": "CSS variable `color-scale-deep-red-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-400",
-      "description": "CSS variable `color-scale-deep-red-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-500",
-      "description": "CSS variable `color-scale-deep-red-500` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-600",
-      "description": "CSS variable `color-scale-deep-red-600` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-700",
-      "description": "CSS variable `color-scale-deep-red-700` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-800",
-      "description": "CSS variable `color-scale-deep-red-800` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-900",
-      "description": "CSS variable `color-scale-deep-red-900` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-950",
-      "description": "CSS variable `color-scale-deep-red-950` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-100",
-      "description": "CSS variable `color-scale-blue-100` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-200",
-      "description": "CSS variable `color-scale-blue-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-300",
-      "description": "CSS variable `color-scale-blue-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-400",
-      "description": "CSS variable `color-scale-blue-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-500",
-      "description": "CSS variable `color-scale-blue-500` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-600",
-      "description": "CSS variable `color-scale-blue-600` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-700",
-      "description": "CSS variable `color-scale-blue-700` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-800",
-      "description": "CSS variable `color-scale-blue-800` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-900",
-      "description": "CSS variable `color-scale-blue-900` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-950",
-      "description": "CSS variable `color-scale-blue-950` from tokens.css"
-    },
-    {
-      "name": "--color-scale-yellow-100",
-      "description": "CSS variable `color-scale-yellow-100` from tokens.css"
-    },
-    {
-      "name": "--color-scale-yellow-200",
-      "description": "CSS variable `color-scale-yellow-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-yellow-300",
-      "description": "CSS variable `color-scale-yellow-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-yellow-400",
-      "description": "CSS variable `color-scale-yellow-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-yellow-500",
-      "description": "CSS variable `color-scale-yellow-500` from tokens.css"
-    },
-    {
-      "name": "--color-scale-yellow-600",
-      "description": "CSS variable `color-scale-yellow-600` from tokens.css"
-    },
-    {
-      "name": "--color-scale-yellow-700",
-      "description": "CSS variable `color-scale-yellow-700` from tokens.css"
-    },
-    {
-      "name": "--color-scale-yellow-800",
-      "description": "CSS variable `color-scale-yellow-800` from tokens.css"
-    },
-    {
-      "name": "--color-scale-yellow-900",
-      "description": "CSS variable `color-scale-yellow-900` from tokens.css"
-    },
-    {
-      "name": "--color-scale-yellow-950",
-      "description": "CSS variable `color-scale-yellow-950` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-100",
-      "description": "CSS variable `color-scale-green-100` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-200",
-      "description": "CSS variable `color-scale-green-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-300",
-      "description": "CSS variable `color-scale-green-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-400",
-      "description": "CSS variable `color-scale-green-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-500",
-      "description": "CSS variable `color-scale-green-500` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-600",
-      "description": "CSS variable `color-scale-green-600` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-700",
-      "description": "CSS variable `color-scale-green-700` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-800",
-      "description": "CSS variable `color-scale-green-800` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-900",
-      "description": "CSS variable `color-scale-green-900` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-950",
-      "description": "CSS variable `color-scale-green-950` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-alpha-200",
-      "description": "CSS variable `color-scale-gray-alpha-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-alpha-300",
-      "description": "CSS variable `color-scale-gray-alpha-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-alpha-400",
-      "description": "CSS variable `color-scale-gray-alpha-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-alpha-500",
-      "description": "CSS variable `color-scale-gray-alpha-500` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-alpha-600",
-      "description": "CSS variable `color-scale-gray-alpha-600` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-alpha-700",
-      "description": "CSS variable `color-scale-gray-alpha-700` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-alpha-800",
-      "description": "CSS variable `color-scale-gray-alpha-800` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-alpha-200",
-      "description": "CSS variable `color-scale-orange-red-alpha-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-alpha-300",
-      "description": "CSS variable `color-scale-orange-red-alpha-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-alpha-400",
-      "description": "CSS variable `color-scale-orange-red-alpha-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-alpha-200",
-      "description": "CSS variable `color-scale-deep-red-alpha-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-alpha-300",
-      "description": "CSS variable `color-scale-deep-red-alpha-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-alpha-400",
-      "description": "CSS variable `color-scale-deep-red-alpha-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-alpha-200",
-      "description": "CSS variable `color-scale-blue-alpha-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-alpha-300",
-      "description": "CSS variable `color-scale-blue-alpha-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-alpha-400",
-      "description": "CSS variable `color-scale-blue-alpha-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-alpha-200",
-      "description": "CSS variable `color-scale-green-alpha-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-alpha-300",
-      "description": "CSS variable `color-scale-green-alpha-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-alpha-400",
-      "description": "CSS variable `color-scale-green-alpha-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-00",
-      "description": "CSS variable `color-scale-gray-00` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-100",
-      "description": "CSS variable `color-scale-gray-100` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-200",
-      "description": "CSS variable `color-scale-gray-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-300",
-      "description": "CSS variable `color-scale-gray-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-400",
-      "description": "CSS variable `color-scale-gray-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-500",
-      "description": "CSS variable `color-scale-gray-500` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-600",
-      "description": "CSS variable `color-scale-gray-600` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-700",
-      "description": "CSS variable `color-scale-gray-700` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-800",
-      "description": "CSS variable `color-scale-gray-800` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-900",
-      "description": "CSS variable `color-scale-gray-900` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-950",
-      "description": "CSS variable `color-scale-gray-950` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-100",
-      "description": "CSS variable `color-scale-orange-red-100` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-200",
-      "description": "CSS variable `color-scale-orange-red-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-300",
-      "description": "CSS variable `color-scale-orange-red-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-400",
-      "description": "CSS variable `color-scale-orange-red-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-500",
-      "description": "CSS variable `color-scale-orange-red-500` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-600",
-      "description": "CSS variable `color-scale-orange-red-600` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-700",
-      "description": "CSS variable `color-scale-orange-red-700` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-800",
-      "description": "CSS variable `color-scale-orange-red-800` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-900",
-      "description": "CSS variable `color-scale-orange-red-900` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-950",
-      "description": "CSS variable `color-scale-orange-red-950` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-100",
-      "description": "CSS variable `color-scale-deep-red-100` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-200",
-      "description": "CSS variable `color-scale-deep-red-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-300",
-      "description": "CSS variable `color-scale-deep-red-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-400",
-      "description": "CSS variable `color-scale-deep-red-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-500",
-      "description": "CSS variable `color-scale-deep-red-500` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-600",
-      "description": "CSS variable `color-scale-deep-red-600` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-700",
-      "description": "CSS variable `color-scale-deep-red-700` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-800",
-      "description": "CSS variable `color-scale-deep-red-800` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-900",
-      "description": "CSS variable `color-scale-deep-red-900` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-950",
-      "description": "CSS variable `color-scale-deep-red-950` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-100",
-      "description": "CSS variable `color-scale-blue-100` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-200",
-      "description": "CSS variable `color-scale-blue-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-300",
-      "description": "CSS variable `color-scale-blue-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-400",
-      "description": "CSS variable `color-scale-blue-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-500",
-      "description": "CSS variable `color-scale-blue-500` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-600",
-      "description": "CSS variable `color-scale-blue-600` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-700",
-      "description": "CSS variable `color-scale-blue-700` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-800",
-      "description": "CSS variable `color-scale-blue-800` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-900",
-      "description": "CSS variable `color-scale-blue-900` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-950",
-      "description": "CSS variable `color-scale-blue-950` from tokens.css"
-    },
-    {
-      "name": "--color-scale-yellow-100",
-      "description": "CSS variable `color-scale-yellow-100` from tokens.css"
-    },
-    {
-      "name": "--color-scale-yellow-200",
-      "description": "CSS variable `color-scale-yellow-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-yellow-300",
-      "description": "CSS variable `color-scale-yellow-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-yellow-400",
-      "description": "CSS variable `color-scale-yellow-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-yellow-500",
-      "description": "CSS variable `color-scale-yellow-500` from tokens.css"
-    },
-    {
-      "name": "--color-scale-yellow-600",
-      "description": "CSS variable `color-scale-yellow-600` from tokens.css"
-    },
-    {
-      "name": "--color-scale-yellow-700",
-      "description": "CSS variable `color-scale-yellow-700` from tokens.css"
-    },
-    {
-      "name": "--color-scale-yellow-800",
-      "description": "CSS variable `color-scale-yellow-800` from tokens.css"
-    },
-    {
-      "name": "--color-scale-yellow-900",
-      "description": "CSS variable `color-scale-yellow-900` from tokens.css"
-    },
-    {
-      "name": "--color-scale-yellow-950",
-      "description": "CSS variable `color-scale-yellow-950` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-100",
-      "description": "CSS variable `color-scale-green-100` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-200",
-      "description": "CSS variable `color-scale-green-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-300",
-      "description": "CSS variable `color-scale-green-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-400",
-      "description": "CSS variable `color-scale-green-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-500",
-      "description": "CSS variable `color-scale-green-500` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-600",
-      "description": "CSS variable `color-scale-green-600` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-700",
-      "description": "CSS variable `color-scale-green-700` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-800",
-      "description": "CSS variable `color-scale-green-800` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-900",
-      "description": "CSS variable `color-scale-green-900` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-950",
-      "description": "CSS variable `color-scale-green-950` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-alpha-200",
-      "description": "CSS variable `color-scale-gray-alpha-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-alpha-300",
-      "description": "CSS variable `color-scale-gray-alpha-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-alpha-400",
-      "description": "CSS variable `color-scale-gray-alpha-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-alpha-500",
-      "description": "CSS variable `color-scale-gray-alpha-500` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-alpha-600",
-      "description": "CSS variable `color-scale-gray-alpha-600` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-alpha-700",
-      "description": "CSS variable `color-scale-gray-alpha-700` from tokens.css"
-    },
-    {
-      "name": "--color-scale-gray-alpha-800",
-      "description": "CSS variable `color-scale-gray-alpha-800` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-alpha-200",
-      "description": "CSS variable `color-scale-orange-red-alpha-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-alpha-300",
-      "description": "CSS variable `color-scale-orange-red-alpha-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-orange-red-alpha-400",
-      "description": "CSS variable `color-scale-orange-red-alpha-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-alpha-200",
-      "description": "CSS variable `color-scale-deep-red-alpha-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-alpha-300",
-      "description": "CSS variable `color-scale-deep-red-alpha-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-deep-red-alpha-400",
-      "description": "CSS variable `color-scale-deep-red-alpha-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-alpha-200",
-      "description": "CSS variable `color-scale-blue-alpha-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-alpha-300",
-      "description": "CSS variable `color-scale-blue-alpha-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-blue-alpha-400",
-      "description": "CSS variable `color-scale-blue-alpha-400` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-alpha-200",
-      "description": "CSS variable `color-scale-green-alpha-200` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-alpha-300",
-      "description": "CSS variable `color-scale-green-alpha-300` from tokens.css"
-    },
-    {
-      "name": "--color-scale-green-alpha-400",
-      "description": "CSS variable `color-scale-green-alpha-400` from tokens.css"
+      "name": "--thin-100",
+      "description": "Design Token: --thin-100",
+      "browsers": ["last 2 versions"],
+      "relevance": 100
     }
   ]
 }
