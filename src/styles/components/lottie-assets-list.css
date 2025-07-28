@@ -1,5 +1,5 @@
-/* src/components/LottieAssetList.css */
 
+/* 로띠 */
 /* 비밀번호 입력 컨테이너 */
 .password-container {
   display: flex;
@@ -7,7 +7,6 @@
   justify-content: center;
   min-height: 400px;
   padding: var(--spacing-dimension-400);
-  background-color: aqua;
 }
 
 .password-form-wrapper {
@@ -208,6 +207,9 @@
 }
 
 /* 액션 버튼들 */
+.asset-preview {
+  background-color: var(--color-scale-gray-300);
+}
 .asset-actions {
   display: flex;
   gap: var(--spacing-dimension-100);

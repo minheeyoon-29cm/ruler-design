@@ -1,175 +1,235 @@
-# ruler-design
-
-**A system designed for clarity, not memory.**
-
-The design system isn’t just how we build —
-it’s how we stay aligned.
-
-Ruler enables designers and developers to work in their own tools,
-while thinking in the same structure and speaking the same language.
-
-Freedom in expression begins with shared rules.
-Efficiency comes from clear principles.
-
-This document is Ruler’s Single Source of Truth —
-a shared foundation for consistent, scalable, and brand-aligned UI.
-
----
+# Ruler Design System Documentation
 
 **기억이 아닌 기준으로 정렬되는 시스템**
 
-디자인 시스템은 단지 만드는 방식이 아니라,
-팀이 어떻게 정렬되어 일하는가를 결정합니다.
-
-Ruler는 디자이너와 개발자가 각자의 도구에서 작업하더라도
-같은 구조로 사고하고, 같은 언어로 협업할 수 있도록 돕습니다.
-
-표현의 자유는 공통된 규칙에서 시작되고,
-효율은 명확한 원칙에서 만들어집니다.
-
-이 문서는 바로 그 기준 —
-Ruler의 Single Source of Truth입니다.
-일관되고 확장 가능한 UI를 위한 팀의 공통 기반이 됩니다.
+Ruler는 29CM의 디자인 시스템으로, 디자이너와 개발자가 각자의 도구에서 작업하더라도 같은 구조로 사고하고 같은 언어로 협업할 수 있도록 돕습니다. 이 문서는 Ruler의 Single Source of Truth입니다.
 
 ---
 
-## Project Guide
+## 🚀 시작하기
 
-| 경로                              | 설명                                                            | 액션                                         |
-| --------------------------------- | --------------------------------------------------------------- | -------------------------------------------- |
-| `src/ruler-tokens/`               | 📌 Figma에서 추출한 디자인 토큰 원본 저장소                     | Figma → JSON 파일 내보내기 후 이곳에 저장    |
-| ├─ `scale/`                       | 📌 색상, 여백, 폰트 등 **기본 디자인 값**                       | Figma에서 수정한 후 덮어쓰기                 |
-| ├─ `semantic/`                    | 📌 버튼, 배경 등 **의미 기반 시맨틱 토큰**                      | 역할별 토큰 정의 및 갱신                     |
-| └─ `static-scale/`                | 📌 폰트 패밀리 등 **고정값**                                    | 거의 수정 없음 (필요 시 업데이트)            |
-| `src/scripts/transform-tokens.ts` | 토큰을 CSS 변수 및 Tailwind 설정으로 **자동 변환하는 스크립트** | 토큰 수정 후 `npm run transform-tokens` 실행 |
-| `src/tokens/`                     | 변환된 디자인 토큰 결과물 저장소                                | 토큰 변환 결과 확인 (`tokens.css`)           |
-| ├─ `processed/`                   | Tailwind에서 사용하는 JSON 구조                                 | 필요 시 Tailwind 설정 확인                   |
-| └─ `tokens.css`                   | 최종 CSS 변수 (웹에 반영되는 실제 스타일)                       | 웹 스타일 적용 결과 확인                     |
-| `src/content/`                    | 📌 디자인 시스템 설명 및 문서화 콘텐츠                          | 각 토큰/컴포넌트에 대한 설명 문서 작성       |
-| ├─ `components/`                  | 📌 컴포넌트별 MDX 문서 (예: `Button.mdx`)                       | 사용법, 구조 설명 문서 작성                  |
-| └─ `tokens/`                      | 📌 토큰 설명 문서 (예: `Color.mdx`)                             | 스케일/시맨틱 토큰 설명 문서 작성            |
-| `src/components/`                 | 문서 사이트에서 사용되는 공통 UI 컴포넌트                       | 필요 시 커스터마이징 요청                    |
-| ├─ `ui/`                          | 버튼, 뱃지 등 공통 UI 요소들                                    | UI 변경 사항 정리하여 개발 요청              |
-| ├─ `docs/`                        | 코드 블록, 타이틀 등 문서화 전용 컴포넌트                       | 변경 필요 시 요청 또는 협업                  |
-| └─ `MDXContents.tsx`              | MDX 렌더링용 Wrapper 컴포넌트                                   | 별도 액션 없음                               |
-| `src/app/`                        | Next.js App Router 기반 페이지 구조                             | 페이지 구조 변경 시 협의 필요                |
-| ├─ `components/`                  | `/components` 문서 페이지                                       | 컴포넌트 정렬, 설명 구조 피드백              |
-| ├─ `tokens/`                      | `/tokens` 문서 페이지                                           | 토큰 분류 및 UI 구조 개선 피드백             |
-| └─ `layout.tsx`                   | 전체 레이아웃 구조 정의                                         | 메뉴 구조나 페이지 구조 변경 요청            |
-| `src/styles/globals.css`          | 전역 스타일 및 `.dark`, `.light` 테마 설정 포함                 | 라이트/다크 테마 적용 결과 확인              |
-| `tailwind.config.js`              | Tailwind에 디자인 토큰을 연결하는 설정 파일                     | 토큰 매핑 구조 이해 및 요청 가능             |
-| `contentlayer.config.ts`          | MDX 파일 자동 처리 설정                                         | 문서화 오류 시 확인 요청 가능                |
-| `next.config.js`                  | Next.js 전역 설정                                               | 일반적으로 수정 불필요                       |
+### 설치 및 실행
 
-## Project Setup
-
-**설치**
-
-```
+```bash
 # 저장소 클론
-
 gh repo clone 29CM-Developers/ruler-design
 cd ruler-design
 
 # 의존성 설치
-
 npm install
 
-```
-
-**개발 서버 실행**
-
-```
-
+# 개발 서버 실행
 npm run dev
-
 ```
 
-실행 후 `http://localhost:3000`에 접속하여 디자인 시스템 문서를 확인할 수 있습니다.
+실행 후 `http://localhost:3000`에서 디자인 시스템 문서를 확인할 수 있습니다.
 
-## 토큰 변환 스크립트 사용법
+---
 
-디자인 토큰을 Figma에서 수정한 뒤 JSON 파일로 내보낸 경우, 아래 스크립트를 실행하여 CSS 변수로 변환합니다.
+## 📁 프로젝트 구조
 
+### 디자인 토큰 관리
+
+| 경로 | 역할 | 액션 가이드 |
+|------|------|-------------|
+| `src/ruler-tokens/` | 📌 **Figma 디자인 토큰 원본 저장소** | Figma Token Studio에서 내보낸 JSON 파일 저장 |
+| ├─ `scale/` | 기본 디자인 값 (색상, 크기, 간격 등) | Figma에서 수정 후 JSON 덮어쓰기 |
+| ├─ `semantic/` | 의미 기반 토큰 (primary, secondary 등) | 컴포넌트 역할에 따른 토큰 정의 |
+| ├─ `static-scale/` | 고정값 (폰트 패밀리 등) | 거의 수정 없음, 필요 시만 업데이트 |
+| └─ `$metadata.json` | 토큰셋 순서 및 메타데이터 | 토큰 구조 변경 시 업데이트 |
+
+### 토큰 변환 시스템
+
+| 경로 | 역할 | 액션 가이드 |
+|------|------|-------------|
+| `src/scripts/transform-tokens.ts` | **토큰 자동 변환 스크립트** | 토큰 수정 후 `npm run transform-tokens` 실행 |
+| `src/tokens/` | 변환된 토큰 결과물 저장소 | 변환 결과 확인 및 검증 |
+| ├─ `processed/` | Tailwind용 JSON 구조 | Tailwind 설정에서 자동 사용 |
+| └─ `tokens.css` | 웹용 CSS 변수 | 전역 스타일에 자동 적용 |
+
+### 문서 및 컨텐츠
+
+| 경로 | 역할 | 액션 가이드 |
+|------|------|-------------|
+| `src/content/` | 📌 **MDX 문서 작성 영역** | 컴포넌트/토큰 설명 문서 작성 |
+| ├─ `components/` | 컴포넌트별 MDX 문서 | 사용법, 가이드라인, 예제 작성 |
+| ├─ `foundation/` | 디자인 토큰 설명 문서 | 토큰 설명 및 사용 가이드 작성 |
+| └─ `patterns/` | 패턴 컴포넌트 문서 | 복합 컴포넌트 사용법 작성 |
+
+### UI 컴포넌트
+
+| 경로 | 역할 | 액션 가이드 |
+|------|------|-------------|
+| `src/components/` | 문서 사이트용 공통 UI | 문서화 전용 컴포넌트 개발 |
+| ├─ `ui/` | 기본 UI 요소 (버튼, 뱃지 등) | 디자인 시스템 기반 UI 컴포넌트 |
+| ├─ `docs/` | 문서화 전용 컴포넌트 | 코드 블록, 색상 팔레트, 미리보기 등 |
+| ├─ `foundation/` | 토큰 시각화 컴포넌트 | 디자인 토큰을 시각적으로 표현 |
+| └─ `MDXContents.tsx` | MDX 렌더링 래퍼 | MDX 문서 표시용 공통 컴포넌트 |
+
+### 페이지 구조
+
+| 경로 | 역할 | 액션 가이드 |
+|------|------|-------------|
+| `src/app/` | Next.js App Router 페이지 | 라우팅 및 레이아웃 관리 |
+| ├─ `foundation/` | `/foundation` 토큰 문서 페이지 | 토큰 분류별 페이지 구성 |
+| ├─ `components/` | `/components` 컴포넌트 문서 페이지 | 컴포넌트별 상세 문서 |
+| ├─ `patterns/` | `/patterns` 패턴 문서 페이지 | 패턴별 사용 가이드 |
+| └─ `layout.tsx` | 전체 레이아웃 정의 | 네비게이션, 사이드바 구조 |
+
+### 스타일 및 설정
+
+| 경로 | 역할 | 액션 가이드 |
+|------|------|-------------|
+| `src/styles/globals.css` | 전역 스타일 + 테마 설정 | 라이트/다크 테마 및 기본 스타일 |
+| `tailwind.config.js` | Tailwind 설정 | 디자인 토큰 자동 연결 설정 |
+| `contentlayer.config.ts` | MDX 자동 처리 설정 | 문서 메타데이터 및 변환 규칙 |
+| `next.config.js` | Next.js 전역 설정 | 빌드 및 최적화 설정 |
+
+---
+
+## 🔄 디자인 토큰 워크플로우
+
+### 1. Figma에서 토큰 수정
+```bash
+# Figma Token Studio 플러그인 사용
+1. 디자인 토큰 수정
+2. JSON 형태로 Export
+3. src/ruler-tokens/ 해당 경로에 저장
 ```
 
+### 2. 토큰 변환 실행
+```bash
+# 토큰을 CSS 변수와 Tailwind 설정으로 변환
 npm run transform-tokens
-
 ```
 
-- 변환된 결과는 `src/tokens/tokens.css`에 저장됩니다.
-
-- Tailwind와 연결되는 JSON 구조는 `src/tokens/processed/`에 생성됩니다.
-
-## MDX 문서 템플릿 생성 스크립트
-
-컴포넌트 문서 초안을 쉽게 만들기 위해 MDX 파일을 자동 생성할 수 있습니다.
-
-**스크립트 실행**
-
+### 3. 자동 적용 확인
+```bash
+# 개발 서버에서 변경사항 확인
+npm run dev
 ```
 
+### 4. 빌드 및 배포
+```bash
+# 프로덕션 빌드
+npm run build
+
+# Vercel 자동 배포 (main 브랜치 push 시)
+git push origin main
+```
+
+---
+
+## 🤝 협업 가이드
+
+### 디자이너 워크플로우
+
+1. **토큰 수정**
+   - Figma Token Studio에서 디자인 토큰 수정
+   - JSON 파일을 `src/ruler-tokens/` 해당 디렉토리에 저장
+
+2. **문서 작성**
+   - `src/content/` 하위에 MDX 파일로 가이드라인 작성
+   - 이미지는 `public/images/` 경로에 저장
+
+3. **확인 및 피드백**
+   - 개발 서버에서 실시간 미리보기
+   - Slack #design_platform 채널에서 피드백
+
+### 개발자 워크플로우
+
+1. **토큰 변환**
+   - 디자이너가 수정한 토큰을 `npm run transform-tokens`로 변환
+   - 변환된 CSS 변수와 Tailwind 설정 확인
+
+2. **컴포넌트 개발**
+   - `src/components/` 하위에 문서화용 컴포넌트 개발
+   - 디자인 토큰 기반으로 스타일링
+
+3. **문서 개선**
+   - MDX 템플릿 자동 생성: `npm run generate-mdx`
+   - 컴포넌트 미리보기, 상호작용 기능 추가
+
+---
+
+## 📝 문서 작성 가이드
+
+### MDX 파일 생성
+```bash
+# 대화형 템플릿 생성
 npm run generate-mdx
 
+# 특정 컴포넌트 템플릿 생성
+npm run generate-mdx Button
 ```
 
-스크립트를 실행하면 아래와 같은 정보를 순차적으로 입력받습니다 - generate-mdx 입력 항목별 가이드 :
+### 프론트매터 구조
+```yaml
+---
+title: "컴포넌트명"
+description: "컴포넌트 설명"
+status: "active" # draft, beta, active, deprecated
+version: "1.0.0"
+category: "component" # component, pattern, module
+tags: ["ui", "interactive"]
+platforms: ["web", "ios", "android"]
+updated: "2025-01-28"
+---
+```
 
-**1. 컴포넌트 이름 `name`**
+### 이미지 경로 규칙
+```
+public/images/
+├── components/
+│   ├── button/
+│   │   ├── usage/
+│   │   ├── states/
+│   │   └── examples/
+├── foundation/
+│   ├── color/
+│   ├── typography/
+│   └── spacing/
+└── patterns/
+```
 
-| 예시     | 설명                 | 작성 기준 및 가이드                                                                                                     |
-| -------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `Button` | 컴포넌트의 공식 명칭 | - UpperCamelCase로 작성 (예: `ProductCard`, `TagBadge`) <br> - 파일명은 자동으로 kebab-case 변환됨 (`product-card.mdx`) |
+---
 
-**2. 설명 `description`**
+## 🛠️ 개발 스크립트
 
-| 예시                                     | 설명                              | 작성 기준 및 가이드                                                                                                 |
-| ---------------------------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `"상품 정보를 카드 형태로 시각화합니다"` | 이 컴포넌트의 역할을 한 줄로 요약 | - 마케팅 문구 ❌ <br> - 실제 역할 기반으로 명확하게 작성 ✅ <br> - 예: `"경고 메시지를 강조된 스타일로 노출합니다"` |
+| 명령어 | 설명 |
+|--------|------|
+| `npm run dev` | 개발 서버 실행 |
+| `npm run build` | 프로덕션 빌드 |
+| `npm run transform-tokens` | 디자인 토큰 변환 |
+| `npm run generate-mdx` | MDX 템플릿 생성 |
+| `npm run lint` | 코드 품질 검사 |
 
-**3. 상태 `status`**
+---
 
-| 값           | 의미      | 작성 기준 및 가이드                                                                                                       |
-| ------------ | --------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `draft`      | 초안      | - 디자인 또는 개발 완료되지 않음 <br> - 문서화는 시작 가능 <br> - 실제 서비스 미적용 <br> - 리뷰 전 단계                  |
-| `review`     | 검증 중   | - 일부 서비스에 A/B 또는 테스트 적용 또는 QA 중, <br> - 피드백 수집 및 수정 가능성 존재                                   |
-| `active`     | 안정화    | - 실 서비스에 안정적으로 적용 중 <br> - 누구나 사용 가능 <br> - 수정 시 `version` 업데이트 필수 (SemVer)                  |
-| `deprecated` | 폐기 예정 | - 신규 적용 금지 <br> - 기존 화면에서만 유지 <br> - 대체 컴포넌트가 있다면 반드시 명시, 대체 가이드 필요 (`→ AlertV2 등`) |
+## 🚀 배포
 
-**4. 버전 `version`**
+- **자동 배포**: `main` 브랜치에 push 시 Vercel에서 자동 배포
+- **미리보기**: PR 생성 시 미리보기 URL 자동 생성
+- **환경**: Production - [ruler-design.vercel.app](https://ruler-design.vercel.app)
 
-| 예시    | 설명                 | 작성 기준 및 가이드                                                                                                       |
-| ------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `1.0.0` | 현재 컴포넌트의 버전 | - [SemVer](https://semver.org/lang/ko/) 형식 사용<br>- MAJOR.MINOR.PATCH 구조 준수<br>- ex: `2.1.3` (마이너 수정 포함 시) |
+---
 
-**5. 카테고리 `category`(수정예정)**
+## 📞 문의 및 지원
 
-| 값          | 설명                            | 작성 기준 및 가이드                                                       |
-| ----------- | ------------------------------- | ------------------------------------------------------------------------- |
-| `component` | 최소 단위 UI 컴포넌트           | 예: `Button`, `Checkbox`, `Badge`                                         |
-| `pattern`   | 구조적으로 묶인 컴포넌트 패턴   | 예: `ProductCard`, `ListItem`                                             |
-| `module`    | 기능 단위 묶음 (서비스 기능 등) | 예: `CouponModule`, `AddressSelector`, `ReviewModule` (복합 로직 포함 시) |
+- **Slack**: #design_platform 채널
+- **이슈 관리**: GitHub Issues
+- **문서 기여**: Pull Request 환영
 
-**6. 태그 `tags`**
+---
 
-| 예시                      | 설명                         | 작성 기준 및 가이드                                                                                                             |
-| ------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `card, product, commerce` | 검색 및 필터링을 위한 키워드 | - 쉼표로 구분된 단어들로 작성 <br> - **사용자 검색어 기반으로 실제 유용한 키워드 사용** <br> - 예: `form, input, accessibility` |
+## 🔮 향후 계획
 
-**7. 플랫폼 `platforms`**
+- [ ] Figma MCP 서버 연동으로 자동 동기화
+- [ ] 컴포넌트 상태 및 Props 자동 추출
+- [ ] 디자인 토큰 버전 관리 시스템
+- [ ] 다국어 문서 지원
+- [ ] 검색 기능 고도화
 
-| 예시                    | 설명                       | 작성 기준 및 가이드                                                                                       |
-| ----------------------- | -------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `web`, `ios`, `android` | 컴포넌트가 지원되는 플랫폼 | - 쉼표로 구분하여 중복 작성 가능 <br> - 기본값: `web` <br> - 앱 공용일 경우 `web, ios, android` 모두 포함 |
 
-**8. 대상 디렉토리 `targetDir`**
+--- 
 
-| 예시                     | 설명                  | 작성 기준 및 가이드                                               |
-| ------------------------ | --------------------- | ----------------------------------------------------------------- |
-| `src/content/components` | `.mdx` 파일 저장 위치 | - 기본값으로 사용 가능 <br> `src/content/tokens` 등으로 변경 가능 |
-
-**결과**
-
-- `ex:src/content/components/button.mdx` 파일이 자동 생성됩니다.
-
-- 프론트매터와 예제 코드, Props 설명 섹션이 포함된 기본 템플릿이 생성됩니다.

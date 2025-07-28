@@ -2,6 +2,7 @@
 'use client';
 import React from 'react';
 import { useEffect, useState, FormEvent, ChangeEvent, useRef } from 'react';
+import '../../styles/components/lottie-assets-list.css'
 
 type LottieFile = {
   name: string;
