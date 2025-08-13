@@ -1,8 +1,8 @@
 // src/components/LottieAssetList.tsx
 'use client';
 import React from 'react';
-import { useEffect, useState, FormEvent, ChangeEvent, useRef } from 'react';
-import '../../styles/components/lottie-assets-list.css'
+import { useEffect, useState, useRef } from 'react';
+
 
 type LottieFile = {
   name: string;
@@ -76,9 +76,7 @@ const LottiePlayer = ({ src, file }: { src: string; file: LottieFile }) => {
   );
 };
 
-export const LottieAssetList = () => {
-  const [allowed, setAllowed] = useState(false);
-  const [password, setPassword] = useState('');
+export const LottieAssetListPublic = () => {
   const [scriptLoaded, setScriptLoaded] = useState(false);
 
   useEffect(() => {
@@ -109,18 +107,6 @@ export const LottieAssetList = () => {
     };
   }, []);
 
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    if (password === '29cm.co.kr') {
-      setAllowed(true);
-    } else {
-      alert('비밀번호가 올바르지 않습니다.');
-    }
-  };
-
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setPassword(e.target.value);
-  };
 
   const handleDownload = (url: string, filename: string) => {
     const link = document.createElement('a');
@@ -131,35 +117,6 @@ export const LottieAssetList = () => {
     document.body.removeChild(link);
   };
 
-  if (!allowed) {
-    return (
-      <div className="password-container">
-        <div className="password-form-wrapper">
-          <div className="password-header">
-            <h2 className="title-m-medium">Lottie Assets</h2>
-            <p className="text-m text-secondary">29cm Ruler 디자인 시스템의 Lottie 애니메이션 자산들입니다.</p>
-          </div>
-          <form onSubmit={handleSubmit} className="password-form">
-            <div className="form-group">
-              <label className="text-s-medium text-primary">
-                비밀번호를 입력하세요
-              </label>
-              <input
-                type="password"
-                value={password}
-                onChange={handleChange}
-                className="password-input"
-                placeholder="비밀번호 입력"
-              />
-            </div>
-            <button type="submit" className="primary-button">
-              확인
-            </button>
-          </form>
-        </div>
-      </div>
-    );
-  }
 
   if (!scriptLoaded) {
     return (
