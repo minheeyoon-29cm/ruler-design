@@ -1,16 +1,30 @@
-// src/components/MDXContent.tsx
 'use client';
+// src/components/MDXContent.tsx
 
 import { useMDXComponent } from 'next-contentlayer/hooks';
-import { PropsWithChildren } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import * as RulerUI from '@29cm/ruler-ui';
+import type { ComponentType } from 'react';
+import type { MDXComponents } from 'mdx/types';
 
 interface MDXProps {
   code: string;
 }
 
-const components = {
+const isRenderableComponent = (val: unknown): val is ComponentType<any> => {
+  if (typeof val === 'function') return true;
+  if (val && typeof val === 'object' && '$$typeof' in (val as any)) return true; // forwardRef, memo 등
+  return false;
+};
+
+const rulerComponents = Object.fromEntries(
+  Object.entries(RulerUI).filter(([, val]) => isRenderableComponent(val))
+) as Record<string, ComponentType<any>>;
+
+const components: MDXComponents = {
+  ...rulerComponents,
+  // 명시적으로 Button을 매핑해 MDX 내부에서 바로 사용할 수 있게 한다.
+  Button: RulerUI.Button as ComponentType<any>,
   a: ({ href, ...props }: any) => {
     if (href?.startsWith('/')) {
       return <Link href={href} {...props} />;
@@ -74,6 +88,17 @@ const components = {
 };
 
 export function MDXContent({ code }: MDXProps) {
-  const Component = useMDXComponent(code);
+  // contentlayer가 생성한 코드가 CommonJS 형태(`exports`, `module`, `require`)를 기대하므로
+  // 브라우저 실행 시 참조 에러를 막기 위해 명시적으로 주입한다.
+  const noopRequire: any = () => ({});
+  (noopRequire as any).resolve = () => ({});
+
+  // __require가 함수가 아니라고 하는 케이스가 있어, fallback으로 noop 함수를 함께 전달
+  const Component = useMDXComponent(code, {
+    exports: {},
+    module: { exports: {}, __esModule: true },
+    require: noopRequire,
+    __require: noopRequire,
+  });
   return <Component components={components} />;
 }

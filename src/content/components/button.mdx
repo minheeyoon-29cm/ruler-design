@@ -9,8 +9,11 @@ platforms: ["web", "ios", "android"]
 updated: "2025-05-28"
 ---
 
-import React from 'react';
-import { Button } from '@29cm/ruler-ui';
+<Button priority="primary" size="large" label="Primary 이거거든~" /> 
+
+
+
+
 
 # Button
 
@@ -22,6 +25,10 @@ import { Button } from '@29cm/ruler-ui';
 수정필요: component_usage_demo 컴포넌트는 수동 변환 필요 
 
 Button은 29CM 서비스 내에서 일반적으로 사용되며 가장 중요한 작업 수행을 돕는 버튼입니다. 화면의 흐름에서 사용자에게 예측가능하고, 필요한 곳에 적절히 버튼을 위치시키세요. 버튼을 통해 사용자가 화면에서 특정 조치를 취하거나 선택하며 흐름을 이어나갈 수 있도록 도와주어야 합니다.
+
+### 기본 버튼 예시
+
+
 
 ## Contents Guide
 
@@ -91,45 +98,6 @@ c. tertiary : 낮은 강조의 성격으로 주로 취소, 해제, 건너뛰기�
 - isPending: true / false (로딩 스피너 표시)
 - prefix, postfix: true / false (레이블 좌/우 아이콘 사용)
 
-### Live Preview (렌더링)
-
-export const ButtonPreviewGrid = () => {
-  const priorities = [
-    { label: 'Primary', priority: 'primary' },
-    { label: 'Secondary', priority: 'secondary' },
-    { label: 'Tertiary', priority: 'tertiary' },
-    { label: 'Negative', priority: 'negative' },
-  ];
-
-  const sizes = ['xSmall', 'small', 'medium', 'large'];
-
-  return (
-    <div style={{ display: 'grid', gap: '16px', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
-      {priorities.map(({ label, priority }) => (
-        <div key={priority} style={{ padding: '12px', border: '1px solid var(--color-semantic-fill-surface-contents)', borderRadius: '8px', background: 'var(--color-semantic-background-default)' }}>
-          <div style={{ marginBottom: '8px', fontSize: 'var(--font-size-175)', color: 'var(--color-semantic-text-secondary)' }}>{label}</div>
-
-          <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-            {sizes.map((size) => (
-              <Button
-                key={size}
-                priority={priority}
-                size={size}
-                label={`${label} ${size}`}
-                pending={size === 'medium' && priority === 'secondary'}
-                disabled={size === 'large'}
-                prefixIcon="●"
-                postfixIcon="●"
-              />
-            ))}
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-};
-
-<ButtonPreviewGrid />
 
 ## Disabled
 

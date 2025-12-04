@@ -9,6 +9,9 @@ platforms: ["web", "ios", "android"]
 updated: "2025-05-28"
 ---
 
+import React from 'react';
+import { AlertDialog, Button } from '@29cm/ruler-ui';
+
 # Alert Dialog
 
 Alert Dialog는 사용자의 여정에서 중요한 정보를 표시합니다. 사용자가 Alert Dialog에서의 작업을 완료할 때까지 다른 상호작용을 차단합니다.
@@ -20,6 +23,35 @@ Alert Dialog는 사용자의 여정에서 중요한 정보를 표시합니다. �
 
 
 Alert Dialog는 사용자에게 간단하거나 확인해야하는 중요한 메세지를 전달하고 응답 또는 선택을 요구하기 위해 의도적으로 사용자 여정 중간에 표시됩니다. 
+
+### 라이브 예시
+
+export function AlertDialogDemo() {
+  const [open, setOpen] = React.useState(false);
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+      <Button priority="primary" label="Alert Dialog 열기" onClick={() => setOpen(true)} />
+
+      <AlertDialog
+        open={open}
+        onOpenChange={setOpen}
+        title="구독을 해지할까요?"
+        description="해지 후에는 혜택이 중단됩니다. 정말 진행하시겠습니까?"
+        primaryAction={{
+          label: '해지하기',
+          onClick: () => setOpen(false),
+        }}
+        secondaryAction={{
+          label: '취소',
+          onClick: () => setOpen(false),
+        }}
+      />
+    </div>
+  );
+}
+
+<AlertDialogDemo />
 
 
 ## Decision Tree
@@ -279,5 +311,3 @@ h. Primary action : Alert Dialog 맥락에 따른 가장 중요한 액션을 표
 | isOpen | boolean | false | Alert Dialog가 열려 있는지 여부 |
 | open | () =&gt; void | false | Alert Dialog가 열림 |
 | close | () =&gt; void | true | Alert Dialog가 닫힘 |
-
-
