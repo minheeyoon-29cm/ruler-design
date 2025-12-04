@@ -12,10 +12,12 @@ type StatusFilter = 'all' | 'draft' | 'review' | 'active' | 'deprecated' ;
 export default function ComponentsPage() {
   const [selectedStatus, setSelectedStatus] = useState<StatusFilter>('all');
 
+  const componentsData = [...allComponents].sort((a, b) => a.title.localeCompare(b.title, 'ko'));
+
   // 상태별 필터링
   const filteredComponents = selectedStatus === 'all' 
-    ? allComponents
-    : allComponents.filter(component => component.status === selectedStatus);
+    ? componentsData
+    : componentsData.filter(component => component.status === selectedStatus);
 
   const componentsByCategory = filteredComponents.reduce((acc, component) => {
     const category = component.category || '기타';
@@ -36,13 +38,13 @@ export default function ComponentsPage() {
       {/* 필터 태그들 */}
       <div className="flex flex-wrap gap-2 mb-6">
         <ToggleTag 
-          label={`All (${allComponents.length})`}
+          label={`All (${componentsData.length})`}
           isSelected={selectedStatus === 'all'}
           onClick={() => setSelectedStatus('all')}
         />
         
         {(['draft', 'review', 'active', 'deprecated'] as const).map((status) => {
-          const count = allComponents.filter(c => c.status === status).length;
+          const count = componentsData.filter(c => c.status === status).length;
           return (
             <ToggleTag
               key={status}

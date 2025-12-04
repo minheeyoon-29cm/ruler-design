@@ -3,7 +3,6 @@
 import React from 'react';
 import { useEffect, useState, useRef } from 'react';
 
-
 type LottieFile = {
   name: string;
   url: string;
@@ -107,7 +106,6 @@ export const LottieAssetListPublic = () => {
     };
   }, []);
 
-
   const handleDownload = (url: string, filename: string) => {
     const link = document.createElement('a');
     link.href = url;
@@ -116,7 +114,6 @@ export const LottieAssetListPublic = () => {
     link.click();
     document.body.removeChild(link);
   };
-
 
   if (!scriptLoaded) {
     return (

@@ -9,6 +9,9 @@ platforms: ["web", "ios", "android"]
 updated: "2025-05-28"
 ---
 
+import React from 'react';
+import { Button } from '@29cm/ruler-ui';
+
 # Button
 
 사용자의 클릭 또는 터치를 통해 요구한 작업을 즉시 시작시키는 컨트롤입니다.
@@ -77,6 +80,56 @@ Button은 사용자가 스스로 어떤 작업을 수행할지 빠르게 파악�
 a. primary : 사용자가 작업을 완료하는데 가장 중요한 액션에 사용됩니다. 강한 강조를 띄우고 있으므로 페이지 안에서 아껴서 사용해야 합니다. 
 b. secondary : 약한 강조의 성격을 가지고 있어 primary보다 낮은 중요도의 사용자 액션에 사용될 수 있습니다. 
 c. tertiary : 낮은 강조의 성격으로 주로 취소, 해제, 건너뛰기와 같이 사용자의 목표 달성과 무관한 액션에 사용될 수 있습니다. 
+
+## Variants (Figma 기준 자동 초안)
+
+- variant: primary / secondary / tertiary (버튼 계층/강조도)
+- tone: default / negative (일반 / 파괴적 액션)
+- size: xSmall / small / medium / large (기본 medium)
+- state: default / hover / focus / pressed (상호작용 상태)
+- isDisabled: true / false (비활성 여부)
+- isPending: true / false (로딩 스피너 표시)
+- prefix, postfix: true / false (레이블 좌/우 아이콘 사용)
+
+### Live Preview (렌더링)
+
+export const ButtonPreviewGrid = () => {
+  const priorities = [
+    { label: 'Primary', priority: 'primary' },
+    { label: 'Secondary', priority: 'secondary' },
+    { label: 'Tertiary', priority: 'tertiary' },
+    { label: 'Negative', priority: 'negative' },
+  ];
+
+  const sizes = ['xSmall', 'small', 'medium', 'large'];
+
+  return (
+    <div style={{ display: 'grid', gap: '16px', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
+      {priorities.map(({ label, priority }) => (
+        <div key={priority} style={{ padding: '12px', border: '1px solid var(--color-semantic-fill-surface-contents)', borderRadius: '8px', background: 'var(--color-semantic-background-default)' }}>
+          <div style={{ marginBottom: '8px', fontSize: 'var(--font-size-175)', color: 'var(--color-semantic-text-secondary)' }}>{label}</div>
+
+          <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+            {sizes.map((size) => (
+              <Button
+                key={size}
+                priority={priority}
+                size={size}
+                label={`${label} ${size}`}
+                pending={size === 'medium' && priority === 'secondary'}
+                disabled={size === 'large'}
+                prefixIcon="●"
+                postfixIcon="●"
+              />
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+<ButtonPreviewGrid />
 
 ## Disabled
 

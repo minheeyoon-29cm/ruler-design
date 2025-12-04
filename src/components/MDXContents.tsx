@@ -28,33 +28,17 @@ const components = {
 
     const isExternal = src.startsWith('http');
 
-    // 외부 이미지: hydration mismatch 방지를 위해 일반 <img> 사용
-    if (isExternal) {
-      return (
-        <div className="my-6">
-          <img
-            src={src}
-            alt={alt || ''}
-            loading="lazy"
-            className="rounded-md"
-            {...props}
-          />
-        </div>
-      );
-    }
+    const className = ['rounded-md', props.className].filter(Boolean).join(' ');
 
-    // 내부 이미지: Next.js Image 사용
+    // 외부/내부 모두 단순 <img>로 렌더링하여 p 내부 중첩 문제를 방지
     return (
-      <div className="my-6">
-        <Image
-          src={src}
-          alt={alt || ''}
-          width={800}
-          height={500}
-          className="rounded-md"
-          {...props}
-        />
-      </div>
+      <img
+        src={src}
+        alt={alt || ''}
+        loading="lazy"
+        className={className}
+        {...props}
+      />
     );
   },
 

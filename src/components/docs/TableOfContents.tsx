@@ -15,23 +15,36 @@ export default function TableOfContents() {
 
   useEffect(() => {
     const headings = Array.from(document.querySelectorAll('h2, h3')) as HTMLHeadingElement[];
-    const toc: TOCItem[] = headings.map((heading) => {
-      let id = heading.id;
-      if (!id) {
-        const slug = (heading.textContent || '')
-          .toLowerCase()
-          .trim()
-          .replace(/[^a-z0-9\s-]/g, '')
-          .replace(/\s+/g, '-');
-        id = slug;
-        heading.id = id;
+    const usedIds = new Set<string>();
+
+    const createSlug = (text: string) => {
+      const baseSlug = text
+        .trim()
+        .toLowerCase()
+        .replace(/\s+/g, '-')
+        .replace(/[^\p{L}\p{N}-]/gu, '') || 'section';
+
+      let slug = baseSlug;
+      let counter = 1;
+      while (usedIds.has(slug)) {
+        slug = `${baseSlug}-${counter++}`;
       }
+      usedIds.add(slug);
+      return slug;
+    };
+
+    const toc: TOCItem[] = headings.map((heading) => {
+      const text = heading.textContent || '';
+      const id = heading.id || createSlug(text);
+      heading.id = id;
+
       return {
         id,
-        text: heading.textContent || '',
+        text,
         level: heading.tagName === 'H2' ? 2 : 3,
       };
     });
+
     setItems(toc);
   }, []);
 

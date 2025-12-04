@@ -26,6 +26,7 @@ export default function Sidebar() {
   const [isComponentOpen, setIsComponentOpen] = useState(true);
 
   const sortedFoundations = allFoundations.sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
+  const sortedComponents = [...allComponents].sort((a, b) => a.title.localeCompare(b.title, 'ko'));
 
   const handleFoundationToggle = () => {
     setIsFoundationOpen(!isFoundationOpen);
@@ -81,7 +82,7 @@ export default function Sidebar() {
             <summary className="sidebar-opener">
               Component
               
-              <ChevronIcon isOpen={isFoundationOpen} size={22} />
+              <ChevronIcon isOpen={isComponentOpen} size={22} />
             </summary>
             <ul className="">
               <li>
@@ -94,7 +95,7 @@ export default function Sidebar() {
                   Overview
                 </Link>
               </li>
-              {allComponents.map((component) => (
+              {sortedComponents.map((component) => (
                 <li key={component.slug} className="flex items-center justify-between">
                   <Link
                     href={`/components/${component.slug}`}

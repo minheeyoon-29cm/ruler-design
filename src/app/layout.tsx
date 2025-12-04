@@ -1,6 +1,7 @@
 // src/app/layout.tsx
 import '../styles/globals.css';
 import '../styles/layout.css';
+import '@29cm/ruler-ui/style.css';
 import Link from 'next/link';
 import { ThemeProvider } from 'next-themes';
 import PageThemeToggle from './components/pageThemeToggle';
